@@ -800,49 +800,49 @@
    {
       "nombre": "Empanadas",
       "descripcion": "Carne o jamón y queso",
-      "precio": "2500",
+      "precio": "3000",
       "imagen": "img/Empa.jpg",
       "categoria": "🥟 ENTRADITAS"
     },
     {
       "nombre": "Rabas a la romana",
       "descripcion": "Rabas a la romana",
-      "precio": "23000",
+      "precio": "24000",
       "imagen": "img/Rabas.jpg",
       "categoria": "🥟 ENTRADITAS"
     },
     {
       "nombre": "Mozzarellas rebozadas",
       "descripcion": "Mozzarellas rebozadas",
-      "precio": "16000",
+      "precio": "17000",
       "imagen": "img/20250817_131412.jpg",
       "categoria": "🥟 ENTRADITAS"
     },
     {
       "nombre": "Nachos",
       "descripcion": "Nachos de carne con cheddar y palta",
-      "precio": "18000",
+      "precio": "18500",
       "imagen": "img/20250815_155313.jpg",
       "categoria": "🥟 ENTRADITAS"
     },
     {
       "nombre": "Farinata recomendado",
       "descripcion": "Fainá con stracciatella, jamón crudo, tomates y albahaca",
-      "precio": "20000",
+      "precio": "21000",
       "imagen": "img/Farinata.jpg",
       "categoria": "🥟 ENTRADITAS"
     },
     {
       "nombre": "PICADITA FRIA (para 2 personas)",
       "descripcion": "Jamón crudo, jamón cocido, queso roquefort, queso tybo, tomates cherries, frutos secos",
-      "precio": "52000",
+      "precio": "55000",
       "imagen": "img/tarta_brocoli.jpg",
       "categoria": "🥟 ENTRADITAS"
     },
     {
       "nombre": "PICADITA CALIENTE (para 2 personas)",
       "descripcion": "Pollo rebozado, bastones de muzarella, rabas y papas fritas. Incluye dos porrones de Stella",
-      "precio": "42000",
+      "precio": "45000",
       "imagen": "img/IMG-20250815.jpg",
       "categoria": "🥟 ENTRADITAS"
     },
@@ -947,7 +947,7 @@
   {
       "nombre": "línea Coca-Cola",
       "descripcion": "Zeros y clásicas",
-      "precio": "4000",
+      "precio": "4200",
       "imagen": "img/20250830_141813.jpg",
       "categoria": "🥤 Bebidas y vinos"
     },
@@ -968,55 +968,55 @@
     {
       "nombre": "Jugo exprimido de naranja",
       "descripcion": "Exprimido de naranja natural",
-      "precio": "6500",
+      "precio": "6700",
       "imagen": "img/Exprimido.jpg",
       "categoria": "🥤 Bebidas y vinos"
     },    {
       "nombre": "Pomelada",
       "descripcion": "Pomelo  natural",
-      "precio": "7000",
+      "precio": "7200",
       "imagen": "img/pomelada.jpg",
       "categoria": "🥤 Bebidas y vinos"
     },
     {
       "nombre": "Milkshake OREO",
       "descripcion": "Helado de crema, con oreos y crema batida",
-      "precio": "8800",
+      "precio": "9000",
       "imagen": "img/Mioreo.jpg",
       "categoria": "🥤 Bebidas y vinos"
     },
     {
       "nombre": "Licuados",
       "descripcion": "Con frutas de estación (base de agua, leche o exprimido)",
-      "precio": "7000",
+      "precio": "7500",
       "imagen": "img/20250903_110035.jpg",
       "categoria": "🥤 Bebidas y vinos"
     },
     {
       "nombre": "Limonada a la menta con jengibre",
       "descripcion": "Limonada natural con menta y jengibre",
-      "precio": "6500",
+      "precio": "6700",
       "imagen": "img/Limonada.jpg",
       "categoria": "🥤 Bebidas y vinos"
     },
     {
       "nombre": "Limonada",
       "descripcion": "Limonada simple",
-      "precio": "6200",
+      "precio": "6400",
       "imagen": "img/Limosim.jpg",
       "categoria": "🥤 Bebidas y vinos"
     },
     {
       "nombre": "STELLA ARTOIS (410cc - Porrón)",
       "descripcion": "Cerveza Stella Artois 410cc",
-      "precio": "7200",
+      "precio": "7400",
       "imagen": "img/Coroa.jpg",
       "categoria": "🥤 Bebidas y vinos"
     },
     {
       "nombre": "CORONA (Porrón)",
       "descripcion": "Cerveza Corona 330cc",
-      "precio": "7500",
+      "precio": "7700",
       "imagen": "img/Estelar.jpg",
       "categoria": "🥤 Bebidas y vinos"
     },
