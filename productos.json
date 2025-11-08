@@ -107,8 +107,8 @@
   {
     "nombre": "FRAPPUCCINO con Leche y OREO🥶",
     "descripcion": "Base de leche ❄️",
-    "precio": "6700",
-    "imagen": "img/20250817_104537.jpg",
+    "precio": 6700,
+    "imagen": "img/miloreo.jpg",
     "categoria": "Cafetería☕️"
   },
   {
@@ -254,8 +254,8 @@
   {
     "nombre": "Yogurt",
     "descripcion": "Yogurt $5.000 | Yogurt con granola $8.000 | Yogurt Forte (con frutas y granola) $12.000",
-    "precio": "12000",
-    "imagen": "img/IMG-20250802-WA0010.jpg",
+    "precio": 12000,
+    "imagen": "img/forte.jpg",
     "categoria": "Cafetería☕️"
   },
   {
