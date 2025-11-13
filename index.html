@@ -158,14 +158,12 @@
 
   <div class="banner" id="banner-text">¡Bienvenidos a Tilo Café Agüero 2298!</div>
 
-  <!-- 🌍 Selector de idioma -->
   <div id="languageSwitcher">
     <button id="btn-es" class="lang-btn">🇪🇸 Español</button>
     <button id="btn-en" class="lang-btn">🇬🇧 English</button>
     <button id="btn-pt" class="lang-btn">🇧🇷 Português</button>
   </div>
 
-  <!-- 🔍 Buscador -->
   <div class="search-box">
     <input id="search" type="text" placeholder="Buscar por nombre, descripción o categoría...">
     <button id="btnSearch">Buscar</button>
@@ -175,135 +173,152 @@
   <div id="product-list"></div>
   <button id="btnUp">⬆️</button>
 
-  <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const USER = 'cholose10';
-    const REPO = 'cartaaguero';
-    let idiomaActual = localStorage.getItem('idioma') || 'es';
+<script>
+document.addEventListener('DOMContentLoaded', () => {
 
-    const btnEs = document.getElementById('btn-es');
-    const btnEn = document.getElementById('btn-en');
-    const btnPt = document.getElementById('btn-pt');
-    const banner = document.getElementById('banner-text');
-    const categoryContainer = document.getElementById('category-buttons');
-    const productList = document.getElementById('product-list');
-    const searchInput = document.getElementById('search');
-    const btnSearch = document.getElementById('btnSearch');
-    const btnUp = document.getElementById('btnUp');
+  const USER = "cholose10";
+  const REPO = "cartaaguero";
+  let idiomaActual = localStorage.getItem("idioma") || "es";
 
-    let productos = [];
+  const btnEs = document.getElementById("btn-es");
+  const btnEn = document.getElementById("btn-en");
+  const btnPt = document.getElementById("btn-pt");
+  const banner = document.getElementById("banner-text");
+  const categoryContainer = document.getElementById("category-buttons");
+  const productList = document.getElementById("product-list");
+  const searchInput = document.getElementById("search");
+  const btnSearch = document.getElementById("btnSearch");
+  const btnUp = document.getElementById("btnUp");
 
-    function actualizarBotones() {
-      btnEs.classList.toggle('active', idiomaActual === 'es');
-      btnEn.classList.toggle('active', idiomaActual === 'en');
-      btnPt.classList.toggle('active', idiomaActual === 'pt');
+  let productos = [];
 
-      // Cambiar texto del banner
-      if (idiomaActual === 'es') banner.textContent = "¡Bienvenidos a Tilo Café Agüero 2298!";
-      if (idiomaActual === 'en') banner.textContent = "Welcome to Tilo Café Agüero 2298!";
-      if (idiomaActual === 'pt') banner.textContent = "Bem-vindo ao Tilo Café Agüero 2298!";
+  function scrollToProducts() {
+    productList.scrollIntoView({ behavior: "smooth" });
+  }
+
+  function actualizarBotones() {
+    btnEs.classList.toggle("active", idiomaActual === "es");
+    btnEn.classList.toggle("active", idiomaActual === "en");
+    btnPt.classList.toggle("active", idiomaActual === "pt");
+
+    if (idiomaActual === "es") banner.textContent = "¡Bienvenidos a Tilo Café Agüero 2298!";
+    if (idiomaActual === "en") banner.textContent = "Welcome to Tilo Café Agüero 2298!";
+    if (idiomaActual === "pt") banner.textContent = "Bem-vindo ao Tilo Café Agüero 2298!";
+  }
+
+  async function load() {
+    actualizarBotones();
+
+    let filename = "productos.json";
+    if (idiomaActual === "en") filename = "productos-en.json";
+    if (idiomaActual === "pt") filename = "productos-port.json";
+
+    const RAW_URL = `https://raw.githubusercontent.com/${USER}/${REPO}/main/${filename}`;
+
+    try {
+      const res = await fetch(RAW_URL, { cache: "no-store" });
+      if (!res.ok) throw new Error("Error cargando productos");
+
+      const data = await res.json();
+
+      productos = data.map(p => ({
+        nombre: idiomaActual === "es" ? p.nombre : p.name,
+        descripcion: idiomaActual === "es" ? p.descripcion : p.description,
+        precio: p.precio || p.price,
+        imagen: p.imagen,
+        categoria: idiomaActual === "es" ? p.categoria : p.category
+      }));
+
+      renderCategories();
+      renderProducts("Todos");
+
+    } catch (e) {
+      console.error(e);
+      productList.innerHTML = `<div class="msg">⚠️ No se pudieron cargar los productos.</div>`;
     }
+  }
 
-    async function load() {
-      actualizarBotones();
-      let filename = 'productos.json';
-      if (idiomaActual === 'en') filename = 'productos-en.json';
-      if (idiomaActual === 'pt') filename = 'productos-port.json';
-
-      const RAW_URL = `https://raw.githubusercontent.com/${USER}/${REPO}/main/${filename}`;
-
-      try {
-        const res = await fetch(RAW_URL, { cache: "no-store" });
-        if (!res.ok) throw new Error('Error cargando ' + RAW_URL);
-        const data = await res.json();
-
-        productos = data.map(p => ({
-          nombre: idiomaActual === 'es' ? p.nombre : idiomaActual === 'en' ? p.name : p.name,
-          descripcion: idiomaActual === 'es' ? p.descripcion : idiomaActual === 'en' ? p.description : p.description,
-          precio: p.precio || p.price,
-          imagen: p.imagen,
-          categoria: idiomaActual === 'es' ? p.categoria : idiomaActual === 'en' ? p.category : p.category
-        }));
-
-        renderCategories();
-        renderProducts('Todos');
-      } catch (err) {
-        console.error(err);
-        productList.innerHTML = '<div class="msg">⚠️ No se pudieron cargar los productos.</div>';
-      }
-    }
-
-    function renderCategories() {
-      const categorias = ['Todos', ...new Set(productos.map(p => p.categoria).filter(Boolean))];
-      categoryContainer.innerHTML = '';
-      categorias.forEach(cat => {
-        const btn = document.createElement('button');
-        btn.textContent = cat;
-        btn.addEventListener('click', () => renderProducts(cat));
-        categoryContainer.appendChild(btn);
+  function renderCategories() {
+    const categorias = ["Todos", ...new Set(productos.map(p => p.categoria).filter(Boolean))];
+    categoryContainer.innerHTML = "";
+    categorias.forEach(cat => {
+      const btn = document.createElement("button");
+      btn.textContent = cat;
+      btn.addEventListener("click", () => {
+        renderProducts(cat);
+        scrollToProducts(); // ✔️ MISMO QUE FRENCH
       });
-    }
-
-    function renderProducts(categoria) {
-      productList.innerHTML = '';
-      const lista = categoria === 'Todos' ? productos : productos.filter(p => p.categoria === categoria);
-      if (lista.length === 0) {
-        productList.innerHTML = '<div class="msg">No hay productos disponibles.</div>';
-        return;
-      }
-      lista.forEach(p => {
-        const div = document.createElement('div');
-        div.className = 'item';
-        div.innerHTML = `
-          <img src="${p.imagen}" alt="${p.nombre}">
-          <h3>${p.nombre}</h3>
-          <p>${p.descripcion || ''}</p>
-          <span class="price">$${p.precio}</span>`;
-        productList.appendChild(div);
-      });
-    }
-
-    function buscar() {
-      const q = searchInput.value.toLowerCase().trim();
-      const res = productos.filter(p =>
-        p.nombre.toLowerCase().includes(q) ||
-        (p.descripcion || '').toLowerCase().includes(q) ||
-        p.categoria.toLowerCase().includes(q)
-      );
-      if (res.length === 0) {
-        productList.innerHTML = '<div class="msg">🔍 No se encontraron resultados.</div>';
-        return;
-      }
-      productList.innerHTML = '';
-      res.forEach(p => {
-        const div = document.createElement('div');
-        div.className = 'item';
-        div.innerHTML = `
-          <img src="${p.imagen}" alt="${p.nombre}">
-          <h3>${p.nombre}</h3>
-          <p>${p.descripcion || ''}</p>
-          <span class="price">$${p.precio}</span>`;
-        productList.appendChild(div);
-      });
-    }
-
-    // Eventos de idioma
-    btnEs.addEventListener('click', () => { idiomaActual = 'es'; localStorage.setItem('idioma', 'es'); load(); });
-    btnEn.addEventListener('click', () => { idiomaActual = 'en'; localStorage.setItem('idioma', 'en'); load(); });
-    btnPt.addEventListener('click', () => { idiomaActual = 'pt'; localStorage.setItem('idioma', 'pt'); load(); });
-
-    btnSearch.addEventListener('click', buscar);
-    searchInput.addEventListener('keydown', e => { if (e.key === 'Enter') buscar(); });
-
-    window.addEventListener('scroll', () => {
-      btnUp.style.display = window.scrollY > 300 ? 'block' : 'none';
+      categoryContainer.appendChild(btn);
     });
-    btnUp.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function renderProducts(categoria) {
+    productList.innerHTML = "";
+    const lista = categoria === "Todos" ? productos : productos.filter(p => p.categoria === categoria);
+    if (lista.length === 0) {
+      productList.innerHTML = `<div class="msg">No hay productos disponibles.</div>`;
+      return;
+    }
+    lista.forEach(p => {
+      const div = document.createElement("div");
+      div.className = "item";
+      div.innerHTML = `
+        <img src="${p.imagen}" alt="${p.nombre}">
+        <h3>${p.nombre}</h3>
+        <p>${p.descripcion || ""}</p>
+        <span class="price">$${p.precio}</span>`;
+      productList.appendChild(div);
+    });
+  }
+
+  function buscar() {
+    const q = searchInput.value.toLowerCase().trim();
+    const res = productos.filter(p =>
+      p.nombre.toLowerCase().includes(q) ||
+      (p.descripcion || "").toLowerCase().includes(q) ||
+      p.categoria.toLowerCase().includes(q)
+    );
+
+    if (res.length === 0) {
+      productList.innerHTML = `<div class="msg">🔍 No se encontraron resultados.</div>`;
+      return;
+    }
+
+    productList.innerHTML = "";
+    res.forEach(p => {
+      const div = document.createElement("div");
+      div.className = "item";
+      div.innerHTML = `
+        <img src="${p.imagen}" alt="${p.nombre}">
+        <h3>${p.nombre}</h3>
+        <p>${p.descripcion || ""}</p>
+        <span class="price">$${p.precio}</span>`;
+      productList.appendChild(div);
     });
 
-    load();
+    scrollToProducts(); // ✔️ EXACTO COMO FRENCH
+  }
+
+  // EVENTOS
+
+  btnEs.addEventListener("click", () => { idiomaActual = "es"; localStorage.setItem("idioma", "es"); load(); });
+  btnEn.addEventListener("click", () => { idiomaActual = "en"; localStorage.setItem("idioma", "en"); load(); });
+  btnPt.addEventListener("click", () => { idiomaActual = "pt"; localStorage.setItem("idioma", "pt"); load(); });
+
+  btnSearch.addEventListener("click", buscar);
+  searchInput.addEventListener("keydown", e => { if (e.key === "Enter") buscar(); });
+
+  window.addEventListener("scroll", () => {
+    btnUp.style.display = window.scrollY > 300 ? "block" : "none";
   });
-  </script>
+
+  btnUp.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+  load();
+});
+</script>
+
 </body>
 </html>
