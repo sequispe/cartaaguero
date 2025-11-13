@@ -127,7 +127,6 @@
     .price { font-weight: bold; margin: 0 8px 10px; display: block; }
     .msg { padding: 20px; color: #a00; }
 
-    /* Flecha subir */
     #btnUp {
       position: fixed;
       bottom: 25px;
@@ -157,12 +156,13 @@
     <img src="img/Logo99.jpg" alt="Tilo Café">
   </header>
 
-  <div class="banner">¡Bienvenidos a Tilo Café Agüero 2298!</div>
+  <div class="banner" id="banner-text">¡Bienvenidos a Tilo Café Agüero 2298!</div>
 
   <!-- 🌍 Selector de idioma -->
   <div id="languageSwitcher">
     <button id="btn-es" class="lang-btn">🇪🇸 Español</button>
     <button id="btn-en" class="lang-btn">🇬🇧 English</button>
+    <button id="btn-pt" class="lang-btn">🇧🇷 Português</button>
   </div>
 
   <!-- 🔍 Buscador -->
@@ -188,6 +188,8 @@
 
     const btnEs = document.getElementById('btn-es');
     const btnEn = document.getElementById('btn-en');
+    const btnPt = document.getElementById('btn-pt');
+    const banner = document.getElementById('banner-text');
     const categoryContainer = document.getElementById('category-buttons');
     const productList = document.getElementById('product-list');
     const searchInput = document.getElementById('search');
@@ -199,11 +201,19 @@
     function actualizarBotones() {
       btnEs.classList.toggle('active', idiomaActual === 'es');
       btnEn.classList.toggle('active', idiomaActual === 'en');
+      btnPt.classList.toggle('active', idiomaActual === 'pt');
+
+      if (idiomaActual === 'es') banner.textContent = "¡Bienvenidos a Tilo Café Agüero 2298!";
+      if (idiomaActual === 'en') banner.textContent = "Welcome to Tilo Café Agüero 2298!";
+      if (idiomaActual === 'pt') banner.textContent = "Bem-vindo ao Tilo Café Agüero 2298!";
     }
 
     async function load() {
       actualizarBotones();
-      const filename = idiomaActual === 'es' ? 'productos.json' : 'productos-en.json';
+      let filename = 'productos.json';
+      if (idiomaActual === 'en') filename = 'productos-en.json';
+      if (idiomaActual === 'pt') filename = 'productos-port.json';
+
       const RAW_URL = `https://raw.githubusercontent.com/${USER}/${REPO}/main/${filename}`;
 
       try {
@@ -212,11 +222,20 @@
         const data = await res.json();
 
         productos = data.map(p => ({
-          nombre: idiomaActual === 'es' ? p.nombre : p.name,
-          descripcion: idiomaActual === 'es' ? p.descripcion : p.description,
+          nombre:
+            idiomaActual === 'es' ? p.nombre :
+            idiomaActual === 'en' ? p.name :
+            p.name,
+          descripcion:
+            idiomaActual === 'es' ? p.descripcion :
+            idiomaActual === 'en' ? p.description :
+            p.description,
           precio: p.precio || p.price,
           imagen: p.imagen,
-          categoria: idiomaActual === 'es' ? p.categoria : p.category
+          categoria:
+            idiomaActual === 'es' ? p.categoria :
+            idiomaActual === 'en' ? p.category :
+            p.category
         }));
 
         renderCategories();
@@ -289,7 +308,7 @@
       scrollToProducts();
     }
 
-    // Eventos
+    // 🌍 Eventos de idioma
     btnEs.addEventListener('click', () => {
       idiomaActual = 'es';
       localStorage.setItem('idioma', 'es');
@@ -302,12 +321,17 @@
       load();
     });
 
+    btnPt.addEventListener('click', () => {
+      idiomaActual = 'pt';
+      localStorage.setItem('idioma', 'pt');
+      load();
+    });
+
     btnSearch.addEventListener('click', buscar);
     searchInput.addEventListener('keydown', e => {
       if (e.key === 'Enter') buscar();
     });
 
-    // Flecha subir
     window.addEventListener('scroll', () => {
       btnUp.style.display = window.scrollY > 300 ? 'block' : 'none';
     });
