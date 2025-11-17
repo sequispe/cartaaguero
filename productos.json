@@ -79,7 +79,7 @@
   {
     "nombre": "Leche caliente o fría",
     "descripcion": "Leche descremada",
-    "precio": "2900",
+    "precio": 3000,
     "imagen": "img/20250818_101037.jpg",
     "categoria": "Cafetería☕️"
   },
