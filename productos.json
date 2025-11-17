@@ -30,7 +30,7 @@
   {
     "nombre": "Café expresso Doble",
     "descripcion": "Café expresso Doble",
-    "precio": null,
+    "precio": 5000,
     "imagen": "img/doble.jpg",
     "categoria": "Cafetería☕️"
   },
