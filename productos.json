@@ -730,7 +730,7 @@
   {
     "nombre": "Tostado mixto",
     "descripcion": "4 triángulos de jamón y queso",
-    "precio": "14000",
+    "precio": 15000,
     "imagen": "img/20250824_141355.jpg",
     "categoria": "🥪 Sandwiches"
   },
