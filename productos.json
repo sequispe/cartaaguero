@@ -758,7 +758,7 @@
   {
     "nombre": "Sandwich de lomito solo queso",
     "descripcion": "Simple (solo queso) con papas fritas",
-    "precio": "21000",
+    "precio": 22000,
     "imagen": "img/20250910_132716.jpg",
     "categoria": "🥪 Sandwiches"
   },
