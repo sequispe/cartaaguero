@@ -723,7 +723,7 @@
   {
     "nombre": "Jamón cocido, queso y tomate",
     "descripcion": "Pan ciabatta o árabe",
-    "precio": "13000",
+    "precio": 14000,
     "imagen": "img/Jqyt.jpg",
     "categoria": "🥪 Sandwiches"
   },
