@@ -744,7 +744,7 @@
   {
     "nombre": "Pavita, queso y tomate",
     "descripcion": "Pan ciabatta o árabe",
-    "precio": "16000",
+    "precio": 17000,
     "imagen": "img/Pabita.jpg",
     "categoria": "🥪 Sandwiches"
   },
