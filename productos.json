@@ -597,7 +597,7 @@
   {
     "nombre": "Matambre de cerdo",
     "descripcion": "Acompañado con espinaca, papas a la crema o verduras grilladas",
-    "precio": "26000",
+    "precio": 26500,
     "imagen": "img/Matavergrill.jpg",
     "categoria": "🍽️Comidas"
   },
