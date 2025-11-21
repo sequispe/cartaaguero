@@ -450,7 +450,7 @@
   {
     "nombre": " ENSALADAS COBB SALAD",
     "descripcion": "Mix de verdes, pollo, huevo, queso azul, tomate y salsa de palta.",
-    "precio": "17800",
+    "precio": 18200,
     "imagen": "img/Cpsala.jpg",
     "categoria": "🍽️Comidas"
   },
