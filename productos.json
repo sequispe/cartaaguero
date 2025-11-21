@@ -471,7 +471,7 @@
   {
     "nombre": "Mila SUIZA",
     "descripcion": "Salsa blanca y queso gratinado. Acompañadas con puré, fideos, ensalada o papas fritas",
-    "precio": "22000",
+    "precio": 22500,
     "imagen": "img/Mizuisa.jpg",
     "categoria": "🍽️Comidas"
   },
