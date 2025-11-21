@@ -567,9 +567,9 @@
     "categoria": "🍽️Comidas"
   },
   {
-    "nombre": "Bife de chorizo",
+    "nombre": "Bife de chorizo ",
     "descripcion": "Con fritas, puré, ensalada o arroz",
-    "precio": "30000",
+    "precio": 30000,
     "imagen": "img/20250815_151841.jpg",
     "categoria": "🍽️Comidas"
   },
