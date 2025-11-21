@@ -464,7 +464,7 @@
   {
     "nombre": "Mila ESPINACA carne o pollo",
     "descripcion": "Crema de espinaca y queso gratinado. Acompañadas con puré, fideos, ensalada o papas fritas",
-    "precio": "22000",
+    "precio": 22500,
     "imagen": "img/Esp.jpg",
     "categoria": "🍽️Comidas"
   },
