@@ -443,7 +443,7 @@
   {
     "nombre": "Ensalada STRACCIATELLA mozzarella italiana",
     "descripcion": "Mix de verdes, tomates cherries, jamón crudo, mozzarella, tiras de tortilla",
-    "precio": "28000",
+    "precio": 28500,
     "imagen": "img/Estrachatelaens.jpg",
     "categoria": "🍽️Comidas"
   },
