@@ -618,7 +618,7 @@
   {
     "nombre": "Salmón rosado",
     "descripcion": "Acompañado con espinaca, papas a la crema o verduras grilladas",
-    "precio": "36500",
+    "precio": 37000,
     "imagen": "img/Blu.jpg",
     "categoria": "🍽️Comidas"
   },
