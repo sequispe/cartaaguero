@@ -555,7 +555,7 @@
   {
     "nombre": "Pollo (pechuga)",
     "descripcion": "Con fritas, puré, ensalada o arroz",
-    "precio": "20500",
+    "precio": 200,
     "imagen": "img/Pechuga.jpg",
     "categoria": "🍽️Comidas"
   },
