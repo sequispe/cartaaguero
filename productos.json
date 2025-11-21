@@ -1009,8 +1009,8 @@
   },
   {
     "nombre": "STELLA ARTOIS (410cc - Porrón)",
-    "descripcion": "Cerveza Stella Artois 410cc",
-    "precio": "7400",
+    "descripcion": "Cerveza Stella Artois 0cc",
+    "precio": 7400,
     "imagen": "img/Coroa.jpg",
     "categoria": "🥤 Bebidas y vinos"
   },
