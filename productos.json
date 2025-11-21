@@ -632,7 +632,7 @@
   {
     "nombre": "Pollo N.Y",
     "descripcion": "Pollo ahumado, mix de queso, verdeo, tomate and papas fritas",
-    "precio": "23500",
+    "precio": 24000,
     "imagen": "img/Ny.jpg",
     "categoria": "🍽️Comidas"
   },
