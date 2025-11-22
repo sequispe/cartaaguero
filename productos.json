@@ -1198,8 +1198,8 @@
   },
   {
     "nombre": "Flan casero",
-    "descripcion": "Con crema y dulce de leche",
-    "precio": "11000",
+    "descripcion": "Con crema y dulce de leche 11",
+    "precio": 11000,
     "imagen": "img/Flan.jpg",
     "categoria": "🍮POSTRES"
   },
