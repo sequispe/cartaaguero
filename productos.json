@@ -1212,8 +1212,8 @@
   },
   {
     "nombre": "Helado",
-    "descripcion": "Bochas: dulce de leche, chocolate, americano",
-    "precio": "8500",
+    "descripcion": "Bochas : dulce de leche, chocolate, americano",
+    "precio": 8500,
     "imagen": "img/Helado.jpg",
     "categoria": "🍮POSTRES"
   },
