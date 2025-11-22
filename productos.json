@@ -1205,8 +1205,8 @@
   },
   {
     "nombre": "Ensalada de frutas",
-    "descripcion": "Con bocha de helado",
-    "precio": "14000",
+    "descripcion": "Con bocha de helado14",
+    "precio": 14000,
     "imagen": "img/Ensfruta.jpg",
     "categoria": "🍮POSTRES"
   },
