@@ -660,7 +660,7 @@
   {
     "nombre": "Matambrito a la PIZZA",
     "descripcion": "De cerdo, muzarella, tomate y orégano con papas fritas",
-    "precio": "28000",
+    "precio": 28500,
     "imagen": "img/20250815_132057.jpg",
     "categoria": "🍽️Comidas"
   },
