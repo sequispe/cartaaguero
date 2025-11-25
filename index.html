@@ -237,7 +237,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (idiomaActual === "en") filename = "productos-en.json";
     if (idiomaActual === "pt") filename = "productos-port.json";
 
-    const RAW_URL = `https://raw.githubusercontent.com/${USER}/${REPO}/main/${filename}`;
+    /* 🚀 URL SIN BLOQUEO (jsDelivr) */
+    const RAW_URL = `https://cdn.jsdelivr.net/gh/${USER}/${REPO}/${filename}`;
 
     try {
       const res = await fetch(RAW_URL, { cache: "no-store" });
@@ -259,7 +260,7 @@ document.addEventListener('DOMContentLoaded', () => {
         precio: p.precio || p.preco || p.price,
         imagen: p.imagen,
         categoria:
-          idiomaActual === "es" ? (p.categoria) :
+          idiomaActual === "es" ? p.categoria :
           idiomaActual === "en" ? (p.category || p.categoria) :
           p.categoria
       }));
