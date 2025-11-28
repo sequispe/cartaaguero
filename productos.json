@@ -1244,5 +1244,12 @@
     "precio": "9200",
     "imagen": "img/torgrende.jpg",
     "categoria": "📋MENU del DIA/SUGERENCIAS Y NOVEDADES"
+  },
+  {
+    "nombre": "piza",
+    "descripcion": "piza 4 porciones con muzarela salsa de tomate y oregano",
+    "precio": 25500,
+    "imagen": "img/piza.jpg",
+    "categoria": "🍽️Comidas"
   }
 ]
