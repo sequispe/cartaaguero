@@ -1,349 +1,182 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Admin - Tilo Café Agüero</title>
-  <style>
-    body {
-      background: #f4ece6;
-      margin: 0;
-      font-family: Arial, sans-serif;
-      padding: 25px;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Carta Digital</title>
 
-    h1 {
-      text-align: center;
-      color: #5e4234;
-      margin-bottom: 20px;
-    }
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
 
-    /* BUSCADOR */
-    #search {
-      width: 70%;
-      padding: 10px;
-      border-radius: 8px;
-      border: 1px solid #b8a59a;
-      margin-bottom: 15px;
-    }
+        h1 {
+            text-align: center;
+        }
 
-    button {
-      background: #806250;
-      color: white;
-      border: none;
-      padding: 8px 14px;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: .3s;
-    }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background: white;
+        }
 
-    button:hover { background: #a07863; }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
 
-    /* FORMULARIO */
-    #formBox {
-      background: #fff;
-      padding: 15px;
-      border-radius: 12px;
-      margin-bottom: 20px;
-      display: none;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-    }
+        th {
+            background: #333;
+            color: white;
+        }
 
-    input, textarea {
-      width: 100%;
-      padding: 8px;
-      margin: 6px 0;
-      border-radius: 6px;
-      border: 1px solid #c8b8ac;
-    }
+        td[contenteditable="true"] {
+            background: #fff7cc;
+            border-radius: 4px;
+        }
 
-    #preview {
-      max-width: 120px;
-      margin-top: 6px;
-      border-radius: 8px;
-    }
+        .btn-guardar {
+            padding: 6px 12px;
+            border: none;
+            background: #28a745;
+            color: white;
+            cursor: pointer;
+            border-radius: 4px;
+        }
 
-    /* TABLA */
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      background: #fff;
-      border-radius: 8px;
-      overflow: hidden;
-    }
-
-    th {
-      background: #806250;
-      color: white;
-      padding: 10px;
-      text-align: left;
-    }
-
-    td {
-      padding: 8px;
-      border-bottom: 1px solid #e5d8cf;
-    }
-
-    img {
-      width: 60px;
-      border-radius: 6px;
-    }
-
-    /* NOTIFICACIÓN */
-    #notif {
-      display: none;
-      position: fixed;
-      bottom: 25px;
-      right: 25px;
-      background: #5e4234;
-      padding: 12px 18px;
-      color: white;
-      border-radius: 10px;
-      font-weight: bold;
-    }
-  </style>
+        .btn-eliminar {
+            padding: 6px 12px;
+            border: none;
+            background: #dc3545;
+            color: white;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+    </style>
 </head>
+
 <body>
 
-<h1>Panel de Administración - Tilo Café Agüero</h1>
+    <h1>Administrador de Productos</h1>
 
-<!-- TOKEN -->
-<div style="margin-bottom:15px;">
-  <input type="password" id="token" placeholder="Pegá tu token" style="width:60%; padding:8px;">
-  <button onclick="saveToken()">Guardar Token</button>
-  <button onclick="clearToken()">Borrar</button>
-  <p id="tokMsg"></p>
-</div>
+    <table id="tablaProductos">
+        <thead>
+            <tr>
+                <th>Imagen</th>
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th>Precio</th>
+                <th>Categoría</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="productosBody"></tbody>
+    </table>
 
-<!-- BUSCADOR -->
-<input type="text" id="search" placeholder="Buscar producto..." oninput="buscar()">
+    <script>
+        // CONFIGURACIÓN GITHUB  
+        const OWNER = "sequispe";
+        const REPO = "cartaaguero";
+        const FILE_PATH = "productos.json";
+        const TOKEN = "TOKEN_GITHUB"; // 🔴 CAMBIAR POR TU TOKEN
 
-<!-- BOTÓN MOSTRAR FORM -->
-<button onclick="toggleForm()">Agregar producto ➕</button>
+        let productos = [];
+        let shaActual = "";
 
-<!-- FORMULARIO -->
-<div id="formBox">
-  <h3 id="formTitle">Agregar producto</h3>
+        // Cargar productos.json desde GitHub
+        async function cargarProductos() {
+            const url = `https://api.github.com/repos/${OWNER}/${REPO}/contents/${FILE_PATH}`;
 
-  <input type="hidden" id="editIndex">
+            const res = await fetch(url);
+            const data = await res.json();
 
-  <label>Nombre</label>
-  <input type="text" id="nombre" required>
+            shaActual = data.sha;
+            productos = JSON.parse(atob(data.content));
 
-  <label>Descripción</label>
-  <textarea id="descripcion" required></textarea>
+            renderTabla();
+        }
 
-  <label>Precio</label>
-  <input type="number" id="precio" required>
+        // Render tabla editable
+        function renderTabla() {
+            const tbody = document.getElementById("productosBody");
+            tbody.innerHTML = "";
 
-  <label>Imagen (img/foto.jpg)</label>
-  <input type="text" id="imagen" oninput="preview()" required>
-  <img id="preview">
+            productos.forEach((p, index) => {
+                const fila = document.createElement("tr");
 
-  <label>Categoría</label>
-  <input list="cats" type="text" id="categoria" required>
-  <datalist id="cats"></datalist>
+                fila.innerHTML = `
+                    <td contenteditable="true">${p.imagen}</td>
+                    <td contenteditable="true">${p.nombre}</td>
+                    <td contenteditable="true">${p.descripcion}</td>
+                    <td contenteditable="true">${p.precio}</td>
+                    <td contenteditable="true">${p.categoria}</td>
+                    <td>
+                        <button class="btn-guardar" onclick="guardarProducto(${index})">Guardar</button>
+                        <button class="btn-eliminar" onclick="eliminarProducto(${index})">Eliminar</button>
+                    </td>
+                `;
 
-  <button onclick="guardar()">Guardar</button>
-</div>
+                tbody.appendChild(fila);
+            });
+        }
 
-<!-- TABLA -->
-<table>
-  <thead>
-    <tr>
-      <th>Img</th>
-      <th>Nombre</th>
-      <th>Descripción</th>
-      <th>Categoría</th>
-      <th>Precio</th>
-      <th>Acciones</th>
-    </tr>
-  </thead>
-  <tbody id="tb"></tbody>
-</table>
+        // Guardar un producto editado
+        async function guardarProducto(i) {
+            const fila = document.querySelectorAll("#productosBody tr")[i];
+            const celdas = fila.querySelectorAll("td");
 
-<!-- NOTIFICACIÓN -->
-<div id="notif"></div>
+            productos[i] = {
+                imagen: celdas[0].innerText.trim(),
+                nombre: celdas[1].innerText.trim(),
+                descripcion: celdas[2].innerText.trim(),
+                precio: Number(celdas[3].innerText.trim()),
+                categoria: celdas[4].innerText.trim()
+            };
 
-<script>
-const USER = "cholose10";
-const REPO = "cartaaguero";
-const FILE = "productos.json";
+            await subirAGitHub();
+            alert("Producto actualizado ✔");
+        }
 
-let productos = [];
+        // Eliminar producto
+        async function eliminarProducto(i) {
+            if (!confirm("¿Eliminar este producto?")) return;
 
-/* TOKEN */
-function saveToken(){
-  let t = document.getElementById("token").value.trim();
-  if(t){
-    localStorage.setItem("token_tilo", t);
-    document.getElementById("tokMsg").innerText = "🔐 Token guardado.";
-    document.getElementById("token").value = "";
-  }
-}
-function clearToken(){
-  localStorage.removeItem("token_tilo");
-  document.getElementById("tokMsg").innerText = "⚠️ Token borrado.";
-}
-function getToken(){ return localStorage.getItem("token_tilo"); }
+            productos.splice(i, 1);
+            await subirAGitHub();
+            renderTabla();
+        }
 
-/* LOAD */
-async function load(){
-  const url = `https://raw.githubusercontent.com/${USER}/${REPO}/main/${FILE}`;
-  const res = await fetch(url);
-  productos = await res.json();
-  render(productos);
-  cargarCategorias();
-}
-load();
+        // Subir productos.json a GitHub
+        async function subirAGitHub() {
+            const url = `https://api.github.com/repos/${OWNER}/${REPO}/contents/${FILE_PATH}`;
 
-/* RENDER */
-function render(list){
-  const tb = document.getElementById("tb");
-  tb.innerHTML = "";
+            const nuevoContenido = btoa(JSON.stringify(productos, null, 2));
 
-  list.forEach((p,i) => {
-    tb.innerHTML += `
-      <tr>
-        <td><img src="${p.imagen}"></td>
-        <td>${p.nombre}</td>
-        <td>${p.descripcion}</td>
-        <td>${p.categoria}</td>
-        <td>$${p.precio}</td>
-        <td>
-          <button onclick="editar(${i})">Editar</button>
-          <button onclick="eliminar(${i})">Eliminar</button>
-        </td>
-      </tr>
-    `;
-  });
-}
+            const res = await fetch(url, {
+                method: "PUT",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Authorization": `Bearer ${TOKEN}`
+                },
+                body: JSON.stringify({
+                    message: "Actualización desde admin",
+                    content: nuevoContenido,
+                    sha: shaActual
+                })
+            });
 
-/* BUSCADOR */
-function buscar(){
-  const q = document.getElementById("search").value.toLowerCase();
-  const f = productos.filter(p =>
-    p.nombre.toLowerCase().includes(q) ||
-    p.descripcion.toLowerCase().includes(q) ||
-    p.categoria.toLowerCase().includes(q)
-  );
-  render(f);
-}
+            const data = await res.json();
+            shaActual = data.content.sha;
+        }
 
-/* PREVIEW IMG */
-function preview(){
-  document.getElementById("preview").src =
-    document.getElementById("imagen").value;
-}
-
-/* TOGGLE FORM */
-function toggleForm(){
-  const box = document.getElementById("formBox");
-  box.style.display = box.style.display === "block" ? "none" : "block";
-}
-
-/* CATEGORÍAS */
-function cargarCategorias(){
-  const cats = [...new Set(productos.map(p => p.categoria))].sort();
-  const dat = document.getElementById("cats");
-  dat.innerHTML = "";
-  cats.forEach(c => {
-    dat.innerHTML += `<option value="${c}">`;
-  });
-}
-
-/* GUARDAR */
-async function guardar(){
-  const prod = {
-    nombre: nombre.value,
-    descripcion: descripcion.value,
-    precio: parseFloat(precio.value),
-    imagen: imagen.value,
-    categoria: categoria.value
-  };
-
-  let idx = document.getElementById("editIndex").value;
-
-  if(idx === "")
-    productos.push(prod);
-  else
-    productos[idx] = prod;
-
-  await saveGitHub(JSON.stringify(productos, null, 2));
-
-  render(productos);
-  cargarCategorias();
-
-  notif("Guardado correctamente ✔️");
-
-  document.getElementById("formBox").style.display = "none";
-  document.getElementById("editIndex").value = "";
-}
-
-/* EDITAR */
-function editar(i){
-  const p = productos[i];
-
-  nombre.value = p.nombre;
-  descripcion.value = p.descripcion;
-  precio.value = p.precio;
-  imagen.value = p.imagen;
-  categoria.value = p.categoria;
-  preview();
-  document.getElementById("editIndex").value = i;
-
-  document.getElementById("formBox").style.display = "block";
-  document.getElementById("formTitle").innerText = "Editar producto";
-}
-
-/* ELIMINAR */
-async function eliminar(i){
-  if(!confirm("¿Eliminar producto?")) return;
-
-  productos.splice(i,1);
-  render(productos);
-
-  await saveGitHub(JSON.stringify(productos,null,2));
-  notif("Producto eliminado ❌");
-}
-
-/* GUARDAR EN GITHUB */
-async function saveGitHub(content){
-  const token = getToken();
-  if(!token){ notif("Falta token ❌"); return; }
-
-  const api = `https://api.github.com/repos/${USER}/${REPO}/contents/${FILE}`;
-
-  const get = await fetch(api, {
-    headers: { Authorization: "token " + token }
-  });
-
-  const data = await get.json();
-
-  const res = await fetch(api, {
-    method: "PUT",
-    headers: {
-      Authorization: "token " + token,
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-      message: "Admin update",
-      content: btoa(unescape(encodeURIComponent(content))),
-      sha: data.sha
-    })
-  });
-
-  return res.ok;
-}
-
-/* NOTIF */
-function notif(msg){
-  const n = document.getElementById("notif");
-  n.innerText = msg;
-  n.style.display = "block";
-  setTimeout(()=> n.style.display="none", 2500);
-}
-</script>
+        // Iniciar
+        cargarProductos();
+    </script>
 
 </body>
 </html>
