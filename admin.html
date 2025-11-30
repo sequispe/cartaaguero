@@ -1,165 +1,148 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Admin - Carta Digital</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Carta - Tilo Café Agüero</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f4f4f4;
-      margin: 0;
-      padding: 20px;
-    }
+    body { font-family: Arial, sans-serif; margin: 20px; background: #f7f3f0; color:#333; }
+    h1 { text-align:center; color:#806250; }
+    #toggleForm { background:#806250; color:white; padding:10px 15px; border-radius:6px; cursor:pointer; margin-bottom:15px; }
 
-    h1 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      background: white;
-      border-radius: 10px;
-      overflow: hidden;
-    }
-
-    th, td {
-      border-bottom: 1px solid #ddd;
-      padding: 12px;
-      text-align: left;
-    }
-
-    th {
-      background: #222;
-      color: white;
-    }
-
-    tr:hover {
-      background: #f1f1f1;
-    }
-
-    button {
-      padding: 6px 12px;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-
-    .guardar {
-      background: #28a745;
-      color: white;
-    }
-
-    .editar {
-      background: #007bff;
-      color: white;
-    }
+    form { display:none; background:#fff; padding:15px; border-radius:10px; margin-bottom:20px; }
+    input, textarea { width:100%; padding:8px; margin:7px 0; border-radius:6px; border:1px solid #ccc; }
+    table { width:100%; border-collapse:collapse; background:white; }
+    th,td { border:1px solid #ddd; padding:8px; }
+    th { background:#806250; color:white; }
+    button { background:#806250; color:white; border:none; padding:6px 10px; border-radius:6px; cursor:pointer; }
+    .btn-delete { background:#c0392b; }
+    #preview { max-width:100px; margin-top:5px; border-radius:6px; }
   </style>
 </head>
 <body>
+  <h1>Panel de Administración</h1>
 
-<h1>Administrador de Productos</h1>
+  <div>
+    <label>Token:</label>
+    <input type="password" id="token" placeholder="Pegar token">
+    <button onclick="saveToken()">Guardar</button>
+    <button onclick="clearToken()">Borrar</button>
+    <p id="tokenStatus"></p>
+  </div>
 
-<table id="tablaProductos">
-  <thead>
-    <tr>
-      <th>Imagen</th>
-      <th>Nombre</th>
-      <th>Descripción</th>
-      <th>Categoría</th>
-      <th>Precio</th>
-      <th>Acciones</th>
-    </tr>
-  </thead>
-  <tbody></tbody>
-</table>
+  <input id="search" placeholder="Buscar..." oninput="filterProducts()">
+
+  <button id="toggleForm" onclick="toggleForm()">+ Agregar producto</button>
+
+  <form id="form">
+    <input type="hidden" id="editIndex">
+    <label>Nombre</label>
+    <input id="nombre">
+
+    <label>Descripción</label>
+    <textarea id="descripcion"></textarea>
+
+    <label>Precio</label>
+    <input type="number" id="precio">
+
+    <label>Imagen (img/...)</label>
+    <input id="imagen" oninput="previewImage()">
+    <img id="preview">
+
+    <label>Categoría</label>
+    <input id="categoria">
+
+    <button type="button" onclick="guardarFormulario()">Guardar</button>
+  </form>
+
+  <table>
+    <thead><tr>
+      <th>Imagen</th><th>Nombre</th><th>Descripción</th><th>Categoría</th><th>Precio</th><th>Acciones</th>
+    </tr></thead>
+    <tbody id="tbody"></tbody>
+  </table>
 
 <script>
-// ==================== CONFIG ====================
-const repoUser = "sequispe";
-const repoName = "cartaaguero";
-const filePath = "productos.json";
+const USERNAME="cholose10", REPO="cartaaguero", FILE_PATH="productos.json";
+let productos=[];
 
-const apiBase = `https://api.github.com/repos/${repoUser}/${repoName}`;
-
-// ==================== CARGAR PRODUCTOS ====================
-async function cargarProductos() {
-  const res = await fetch(`https://raw.githubusercontent.com/${repoUser}/${repoName}/main/${filePath}`);
-  const data = await res.json();
-  renderTabla(data);
+function toggleForm(){
+  const f=document.getElementById('form');
+  f.style.display = f.style.display==='none' || f.style.display==='' ? 'block':'none';
 }
 
-let productosGlobal = [];
+function saveToken(){ const t=document.getElementById('token').value; localStorage.setItem('github_token',t); document.getElementById('tokenStatus').innerText='Token guardado'; }
+function clearToken(){ localStorage.removeItem('github_token'); document.getElementById('tokenStatus').innerText='Token borrado'; }
+function getToken(){ return localStorage.getItem('github_token'); }
 
-// ==================== MOSTRAR TABLA ====================
-function renderTabla(productos) {
-  productosGlobal = productos;
-  const tbody = document.querySelector("#tablaProductos tbody");
-  tbody.innerHTML = "";
+async function loadProducts(){
+  const url=`https://raw.githubusercontent.com/${USERNAME}/${REPO}/main/${FILE_PATH}`;
+  const r=await fetch(url); productos=await r.json(); render(productos);
+}
 
-  productos.forEach((p, index) => {
-    const tr = document.createElement("tr");
+function render(lista){
+    const tb=document.getElementById('tbody'); tb.innerHTML='';
+    lista.forEach((p,i)=>{
+      tb.innerHTML+=`
+        <tr>
+          <td><img src="${p.imagen}" style="max-width:60px;"><br><input value="${p.imagen}" oninput="editField(${i}, 'imagen', this.value)"></td>
+          <td><input value="${p.nombre}" oninput="editField(${i}, 'nombre', this.value)"></td>
+          <td><textarea oninput="editField(${i}, 'descripcion', this.value)">${p.descripcion}</textarea></td>
+          <td><input value="${p.categoria}" oninput="editField(${i}, 'categoria', this.value)"></td>
+          <td><input type="number" value="${p.precio}" oninput="editField(${i}, 'precio', this.value)"></td>
+          <td>
+            <button onclick="guardarFila(${i})">Guardar</button>
+            <button class="btn-delete" onclick="del(${i})">Eliminar</button>
+          </td>
+        </tr>`;
+    });
+  }
 
-    tr.innerHTML = `
-      <td><input type="text" value="${p.imagen}" data-campo="imagen"></td>
-      <td><input type="text" value="${p.nombre}" data-campo="nombre"></td>
-      <td><input type="text" value="${p.descripcion}" data-campo="descripcion"></td>
-      <td><input type="text" value="${p.categoria}" data-campo="categoria"></td>
-      <td><input type="number" value="${p.precio}" data-campo="precio"></td>
-      <td>
-        <button class="guardar" onclick="guardarProducto(${index}, this)">Guardar</button>
-      </td>
-    `;
+function editar(i){
+  const p=productos[i];
+  document.getElementById('editIndex').value=i;
+  nombre.value=p.nombre;
+  descripcion.value=p.descripcion;
+  precio.value=p.precio;
+  imagen.value=p.imagen;
+  categoria.value=p.categoria;
+  preview.src=p.imagen;
+  document.getElementById('form').style.display='block';
+}
 
-    tbody.appendChild(tr);
+function eliminar(i){ productos.splice(i,1); saveToGitHub(JSON.stringify(productos,null,2)); }
+
+function guardarFormulario(){
+  const i=document.getElementById('editIndex').value;
+  const obj={ nombre:nombre.value, descripcion:descripcion.value, precio:Number(precio.value), imagen:imagen.value, categoria:categoria.value };
+
+  if(i==='') productos.push(obj); else productos[i]=obj;
+  saveToGitHub(JSON.stringify(productos,null,2));
+}
+
+async function saveToGitHub(content){
+  const token=getToken(); if(!token){ alert('Falta token'); return; }
+  const sha=await getSHA();
+
+  await fetch(`https://api.github.com/repos/${USERNAME}/${REPO}/contents/${FILE_PATH}`,{
+    method:'PUT',
+    headers:{'Content-Type':'application/json','Authorization':`token ${token}`},
+    body:JSON.stringify({message:'update', content:btoa(unescape(encodeURIComponent(content))), sha})
   });
+  loadProducts();
+  alert('Guardado');
 }
 
-// ==================== GUARDAR CAMBIOS ====================
-async function guardarProducto(index, boton) {
-  boton.disabled = true;
-  boton.textContent = "Guardando...";
-
-  const fila = boton.parentNode.parentNode;
-  const inputs = fila.querySelectorAll("input");
-
-  inputs.forEach(input => {
-    const campo = input.getAttribute("data-campo");
-    productosGlobal[index][campo] = (campo === "precio")
-        ? Number(input.value)
-        : input.value;
-  });
-
-  await subirAGithub(productosGlobal);
-
-  boton.disabled = false;
-  boton.textContent = "Guardar";
+async function getSHA(){
+  const r=await fetch(`https://api.github.com/repos/${USERNAME}/${REPO}/contents/${FILE_PATH}`);
+  const j=await r.json(); return j.sha;
 }
 
-// ==================== SUBIR A GITHUB ====================
-async function subirAGithub(jsonData) {
-  const fileUrl = `${apiBase}/contents/${filePath}`;
+function previewImage(){ preview.src=document.getElementById('imagen').value; }
 
-  const fileInfo = await fetch(fileUrl).then(r => r.json());
+function filterProducts(){ const t=search.value.toLowerCase(); render(productos.filter(p=>p.nombre.toLowerCase().includes(t))); }
 
-  await fetch(fileUrl, {
-    method: "PUT",
-    headers: {
-      "Content-Type": "application/json",
-      "Authorization": `Bearer ghp_tu_token_aqui`   // ⚠️ PONÉ TU TOKEN
-    },
-    body: JSON.stringify({
-      message: "Actualización desde admin (edición en tabla)",
-      content: btoa(unescape(encodeURIComponent(JSON.stringify(jsonData, null, 2)))),
-      sha: fileInfo.sha
-    })
-  });
-}
-
-cargarProductos();
+loadProducts();
 </script>
-
 </body>
 </html>
