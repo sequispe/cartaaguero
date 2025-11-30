@@ -17,6 +17,27 @@
     button { background:#806250; color:white; border:none; padding:6px 10px; border-radius:6px; cursor:pointer; }
     .btn-delete { background:#c0392b; }
     #preview { max-width:100px; margin-top:5px; border-radius:6px; }
+
+    /* Vista previa flotante */
+    #hoverPreview {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 220px;
+      height: auto;
+      display: none;
+      border: 2px solid #806250;
+      border-radius: 10px;
+      background: #fff;
+      z-index: 9999;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      transition: transform 0.15s ease-in-out;
+      padding: 6px;
+    }
+
+    /* pequeña mejora visual para inputs en tabla */
+    td input, td textarea { width: 95%; }
+    td img.mini-img { cursor: pointer; }
   </style>
 </head>
 <body>
@@ -76,20 +97,36 @@ function clearToken(){ localStorage.removeItem('github_token'); document.getElem
 function getToken(){ return localStorage.getItem('github_token'); }
 
 async function loadProducts(){
-  const url=`https://raw.githubusercontent.com/${USERNAME}/${REPO}/main/${FILE_PATH}`;
-  const r=await fetch(url); productos=await r.json(); render(productos);
+  try{
+    const url=`https://raw.githubusercontent.com/${USERNAME}/${REPO}/main/${FILE_PATH}`;
+    const r=await fetch(url);
+    if(!r.ok) throw new Error('No se pudo cargar productos');
+    productos=await r.json(); render(productos);
+  }catch(err){
+    console.error(err); alert('Error cargando productos: '+err.message);
+  }
 }
 
 function render(lista){
     const tb=document.getElementById('tbody'); tb.innerHTML='';
     lista.forEach((p,i)=>{
+      // escape values to avoid breaking HTML
+      const imagenEsc = (p.imagen||'').replaceAll('"','&quot;');
+      const nombreEsc = (p.nombre||'').replaceAll('"','&quot;');
+      const descEsc = (p.descripcion||'').replaceAll('"','&quot;');
+      const catEsc = (p.categoria||'').replaceAll('"','&quot;');
+      const precioEsc = (p.precio||'');
+
       tb.innerHTML+=`
         <tr>
-          <td><img src="${p.imagen}" style="max-width:60px;"><br><input value="${p.imagen}" oninput="editField(${i}, 'imagen', this.value)"></td>
-          <td><input value="${p.nombre}" oninput="editField(${i}, 'nombre', this.value)"></td>
-          <td><textarea oninput="editField(${i}, 'descripcion', this.value)">${p.descripcion}</textarea></td>
-          <td><input value="${p.categoria}" oninput="editField(${i}, 'categoria', this.value)"></td>
-          <td><input type="number" value="${p.precio}" oninput="editField(${i}, 'precio', this.value)"></td>
+          <td>
+            <img src="${imagenEsc}" class="mini-img" style="max-width:60px; display:block; margin:0 auto 6px;">
+            <input value="${imagenEsc}" oninput="editField(${i}, 'imagen', this.value)">
+          </td>
+          <td><input value="${nombreEsc}" oninput="editField(${i}, 'nombre', this.value)"></td>
+          <td><textarea oninput="editField(${i}, 'descripcion', this.value)">${descEsc}</textarea></td>
+          <td><input value="${catEsc}" oninput="editField(${i}, 'categoria', this.value)"></td>
+          <td><input type="number" value="${precioEsc}" oninput="editField(${i}, 'precio', this.value)"></td>
           <td>
             <button onclick="guardarFila(${i})">Guardar</button>
             <button class="btn-delete" onclick="del(${i})">Eliminar</button>
@@ -98,6 +135,7 @@ function render(lista){
     });
   }
 
+// llamada original 'editar' (mantener por compatibilidad con formulario)
 function editar(i){
   const p=productos[i];
   document.getElementById('editIndex').value=i;
@@ -106,31 +144,55 @@ function editar(i){
   precio.value=p.precio;
   imagen.value=p.imagen;
   categoria.value=p.categoria;
-  preview.src=p.imagen;
+  const prev = document.getElementById('preview'); if(prev) prev.src=p.imagen;
   document.getElementById('form').style.display='block';
 }
 
-function eliminar(i){ productos.splice(i,1); saveToGitHub(JSON.stringify(productos,null,2)); }
+// alias para eliminar
+async function del(i){
+  if(!confirm('¿Eliminar producto?')) return;
+  productos.splice(i,1);
+  const ok = await saveToGitHub(JSON.stringify(productos,null,2));
+  if(ok) loadProducts();
+}
 
 function guardarFormulario(){
   const i=document.getElementById('editIndex').value;
   const obj={ nombre:nombre.value, descripcion:descripcion.value, precio:Number(precio.value), imagen:imagen.value, categoria:categoria.value };
 
-  if(i==='') productos.push(obj); else productos[i]=obj;
-  saveToGitHub(JSON.stringify(productos,null,2));
+  if(i==='' || i===null) productos.push(obj); else productos[i]=obj;
+  saveToGitHub(JSON.stringify(productos,null,2)).then(ok=>{ if(ok){ loadProducts(); alert('Guardado'); } });
+}
+
+// --- NUEVAS FUNCIONES SOLUCIÓN DE ERRORES ---
+function editField(index, field, value){
+  // actualizar en memoria (como string or number)
+  if(field==='precio') productos[index][field] = Number(value) || 0;
+  else productos[index][field] = value;
+}
+
+async function guardarFila(index){
+  const p = productos[index];
+  if(!validarProducto(p)){
+    alert('El producto tiene campos inválidos. Revisá nombre, descripción, categoría y precio > 0.');
+    return;
+  }
+  const ok = await saveToGitHub(JSON.stringify(productos,null,2));
+  if(ok){ animarFila(index); alert('Fila guardada'); }
 }
 
 async function saveToGitHub(content){
-  const token=getToken(); if(!token){ alert('Falta token'); return; }
-  const sha=await getSHA();
-
-  await fetch(`https://api.github.com/repos/${USERNAME}/${REPO}/contents/${FILE_PATH}`,{
-    method:'PUT',
-    headers:{'Content-Type':'application/json','Authorization':`token ${token}`},
-    body:JSON.stringify({message:'update', content:btoa(unescape(encodeURIComponent(content))), sha})
-  });
-  loadProducts();
-  alert('Guardado');
+  try{
+    const token = getToken(); if(!token){ alert('Falta token'); return false; }
+    const sha = await getSHA();
+    const res = await fetch(`https://api.github.com/repos/${USERNAME}/${REPO}/contents/${FILE_PATH}`,{
+      method:'PUT',
+      headers:{'Content-Type':'application/json','Authorization':`token ${token}`},
+      body:JSON.stringify({message:'update', content:btoa(unescape(encodeURIComponent(content))), sha})
+    });
+    if(!res.ok){ const j=await res.json(); console.error('GitHub error', j); alert('Error guardando en GitHub: '+(j.message||res.status)); return false; }
+    return true;
+  }catch(e){ console.error(e); alert('Error guardando: '+e.message); return false; }
 }
 
 async function getSHA(){
@@ -138,11 +200,61 @@ async function getSHA(){
   const j=await r.json(); return j.sha;
 }
 
-function previewImage(){ preview.src=document.getElementById('imagen').value; }
+function previewImage(){ const prev=document.getElementById('preview'); if(prev) prev.src=document.getElementById('imagen').value; }
 
-function filterProducts(){ const t=search.value.toLowerCase(); render(productos.filter(p=>p.nombre.toLowerCase().includes(t))); }
+function filterProducts(){ const t=document.getElementById('search').value.toLowerCase(); render(productos.filter(p=> (p.nombre||'').toLowerCase().includes(t) || (p.descripcion||'').toLowerCase().includes(t) || (p.categoria||'').toLowerCase().includes(t))); }
 
 loadProducts();
+</script>
+<img id="hoverPreview" />
+
+<script>
+// --- VALIDACIONES SIMPLES ---
+function validarProducto(p){
+  if(!p) return false;
+  if(!p.nombre || p.nombre.toString().trim().length < 2) return false;
+  if(!p.descripcion || p.descripcion.toString().trim().length < 2) return false;
+  if(!p.categoria || p.categoria.toString().trim().length < 2) return false;
+  if(p.precio===undefined || p.precio===null || Number(p.precio) <= 0) return false;
+  return true;
+}
+
+// --- ANIMACIÓN DE FILA AL GUARDAR ---
+function animarFila(i){
+  const filas = document.querySelectorAll('#tbody tr');
+  if(filas[i]){
+    filas[i].style.transition = 'background 0.5s';
+    filas[i].style.background = '#d1f2d1';
+    setTimeout(()=>{ filas[i].style.background = ''; },500);
+  }
+}
+
+// --- VISTA PREVIA AL PASAR EL MOUSE ---
+const hoverPreview = document.getElementById('hoverPreview');
+
+document.addEventListener('mouseover', e =>{
+  const target = e.target;
+  if(target && target.classList && target.classList.contains('mini-img')){
+    hoverPreview.src = target.src;
+    hoverPreview.style.display = 'block';
+  }
+});
+
+document.addEventListener('mousemove', e =>{
+  if(hoverPreview.style.display === 'block'){
+    const x = e.pageX + 18;
+    const y = e.pageY + 18;
+    hoverPreview.style.left = x + 'px';
+    hoverPreview.style.top = y + 'px';
+  }
+});
+
+document.addEventListener('mouseout', e =>{
+  const target = e.target;
+  if(target && target.classList && target.classList.contains('mini-img')){
+    hoverPreview.style.display = 'none';
+  }
+});
 </script>
 </body>
 </html>
