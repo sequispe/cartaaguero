@@ -64,7 +64,7 @@
     <textarea id="descripcion"></textarea>
 
     <label>Precio</label>
-    <input type="number" id="precio">
+    <input id="precio">
 
     <label>Imagen (img/...)</label>
     <input id="imagen" oninput="previewImage()">
@@ -126,7 +126,7 @@ function render(lista){
           <td><input value="${nombreEsc}" oninput="editField(${i}, 'nombre', this.value)"></td>
           <td><textarea oninput="editField(${i}, 'descripcion', this.value)">${descEsc}</textarea></td>
           <td><input value="${catEsc}" oninput="editField(${i}, 'categoria', this.value)"></td>
-          <td><input type="number" value="${precioEsc}" oninput="editField(${i}, 'precio', this.value)"></td>
+          <td><input type="text" value="${precioEsc}" oninput="editField(${i}, 'precio', this.value)"></td>
           <td>
             <button onclick="guardarFila(${i})">Guardar</button>
             <button class="btn-delete" onclick="del(${i})">Eliminar</button>
@@ -229,7 +229,8 @@ function validarProducto(p){
   if(!p.nombre || p.nombre.toString().trim().length < 2) return false;
   if(!p.descripcion || p.descripcion.toString().trim().length < 2) return false;
   if(!p.categoria || p.categoria.toString().trim().length < 2) return false;
-  if(p.precio===undefined || p.precio===null || Number(p.precio) <= 0) return false;
+  // permitir precios mixtos ej: "500/700" o "500-700"
+  if(!p.precio || p.precio.toString().trim().length < 1) return false;
   return true;
 }
 
