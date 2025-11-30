@@ -2,7 +2,7 @@
   {
     "nombre": "Café expresso",
     "descripcion": "Café chico",
-    "precio": 3400,
+    "precio": 340,
     "imagen": "img/cafe.jpg",
     "categoria": "Cafetería☕️"
   },
