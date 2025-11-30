@@ -121,14 +121,14 @@
   {
     "nombre": "Crema",
     "descripcion": "Crema de leche",
-    "precio": 300,
+    "precio": 300000000,
     "imagen": "img/cremaadi.jpg",
     "categoria": "Cafetería☕️"
   },
   {
     "nombre": "Leche de almendras",
     "descripcion": "Chico $350 - Grande $450",
-    "precio": "350-450",
+    "precio": 0,
     "imagen": "img/lmen.jpg",
     "categoria": "Cafetería☕️"
   },
