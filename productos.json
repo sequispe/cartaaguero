@@ -121,7 +121,7 @@
   {
     "nombre": "Crema",
     "descripcion": "Crema de leche",
-    "precio": 300000000,
+    "precio": 350,
     "imagen": "img/cremaadi.jpg",
     "categoria": "Cafetería☕️"
   },
