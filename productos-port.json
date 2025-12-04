@@ -1,7 +1,7 @@
 [
   {
     "nome": "Café expresso",
-    "descrição": "Café pequeno",
+    "descripcion": "Café pequeno",
     "precio": "34000",
     "imagen": "img/cafe.jpg",
     "categoria": "Cafeteria☕️",
@@ -40,7 +40,7 @@
     "id": "prod0005"
   },
   {
-    "nombre": "Capuccino",
+    "nome": "Capuccino",
     "descripcion": "Café, leite, canela e cacau",
     "precio": "5400",
     "imagen": "img/Capuchino.jpg",
