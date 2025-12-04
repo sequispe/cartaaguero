@@ -258,7 +258,8 @@ document.addEventListener('DOMContentLoaded', () => {
           p.descricao,
 
         precio: p.precio || p.preco || p.price,
-        imagen: p.imagen,
+        imagen: p.imagen || p.imagem || p.image,
+
         categoria:
           idiomaActual === "es" ? p.categoria :
           idiomaActual === "en" ? (p.category || p.categoria) :
