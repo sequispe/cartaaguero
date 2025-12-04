@@ -1423,12 +1423,12 @@
   "categoria": "📋DAILY MENU/SPECIALS & NEWS",
   "id": "prod0178"
 },
-{
-  "nombre": "New cakes",
-  "descripcion": "New suggestion per slice.",
-  "precio": "9200",
-  "imagen": "img/torgrende.jpg",
-  "categoria": "📋DAILY MENU/SPECIALS & NEWS",
-  "id": "prod0179"
-},
+  {
+    "nombre": "New cakes",
+    "descripcion": "New suggestion per slice.",
+    "precio": "9200",
+    "imagen": "img/torgrende.jpg",
+    "categoria": "📋DAILY MENU/SPECIALS & NEWS",
+    "id": "prod0179"
+  }
 ]
