@@ -14,7 +14,8 @@
     "description": "Americano coffee",
     "price": "36000",
     "imagen": "img/Americano.jpg",
-    "category": "Coffee Shop ☕️"
+    "category": "Coffee Shop ☕️",
+    "precio": "3600"
   },
   {
     "id": "prod0003",
