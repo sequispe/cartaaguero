@@ -23,7 +23,8 @@
     "description": "Decaffeinated coffee",
     "price": "3900",
     "imagen": "img/20250813_094842.jpg",
-    "category": "Coffee Shop ☕️"
+    "category": "Coffee Shop ☕️",
+    "precio": "3900"
   },
   {
     "id": "prod0004",
