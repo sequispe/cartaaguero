@@ -1,23 +1,23 @@
 [
   {
-    "nombre": "Café expresso",
-    "descripcion": "Café pequeno",
+    "nome": "Café expresso",
+    "descrição": "Café pequeno",
     "precio": "34000",
     "imagen": "img/cafe.jpg",
     "categoria": "Cafeteria☕️",
     "id": "prod0001"
   },
   {
-    "nombre": "Café expresso jarrito",
-    "descripcion": "Café americano",
+    "nome": "Café expresso jarrito",
+    "descrição": "Café americano",
     "precio": "36000",
     "imagen": "img/Americano.jpg",
     "categoria": "Cafeteria☕️",
     "id": "prod0002"
   },
   {
-    "nombre": "Café descafeinado",
-    "descripcion": "Café descafeinado",
+    "nome": "Café descafeinado",
+    "descriçãon": "Café descafeinado",
     "precio": "3900",
     "imagen": "img/20250813_094842.jpg",
     "categoria": "Cafeteria☕️",
