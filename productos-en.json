@@ -751,8 +751,7 @@
     "description": "Chicken breast in sweet sauce with sautéed rice and vegetables",
     "price": "23500",
     "imagen": "img/Tari.jpg",
-    "category": "🍽️Meals",
-    "precio": "23500"
+    "category": "🍽️Meals"
   },
   {
     "id": "prod0095",
