@@ -1119,7 +1119,8 @@
     "description": "Freshly squeezed orange juice",
     "price": "6700",
     "imagen": "img/Exprimido.jpg",
-    "category": "🥤 Drinks & Wine"
+    "category": "🥤 Drinks & Wine",
+    "precio": "6700"
   },
   {
     "id": "prod0141",
@@ -1311,8 +1312,7 @@
     "description": "Gancia Shake",
     "price": "9500",
     "imagen": "img/Gancia.jpg",
-    "category": "🍹Drinks",
-    "precio": "9500"
+    "category": "🍹Drinks"
   },
   {
     "id": "prod0165",
