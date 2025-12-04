@@ -1,1434 +1,1434 @@
 [
   {
-    "nombre": "Café expresso",
-    "descripcion": "Café chico",
-    "precio": "3400",
+    "nome": "Café expresso",
+    "descricao": "Café pequeno",
+    "precio": "34000",
     "imagen": "img/cafe.jpg",
     "categoria": "Cafetería☕️",
     "id": "prod0001"
   },
   {
-    "nombre": "Café expresso jarrito",
-    "descripcion": "Café americano",
-    "precio": "3600",
+    "nome": "Café expresso no jarro",
+    "descricao": "Café americano",
+    "precio": "36000",
     "imagen": "img/Americano.jpg",
     "categoria": "Cafetería☕️",
     "id": "prod0002"
   },
   {
-    "nombre": "Café descafeinado",
-    "descripcion": "Café descafeinado",
+    "nome": "Café descafeinado",
+    "descricao": "Café descafeinado",
     "precio": "3900",
     "imagen": "img/20250813_094842.jpg",
     "categoria": "Cafetería☕️",
     "id": "prod0003"
   },
   {
-    "nombre": "Café con leche tradicional",
-    "descripcion": "Café con leche tradicional",
+    "nome": "Café com leite tradicional",
+    "descricao": "Café com leite tradicional",
     "precio": "4400",
     "imagen": "img/Cafechechu.jpg",
     "categoria": "Cafetería☕️",
     "id": "prod0004"
   },
   {
-    "nombre": "Café expresso Doble",
-    "descripcion": "Café expresso Doble",
+    "nome": "Café expresso duplo",
+    "descricao": "Café expresso duplo",
     "precio": "5200",
     "imagen": "img/doble.jpg",
     "categoria": "Cafetería☕️",
     "id": "prod0005"
   },
   {
-    "nombre": "Capuccino",
-    "descripcion": "Café, leche, canela y cacao",
+    "nome": "Capuccino",
+    "descricao": "Café, leite, canela e cacau",
     "precio": "5400",
     "imagen": "img/Capuchino.jpg",
     "categoria": "Cafetería☕️",
     "id": "prod0006"
   },
   {
-    "nombre": "Capuccino italiana",
-    "descripcion": "Capuccino italiana",
+    "nome": "Capuccino italiano",
+    "descricao": "Capuccino italiano",
     "precio": "5500",
     "imagen": "img/Capuchino.jpg",
     "categoria": "Cafetería☕️",
     "id": "prod0007"
   },
   {
-    "nombre": "Café MOKA",
-    "descripcion": "Cacao intenso, café, leche espumada",
+    "nome": "Café MOKA",
+    "descricao": "Cacau intenso, café e leite espumado",
     "precio": "5950",
     "imagen": "img/Moka.jpg",
     "categoria": "Cafetería☕️",
     "id": "prod0008"
   },
   {
-    "nombre": "Café CARAMEL",
-    "descripcion": "Caramelo, café, leche espumada",
+    "nome": "Café CARAMEL",
+    "descricao": "Caramelo, café e leite espumado",
     "precio": "5950",
     "imagen": "img/20250903_144413.jpg",
     "categoria": "Cafetería☕️",
     "id": "prod0009"
   },
   {
-    "nombre": "Té con leche",
-    "descripcion": "Té Inti Zen",
+    "nome": "Chá com leite",
+    "descricao": "Chá Inti Zen",
     "precio": "4400",
     "imagen": "img/te.jpg",
     "categoria": "Cafetería☕️",
     "id": "prod0010"
   },
   {
-    "nombre": "Submarino",
-    "descripcion": "Leche espumada y barra de chocolate",
+    "nome": "Submarino",
+    "descricao": "Leite espumado e barra de chocolate",
     "precio": "5200",
     "imagen": "img/Submarino.jpg",
     "categoria": "Cafetería☕️",
     "id": "prod0011"
   },
   {
-    "nombre": "Leche caliente o fría",
-    "descripcion": "Leche descremada",
+    "nome": "Leite quente ou frio",
+    "descricao": "Leite desnatado",
     "precio": "3000",
     "imagen": "img/20250818_101037.jpg",
     "categoria": "Cafetería☕️",
     "id": "prod0012"
   },
   {
-    "nombre": "CAFE TILO",
-    "descripcion": "Café, Baileys, leche evaporada y chocolate rallado",
+    "nome": "CAFÉ TILO",
+    "descricao": "Café, Baileys, leite evaporado e chocolate ralado",
     "precio": "7500",
     "imagen": "img/20250819_160159.jpg",
     "categoria": "Cafetería☕️",
     "id": "prod0013"
   },
   {
-    "nombre": "ICE COFFE🥶",
-    "descripcion": "Doble shot con hielo❄️",
+    "nome": "ICE COFFEE🥶",
+    "descricao": "Duplo shot com gelo❄️",
     "precio": "5200",
     "imagen": "img/20250817_131630.jpg",
     "categoria": "Cafetería☕️",
     "id": "prod0014"
   },
   {
-    "nombre": "LATTE ICE COFFE🥶",
-    "descripcion": "Leche fría con doble shot de café y hielo❄️",
+    "nome": "LATTE ICE COFFEE🥶",
+    "descricao": "Leite frio com duplo shot de café e gelo❄️",
     "precio": "5200",
     "imagen": "img/20250817_131330.jpg",
     "categoria": "Cafetería☕️",
     "id": "prod0015"
   },
   {
-    "nombre": "FRAPPUCCINO con Leche y OREO🥶",
-    "descripcion": "Base de leche ❄️",
+    "nome": "FRAPPUCCINO com leite e OREO🥶",
+    "descricao": "Base de leite ❄️",
     "precio": "7100",
     "imagen": "img/miloreo.jpg",
     "categoria": "Cafetería☕️",
     "id": "prod0016"
   },
   {
-    "nombre": "FRAPPUCCINO OREO🥶",
-    "descripcion": "Base de café❄️",
+    "nome": "FRAPPUCCINO OREO🥶",
+    "descricao": "Base de café❄️",
     "precio": "7100",
     "imagen": "img/20250815_154308.jpg",
     "categoria": "Cafetería☕️",
     "id": "prod0017"
   },
   {
-    "nombre": "Crema",
-    "descripcion": "Crema de leche",
+    "nome": "Creme",
+    "descricao": "Creme de leite",
     "precio": "350",
     "imagen": "img/cremaadi.jpg",
     "categoria": "Cafetería☕️",
     "id": "prod0018"
   },
   {
-    "nombre": "Leche de almendras",
-    "descripcion": "Chico $350 - Grande $450",
+    "nome": "Leite de amêndoas",
+    "descricao": "Pequeno $350 - Grande $450",
     "precio": "350",
     "imagen": "img/lmen.jpg",
     "categoria": "Cafetería☕️",
     "id": "prod0019"
   },
   {
-    "nombre": "Saborizante vainilla o avellanas",
-    "descripcion": "Saborizante vainilla o avellanas",
+    "nome": "Saborizante baunilha ou avelã",
+    "descricao": "Saborizante baunilha ou avelã",
     "precio": "350",
     "imagen": "img/medialunas.jpg",
     "categoria": "Cafetería☕️",
     "id": "prod0020"
   },
   {
-    "nombre": "Medialunas",
-    "descripcion": "Medialunas 100% manteca",
-    "precio": "2400",
+    "nome": "Medialunas",
+    "descricao": "Medialunas 100% manteiga",
+    "precio": "2300",
     "imagen": "img/Luna.jpg",
     "categoria": "Cafetería☕️",
     "id": "prod0021"
   },
   {
-    "nombre": "Factura",
-    "descripcion": "Pasteleras o membrillo",
-    "precio": "2400",
+    "nome": "Factura",
+    "descricao": "Pasteleras ou membrillo",
+    "precio": "2300",
     "imagen": "img/20250902_085539(1).jpg",
     "categoria": "Cafetería☕️",
     "id": "prod0022"
   },
   {
-    "nombre": "Cinamon Roll (rol de canela)",
-    "descripcion": "Roll de canela",
+    "nome": "Cinnamon Roll (rolo de canela)",
+    "descricao": "Rolo de canela",
     "precio": "4500",
     "imagen": "img/Rolcanela.jpg",
     "categoria": "Cafetería☕️",
     "id": "prod0023"
   },
   {
-    "nombre": "Pan de chocolate",
-    "descripcion": "Masa de croissant con chocolate belga",
+    "nome": "Pão de chocolate",
+    "descricao": "Massa de croissant com chocolate belga",
     "precio": "4800",
     "imagen": "img/Pchoco.jpg",
     "categoria": "Cafetería☕️",
     "id": "prod0024"
   },
   {
-    "nombre": "Cookies🍪",
-    "descripcion": "Cookies vainilla con chocolate, chocolate+chocolate c/u",
+    "nome": "Cookies🍪",
+    "descricao": "Cookies de baunilha com chocolate, chocolate+chocolate (cada uma)",
     "precio": "4800",
     "imagen": "img/20250902_085341.jpg",
     "categoria": "Cafetería☕️",
     "id": "prod0025"
   },
   {
-    "nombre": "Brownie con nueces blancas",
-    "descripcion": "Brownie sin TACC",
+    "nome": "Brownie com nozes brancas",
+    "descricao": "Brownie sem glúten",
     "precio": "6700",
     "imagen": "img/Brownie.jpg",
     "categoria": "Cafetería☕️",
     "id": "prod0026"
   },
   {
-    "nombre": "Chipá relleno",
-    "descripcion": "Chipá relleno de queso c/u",
+    "nome": "Chipá recheado",
+    "descricao": "Chipá recheado com queijo (unidade)",
     "precio": "3700",
     "imagen": "img/Chipa.jpg",
     "categoria": "Cafetería☕️",
     "id": "prod0027"
   },
   {
-    "nombre": "Scon de queso",
-    "descripcion": "Scon de queso c/u",
+    "nome": "Scon de queijo",
+    "descricao": "Scon de queijo (unidade)",
     "precio": "4200",
     "imagen": "img/Sconquso.jpg",
     "categoria": "Cafetería☕️",
     "id": "prod0028"
   },
   {
-    "nombre": "Budín",
-    "descripcion": "Zanahoria y canela, limón y amapolas, chocolate y café c/u",
+    "nome": "Budim",
+    "descricao": "Cenoura e canela, limão e papoula, chocolate e café (cada um)",
     "precio": "5500",
     "imagen": "img/20250817_124915.jpg",
     "categoria": "Cafetería☕️",
     "id": "prod0029"
   },
   {
-    "nombre": "Alfajor de chocolate",
-    "descripcion": "Alfajor de chocolate c/u",
+    "nome": "Alfajor de chocolate",
+    "descricao": "Alfajor de chocolate (unidade)",
     "precio": "4500",
     "imagen": "img/Alchoco.jpg",
     "categoria": "Cafetería☕️",
     "id": "prod0030"
   },
   {
-    "nombre": "Alfajor Dubái",
-    "descripcion": "Alfajor chocolate y pistacho c/u",
+    "nome": "Alfajor Dubai",
+    "descricao": "Alfajor de chocolate e pistache (unidade)",
     "precio": "4700",
     "imagen": "img/alfapis.jpg",
     "categoria": "Cafetería☕️",
     "id": "prod0031"
   },
   {
-    "nombre": "Alfajor de maicena",
-    "descripcion": "Alfajor de maicena (sin TACC)c/u",
+    "nome": "Alfajor de maizena",
+    "descricao": "Alfajor de maizena (sem glúten) (unidade)",
     "precio": "4500",
     "imagen": "img/Maicena.jpg",
     "categoria": "Cafetería☕️",
     "id": "prod0032"
   },
   {
-    "nombre": "Alfajor de almendras",
-    "descripcion": "Alfajor de almendras c/u",
+    "nome": "Alfajor de amêndoas",
+    "descricao": "Alfajor de amêndoas (unidade)",
     "precio": "5500",
     "imagen": "img/Almendras.jpg",
     "categoria": "Cafetería☕️",
     "id": "prod0033"
   },
   {
-    "nombre": "Mini torta",
-    "descripcion": "Mini tortas dulces c/u",
+    "nome": "Mini torta",
+    "descricao": "Mini tortas doces (unidade)",
     "precio": "9200",
     "imagen": "img/Minitor.jpg",
     "categoria": "Cafetería☕️",
     "id": "prod0034"
   },
   {
-    "nombre": "Medialuna caliente de jamón y queso",
-    "descripcion": "Medialuna caliente de jamón y queso c/u",
+    "nome": "Medialuna quente com presunto e queijo",
+    "descricao": "Medialuna quente com presunto e queijo (unidade)",
     "precio": "4600",
     "imagen": "img/Lujyq.jpg",
     "categoria": "Cafetería☕️",
     "id": "prod0035"
   },
   {
-    "nombre": "Plato con frutas de estación",
-    "descripcion": "Plato con frutas de estación",
+    "nome": "Prato com frutas da estação",
+    "descricao": "Prato com frutas da estação",
     "precio": "8200",
     "imagen": "img/Platofrutas.jpg",
     "categoria": "Cafetería☕️",
     "id": "prod0036"
   },
   {
-    "nombre": "Yogurt",
-    "descripcion": "Yogurt $5.000 | Yogurt con granola $8.000 | Yogurt Forte (con frutas y granola) $12.000",
+    "nome": "Iogurte",
+    "descricao": "Iogurte $5.000 | Iogurte com granola $8.000 | Iogurte Forte (com frutas e granola) $12.000",
     "precio": "12000",
     "imagen": "img/forte.jpg",
     "categoria": "Cafetería☕️",
     "id": "prod0037"
   },
   {
-    "nombre": "Porción de tostadas",
-    "descripcion": "Porción de tostadas, blancas o de salvado con semillas 2 unidades",
+    "nome": "Porção de torradas",
+    "descricao": "Porção de torradas brancas ou integrais com sementes (2 unidades)",
     "precio": "3500",
     "imagen": "img/Tosta.jpg",
     "categoria": "Cafetería☕️",
     "id": "prod0038"
   },
   {
-    "nombre": "Porción de mermelada",
-    "descripcion": "Porción de mermelada, manteca, queso blanco, miel o aderezo",
+    "nome": "Porção de geleia",
+    "descricao": "Porção de geleia, manteiga, queijo branco, mel ou molho",
     "precio": "2500",
     "imagen": "img/Dip.jpg",
     "categoria": "Cafetería☕️",
     "id": "prod0039"
   },
   {
-    "nombre": "Medialunas",
-    "descripcion": "3 medialunas caseras",
-    "precio": "9700",
-    "imagen": "img/Promoluna.jpg",
-    "categoria": "💡promociones",
-    "id": "prod0040"
-  },
-  {
-    "nombre": "TOSTADAS🍞",
-    "descripcion": "Pan negro o blanco con queso crema y mermelada casera",
-    "precio": "9700",
-    "imagen": "img/Promotos1.jpg",
-    "categoria": "💡promociones",
-    "id": "prod0041"
-  },
-  {
-    "nombre": "OMELETTE DE CLARAS",
-    "descripcion": "Omelette con queso y tomate (con FRITOLIN) y frutas de estación",
-    "precio": "16000",
-    "imagen": "img/Promoomelet.jpg",
-    "categoria": "💡promociones",
-    "id": "prod0042"
-  },
-  {
-    "nombre": "AVOCADO",
-    "descripcion": "Tostada con huevos revueltos, crema de palta y semillas",
-    "precio": "16000",
-    "imagen": "img/20250806_094923.jpg",
-    "categoria": "💡promociones",
-    "id": "prod0043"
-  },
-  {
-    "nombre": "REVUELTO",
-    "descripcion": "Huevos revueltos con jamón y queso, una tostada para acompañar",
-    "precio": "14000",
-    "imagen": "img/Resultado.jpg",
-    "categoria": "💡promociones",
-    "id": "prod0044"
-  },
-  {
-    "nombre": "PROTEICO",
-    "descripcion": "Pancake 100% harina de almendras, queso crema y fruta de estación más dip de miel",
-    "precio": "16000",
-    "imagen": "img/20250815_132946.jpg",
-    "categoria": "💡promociones",
-    "id": "prod0045"
-  },
-  {
-    "nombre": "FRENCH TOAST DULCE",
-    "descripcion": "Tostadas marinadas en huevo, con canela y azúcar, queso crema, frutas de estación y dip de miel",
-    "precio": "15000",
-    "imagen": "img/20250819_113846.jpg",
-    "categoria": "💡promociones",
-    "id": "prod0046"
-  },
-  {
-    "nombre": "FRENCH TOAST SALADO",
-    "descripcion": "Tostadas marinadas en huevo, con canela y azúcar, con bacon, palta y huevo revuelto",
-    "precio": "16000",
-    "imagen": "img/20250819_113925.jpg",
-    "categoria": "💡promociones",
-    "id": "prod0047"
-  },
-  {
-    "nombre": "AMIGOS Y FAMILLAS PASTA",
-    "descripcion": "Fuente de ñoquis o tallarines (bolognesa, crema, fileto o rosa). Podés combinar.",
-    "precio": "49000",
-    "imagen": "img/Fuenteñoquis.jpg",
-    "categoria": "💡promociones",
-    "id": "prod0048"
-  },
-  {
-    "nombre": "AMIGOS Y FAMILLA MILANESA PARA 3",
-    "descripcion": "Ternera napolitana, smoke, suiza (puede ser 1/2 y 1/2) con fritas",
-    "precio": "61000",
-    "imagen": "img/mila3.jpg",
-    "categoria": "💡promociones",
-    "id": "prod0049"
-  },
-  {
-    "nombre": "Brunch Para Dos",
-    "descripcion": "Dos infusiones, 2 jugos o limonadas, 2 yogures con fruta y granola, chipa tostado de jamón y queso y tostón con huevo y palta.",
-    "precio": "48000",
-    "imagen": "img/-52.jpg",
-    "categoria": "💡promociones",
-    "id": "prod0050"
-  },
-  {
-    "nombre": "Tarta de calabaza",
-    "descripcion": "Brócoli, queso sardo, muzarella, cebolla, masa integral",
-    "precio": "19000",
-    "imagen": "img/calboso.jpg",
-    "categoria": "🍽️Comidas",
-    "id": "prod0051"
-  },
-  {
-    "nombre": "Tarta de POLLO",
-    "descripcion": "Pechuga de pollo, puerro, queso sardo, cebolla, masa integral",
-    "precio": "19000",
-    "imagen": "img/Tartapollo.jpg",
-    "categoria": "🍽️Comidas",
-    "id": "prod0052"
-  },
-  {
-    "nombre": "Burritos de Langostinos",
-    "descripcion": "(caliente): Tortilla de trigo con langostinos y verduras en salsa Teriyaki",
-    "precio": "24500",
-    "imagen": "img/Jangostino.jpg",
-    "categoria": "🍽️Comidas",
-    "id": "prod0053"
-  },
-  {
-    "nombre": "Burritos CESAR de POLLO",
-    "descripcion": "(fría): Tortilla de trigo, mix de lechugas, clásico aderezo César, pechuga, queso parmesano y croutons",
-    "precio": "21000",
-    "imagen": "img/20250817_135558.jpg",
-    "categoria": "🍽️Comidas",
-    "id": "prod0054"
-  },
-  {
-    "nombre": "Burritos COMO MEXICANO",
-    "descripcion": "(caliente): Tortilla de trigo con salsa de pollo, relleno de lomo, vegetales y cheddar",
-    "precio": "25000",
-    "imagen": "img/Lomi.jpg",
-    "categoria": "🍽️Comidas",
-    "id": "prod0055"
-  },
-  {
-    "nombre": "Omelette de jamón y queso",
-    "descripcion": "Omelette de jamón y queso",
-    "precio": "15000",
-    "imagen": "img/20250804_132736.jpg",
-    "categoria": "🍽️Comidas",
-    "id": "prod0056"
-  },
-  {
-    "nombre": "Omelette de queso y champignones",
-    "descripcion": "Omelette de queso y champignones",
-    "precio": "17000",
-    "imagen": "img/Omecham.jpg",
-    "categoria": "🍽️Comidas",
-    "id": "prod0057"
-  },
-  {
-    "nombre": "Tortilla de papa y cebolla",
-    "descripcion": "Tortilla de papa y cebolla",
-    "precio": "15500",
-    "imagen": "img/20250816_134538.jpg",
-    "categoria": "🍽️Comidas",
-    "id": "prod0058"
-  },
-  {
-    "nombre": "Tortilla de espinaca",
-    "descripcion": "Tortilla de espinaca",
-    "precio": "15700",
-    "imagen": "img/20250813_131026 (1).jpg",
-    "categoria": "🍽️Comidas",
-    "id": "prod0059"
-  },
-  {
-    "nombre": "Ensalada FRESCA",
-    "descripcion": "Rúcula, manzana verde, pepino, tomates cherries, nueces, regianito",
-    "precio": "19700",
-    "imagen": "img/Fresca.jpg",
-    "categoria": "🍽️Comidas",
-    "id": "prod0060"
-  },
-  {
-    "nombre": "Ensalada CAESAR con pollo",
-    "descripcion": "Mix de verdes, croutones, pollo, parmesano y aderezo Caesar",
-    "precio": "17500",
-    "imagen": "img/20250819_121751.jpg",
-    "categoria": "🍽️Comidas",
-    "id": "prod0061"
-  },
-  {
-    "nombre": "Ensalada CAESAR con pollo crujiente",
-    "descripcion": "Mix de verdes, croutons, pollo crujiente, parmesano y aderezo Caesar",
-    "precio": "18500",
-    "imagen": "img/Cranch.jpg",
-    "categoria": "🍽️Comidas",
-    "id": "prod0062"
-  },
-  {
-    "nombre": "Ensalada CAESAR con langostinos",
-    "descripcion": "Mix de verdes, croutons, langostinos rebozados, parmesano y aderezo Caesar",
-    "precio": "20000",
-    "imagen": "img/Caesarlangis.jpg",
-    "categoria": "🍽️Comidas",
-    "id": "prod0063"
-  },
-  {
-    "nombre": "Ensalada STRACCIATELLA mozzarella italiana",
-    "descripcion": "Mix de verdes, tomates cherries, jamón crudo, mozzarella, tiras de tortilla",
-    "precio": "28500",
-    "imagen": "img/Estrachatelaens.jpg",
-    "categoria": "🍽️Comidas",
-    "id": "prod0064"
-  },
-  {
-    "nombre": " ENSALADAS COBB SALAD",
-    "descripcion": "Mix de verdes, pollo, huevo, queso azul, tomate y salsa de palta.",
-    "precio": "18200",
-    "imagen": "img/Cpsala.jpg",
-    "categoria": "🍽️Comidas",
-    "id": "prod0065"
-  },
-  {
-    "nombre": "Mila SOLA de POLLO o CARNE",
-    "descripcion": "Acompañadas con puré, fideos, ensalada o papas fritas",
-    "precio": "20500",
-    "imagen": "img/20250816_144204.jpg",
-    "categoria": "🍽️Comidas",
-    "id": "prod0066"
-  },
-  {
-    "nombre": "Mila ESPINACA carne o pollo",
-    "descripcion": "Crema de espinaca y queso gratinado. Acompañadas con puré, fideos, ensalada o papas fritas",
-    "precio": "22500",
-    "imagen": "img/Esp.jpg",
-    "categoria": "🍽️Comidas",
-    "id": "prod0067"
-  },
-  {
-    "nombre": "Mila SUIZA",
-    "descripcion": "Salsa blanca y queso gratinado. Acompañadas con puré, fideos, ensalada o papas fritas",
-    "precio": "22500",
-    "imagen": "img/Mizuisa.jpg",
-    "categoria": "🍽️Comidas",
-    "id": "prod0068"
-  },
-  {
-    "nombre": "Mila NAPOLITANA",
-    "descripcion": "Salsa de tomate, jamón y queso. Acompañadas con puré, fideos, ensalada o papas fritas",
-    "precio": "22500",
-    "imagen": "img/20250813_125845 (1).jpg",
-    "categoria": "🍽️Comidas",
-    "id": "prod0069"
-  },
-  {
-    "nombre": "Mila SMOKE",
-    "descripcion": "Salsa de tomate, mermelada de bacon, cheddar Acompañadas con puré, fideos, ensalada o papas fritas",
-    "precio": "23500",
-    "imagen": "img/Smuk.jpg",
-    "categoria": "🍽️Comidas",
-    "id": "prod0070"
-  },
-  {
-    "nombre": "Filet de Merluza a la romana",
-    "descripcion": "Con puré mixto",
-    "precio": "18500",
-    "imagen": "img/20250816_135027.jpg",
-    "categoria": "🍽️Comidas",
-    "id": "prod0071"
-  },
-  {
-    "nombre": "Revuelto de Gramajo",
-    "descripcion": "Papas fritas, panceta, cebolla, morrón, arvejas y huevo frito",
-    "precio": "18000",
-    "imagen": "img/Rebuelto.jpg",
-    "categoria": "🍽️Comidas",
-    "id": "prod0072"
-  },
-  {
-    "nombre": "PIZZA NAPOLITANA",
-    "descripcion": "Salsa de tomate, stracciatella sale fria, jamón y rodajas de tomate",
-    "precio": "28000",
-    "imagen": "img/20250906_150935.jpg",
-    "categoria": "🍽️Comidas",
-    "id": "prod0073"
-  },
-  {
-    "nombre": "PIZZA PARMA",
-    "descripcion": "Salsa de tomate, stracciatella sale fria, burrata, jamón crudo, albahaca.",
-    "precio": "34000",
-    "imagen": "img/20250816_135018.jpg",
-    "categoria": "🍽️Comidas",
-    "id": "prod0074"
-  },
-  {
-    "nombre": "PIZZA MARGARITA",
-    "descripcion": "Salsa de tomate, stracciatella sale fria, hojas de albahaca.",
-    "precio": "25500",
-    "imagen": "img/20250819_125331.jpg",
-    "categoria": "🍽️Comidas",
-    "id": "prod0075"
-  },
-  {
-    "nombre": "PIZZA Champi",
-    "descripcion": "Salsa de tomate, stracciatella sale fria, hongos y cebollas salteadas.",
-    "precio": "30000",
-    "imagen": "img/Pizachampi.jpg",
-    "categoria": "🍽️Comidas",
-    "id": "prod0076"
-  },
-  {
-    "nombre": "PIZZA MUZA",
-    "descripcion": "piza 4 porciones con muzarela salsa de tomate y oregano",
-    "precio": "25500",
-    "imagen": "img/Piza.jpg",
-    "categoria": "🍽️Comidas",
-    "id": "prod0077"
-  },
-  {
-    "nombre": "RISOTTO de Pollo",
-    "descripcion": "Con pollo, calabaza y verduras",
-    "precio": "24000",
-    "imagen": "img/20250816_143144.jpg",
-    "categoria": "🍽️Comidas",
-    "id": "prod0078"
-  },
-  {
-    "nombre": "RISOTTO Langostinos",
-    "descripcion": "Con verduras, nueces y almendras",
-    "precio": "26500",
-    "imagen": "img/Risotolangos.jpg",
-    "categoria": "🍽️Comidas",
-    "id": "prod0079"
-  },
-  {
-    "nombre": "RISOTTOS Lomo!",
-    "descripcion": "con verduras lomo.",
-    "precio": "28500",
-    "imagen": "img/Risotolomo.jpg",
-    "categoria": "🍽️Comidas",
-    "id": "prod0080"
-  },
-  {
-    "nombre": "Pollo pechuga gril",
-    "descripcion": "Con fritas, puré, ensalada o arroz",
-    "precio": "21000",
-    "imagen": "img/Pechuga.jpg",
-    "categoria": "🍽️Comidas",
-    "id": "prod0081"
-  },
-  {
-    "nombre": "Matambre de cerdo gril",
-    "descripcion": "Con fritas, puré, ensalada o arroz",
-    "precio": "24500",
-    "imagen": "img/Matam.jpg",
-    "categoria": "🍽️Comidas",
-    "id": "prod0082"
-  },
-  {
-    "nombre": "Bife de chorizo gril",
-    "descripcion": "Con fritas, puré, ensalada o arroz",
-    "precio": "30500",
-    "imagen": "img/20250815_151841.jpg",
-    "categoria": "🍽️Comidas",
-    "id": "prod0083"
-  },
-  {
-    "nombre": "Bife de lomo gril",
-    "descripcion": "Con fritas, puré, ensalada o arroz",
-    "precio": "33500",
-    "imagen": "img/IMG-20250816-WA0008.jpg",
-    "categoria": "🍽️Comidas",
-    "id": "prod0084"
-  },
-  {
-    "nombre": "Salmón rosado gril",
-    "descripcion": "Con fritas, puré, ensalada o arroz",
-    "precio": "35000",
-    "imagen": "img/Salmón.jpg",
-    "categoria": "🍽️Comidas",
-    "id": "prod0085"
-  },
-  {
-    "nombre": "Pollo (pechuga gril  ) ",
-    "descripcion": "Acompañado con espinaca, papas a la crema o verduras grilladas",
-    "precio": "23000",
-    "imagen": "img/Espepollo.jpg",
-    "categoria": "🍽️Comidas",
-    "id": "prod0086"
-  },
-  {
-    "nombre": "Matambre de cerdo gril",
-    "descripcion": "Acompañado con espinaca, papas a la crema o verduras grilladas",
-    "precio": "26500",
-    "imagen": "img/Matavergrill.jpg",
-    "categoria": "🍽️Comidas",
-    "id": "prod0087"
-  },
-  {
-    "nombre": "Bife de chorizo",
-    "descripcion": "Acompañado con espinaca, papas a la crema o verduras grilladas",
-    "precio": "32000",
-    "imagen": "img/Bifepapa.jpg",
-    "categoria": "🍽️Comidas",
-    "id": "prod0088"
-  },
-  {
-    "nombre": "Bife de lomo",
-    "descripcion": "Acompañado con espinaca, papas a la crema o verduras grilladas",
-    "precio": "32500",
-    "imagen": "img/Lomoesp.jpg",
-    "categoria": "🍽️Comidas",
-    "id": "prod0089"
-  },
-  {
-    "nombre": "Salmón rosado (gril)",
-    "descripcion": "Acompañado con espinaca, papas a la crema o verduras grilladas",
-    "precio": "37000",
-    "imagen": "img/Blu.jpg",
-    "categoria": "🍽️Comidas",
-    "id": "prod0090"
-  },
-  {
-    "nombre": "Mila PESTO",
-    "descripcion": "Milanesa de carne con ñoquis al pesto",
-    "precio": "21000",
-    "imagen": "img/Milapesto.jpg",
-    "categoria": "🍽️Comidas",
-    "id": "prod0091"
-  },
-  {
-    "nombre": "Pollo N.Y",
-    "descripcion": "Pollo ahumado, mix de queso, verdeo, tomate and papas fritas",
-    "precio": "24000",
-    "imagen": "img/Ny.jpg",
-    "categoria": "🍽️Comidas",
-    "id": "prod0092"
-  },
-  {
-    "nombre": "Pollo al CHAMPI",
-    "descripcion": "En salsa de hongos con papas fritas",
-    "precio": "24500",
-    "imagen": "img/Pechuchapi.jpg",
-    "categoria": "🍽️Comidas",
-    "id": "prod0093"
-  },
-  {
-    "nombre": "Pollo TERIYAKI",
-    "descripcion": "Pechuga en salsa dulce con arroz salteado y verduras",
-    "precio": "23500",
-    "imagen": "img/Tari.jpg",
-    "categoria": "🍽️Comidas",
-    "id": "prod0094"
-  },
-  {
-    "nombre": "Salmón AZUL",
-    "descripcion": "Salmón rosado grillado en salsa crema de queso azul con papas españolas",
-    "precio": 38000,
-    "imagen": "img/20250817_142010.jpg",
-    "categoria": "🍽️Comidas",
-    "id": "prod0095"
-  },
-  {
-    "nombre": "Matambrito a la PIZZA",
-    "descripcion": "De cerdo, muzarella, tomate y orégano con papas fritas",
-    "precio": "28500",
-    "imagen": "img/20250815_132057.jpg",
-    "categoria": "🍽️Comidas",
-    "id": "prod0096"
-  },
-  {
-    "nombre": "Matambrito a la RIOJANA",
-    "descripcion": "De cerdo, cebollitas, morrones, arvejas y huevo frito, con papas fritas",
-    "precio": "28500",
-    "imagen": "img/Matrio.jpg",
-    "categoria": "🍽️Comidas",
-    "id": "prod0097"
-  },
-  {
-    "nombre": "Lomo CACIO E PEPE",
-    "descripcion": "Bife de lomo grillado con spaghetti en pimienta y queso",
-    "precio": "36000",
-    "imagen": "img/Pepe.jpg",
-    "categoria": "🍽️Comidas",
-    "id": "prod0098"
-  },
-  {
-    "nombre": "Lomo AL CHAMPI",
-    "descripcion": "Bife de lomo grillado en salsa de hongos con papas fritas",
-    "precio": "37000",
-    "imagen": "img/IMG-20250816-WA0009.jpg",
-    "categoria": "🍽️Comidas",
-    "id": "prod0099"
-  },
-  {
-    "nombre": "BROCHETTE de Lomo",
-    "descripcion": "Con papas fritas (para 2 personas)",
-    "precio": "71000",
-    "imagen": "img/Brochette.jpg",
-    "categoria": "🍽️Comidas",
-    "id": "prod0100"
-  },
-  {
-    "nombre": "BROCHETTE de Pollo",
-    "descripcion": "Con papas fritas (para 2 personas)",
-    "precio": "51000",
-    "imagen": "img/20250817_135608.jpg",
-    "categoria": "🍽️Comidas",
-    "id": "prod0101"
-  },
-  {
-    "nombre": "👶MENU KIDS NUGGETS",
-    "descripcion": "De pollo frita o puré",
-    "precio": "18000",
-    "imagen": "img/Nages.jpg",
-    "categoria": "🍽️Comidas",
-    "id": "prod0102"
-  },
-  {
-    "nombre": "👶MENU KIDS Spaghetti o ñoquis",
-    "descripcion": "Fileto o crema",
-    "precio": "18000",
-    "imagen": "img/Ñoquiskit.jpg",
-    "categoria": "🍽️Comidas",
-    "id": "prod0103"
-  },
-  {
-    "nombre": "👶MENU KIDS Milanesa",
-    "descripcion": "De carne con fritas o puré",
-    "precio": "18000",
-    "imagen": "img/Menukit.jpg",
-    "categoria": "🍽️Comidas",
-    "id": "prod0104"
-  },
-  {
-    "nombre": "Jamón cocido, queso y tomate",
-    "descripcion": "Pan ciabatta o árabe",
-    "precio": "14000",
-    "imagen": "img/Jqyt.jpg",
-    "categoria": "🥪 Sandwiches",
-    "id": "prod0105"
-  },
-  {
-    "nombre": "Tostado mixto",
-    "descripcion": "4 triángulos de jamón y queso",
-    "precio": "15000",
-    "imagen": "img/20250824_141355.jpg",
-    "categoria": "🥪 Sandwiches",
-    "id": "prod0106"
-  },
-  {
-    "nombre": "Jamón crudo, stracciatella y tomate",
-    "descripcion": "Jamón crudo, stracciatella y tomate",
-    "precio": "20000",
-    "imagen": "img/20250820_143727.jpg",
-    "categoria": "🥪 Sandwiches",
-    "id": "prod0107"
-  },
-  {
-    "nombre": "Pavita, queso y tomate",
-    "descripcion": "Pan ciabatta o árabe",
-    "precio": "17000",
-    "imagen": "img/Pabita.jpg",
-    "categoria": "🥪 Sandwiches",
-    "id": "prod0108"
-  },
-  {
-    "nombre": "Chipá tostado",
-    "descripcion": "Jamón y queso $16.000, cheddar y jamón $17.000",
-    "precio": "16000",
-    "imagen": "img/Chipatostado.jpg",
-    "categoria": "🥪 Sandwiches",
-    "id": "prod0109"
-  },
-  {
-    "nombre": "Sandwich de lomito solo queso",
-    "descripcion": "Simple (solo queso) con papas fritas",
-    "precio": "22000",
-    "imagen": "img/20250910_132716.jpg",
-    "categoria": "🥪 Sandwiches",
-    "id": "prod0110"
-  },
-  {
-    "nombre": "Sandwich de lomito clásico",
-    "descripcion": "Lechuga, tomate, jamón y queso, con papas fritas",
-    "precio": "25000",
-    "imagen": "img/20250914_130533.jpg",
-    "categoria": "🥪 Sandwiches",
-    "id": "prod0111"
-  },
-  {
-    "nombre": "Sandwich de lomito bacon",
-    "descripcion": "Queso cheddar, panceta y tomate, con papas fritas",
-    "precio": "27000",
-    "imagen": "img/Lomitobac.jpg",
-    "categoria": "🥪 Sandwiches",
-    "id": "prod0112"
-  },
-  {
-    "nombre": "Burger simple",
-    "descripcion": "Simple (solo queso) con papas fritas",
-    "precio": "15000",
-    "imagen": "img/20250816_135012.jpg",
-    "categoria": "🥪 Sandwiches",
-    "id": "prod0113"
-  },
-  {
-    "nombre": "Burger clásico",
-    "descripcion": "Lechuga, tomate, jamón y queso",
-    "precio": "17000",
-    "imagen": "img/20250816_135012.jpg",
-    "categoria": "🥪 Sandwiches",
-    "id": "prod0114"
-  },
-  {
-    "nombre": "Burger bacon",
-    "descripcion": "Queso cheddar, panceta y tomate",
-    "precio": "19000",
-    "imagen": "img/Bacon.jpg",
-    "categoria": "🥪 Sandwiches",
-    "id": "prod0115"
-  },
-  {
-    "nombre": "Empanadas",
-    "descripcion": "Carne o jamón y queso",
-    "precio": "3000",
-    "imagen": "img/Empa.jpg",
-    "categoria": "🥟 ENTRADITAS",
-    "id": "prod0116"
-  },
-  {
-    "nombre": "Rabas a la romana",
-    "descripcion": "Rabas a la romana",
-    "precio": "24000",
-    "imagen": "img/Rabas.jpg",
-    "categoria": "🥟 ENTRADITAS",
-    "id": "prod0117"
-  },
-  {
-    "nombre": "Mozzarellas rebozadas",
-    "descripcion": "Mozzarellas rebozadas",
-    "precio": "17000",
-    "imagen": "img/20250817_131412.jpg",
-    "categoria": "🥟 ENTRADITAS",
-    "id": "prod0118"
-  },
-  {
-    "nombre": "Nachos",
-    "descripcion": "Nachos de carne con cheddar y palta",
-    "precio": "18500",
-    "imagen": "img/20250815_155313.jpg",
-    "categoria": "🥟 ENTRADITAS",
-    "id": "prod0119"
-  },
-  {
-    "nombre": "Farinata recomendado",
-    "descripcion": "Fainá con stracciatella, jamón crudo, tomates y albahaca",
-    "precio": "21000",
-    "imagen": "img/Farinata.jpg",
-    "categoria": "🥟 ENTRADITAS",
-    "id": "prod0120"
-  },
-  {
-    "nombre": "PICADITA FRIA (para 2 personas)",
-    "descripcion": "Jamón crudo, jamón cocido, queso roquefort, queso tybo, tomates cherries, frutos secos",
-    "precio": "55000",
-    "imagen": "img/tarta_brocoli.jpg",
-    "categoria": "🥟 ENTRADITAS",
-    "id": "prod0121"
-  },
-  {
-    "nombre": "PICADITA CALIENTE (para 2 personas)",
-    "descripcion": "Pollo rebozado, bastones de muzarella, rabas y papas fritas. Incluye dos porrones de Stella",
-    "precio": "45000",
-    "imagen": "img/IMG-20250815.jpg",
-    "categoria": "🥟 ENTRADITAS",
-    "id": "prod0122"
-  },
-  {
-    "nombre": "Spaghetti (salsa aparte)",
-    "descripcion": "Spaghetti con salsa a elección",
-    "precio": "11000",
-    "imagen": "img/Spa.jpg",
-    "categoria": "🍝 PASTAS",
-    "id": "prod0123"
-  },
-  {
-    "nombre": "Ñoquis al huevo (salsa aparte)",
-    "descripcion": "Ñoquis al huevo con salsa a elección",
-    "precio": "11000",
-    "imagen": "img/Ñoquis.jpg",
-    "categoria": "🍝 PASTAS",
-    "id": "prod0124"
-  },
-  {
-    "nombre": "Ravioles de verdura, pollo y jamón (salsa aparte)",
-    "descripcion": "Rellenos de verdura, pollo y jamón",
-    "precio": "13000",
-    "imagen": "img/Ravioles.jpg",
-    "categoria": "🍝 PASTAS",
-    "id": "prod0125"
-  },
-  {
-    "nombre": "Ravioles de verdura y ricota (salsa aparte)",
-    "descripcion": "Rellenos de verdura y ricota",
-    "precio": "13000",
-    "imagen": "img/Ravioles.jpg",
-    "categoria": "🍝 PASTAS",
-    "id": "prod0126"
-  },
-  {
-    "nombre": "Sorrentinos de muzzarella y jamón (salsa aparte)",
-    "descripcion": "Sorrentinos rellenos de muzzarella y jamón",
-    "precio": "15000",
-    "imagen": "img/Sonren.jpg",
-    "categoria": "🍝 PASTAS",
-    "id": "prod0127"
-  },
-  {
-    "nombre": "salsa blanca",
-    "descripcion": "Salsa blanca",
-    "precio": "6000",
-    "imagen": "img/20250905_131302.jpg",
-    "categoria": "🥫SALSAS",
-    "id": "prod0128"
-  },
-  {
-    "nombre": "fileto",
-    "descripcion": "fileto",
-    "precio": "6000",
-    "imagen": "img/20250903_124659.jpg",
-    "categoria": "🥫SALSAS",
-    "id": "prod0129"
-  },
-  {
-    "nombre": "Alfredo Pollo",
-    "descripcion": "salsa blanca con Pollo",
-    "precio": "7500",
-    "imagen": "img/Frepollo.jpg",
-    "categoria": "🥫SALSAS",
-    "id": "prod0130"
-  },
-  {
-    "nombre": "Alfredo langostinos",
-    "descripcion": "salsa blanca con langostinos",
-    "precio": "9500",
-    "imagen": "img/Frelang.jpg",
-    "categoria": "🥫SALSAS",
-    "id": "prod0131"
-  },
-  {
-    "nombre": "Boloñesa",
-    "descripcion": "salsa con carne",
-    "precio": "7700",
-    "imagen": "img/Bolo.jpg",
-    "categoria": "🥫SALSAS",
-    "id": "prod0132"
-  },
-  {
-    "nombre": "Pesto con nuez",
-    "descripcion": "nuez, ajo y perejil",
-    "precio": "6800",
-    "imagen": "img/IMG-20250816-WA0011.jpg",
-    "categoria": "🥫SALSAS",
-    "id": "prod0133"
-  },
-  {
-    "nombre": "Carbonara",
-    "descripcion": "Crema, panceta y verdeo",
-    "precio": "7700",
-    "imagen": "img/Carbonara.jpg",
-    "categoria": "🥫SALSAS",
-    "id": "prod0134"
-  },
-  {
-    "nombre": "caccio e pepe",
-    "descripcion": "manteca, pimienta y parmesano",
-    "precio": "7000",
-    "imagen": "img/204218.jpg",
-    "categoria": "🥫SALSAS",
-    "id": "prod0135"
-  },
-  {
-    "nombre": "SALSA VARIAS",
-    "descripcion": "MANTECA, OLIVA, AJO Y PARMESANO",
-    "precio": "6000",
-    "imagen": "img/218.jpg",
-    "categoria": "🥫SALSAS",
-    "id": "prod0136"
-  },
-  {
-    "nombre": "línea Coca-Cola",
-    "descripcion": "Zeros y clásicas",
-    "precio": "4200",
-    "imagen": "img/20250830_141813.jpg",
-    "categoria": "🥤 Bebidas y vinos",
-    "id": "prod0137"
-  },
-  {
-    "nombre": "Agua local filtrada y mineralizada",
-    "descripcion": "Agua fría, natural y con gas",
-    "precio": "3700",
-    "imagen": "img/20250830_142147.jpg",
-    "categoria": "🥤 Bebidas y vinos",
-    "id": "prod0138"
-  },
-  {
-    "nombre": "Adicional con limón",
-    "descripcion": "Adicional con limón",
-    "precio": "400",
-    "imagen": "img/20250903_093625.jpg",
-    "categoria": "🥤 Bebidas y vinos",
-    "id": "prod0139"
-  },
-  {
-    "nombre": "Jugo exprimido de naranja",
-    "descripcion": "Exprimido de naranja natural",
-    "precio": "6700",
-    "imagen": "img/Exprimido.jpg",
-    "categoria": "🥤 Bebidas y vinos",
-    "id": "prod0140"
-  },
-  {
-    "nombre": "Pomelada",
-    "descripcion": "Pomelo  natural",
-    "precio": "7200",
-    "imagen": "img/pomelada.jpg",
-    "categoria": "🥤 Bebidas y vinos",
-    "id": "prod0141"
-  },
-  {
-    "nombre": "Milkshake OREO",
-    "descripcion": "Helado de crema, con oreos y crema batida",
-    "precio": "9000",
-    "imagen": "img/Mioreo.jpg",
-    "categoria": "🥤 Bebidas y vinos",
-    "id": "prod0142"
-  },
-  {
-    "nombre": "Licuados",
-    "descripcion": "Con frutas de estación (base de agua, leche o exprimido)",
-    "precio": "7500",
-    "imagen": "img/20250903_110035.jpg",
-    "categoria": "🥤 Bebidas y vinos",
-    "id": "prod0143"
-  },
-  {
-    "nombre": "Limonada a la menta con jengibre",
-    "descripcion": "Limonada natural con menta y jengibre",
-    "precio": "6700",
-    "imagen": "img/Limonada.jpg",
-    "categoria": "🥤 Bebidas y vinos",
-    "id": "prod0144"
-  },
-  {
-    "nombre": "Limonada",
-    "descripcion": "Limonada simple",
-    "precio": "6400",
-    "imagen": "img/Limosim.jpg",
-    "categoria": "🥤 Bebidas y vinos",
-    "id": "prod0145"
-  },
-  {
-    "nombre": "STELLA ARTOIS (0cc - Porrón)",
-    "descripcion": "Cerveza Stella Artois 330cc",
-    "precio": "7400",
-    "imagen": "img/Coroa.jpg",
-    "categoria": "🥤 Bebidas y vinos",
-    "id": "prod0146"
-  },
-  {
-    "nombre": "CORONA (Porrón)",
-    "descripcion": "Cerveza Corona 330cc",
-    "precio": "7700",
-    "imagen": "img/Estelar.jpg",
-    "categoria": "🥤 Bebidas y vinos",
-    "id": "prod0147"
-  },
-  {
-    "nombre": "STELLA 1 LITRO",
-    "descripcion": "Cerveza Stella Artois 1 L",
-    "precio": "17000",
-    "imagen": "img/SetellaL1.jpg",
-    "categoria": "🥤 Bebidas y vinos",
-    "id": "prod0148"
-  },
-  {
-    "nombre": "Trumpeter Malbec",
-    "descripcion": "Trumpeter Malbec (750 cc)",
-    "precio": "25000",
-    "imagen": "img/20250903_112612.jpg",
-    "categoria": "🥤 Bebidas y vinos",
-    "id": "prod0149"
-  },
-  {
-    "nombre": "Trumpeter Cabernet",
-    "descripcion": "Trumpeter Cabernet (750 cc)",
-    "precio": "25000",
-    "imagen": "img/20250903_112534.jpg",
-    "categoria": "🥤 Bebidas y vinos",
-    "id": "prod0150"
-  },
-  {
-    "nombre": "Rutini Malbec-Cabernet Franc",
-    "descripcion": "Rutini Malbec-Cabernet Franc (750 cc)",
-    "precio": "36000",
-    "imagen": "img/Rutinicaber.jpg",
-    "categoria": "🥤 Bebidas y vinos",
-    "id": "prod0151"
-  },
-  {
-    "nombre": "Portillo Malbec",
-    "descripcion": "Portillo Malbec (750 cc)",
-    "precio": "19000",
-    "imagen": "img/20250903_111015.jpg",
-    "categoria": "🥤 Bebidas y vinos",
-    "id": "prod0152"
-  },
-  {
-    "nombre": "Salentein Reserva Cabernet Sauvignon",
-    "descripcion": "Salentein Reserva Cabernet Sauvignon (750 cc)",
-    "precio": "30000",
-    "imagen": "img/20250903_123740.jpg",
-    "categoria": "🥤 Bebidas y vinos",
-    "id": "prod0153"
-  },
-  {
-    "nombre": "Trumpeter Sauvignon Blanc",
-    "descripcion": "Trumpeter Sauvignon Blanc (750 cc)",
-    "precio": "25000",
-    "imagen": "img/20250903_112257.jpg",
-    "categoria": "🥤 Bebidas y vinos",
-    "id": "prod0154"
-  },
-  {
-    "nombre": "Portillo Chardonnay",
-    "descripcion": "Portillo Chardonnay (750 cc)",
-    "precio": "19000",
-    "imagen": "img/20250903_110934.jpg",
-    "categoria": "🥤 Bebidas y vinos",
-    "id": "prod0155"
-  },
-  {
-    "nombre": "Portillo Rosé Malbec",
-    "descripcion": "Portillo Rosé Malbec (Vino fresco y fácil de beber)",
-    "precio": "19000",
-    "imagen": "img/20250903_110955.jpg",
-    "categoria": "🥤 Bebidas y vinos",
-    "id": "prod0156"
-  },
-  {
-    "nombre": "Copa de vino",
-    "descripcion": "Blancos o tintos",
-    "precio": "8000",
-    "imagen": "img/20250903_124351.jpg",
-    "categoria": "🥤 Bebidas y vinos",
-    "id": "prod0157"
-  },
-  {
-    "nombre": "Jack Daniel's",
-    "descripcion": "Jack Daniel's",
-    "precio": "15000",
-    "imagen": "img/Daniel’s.jpg",
-    "categoria": "🍹TRAGOS",
-    "id": "prod0158"
-  },
-  {
-    "nombre": "Johnny Walker Black",
-    "descripcion": "Johnny Walker Black",
-    "precio": "15000",
-    "imagen": "img/Black.jpg",
-    "categoria": "🍹TRAGOS",
-    "id": "prod0159"
-  },
-  {
-    "nombre": "Johnny Walker Red",
-    "descripcion": "Johnny Walker Red",
-    "precio": "13000",
-    "imagen": "img/Ret.jpg",
-    "categoria": "🍹TRAGOS",
-    "id": "prod0160"
-  },
-  {
-    "nombre": "Licor Baileys",
-    "descripcion": "Licor Baileys",
-    "precio": "12000",
-    "imagen": "img/20250903_111957.jpg",
-    "categoria": "🍹TRAGOS",
-    "id": "prod0161"
-  },
-  {
-    "nombre": "Fernet con Coca-Cola",
-    "descripcion": "Fernet con Coca-Cola",
-    "precio": "12000",
-    "imagen": "img/Ferne.jpg",
-    "categoria": "🍹TRAGOS",
-    "id": "prod0162"
-  },
-  {
-    "nombre": "Gin Tonic Beefeater",
-    "descripcion": "Gin Tonic Beefeater",
-    "precio": "12000",
-    "imagen": "img/Ginton.jpg",
-    "categoria": "🍹TRAGOS",
-    "id": "prod0163"
-  },
-  {
-    "nombre": "Batido Gancia",
-    "descripcion": "Batido Gancia",
-    "precio": "9500",
-    "imagen": "img/Gancia.jpg",
-    "categoria": "🍹TRAGOS",
-    "id": "prod0164"
-  },
-  {
-    "nombre": "Aperol con naranja",
-    "descripcion": "Aperol con naranja",
-    "precio": "9500",
-    "imagen": "img/Campati.jpg",
-    "categoria": "🍹TRAGOS",
-    "id": "prod0165"
-  },
-  {
-    "nombre": "Aperol Spritz",
-    "descripcion": "Aperol Spritz",
-    "precio": "13000",
-    "imagen": "img/Aprol.jpg",
-    "categoria": "🍹TRAGOS",
-    "id": "prod0166"
-  },
-  {
-    "nombre": "HAPPY HOUR",
-    "descripcion": "Aperol Spritz $13000 o naranja $9500, Gin Tonic $12000 o Fernet con Coca $12000. Todos los días de 18 a 20:30.",
-    "precio": "0",
-    "imagen": "img/Api.jpg",
-    "categoria": "🍹TRAGOS",
-    "id": "prod0167"
-  },
-  {
-    "nombre": "Champagne Chandon",
-    "descripcion": "Champagne Chandon (187cc)",
-    "precio": "15000",
-    "imagen": "img/20250903_113545.jpg",
-    "categoria": "🍹TRAGOS",
-    "id": "prod0168"
-  },
-  {
-    "nombre": "Champagne Salentein Brut Nature",
-    "descripcion": "Champagne Salentein Brut Nature",
-    "precio": "32000",
-    "imagen": "img/20250903_104921.jpg",
-    "categoria": "🍹TRAGOS",
-    "id": "prod0169"
-  },
-  {
-    "nombre": "Champagne Blanc de Blancs (Salentein)",
-    "descripcion": "Champagne Blanc de Blancs (Salentein)",
-    "precio": "40000",
-    "imagen": "img/20250903_105019.jpg",
-    "categoria": "🍹TRAGOS",
-    "id": "prod0170"
-  },
-  {
-    "nombre": "Panqueque de dulce de leche",
-    "descripcion": "Panqueque de dulce de leche",
-    "precio": "13500",
-    "imagen": "img/20250818_132532.jpg",
-    "categoria": "🍮POSTRES",
-    "id": "prod0171"
-  },
-  {
-    "nombre": "HOT BANANA",
-    "descripcion": "Base de tarta de queso con bananas flambeadas y salsa de dulce de leche",
-    "precio": "14400",
-    "imagen": "img/Hotbana.jpg",
-    "categoria": "🍮POSTRES",
-    "id": "prod0172"
-  },
-  {
-    "nombre": "Flan casero",
-    "descripcion": "Con crema y dulce de leche $11 solo 8000",
-    "precio": "11000",
-    "imagen": "img/Flan.jpg",
-    "categoria": "🍮POSTRES",
-    "id": "prod0173"
-  },
-  {
-    "nombre": "Ensalada de frutas",
-    "descripcion": "Con bocha de helado $14000 solo $11000",
-    "precio": "14000",
-    "imagen": "img/Ensfruta.jpg",
-    "categoria": "🍮POSTRES",
-    "id": "prod0174"
-  },
-  {
-    "nombre": "Helado",
-    "descripcion": "Bochas dos: dulce de leche, chocolate, americano",
-    "precio": "8500",
-    "imagen": "img/Helado.jpg",
-    "categoria": "🍮POSTRES",
-    "id": "prod0175"
-  },
-  {
-    "nombre": "APPLE HOT",
-    "descripcion": "Apple crumble tibio con helado de vainilla y almendras tostadas",
-    "precio": "14700",
-    "imagen": "img/Apeljot.jpg",
-    "categoria": "🍮POSTRES",
-    "id": "prod0176"
-  },
-  {
-    "nombre": "BROWNIE TIBIO",
-    "descripcion": "Brownie tibio con helado y salsa de chocolate",
-    "precio": "12500",
-    "imagen": "img/Brouni.jpg",
-    "categoria": "🍮POSTRES",
-    "id": "prod0177"
-  },
-  {
-    "nombre": "MENU del DIA o SUGERENCIAS",
-    "descripcion": "Menú del día: plato + bebida + postre o café. La sugerencia solo incluye el plato.",
-    "precio": "0",
-    "imagen": "",
-    "categoria": "📋MENU del DIA/SUGERENCIAS Y NOVEDADES",
-    "id": "prod0178"
-  },
-  {
-    "nombre": "tortas nuevas",
-    "descripcion": "Sugerencia nueva por porción.",
-    "precio": "9200",
-    "imagen": "img/torgrende.jpg",
-    "categoria": "📋MENU del DIA/SUGERENCIAS Y NOVEDADES",
-    "id": "prod0179"
-  }
+  "nome": "Medialunas",
+  "descricao": "3 medialunas caseiras",
+  "precio": "9500",
+  "imagen": "img/Promoluna.jpg",
+  "categoria": "💡promociones",
+  "id": "prod0040"
+},
+{
+  "nome": "Torradas🍞",
+  "descricao": "Pão preto ou branco com cream cheese e geleia caseira",
+  "precio": "9700",
+  "imagen": "img/Promotos1.jpg",
+  "categoria": "💡promociones",
+  "id": "prod0041"
+},
+{
+  "nome": "OMELETE DE CLARAS",
+  "descricao": "Omelete com queijo e tomate (com FRITOLIN) e frutas da estação",
+  "precio": "15000",
+  "imagen": "img/Promoomelet.jpg",
+  "categoria": "💡promociones",
+  "id": "prod0042"
+},
+{
+  "nome": "AVOCADO",
+  "descricao": "Torrada com ovos mexidos, creme de abacate e sementes",
+  "precio": "14700",
+  "imagen": "img/20250806_094923.jpg",
+  "categoria": "💡promociones",
+  "id": "prod0043"
+},
+{
+  "nome": "OVOS MEXIDOS",
+  "descricao": "Ovos mexidos com presunto e queijo, acompanhado de uma torrada",
+  "precio": "13400",
+  "imagen": "img/Resultado.jpg",
+  "categoria": "💡promociones",
+  "id": "prod0044"
+},
+{
+  "nome": "PROTEICO",
+  "descricao": "Panqueca 100% farinha de amêndoas, cream cheese e fruta da estação com mel",
+  "precio": "15000",
+  "imagen": "img/20250815_132946.jpg",
+  "categoria": "💡promociones",
+  "id": "prod0045"
+},
+{
+  "nome": "FRENCH TOAST DOCE",
+  "descricao": "Torradas marinadas em ovo, com canela e açúcar, cream cheese, frutas da estação e mel",
+  "precio": "14400",
+  "imagen": "img/20250819_113846.jpg",
+  "categoria": "💡promociones",
+  "id": "prod0046"
+},
+{
+  "nome": "FRENCH TOAST SALGADO",
+  "descricao": "Torradas marinadas em ovo, com canela e açúcar, bacon, abacate e ovos mexidos",
+  "precio": "15000",
+  "imagen": "img/20250819_113925.jpg",
+  "categoria": "💡promociones",
+  "id": "prod0047"
+},
+{
+  "nome": "AMIGOS E FAMÍLIAS MASSAS",
+  "descricao": "Travessa de nhoques ou talharim (bolonhesa, creme, fileto ou rosé). Pode combinar.",
+  "precio": "49000",
+  "imagen": "img/Fuenteñoquis.jpg",
+  "categoria": "💡promociones",
+  "id": "prod0048"
+},
+{
+  "nome": "AMIGOS E FAMÍLIA MILANESA PARA 3",
+  "descricao": "Vitela à napolitana, smoke, suíça (pode ser 1/2 e 1/2) com fritas",
+  "precio": "61000",
+  "imagen": "img/mila3.jpg",
+  "categoria": "💡promociones",
+  "id": "prod0049"
+},
+{
+  "nome": "Brunch Para Dois",
+  "descricao": "Duas infusões, 2 sucos ou limonadas, 2 iogurtes com fruta e granola, chipá, tostado de presunto e queijo e tostada com ovo e abacate.",
+  "precio": "48000",
+  "imagen": "img/-52.jpg",
+  "categoria": "💡promociones",
+  "id": "prod0050"
+},
+{
+  "nome": "Torta de abóbora",
+  "descricao": "Brócolis, queijo sardo, muçarela, cebola, massa integral",
+  "precio": "19000",
+  "imagen": "img/calboso.jpg",
+  "categoria": "🍽️Comidas",
+  "id": "prod0051"
+},
+{
+  "nome": "Torta de FRANGO",
+  "descricao": "Peito de frango, alho-poró, queijo sardo, cebola, massa integral",
+  "precio": "19000",
+  "imagen": "img/Tartapollo.jpg",
+  "categoria": "🍽️Comidas",
+  "id": "prod0052"
+},
+{
+  "nome": "Burritos de Camarões",
+  "descricao": "(quente): Tortilla de trigo com camarões e legumes ao molho Teriyaki",
+  "precio": "24500",
+  "imagen": "img/Jangostino.jpg",
+  "categoria": "🍽️Comidas",
+  "id": "prod0053"
+},
+{
+  "nome": "Burritos CÉSAR de FRANGO",
+  "descricao": "(frio): Tortilla de trigo, mix de folhas, molho César clássico, peito de frango, parmesão e croutons",
+  "precio": "21000",
+  "imagen": "img/20250817_135558.jpg",
+  "categoria": "🍽️Comidas",
+  "id": "prod0054"
+},
+{
+  "nome": "Burritos MEXICANO",
+  "descricao": "(quente): Tortilla de trigo com molho de frango, carne, legumes e cheddar",
+  "precio": "25000",
+  "imagen": "img/Lomi.jpg",
+  "categoria": "🍽️Comidas",
+  "id": "prod0055"
+},
+{
+  "nome": "Omelete de presunto e queijo",
+  "descricao": "Omelete de presunto e queijo",
+  "precio": "15000",
+  "imagen": "img/20250804_132736.jpg",
+  "categoria": "🍽️Comidas",
+  "id": "prod0056"
+},
+{
+  "nome": "Omelete de queijo e champignons",
+  "descricao": "Omelete de queijo e champignons",
+  "precio": "17000",
+  "imagen": "img/Omecham.jpg",
+  "categoria": "🍽️Comidas",
+  "id": "prod0057"
+},
+{
+  "nome": "Tortilha de batata e cebola",
+  "descricao": "Tortilha de batata e cebola",
+  "precio": "15500",
+  "imagen": "img/20250816_134538.jpg",
+  "categoria": "🍽️Comidas",
+  "id": "prod0058"
+},
+{
+  "nome": "Tortilha de espinafre",
+  "descricao": "Tortilha de espinafre",
+  "precio": "15700",
+  "imagen": "img/20250813_131026 (1).jpg",
+  "categoria": "🍽️Comidas",
+  "id": "prod0059"
+},
+{
+  "nome": "Salada FRESCA",
+  "descricao": "Rúcula, maçã verde, pepino, tomates cereja, nozes, regianito",
+  "precio": "19700",
+  "imagen": "img/Fresca.jpg",
+  "categoria": "🍽️Comidas",
+  "id": "prod0060"
+},
+{
+  "nome": "Salada CAESAR com frango",
+  "descricao": "Mix de verdes, croutons, frango, parmesão e molho Caesar",
+  "precio": "17500",
+  "imagen": "img/20250819_121751.jpg",
+  "categoria": "🍽️Comidas",
+  "id": "prod0061"
+},
+{
+  "nome": "Salada CAESAR com frango crocante",
+  "descricao": "Mix de verdes, croutons, frango crocante, parmesão e molho Caesar",
+  "precio": "18500",
+  "imagen": "img/Cranch.jpg",
+  "categoria": "🍽️Comidas",
+  "id": "prod0062"
+},
+{
+  "nome": "Salada CAESAR com camarões",
+  "descricao": "Mix de verdes, croutons, camarões empanados, parmesão e molho Caesar",
+  "precio": "20000",
+  "imagen": "img/Caesarlangis.jpg",
+  "categoria": "🍽️Comidas",
+  "id": "prod0063"
+},
+{
+  "nome": "Salada STRACCIATELLA mozzarella italiana",
+  "descricao": "Mix de verdes, tomates cereja, presunto cru, mozzarella e tiras de tortilla",
+  "precio": "28500",
+  "imagen": "img/Estrachatelaens.jpg",
+  "categoria": "🍽️Comidas",
+  "id": "prod0064"
+},
+{
+  "nome": "SALADA COBB",
+  "descricao": "Mix de verdes, frango, ovo, queijo azul, tomate e molho de abacate",
+  "precio": "18200",
+  "imagen": "img/Cpsala.jpg",
+  "categoria": "🍽️Comidas",
+  "id": "prod0065"
+},
+{
+  "nome": "Milanesa SIMPLES de FRANGO ou CARNE",
+  "descricao": "Acompanhada de purê, massa, salada ou batatas fritas",
+  "precio": "20500",
+  "imagen": "img/20250816_144204.jpg",
+  "categoria": "🍽️Comidas",
+  "id": "prod0066"
+},
+{
+  "nome": "Milanesa ESPINAFRE (carne ou frango)",
+  "descricao": "Creme de espinafre e queijo gratinado. Acompanhada de purê, massa, salada ou batatas fritas",
+  "precio": "22500",
+  "imagen": "img/Esp.jpg",
+  "categoria": "🍽️Comidas",
+  "id": "prod0067"
+},
+{
+  "nome": "Milanesa SUÍÇA",
+  "descricao": "Molho branco e queijo gratinado. Acompanhada de purê, massa, salada ou batatas fritas",
+  "precio": "22500",
+  "imagen": "img/Mizuisa.jpg",
+  "categoria": "🍽️Comidas",
+  "id": "prod0068"
+},
+{
+  "nome": "Milanesa NAPOLITANA",
+  "descricao": "Molho de tomate, presunto e queijo. Acompanhada de purê, massa, salada ou batatas fritas",
+  "precio": "22500",
+  "imagen": "img/20250813_125845 (1).jpg",
+  "categoria": "🍽️Comidas",
+  "id": "prod0069"
+},
+{
+  "nome": "Mila SMOKE",
+  "descricao": "Molho de tomate, geleia de bacon, cheddar. Acompanhada de purê, massa, salada ou batatas fritas",
+  "precio": "23500",
+  "imagen": "img/Smuk.jpg",
+  "categoria": "🍽️Comidas",
+  "id": "prod0070"
+},
+{
+  "nome": "Filé de Merluza à romana",
+  "descricao": "Com purê misto",
+  "precio": "18500",
+  "imagen": "img/20250816_135027.jpg",
+  "categoria": "🍽️Comidas",
+  "id": "prod0071"
+},
+{
+  "nome": "Revuelto de Gramajo",
+  "descricao": "Batatas fritas, bacon, cebola, pimentão, ervilhas e ovo frito",
+  "precio": "18000",
+  "imagen": "img/Rebuelto.jpg",
+  "categoria": "🍽️Comidas",
+  "id": "prod0072"
+},
+{
+  "nome": "PIZZA NAPOLITANA",
+  "descricao": "Molho de tomate, stracciatella fria, presunto e rodelas de tomate",
+  "precio": "28000",
+  "imagen": "img/20250906_150935.jpg",
+  "categoria": "🍽️Comidas",
+  "id": "prod0073"
+},
+{
+  "nome": "PIZZA PARMA",
+  "descricao": "Molho de tomate, stracciatella fria, burrata, presunto cru e manjericão",
+  "precio": "34000",
+  "imagen": "img/20250816_135018.jpg",
+  "categoria": "🍽️Comidas",
+  "id": "prod0074"
+},
+{
+  "nome": "PIZZA MARGARITA",
+  "descricao": "Molho de tomate, stracciatella fria e folhas de manjericão",
+  "precio": "25500",
+  "imagen": "img/20250819_125331.jpg",
+  "categoria": "🍽️Comidas",
+  "id": "prod0075"
+},
+{
+  "nome": "PIZZA Champi",
+  "descricao": "Molho de tomate, stracciatella fria, cogumelos e cebolas salteadas",
+  "precio": "30000",
+  "imagen": "img/Pizachampi.jpg",
+  "categoria": "🍽️Comidas",
+  "id": "prod0076"
+},
+{
+  "nome": "PIZZA MUZA",
+  "descricao": "Pizza 4 pedaços com muçarela, molho de tomate e orégano",
+  "precio": "25500",
+  "imagen": "img/Piza.jpg",
+  "categoria": "🍽️Comidas",
+  "id": "prod0077"
+},
+{
+  "nome": "RISOTTO de Frango",
+  "descricao": "Com frango, abóbora e legumes",
+  "precio": "24000",
+  "imagen": "img/20250816_143144.jpg",
+  "categoria": "🍽️Comidas",
+  "id": "prod0078"
+},
+{
+  "nome": "RISOTTO de Camarões",
+  "descricao": "Com legumes, nozes e amêndoas",
+  "precio": "26500",
+  "imagen": "img/Risotolangos.jpg",
+  "categoria": "🍽️Comidas",
+  "id": "prod0079"
+},
+{
+  "nome": "RISOTTO de Lombo",
+  "descricao": "Com legumes e lombo",
+  "precio": "28500",
+  "imagen": "img/Risotolomo.jpg",
+  "categoria": "🍽️Comidas",
+  "id": "prod0080"
+},
+{
+  "nome": "Frango peito grelhado",
+  "descricao": "Com fritas, purê, salada ou arroz",
+  "precio": "21000",
+  "imagen": "img/Pechuga.jpg",
+  "categoria": "🍽️Comidas",
+  "id": "prod0081"
+},
+{
+  "nome": "Matambre de porco grelhado",
+  "descricao": "Com fritas, purê, salada ou arroz",
+  "precio": "24500",
+  "imagen": "img/Matam.jpg",
+  "categoria": "🍽️Comidas",
+  "id": "prod0082"
+},
+{
+  "nome": "Bife de chorizo grelhado",
+  "descricao": "Com fritas, purê, salada ou arroz",
+  "precio": "30500",
+  "imagen": "img/20250815_151841.jpg",
+  "categoria": "🍽️Comidas",
+  "id": "prod0083"
+},
+{
+  "nome": "Bife de lombo grelhado",
+  "descricao": "Com fritas, purê, salada ou arroz",
+  "precio": "33500",
+  "imagen": "img/IMG-20250816-WA0008.jpg",
+  "categoria": "🍽️Comidas",
+  "id": "prod0084"
+},
+{
+  "nome": "Salmão rosado grelhado",
+  "descricao": "Com fritas, purê, salada ou arroz",
+  "precio": "35000",
+  "imagen": "img/Salmón.jpg",
+  "categoria": "🍽️Comidas",
+  "id": "prod0085"
+},
+{
+  "nome": "Frango (peito grelhado)",
+  "descricao": "Acompanhado de espinafre, batatas ao creme ou legumes grelhados",
+  "precio": "23000",
+  "imagen": "img/Espepollo.jpg",
+  "categoria": "🍽️Comidas",
+  "id": "prod0086"
+},
+{
+  "nome": "Matambre de porco grelhado",
+  "descricao": "Acompanhado de espinafre, batatas ao creme ou legumes grelhados",
+  "precio": "26500",
+  "imagen": "img/Matavergrill.jpg",
+  "categoria": "🍽️Comidas",
+  "id": "prod0087"
+},
+{
+  "nome": "Bife de chorizo",
+  "descricao": "Acompanhado de espinafre, batatas ao creme ou legumes grelhados",
+  "precio": "32000",
+  "imagen": "img/Bifepapa.jpg",
+  "categoria": "🍽️Comidas",
+  "id": "prod0088"
+},
+{
+  "nome": "Bife de lombo",
+  "descricao": "Acompanhado de espinafre, batatas ao creme ou legumes grelhados",
+  "precio": "32500",
+  "imagen": "img/Lomoesp.jpg",
+  "categoria": "🍽️Comidas",
+  "id": "prod0089"
+},
+{
+  "nome": "Salmão rosado (grelhado)",
+  "descricao": "Acompanhado de espinafre, batatas ao creme ou legumes grelhados",
+  "precio": "37000",
+  "imagen": "img/Blu.jpg",
+  "categoria": "🍽️Comidas",
+  "id": "prod0090"
+},
+{
+  "nome": "Mila PESTO",
+  "descricao": "Milanesa de carne com nhoque ao pesto",
+  "precio": "21000",
+  "imagen": "img/Milapesto.jpg",
+  "categoria": "🍽️Comidas",
+  "id": "prod0091"
+},
+{
+  "nome": "Frango N.Y",
+  "descricao": "Frango defumado, mix de queijos, cebolinha, tomate e batatas fritas",
+  "precio": "24000",
+  "imagen": "img/Ny.jpg",
+  "categoria": "🍽️Comidas",
+  "id": "prod0092"
+},
+{
+  "nome": "Frango ao CHAMPI",
+  "descricao": "Em molho de cogumelos com batatas fritas",
+  "precio": "24500",
+  "imagen": "img/Pechuchapi.jpg",
+  "categoria": "🍽️Comidas",
+  "id": "prod0093"
+},
+{
+  "nome": "Frango TERIYAKI",
+  "descricao": "Peito em molho agridoce com arroz salteado e legumes",
+  "precio": "23500",
+  "imagen": "img/Tari.jpg",
+  "categoria": "🍽️Comidas",
+  "id": "prod0094"
+},
+{
+  "nome": "Salmão AZUL",
+  "descricao": "Salmão rosado grelhado em molho cremoso de queijo azul com batatas espanholas",
+  "precio": 38000,
+  "imagen": "img/20250817_142010.jpg",
+  "categoria": "🍽️Comidas",
+  "id": "prod0095"
+},
+{
+  "nome": "Matambrito à PIZZA",
+  "descricao": "De porco, muçarela, tomate e orégano com batatas fritas",
+  "precio": "28500",
+  "imagen": "img/20250815_132057.jpg",
+  "categoria": "🍽️Comidas",
+  "id": "prod0096"
+},
+{
+  "nome": "Matambrito à RIOJANA",
+  "descricao": "De porco, cebolinhas, pimentões, ervilhas e ovo frito com batatas fritas",
+  "precio": "28500",
+  "imagen": "img/Matrio.jpg",
+  "categoria": "🍽️Comidas",
+  "id": "prod0097"
+},
+{
+  "nome": "Lomo CACIO E PEPE",
+  "descricao": "Filé de lombo grelhado com espaguete ao molho de pimenta e queijo",
+  "precio": "36000",
+  "imagen": "img/Pepe.jpg",
+  "categoria": "🍽️Comidas",
+  "id": "prod0098"
+},
+{
+  "nome": "Lomo ao CHAMPI",
+  "descricao": "Filé de lombo grelhado em molho de cogumelos com batatas fritas",
+  "precio": "37000",
+  "imagen": "img/IMG-20250816-WA0009.jpg",
+  "categoria": "🍽️Comidas",
+  "id": "prod0099"
+},
+{
+  "nome": "BROCHETTE de Lombo",
+  "descricao": "Com batatas fritas (para 2 pessoas)",
+  "precio": "71000",
+  "imagen": "img/Brochette.jpg",
+  "categoria": "🍽️Comidas",
+  "id": "prod0100"
+},
+{
+  "nome": "BROCHETTE de Frango",
+  "descricao": "Com batatas fritas (para 2 pessoas)",
+  "precio": "51000",
+  "imagen": "img/20250817_135608.jpg",
+  "categoria": "🍽️Comidas",
+  "id": "prod0101"
+},
+{
+  "nome": "👶MENU KIDS NUGGETS",
+  "descricao": "Frango frito ou purê",
+  "precio": "18000",
+  "imagen": "img/Nages.jpg",
+  "categoria": "🍽️Comidas",
+  "id": "prod0102"
+},
+{
+  "nome": "👶MENU KIDS Spaghetti ou nhoques",
+  "descricao": "Molho fileto ou creme",
+  "precio": "18000",
+  "imagen": "img/Ñoquiskit.jpg",
+  "categoria": "🍽️Comidas",
+  "id": "prod0103"
+},
+{
+  "nome": "👶MENU KIDS Milanesa",
+  "descricao": "De carne com fritas ou purê",
+  "precio": "18000",
+  "imagen": "img/Menukit.jpg",
+  "categoria": "🍽️Comidas",
+  "id": "prod0104"
+},
+{
+  "nome": "Presunto cozido, queijo e tomate",
+  "descricao": "Pão ciabatta ou árabe",
+  "precio": "14000",
+  "imagen": "img/Jqyt.jpg",
+  "categoria": "🥪 Sandwiches",
+  "id": "prod0105"
+},
+{
+  "nome": "Tostado misto",
+  "descricao": "4 triângulos de presunto e queijo",
+  "precio": "15000",
+  "imagen": "img/20250824_141355.jpg",
+  "categoria": "🥪 Sandwiches",
+  "id": "prod0106"
+},
+{
+  "nome": "Presunto cru, stracciatella e tomate",
+  "descricao": "Presunto cru, stracciatella e tomate",
+  "precio": "20000",
+  "imagen": "img/20250820_143727.jpg",
+  "categoria": "🥪 Sandwiches",
+  "id": "prod0107"
+},
+{
+  "nome": "Peito de peru, queijo e tomate",
+  "descricao": "Pão ciabatta ou árabe",
+  "precio": "17000",
+  "imagen": "img/Pabita.jpg",
+  "categoria": "🥪 Sandwiches",
+  "id": "prod0108"
+},
+{
+  "nome": "Chipá tostado",
+  "descricao": "Presunto e queijo $16.000, cheddar e presunto $17.000",
+  "precio": "16000",
+  "imagen": "img/Chipatostado.jpg",
+  "categoria": "🥪 Sandwiches",
+  "id": "prod0109"
+},
+{
+  "nome": "Sanduíche de lomito só queijo",
+  "descricao": "Simples (só queijo) com batatas fritas",
+  "precio": "22000",
+  "imagen": "img/20250910_132716.jpg",
+  "categoria": "🥪 Sandwiches",
+  "id": "prod0110"
+},
+{
+  "nome": "Sanduíche de lomito clássico",
+  "descricao": "Alface, tomate, presunto e queijo, com batatas fritas",
+  "precio": "25000",
+  "imagen": "img/20250914_130533.jpg",
+  "categoria": "🥪 Sandwiches",
+  "id": "prod0111"
+},
+{
+  "nome": "Sanduíche de lomito bacon",
+  "descricao": "Queijo cheddar, bacon e tomate, com batatas fritas",
+  "precio": "27000",
+  "imagen": "img/Lomitobac.jpg",
+  "categoria": "🥪 Sandwiches",
+  "id": "prod0112"
+},
+{
+  "nome": "Burger simples",
+  "descricao": "Simples (só queijo) com batatas fritas",
+  "precio": "15000",
+  "imagen": "img/20250816_135012.jpg",
+  "categoria": "🥪 Sandwiches",
+  "id": "prod0113"
+},
+{
+  "nome": "Burger clássico",
+  "descricao": "Alface, tomate, presunto e queijo",
+  "precio": "17000",
+  "imagen": "img/20250816_135012.jpg",
+  "categoria": "🥪 Sandwiches",
+  "id": "prod0114"
+},
+{
+  "nome": "Burger bacon",
+  "descricao": "Queijo cheddar, bacon e tomate",
+  "precio": "19000",
+  "imagen": "img/Bacon.jpg",
+  "categoria": "🥪 Sandwiches",
+  "id": "prod0115"
+},
+{
+  "nome": "Empanadas",
+  "descricao": "Carne ou presunto e queijo",
+  "precio": "3000",
+  "imagen": "img/Empa.jpg",
+  "categoria": "🥟 ENTRADITAS",
+  "id": "prod0116"
+},
+{
+  "nome": "Lulas à romana",
+  "descricao": "Lulas à romana",
+  "precio": "24000",
+  "imagen": "img/Rabas.jpg",
+  "categoria": "🥟 ENTRADITAS",
+  "id": "prod0117"
+},
+{
+  "nome": "Mozzarellas empanadas",
+  "descricao": "Mozzarellas empanadas",
+  "precio": "17000",
+  "imagen": "img/20250817_131412.jpg",
+  "categoria": "🥟 ENTRADITAS",
+  "id": "prod0118"
+},
+{
+  "nome": "Nachos",
+  "descricao": "Nachos de carne com cheddar e abacate",
+  "precio": "18500",
+  "imagen": "img/20250815_155313.jpg",
+  "categoria": "🥟 ENTRADITAS",
+  "id": "prod0119"
+},
+{
+  "nome": "Farinata recomendado",
+  "descricao": "Fainá com stracciatella, presunto cru, tomates e manjericão",
+  "precio": "21000",
+  "imagen": "img/Farinata.jpg",
+  "categoria": "🥟 ENTRADITAS",
+  "id": "prod0120"
+},
+{
+  "nome": "PICADITA FRIA (para 2 pessoas)",
+  "descricao": "Presunto cru, presunto cozido, queijo roquefort, queijo tybo, tomates cereja, frutos secos",
+  "precio": "55000",
+  "imagen": "img/tarta_brocoli.jpg",
+  "categoria": "🥟 ENTRADITAS",
+  "id": "prod0121"
+},
+{
+  "nome": "PICADITA QUENTE (para 2 pessoas)",
+  "descricao": "Frango empanado, bastões de muçarela, lulas e batatas fritas. Inclui dois porrones de Stella",
+  "precio": "45000",
+  "imagen": "img/IMG-20250815.jpg",
+  "categoria": "🥟 ENTRADITAS",
+  "id": "prod0122"
+},
+{
+  "nome": "Spaghetti (molho à parte)",
+  "descricao": "Spaghetti com molho à escolha",
+  "precio": "11000",
+  "imagen": "img/Spa.jpg",
+  "categoria": "🍝 PASTAS",
+  "id": "prod0123"
+},
+{
+  "nome": "Nhoques ao ovo (molho à parte)",
+  "descricao": "Nhoques ao ovo com molho à escolha",
+  "precio": "11000",
+  "imagen": "img/Ñoquis.jpg",
+  "categoria": "🍝 PASTAS",
+  "id": "prod0124"
+},
+{
+  "nome": "Ravioles de verdura, frango e presunto (molho à parte)",
+  "descricao": "Recheados com verdura, frango e presunto",
+  "precio": "13000",
+  "imagen": "img/Ravioles.jpg",
+  "categoria": "🍝 PASTAS",
+  "id": "prod0125"
+},
+{
+  "nome": "Ravioles de verdura e ricota (molho à parte)",
+  "descricao": "Recheados com verdura e ricota",
+  "precio": "13000",
+  "imagen": "img/Ravioles.jpg",
+  "categoria": "🍝 PASTAS",
+  "id": "prod0126"
+},
+{
+  "nome": "Sorrentinos de muçarela e presunto (molho à parte)",
+  "descricao": "Sorrentinos recheados com muçarela e presunto",
+  "precio": "15000",
+  "imagen": "img/Sonren.jpg",
+  "categoria": "🍝 PASTAS",
+  "id": "prod0127"
+},
+{
+  "nome": "Molho branco",
+  "descricao": "Molho branco",
+  "precio": "6000",
+  "imagen": "img/20250905_131302.jpg",
+  "categoria": "🥫SALSAS",
+  "id": "prod0128"
+},
+{
+  "nome": "Fileto",
+  "descricao": "Fileto",
+  "precio": "6000",
+  "imagen": "img/20250903_124659.jpg",
+  "categoria": "🥫SALSAS",
+  "id": "prod0129"
+},
+{
+  "nome": "Alfredo Frango",
+  "descricao": "Molho branco com frango",
+  "precio": "7500",
+  "imagen": "img/Frepollo.jpg",
+  "categoria": "🥫SALSAS",
+  "id": "prod0130"
+},
+{
+  "nome": "Alfredo camarões",
+  "descricao": "Molho branco com camarões",
+  "precio": "9500",
+  "imagen": "img/Frelang.jpg",
+  "categoria": "🥫SALSAS",
+  "id": "prod0131"
+},
+{
+  "nome": "Bolonhesa",
+  "descricao": "salsa com carne",
+  "precio": "7700",
+  "imagen": "img/Bolo.jpg",
+  "categoria": "🥫SALSAS",
+  "id": "prod0132"
+},
+{
+  "nome": "Pesto com noz",
+  "descricao": "noz, alho e salsa",
+  "precio": "6800",
+  "imagen": "img/IMG-20250816-WA0011.jpg",
+  "categoria": "🥫SALSAS",
+  "id": "prod0133"
+},
+{
+  "nome": "Carbonara",
+  "descricao": "Creme, bacon e cebolinha",
+  "precio": "7700",
+  "imagen": "img/Carbonara.jpg",
+  "categoria": "🥫SALSAS",
+  "id": "prod0134"
+},
+{
+  "nome": "caccio e pepe",
+  "descricao": "manteiga, pimenta e parmesão",
+  "precio": "7000",
+  "imagen": "img/204218.jpg",
+  "categoria": "🥫SALSAS",
+  "id": "prod0135"
+},
+{
+  "nome": "MOLHOS VARIADOS",
+  "descricao": "MANTEIGA, AZEITE, ALHO E PARMESÃO",
+  "precio": "6000",
+  "imagen": "img/218.jpg",
+  "categoria": "🥫SALSAS",
+  "id": "prod0136"
+},
+{
+  "nome": "linha Coca-Cola",
+  "descricao": "Zeros e clássicas",
+  "precio": "4200",
+  "imagen": "img/20250830_141813.jpg",
+  "categoria": "🥤 Bebidas y vinos",
+  "id": "prod0137"
+},
+{
+  "nome": "Água local filtrada e mineralizada",
+  "descricao": "Água fria, natural e com gás",
+  "precio": "3700",
+  "imagen": "img/20250830_142147.jpg",
+  "categoria": "🥤 Bebidas y vinos",
+  "id": "prod0138"
+},
+{
+  "nome": "Adicional com limão",
+  "descricao": "Adicional com limão",
+  "precio": "400",
+  "imagen": "img/20250903_093625.jpg",
+  "categoria": "🥤 Bebidas y vinos",
+  "id": "prod0139"
+},
+{
+  "nome": "Suco espremido de laranja",
+  "descricao": "Suco natural de laranja",
+  "precio": "6700",
+  "imagen": "img/Exprimido.jpg",
+  "categoria": "🥤 Bebidas y vinos",
+  "id": "prod0140"
+},
+{
+  "nome": "Pomelada",
+  "descricao": "Pomelo natural",
+  "precio": "7200",
+  "imagen": "img/pomelada.jpg",
+  "categoria": "🥤 Bebidas y vinos",
+  "id": "prod0141"
+},
+{
+  "nome": "Milkshake OREO",
+  "descricao": "Sorvete de creme com oreos e chantilly",
+  "precio": "9000",
+  "imagen": "img/Mioreo.jpg",
+  "categoria": "🥤 Bebidas y vinos",
+  "id": "prod0142"
+},
+{
+  "nome": "Vitaminas",
+  "descricao": "Com frutas da estação (base de água, leite ou suco)",
+  "precio": "7500",
+  "imagen": "img/20250903_110035.jpg",
+  "categoria": "🥤 Bebidas y vinos",
+  "id": "prod0143"
+},
+{
+  "nome": "Limonada com hortelã e gengibre",
+  "descricao": "Limonada natural com hortelã e gengibre",
+  "precio": "6700",
+  "imagen": "img/Limonada.jpg",
+  "categoria": "🥤 Bebidas y vinos",
+  "id": "prod0144"
+},
+{
+  "nome": "Limonada",
+  "descricao": "Limonada simples",
+  "precio": "6400",
+  "imagen": "img/Limosim.jpg",
+  "categoria": "🥤 Bebidas y vinos",
+  "id": "prod0145"
+},
+{
+  "nome": "STELLA ARTOIS (0cc - Porrón)",
+  "cricao": "Cerveja Stella Artois 330cc",
+  "precio": "7400",
+  "imagen": "img/Coroa.jpg",
+  "categoria": "🥤 Bebidas y vinos",
+  "id": "prod0146"
+},
+{
+  "nome": "CORONA (Porrón)",
+  "descricao": "Cerveja Corona 330cc",
+  "precio": "7700",
+  "imagen": "img/Estelar.jpg",
+  "categoria": "🥤 Bebidas y vinos",
+  "id": "prod0147"
+},
+{
+  "nome": "STELLA 1 LITRO",
+  "descricao": "Cerveja Stella Artois 1 L",
+  "precio": "17000",
+  "imagen": "img/SetellaL1.jpg",
+  "categoria": "🥤 Bebidas y vinos",
+  "id": "prod0148"
+},
+{
+  "nome": "Trumpeter Malbec",
+  "descricao": "Trumpeter Malbec (750 cc)",
+  "precio": "25000",
+  "imagen": "img/20250903_112612.jpg",
+  "categoria": "🥤 Bebidas y vinos",
+  "id": "prod0149"
+},
+{
+  "nome": "Trumpeter Cabernet",
+  "descricao": "Trumpeter Cabernet (750 cc)",
+  "precio": "25000",
+  "imagen": "img/20250903_112534.jpg",
+  "categoria": "🥤 Bebidas y vinos",
+  "id": "prod0150"
+},
+{
+  "nome": "Rutini Malbec-Cabernet Franc",
+  "descricao": "Rutini Malbec-Cabernet Franc (750 cc)",
+  "precio": "36000",
+  "imagen": "img/Rutinicaber.jpg",
+  "categoria": "🥤 Bebidas y vinos",
+  "id": "prod0151"
+},
+{
+  "nome": "Portillo Malbec",
+  "cricao": "Portillo Malbec (750 cc)",
+  "precio": "19000",
+  "imagen": "img/20250903_111015.jpg",
+  "categoria": "🥤 Bebidas y vinos",
+  "id": "prod0152"
+},
+{
+  "nome": "Salentein Reserva Cabernet Sauvignon",
+  "descricao": "Salentein Reserva Cabernet Sauvignon (750 cc)",
+  "precio": "30000",
+  "imagen": "img/20250903_123740.jpg",
+  "categoria": "🥤 Bebidas y vinos",
+  "id": "prod0153"
+},
+{
+  "nome": "Trumpeter Sauvignon Blanc",
+  "descricao": "Trumpeter Sauvignon Blanc (750 cc)",
+  "precio": "25000",
+  "imagen": "img/20250903_112257.jpg",
+  "categoria": "🥤 Bebidas y vinos",
+  "id": "prod0154"
+},
+{
+  "nome": "Portillo Chardonnay",
+  "descricao": "Portillo Chardonnay (750 cc)",
+  "precio": "19000",
+  "imagen": "img/20250903_110934.jpg",
+  "categoria": "🥤 Bebidas y vinos",
+  "id": "prod0155"
+},
+{
+  "nome": "Portillo Rosé Malbec",
+  "descricao": "Portillo Rosé Malbec (Vinho fresco e fácil de beber)",
+  "precio": "19000",
+  "imagen": "img/20250903_110955.jpg",
+  "categoria": "🥤 Bebidas y vinos",
+  "id": "prod0156"
+},
+{
+  "nome": "Taça de vinho",
+  "descricao": "Brancos ou tintos",
+  "precio": "8000",
+  "imagen": "img/20250903_124351.jpg",
+  "categoria": "🥤 Bebidas y vinos",
+  "id": "prod0157"
+},
+{
+  "nome": "Jack Daniel's",
+  "descricao": "Jack Daniel's",
+  "precio": "15000",
+  "imagen": "img/Daniel’s.jpg",
+  "categoria": "🍹TRAGOS",
+  "id": "prod0158"
+},
+{
+  "nome": "Johnny Walker Black",
+  "descricao": "Johnny Walker Black",
+  "precio": "15000",
+  "imagen": "img/Black.jpg",
+  "categoria": "🍹TRAGOS",
+  "id": "prod0159"
+},
+{
+  "nome": "Johnny Walker Red",
+  "descricao": "Johnny Walker Red",
+  "precio": "13000",
+  "imagen": "img/Ret.jpg",
+  "categoria": "🍹TRAGOS",
+  "id": "prod0160"
+},
+{
+  "nome": "Licor Baileys",
+  "descricao": "Licor Baileys",
+  "precio": "12000",
+  "imagen": "img/20250903_111957.jpg",
+  "categoria": "🍹TRAGOS",
+  "id": "prod0161"
+},
+{
+  "nome": "Fernet com Coca-Cola",
+  "descricao": "Fernet com Coca-Cola",
+  "precio": "12000",
+  "imagen": "img/Ferne.jpg",
+  "categoria": "🍹TRAGOS",
+  "id": "prod0162"
+},
+{
+  "nome": "Gin Tonic Beefeater",
+  "descricao": "Gin Tonic Beefeater",
+  "precio": "12000",
+  "imagen": "img/Ginton.jpg",
+  "categoria": "🍹TRAGOS",
+  "id": "prod0163"
+},
+{
+  "nome": "Batido Gancia",
+  "descricao": "Batido Gancia",
+  "precio": "9500",
+  "imagen": "img/Gancia.jpg",
+  "categoria": "🍹TRAGOS",
+  "id": "prod0164"
+},
+{
+  "nome": "Aperol com laranja",
+  "descricao": "Aperol com laranja",
+  "precio": "9500",
+  "imagen": "img/Campati.jpg",
+  "categoria": "🍹TRAGOS",
+  "id": "prod0165"
+},
+{
+  "nome": "Aperol Spritz",
+  "descricao": "Aperol Spritz",
+  "precio": "13000",
+  "imagen": "img/Aprol.jpg",
+  "categoria": "🍹TRAGOS",
+  "id": "prod0166"
+},
+{
+  "nome": "HAPPY HOUR",
+  "descricao": "Aperol Spritz $13000 ou laranja $9500, Gin Tonic $12000 ou Fernet com Coca $12000. Todos os dias das 18 às 20:30.",
+  "precio": "0",
+  "imagen": "img/Api.jpg",
+  "categoria": "🍹TRAGOS",
+  "id": "prod0167"
+},
+{
+  "nome": "Champagne Chandon",
+  "descricao": "Champagne Chandon (187cc)",
+  "precio": "15000",
+  "imagen": "img/20250903_113545.jpg",
+  "categoria": "🍹TRAGOS",
+  "id": "prod0168"
+},
+{
+  "nome": "Champagne Salentein Brut Nature",
+  "descricao": "Champagne Salentein Brut Nature",
+  "precio": "32000",
+  "imagen": "img/20250903_104921.jpg",
+  "categoria": "🍹TRAGOS",
+  "id": "prod0169"
+},
+{
+  "nome": "Champagne Blanc de Blancs (Salentein)",
+  "descricao": "Champagne Blanc de Blancs (Salentein)",
+  "precio": "40000",
+  "imagen": "img/20250903_105019.jpg",
+  "categoria": "🍹TRAGOS",
+  "id": "prod0170"
+},
+{
+  "nome": "Panqueca de doce de leite",
+  "descricao": "Panqueca de doce de leite",
+  "precio": "13500",
+  "imagen": "img/20250818_132532.jpg",
+  "categoria": "🍮POSTRES",
+  "id": "prod0171"
+},
+{
+  "nome": "HOT BANANA",
+  "descricao": "Base de torta de queijo com bananas flambadas e molho de doce de leite",
+  "precio": "14400",
+  "imagen": "img/Hotbana.jpg",
+  "categoria": "🍮POSTRES",
+  "id": "prod0172"
+},
+{
+  "nome": "Pudim caseiro",
+  "descricao": "Com creme e doce de leite $11 só 8000",
+  "precio": "11000",
+  "imagen": "img/Flan.jpg",
+  "categoria": "🍮POSTRES",
+  "id": "prod0173"
+},
+{
+  "nome": "Salada de frutas",
+  "descricao": "Com bola de sorvete $14000 só $11000",
+  "precio": "14000",
+  "imagen": "img/Ensfruta.jpg",
+  "categoria": "🍮POSTRES",
+  "id": "prod0174"
+},
+{
+  "nome": "Sorvete",
+  "descricao": "Duas bolas: doce de leite, chocolate, americano",
+  "precio": "8500",
+  "imagen": "img/Helado.jpg",
+  "categoria": "🍮POSTRES",
+  "id": "prod0175"
+},
+{
+  "nome": "APPLE HOT",
+  "descricao": "Apple crumble morno com sorvete de baunilha e amêndoas tostadas",
+  "precio": "14700",
+  "imagen": "img/Apeljot.jpg",
+  "categoria": "🍮POSTRES",
+  "id": "prod0176"
+},
+{
+  "nome": "BROWNIE MORNO",
+  "descricao": "Brownie morno com sorvete e calda de chocolate",
+  "precio": "12500",
+  "imagen": "img/Brouni.jpg",
+  "categoria": "🍮POSTRES",
+  "id": "prod0177"
+},
+{
+  "nome": "MENU do DIA ou SUGESTÕES",
+  "descricao": "Menu do dia: prato + bebida + sobremesa ou café. A sugestão inclui apenas o prato.",
+  "precio": "0",
+  "imagen": "",
+  "categoria": "📋MENU del DIA/SUGERENCIAS Y NOVEDADES",
+  "id": "prod0178"
+},
+{
+  "nome": "tortas novas",
+  "descricao": "Sugestão nova por porção.",
+  "precio": "9200",
+  "imagen": "img/torgrende.jpg",
+  "categoria": "📋MENU del DIA/SUGERENCIAS Y NOVEDADES",
+  "id": "prod0179"
+},
 ]
