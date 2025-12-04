@@ -64,22 +64,25 @@
     <tbody id="tbody"></tbody>
   </table>
 
+<button id="guardarTodos" onclick="guardarTodosLosPrecios()" style="margin-top:15px; padding:10px 15px; background:#a07b68; color:white; border:none; border-radius:8px; cursor:pointer;">💾 Guardar TODOS los precios</button>
+
 <script>
 const USERNAME="cholose10", REPO="cartaaguero";
-const FILES=["productos.json","productos-en.json","productos-port.json"];
+const MAIN_JSON="productos.json";          // español
+const EN_JSON="productos-en.json";         // inglés
+const PT_JSON="productos-por.json";        // portugués
+
 let productos=[];
 
-function toggleForm(){ const f=document.getElementById('form'); f.style.display = f.style.display==='none' || f.style.display==='' ? 'block':'none'; }
-function saveToken(){ const t=document.getElementById('token').value; localStorage.setItem('github_token',t); tokenStatus.innerText='Token guardado'; }
-function clearToken(){ localStorage.removeItem('github_token'); tokenStatus.innerText='Token borrado'; }
+function saveToken(){ const t=document.getElementById('token').value; localStorage.setItem('github_token',t); document.getElementById('tokenStatus').innerText='Token guardado'; }
+function clearToken(){ localStorage.removeItem('github_token'); document.getElementById('tokenStatus').innerText='Token borrado'; }
 function getToken(){ return localStorage.getItem('github_token'); }
 
 async function loadProducts(){
-  try{
-    const url=`https://raw.githubusercontent.com/${USERNAME}/${REPO}/main/productos.json`;
-    const r=await fetch(url);
-    productos=await r.json(); render(productos);
-  }catch(e){ alert('Error cargando productos'); }
+  const url=`https://raw.githubusercontent.com/${USERNAME}/${REPO}/main/${MAIN_JSON}`;
+  const r=await fetch(url);
+  productos=await r.json();
+  render(productos);
 }
 
 function render(lista){
@@ -87,71 +90,87 @@ function render(lista){
   lista.forEach((p,i)=>{
     tb.innerHTML+=`
       <tr>
-        <td>
-          <img src="${p.imagen}" class="mini-img" style="max-width:60px; margin-bottom:6px;">
-          <input value="${p.imagen}" oninput="editField(${i}, 'imagen', this.value)">
-        </td>
-        <td><input value="${p.nombre}" oninput="editField(${i}, 'nombre', this.value)"></td>
-        <td><textarea oninput="editField(${i}, 'descripcion', this.value)">${p.descripcion}</textarea></td>
-        <td><input value="${p.categoria}" oninput="editField(${i}, 'categoria', this.value)"></td>
-        <td><input value="${p.precio}" oninput="editField(${i}, 'precio', this.value)"></td>
+        <td><img src="${p.imagen}" class="mini-img" style="max-width:60px;"></td>
+        <td><input value="${p.nombre}" oninput="editField(${i},'nombre',this.value)"></td>
+        <td><textarea oninput="editField(${i},'descripcion',this.value)">${p.descripcion}</textarea></td>
+        <td><input value="${p.categoria}" oninput="editField(${i},'categoria',this.value)"></td>
+        <td><input type="text" value="${p.precio}" oninput="editField(${i},'precio',this.value)"></td>
         <td>
           <button onclick="guardarFila(${i})">Guardar</button>
-          <button class="btn-delete" onclick="del(${i})">Eliminar</button>
         </td>
       </tr>`;
   });
 }
 
-function editField(i, campo, valor){ productos[i][campo] = valor; }
-
-function generarID(){
-  let max = 0;
-  productos.forEach(p=>{
-    if(p.id && p.id.startsWith("prod")){
-      const n=parseInt(p.id.replace("prod",""));
-      if(n>max) max=n;
-    }
-  });
-  return "prod" + String(max+1).padStart(4,"0");
+function editField(i,campo,valor){
+  if(campo==="precio") productos[i][campo] = valor;
+  else productos[i][campo] = valor;
 }
 
-async function guardarFila(i){ if(await guardarEnJSONs()) animarFila(i); }
+async function guardarFila(i){
+  const p=productos[i];
 
-async function guardarFormulario(){
-  const i=document.getElementById('editIndex').value;
-  const obj={ nombre:nombre.value, descripcion:descripcion.value, precio:precio.value, imagen:imagen.value, categoria:categoria.value };
-  if(!obj.id) obj.id = generarID();
-  if(i==='' || i===null) productos.push(obj); else productos[i]=obj;
-  await guardarEnJSONs(); loadProducts(); alert('Guardado');
+  // 1) guardar cambios SOLO en productos.json (ES)
+  const ok = await saveToGitHub(MAIN_JSON, productos);
+
+  if(!ok){ alert("Error guardando ES"); return; }
+
+  // 2) sincronizar SOLO el precio en EN y PT
+  await syncPrice(p.id, p.precio);
+
+  alert("Cambios guardados correctamente (ES + precios EN/PT)");
 }
 
-async function del(i){ if(confirm('¿Eliminar?')){ productos.splice(i,1); await guardarEnJSONs(); loadProducts(); } }
-
-async function guardarEnJSONs(){
-  const token=getToken(); if(!token){ alert('Falta token'); return false; }
-  const contentES = JSON.stringify(productos,null,2);
-
-  for(const file of FILES){ await subir(file, contentES, token); }
-  alert('Cambios guardados en los 3 JSON');
-  return true;
+async function syncPrice(id, precio){
+  await updatePriceInJSON(EN_JSON, id, precio);
+  await updatePriceInJSON(PT_JSON, id, precio);
 }
 
-async function subir(file, content, token){
-  const api=`https://api.github.com/repos/${USERNAME}/${REPO}/contents/${file}`;
-  const r=await fetch(api); const j=await r.json();
-  await fetch(api,{
-    method:"PUT",
-    headers:{"Content-Type":"application/json","Authorization":`token ${token}`},
-    body:JSON.stringify({message:"update", content:btoa(unescape(encodeURIComponent(content))), sha:j.sha})
-  });
+async function updatePriceInJSON(file, id, precio){
+  const url=`https://raw.githubusercontent.com/${USERNAME}/${REPO}/main/${file}`;
+  const r=await fetch(url);
+  let arr = await r.json();
+
+  const index = arr.findIndex(x=>x.id===id);
+  if(index>=0){ arr[index].precio = precio; }
+
+  await saveToGitHub(file, arr);
 }
 
-function previewImage(){ preview.src=imagen.value; }
-function filterProducts(){ const t=search.value.toLowerCase(); render(productos.filter(p=>p.nombre.toLowerCase().includes(t) || p.descripcion.toLowerCase().includes(t) || p.categoria.toLowerCase().includes(t))); }
-function animarFila(i){ const filas=document.querySelectorAll('#tbody tr'); if(filas[i]){ filas[i].style.background="#d1f2d1"; setTimeout(()=>filas[i].style.background="",500); }}
+async function saveToGitHub(fileName, content){
+  try{
+    const token=getToken(); if(!token){ alert("Falta token"); return false; }
+
+    const sha = await getSHA(fileName);
+
+    const res = await fetch(`https://api.github.com/repos/${USERNAME}/${REPO}/contents/${fileName}`,{
+      method:'PUT',
+      headers:{'Content-Type':'application/json','Authorization':`token ${token}`},
+      body:JSON.stringify({
+        message:'update',
+        content:btoa(unescape(encodeURIComponent(JSON.stringify(content,null,2)))),
+        sha
+      })
+    });
+
+    return res.ok;
+  }catch(e){ console.error(e); return false; }
+}
+
+async function getSHA(file){
+  const r=await fetch(`https://api.github.com/repos/${USERNAME}/${REPO}/contents/${file}`);
+  const j=await r.json(); return j.sha;
+}
 
 loadProducts();
+
+async function guardarTodosLosPrecios(){
+  if(!confirm("¿Guardar TODOS los precios en EN y PT?")) return;
+  for(const p of productos){
+    await syncPrice(p.id, p.precio);
+  }
+  alert("✔ Todos los precios sincronizados correctamente en EN y PT");
+}
 </script>
 <img id="hoverPreview" />
 </body>
