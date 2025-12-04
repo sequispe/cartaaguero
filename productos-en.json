@@ -5,7 +5,8 @@
     "description": "Small coffee",
     "price": "34000",
     "imagen": "img/cafe.jpg",
-    "category": "Coffee Shop ☕️"
+    "category": "Coffee Shop ☕️",
+    "precio": "3400"
   },
   {
     "id": "prod0002",
@@ -1432,4 +1433,3 @@
     "category": "📋DAILY MENU/SPECIALS & NEWS"
   }
 ]
-
