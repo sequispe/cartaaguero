@@ -343,8 +343,7 @@
     "description": "Toast with scrambled eggs, avocado cream and seeds",
     "price": "14700",
     "imagen": "img/20250806_094923.jpg",
-    "category": "💡Promotions",
-    "precio": "16000"
+    "category": "💡Promotions"
   },
   {
     "id": "prod0044",
@@ -568,7 +567,8 @@
     "description": "Served with mixed mashed potatoes",
     "price": "18500",
     "imagen": "img/20250816_135027.jpg",
-    "category": "🍽️Meals"
+    "category": "🍽️Meals",
+    "precio": "18500"
   },
   {
     "id": "prod0072",
