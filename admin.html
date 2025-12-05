@@ -1,337 +1,716 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8" />
-<title>Admin Carta Tilo Café</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Carta - Tilo Café Agüero</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; background: #f7f3f0; color:#333; }
+    h1 { text-align:center; color:#806250; }
+    #topBar {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 10px;
+    }
+    #guardarTodos {<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Carta - Tilo Café Agüero</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; background: #f7f3f0; color:#333; }
+    h1 { text-align:center; color:#806250; }
+    #toggleForm { background:#806250; color:white; padding:10px 15px; border-radius:6px; cursor:pointer; margin-bottom:15px; }
+    form { display:none; background:#fff; padding:15px; border-radius:10px; margin-bottom:20px; }
+    input, textarea { width:100%; padding:8px; margin:7px 0; border-radius:6px; border:1px solid #ccc; }
+    table { width:100%; border-collapse:collapse; background:white; }
+    th,td { border:1px solid #ddd; padding:8px; }
+    th { background:#806250; color:white; }
+    button { background:#806250; color:white; border:none; padding:6px 10px; border-radius:6px; cursor:pointer; }
+    .btn-delete { background:#c0392b; }
+    #preview { max-width:100px; margin-top:5px; border-radius:6px; }
+    #hoverPreview { position: fixed; top: 0; left: 0; width: 220px; display:none; border:2px solid #806250; border-radius:10px; background:#fff; z-index:9999; box-shadow:0 0 10px rgba(0,0,0,0.3); padding:6px; }
+    td input, td textarea { width:95%; }
+    td img.mini-img { cursor: pointer; }
 
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        margin: 20px;
-        background: #f7f7f7;
+    /* Botón guardar TODOS fijo arriba a la derecha */
+    #guardarTodos{
+      position: fixed;
+      top: 18px;
+      right: 18px;
+      z-index: 1200;
+      padding: 10px 14px;
+      background: #a07b68;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.15);
     }
-    h1 {
-        text-align: center;
-    }
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 20px;
-        background: #fff;
-    }
-    table th, table td {
-        border: 1px solid #ccc;
-        padding: 6px;
-        font-size: 14px;
-        text-align: left;
-    }
-    table th {
-        background: #ead2c3;
-    }
-    img.mini {
-        width: 60px;
-        height: 60px;
-        object-fit: cover;
-        border-radius: 5px;
-    }
-    #preview {
-        width: 120px;
-        height: 120px;
-        object-fit: cover;
-        border-radius: 10px;
-        display: block;
-        margin-bottom: 10px;
-    }
-    #formNuevo, #formVarios {
-        background: #fff;
-        padding: 15px;
-        border-radius: 10px;
-        margin-top: 20px;
-        border: 1px solid #ccc;
-    }
-    .btn {
-        background: #a07b68;
-        color: white;
-        padding: 8px 14px;
-        border: none;
-        border-radius: 6px;
-        cursor: pointer;
-        margin: 4px;
-        font-size: 14px;
-    }
-    .btn:hover {
-        opacity: 0.8;
-    }
-    #toastOK {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        background: #4CAF50;
-        color: white;
-        padding: 12px 18px;
-        border-radius: 6px;
-        font-weight: bold;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-        opacity: 0;
-        pointer-events: none;
-        transition: opacity 0.3s ease;
-        z-index: 3000;
-    }
-</style>
+
+  </style>
 </head>
 <body>
+  <h1>Panel de Administración</h1>
 
-<h1>ADMINISTRADOR DE CARTA</h1>
+  <div>
+    <label>Token:</label>
+    <input type="password" id="token" placeholder="Pegar token">
+    <button onclick="saveToken()">Guardar</button>
+    <button onclick="clearToken()">Borrar</button>
+    <p id="tokenStatus"></p>
+  </div>
 
-<div id="toastOK">Cambios guardados correctamente</div>
+  <input id="search" placeholder="Buscar..." oninput="filterProducts()">
 
-<div>
-    <label><b>Token:</b></label>
-    <input type="password" id="tokenInput" style="width:260px;">
-    <button class="btn" onclick="guardarToken()">Guardar Token</button>
-</div>
+  <button id="toggleForm" onclick="toggleForm()">+ Agregar producto</button>
+  <button id="agregarVarios" onclick="toggleMultiForm()" style="margin-left:10px; background:#5c8a50;">➕ Agregar VARIOS</button>
 
-<button class="btn" onclick="mostrarFormNuevo()">+ Agregar Producto</button>
-<button class="btn" onclick="mostrarFormVarios()">Agregar VARIOS</button>
-<button class="btn" style="float:right;" onclick="guardarTodos()">💾 Guardar TODOS los cambios</button>
+  <!-- BOTÓN GUARDAR TODOS (arriba a la derecha) -->
+  <button id="guardarTodos" onclick="guardarTodosLosPrecios()">💾 Guardar TODOS los cambios</button>
 
-<table>
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th>IMG</th>
-            <th>Nombre</th>
-            <th>Descripción</th>
-            <th>Precio</th>
-            <th>Categoría</th>
-            <th>Guardar</th>
-        </tr>
-    </thead>
-    <tbody id="tablaBody"></tbody>
-</table>
+  <form id="form">
+    <input type="hidden" id="editIndex">
+    <label>Nombre</label>
+    <input id="nombre">
 
-<!-- Formulario para agregar producto -->
-<div id="formNuevo" style="display:none;">
-    <h3>Agregar Producto</h3>
-    <img src="" id="preview">
-    <input id="nNombre" placeholder="Nombre"><br><br>
-    <input id="nDesc" placeholder="Descripción"><br><br>
-    <input id="nPrecio" placeholder="Precio" type="number"><br><br>
-    <input id="nCat" placeholder="Categoría"><br><br>
-    <input id="nImg" placeholder="Nombre de imagen (sin 'img/')"><br><br>
-    <button class="btn" onclick="agregarUno()">Agregar</button>
-    <button class="btn" onclick="cerrarFormNuevo()">Cerrar</button>
-</div>
+    <label>Descripción</label>
+    <textarea id="descripcion"></textarea>
 
-<!-- Formulario para agregar VARIOS -->
-<div id="formVarios" style="display:none;">
-    <h3>Agregar VARIOS</h3>
-    <textarea id="multiTxt" style="width:100%;height:150px;"></textarea><br>
-    <button class="btn" onclick="procesarVarios()">Procesar</button>
-    <button class="btn" onclick="cerrarFormVarios()">Cerrar</button>
-</div>
+    <label>Precio</label>
+    <input id="precio">
+
+    <label>Imagen (img/...)</label>
+    <input id="imagen" oninput="previewImage()">
+    <img id="preview">
+
+    <label>Categoría</label>
+    <input id="categoria">
+
+    <button type="button" onclick="guardarFormulario()">Guardar</button>
+  </form>
+
+  <!-- FORMULARIO MÚLTIPLE -->
+  <form id="multiForm" style="display:none; background:#fff; padding:15px; border-radius:10px; margin-bottom:20px;">
+    <h3>Cargar varios productos</h3>
+    <p>Agregá un producto por línea con este formato:</p>
+    <p><b>nombre | descripcion | precio | imagen | categoria</b></p>
+    <textarea id="multiInput" placeholder="Ej:
+Café expresso | Café chico | 3400 | img/cafe.jpg | Cafetería" style="height:180px;"></textarea>
+    <button type="button" onclick="procesarMulti()">Guardar varios</button>
+  </form>
+
+  <table>
+    <thead><tr>
+      <th>Imagen</th><th>Nombre</th><th>Descripción</th><th>Categoría</th><th>Precio</th><th>Acciones</th>
+    </tr></thead>
+    <tbody id="tbody"></tbody>
+  </table>
 
 <script>
-/* ==========================
-       CONFIGURACIÓN
-=========================== */
-const USERNAME = "sequispe";
-const REPO     = "carta";
-const MAIN_JSON = "productos.json"; 
-const EN_JSON   = "productos-en.json";
-const PT_JSON   = "productos-port.json";
+const USERNAME="cholose10", REPO="cartaaguero";
+const MAIN_JSON="productos.json";
+const EN_JSON="productos-en.json";
+const PT_JSON="productos-port.json"; // ← nombre correcto
 
-let TOKEN = localStorage.getItem("githubToken") || "";
-document.getElementById("tokenInput").value = TOKEN;
+let productos=[];
 
-let productos = [];
-let productosEN = [];
-let productosPT = [];
+function saveToken(){ const t=document.getElementById('token').value; localStorage.setItem('github_token',t); document.getElementById('tokenStatus').innerText='Token guardado'; }
+function clearToken(){ localStorage.removeItem('github_token'); document.getElementById('tokenStatus').innerText='Token borrado'; }
+function getToken(){ return localStorage.getItem('github_token'); }
 
-/* ==========================
-         TOAST
-=========================== */
-function showOK(msg="Cambios guardados") {
-    const t = document.getElementById("toastOK");
-    t.textContent = msg;
-    t.style.opacity = "1";
-    setTimeout(() => t.style.opacity = "0", 3000);
+async function loadProducts(){
+  try{
+    const url=`https://raw.githubusercontent.com/${USERNAME}/${REPO}/main/${MAIN_JSON}`;
+    const r=await fetch(url);
+    productos=await r.json();
+    render(productos);
+  }catch(e){ console.error('Error cargando productos',e); productos=[]; render(productos); }
 }
 
-/* ==========================
-        TOKEN
-=========================== */
-function guardarToken() {
-    TOKEN = document.getElementById("tokenInput").value.trim();
-    if (TOKEN.length < 5) return alert("Token inválido.");
-    localStorage.setItem("githubToken", TOKEN);
-    showOK("Token guardado");
+function render(lista){
+  const tb=document.getElementById('tbody'); tb.innerHTML='';
+  lista.forEach((p,i)=>{
+    tb.innerHTML+=`<tr>
+        <td><img src="${p.imagen||''}" class="mini-img" style="max-width:60px;"></td>
+        <td><input value="${escapeHtml(p.nombre||'')}" oninput="editField(${i},'nombre',this.value)"></td>
+        <td><textarea oninput="editField(${i},'descripcion',this.value)">${escapeHtml(p.descripcion||'')}</textarea></td>
+        <td><input value="${escapeHtml(p.categoria||'')}" oninput="editField(${i},'categoria',this.value)"></td>
+        <td><input type="text" value="${p.precio||''}" oninput="editField(${i},'precio',this.value)"></td>
+        <td><button onclick="guardarFila(${i})">Guardar</button></td>
+      </tr>`;
+  });
 }
 
-/* ==========================
-    CARGA DESDE GITHUB
-=========================== */
-async function getFile(path) {
-    const url = `https://api.github.com/repos/${USERNAME}/${REPO}/contents/${path}`;
-    const r = await fetch(url);
+function escapeHtml(text){ return String(text).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+
+function editField(i,campo,valor){ productos[i] = productos[i] || {}; productos[i][campo] = valor; }
+
+// Guardar una fila (individual)
+async function guardarFila(i){
+  try{
+    // Guardar ES (productos.json)
+    const okMain = await saveToGitHub(MAIN_JSON, productos);
+    if(!okMain){ alert("❌ Error guardando en español (productos.json). Revisa token/permisos."); return; }
+
+    // Sincronizar precio del producto i
+    const prod = productos[i];
+    if(prod && prod.id){
+      await syncPrice(prod.id, prod.precio);
+    } else {
+      console.warn('Producto sin id; no se sincroniza precio para traducciones.');
+    }
+
+    alert("✅ Guardado (ES + EN + PT) para el producto.");
+  }catch(e){
+    console.error(e);
+    alert("❌ Error guardando: " + (e.message || e));
+  }
+}
+
+// --- GUARDAR TODOS LOS PRECIOS (botón superior) ---
+async function guardarTodosLosPrecios(){
+  try{
+    const okMain = await saveToGitHub(MAIN_JSON, productos);
+    if(!okMain){ alert("❌ Error guardando español (productos.json). Revisa token/permisos."); return; }
+
+    // sincronizar cada producto (await en cadena para no golpear la API demasiado rápido)
+    for(const p of productos){
+      if(p.id) await syncPrice(p.id, p.precio);
+    }
+
+    alert("✅ TODOS los cambios guardados (ES + EN + PT).");
+  }catch(e){
+    console.error(e);
+    alert("❌ Error guardando todos los cambios: " + (e.message || e));
+  }
+}
+
+// SINCRONIZAR PRECIOS (ES → EN → PT)
+// EN -> campo "price"
+// PT -> campo "preco"
+async function syncPrice(id, precio){
+  if(!id) return;
+  await updatePriceInJSON(EN_JSON, id, precio, "price");
+  await updatePriceInJSON(PT_JSON, id, precio, "preco");
+}
+
+// ACTUALIZA (o agrega) el precio en archivo JSON de destino
+async function updatePriceInJSON(file, id, precio, campo){
+  try{
+    // 1) Obtener contenido actual del archivo (raw)
+    const rawUrl = `https://raw.githubusercontent.com/${USERNAME}/${REPO}/main/${file}`;
+    let arr = [];
+    let fileExists = true;
+    try{
+      const r = await fetch(rawUrl);
+      if(!r.ok){
+        // si no existe, vamos a crear un array vacío y crear el archivo luego
+        fileExists = false;
+        arr = [];
+      } else {
+        arr = await r.json();
+        if(!Array.isArray(arr)) arr = [];
+      }
+    }catch(e){
+      console.warn("No se pudo leer " + file + ", se creará nuevo archivo si es necesario.");
+      arr = [];
+      fileExists = false;
+    }
+
+    // 2) Buscar producto por id
+    const ix = arr.findIndex(x => x && x.id === id);
+    if(ix >= 0){
+      // Actualizamos el campo correcto sin tocar otras claves
+      arr[ix][campo] = precio;
+    } else {
+      // si no existe el producto en la traducción, lo agregamos con id y campo precio.
+      // Para mantener consistencia con los JSON de traducción, intentamos mapear algunas claves comunes si el MAIN tiene la info.
+      const mainProduct = productos.find(p => p.id === id) || {};
+      let newObj = { id };
+      // Mapeos básicos: si es EN usamos 'name'/'description'/'price'/'image'/'category'
+      if(file === EN_JSON){
+        newObj.name = mainProduct.nombre || mainProduct.nome || '';
+        newObj.description = mainProduct.descripcion || mainProduct.descricao || '';
+        newObj.price = precio;
+        // intentar mantener la clave 'imagen' o 'image'
+        newObj.image = mainProduct.imagen || mainProduct.imagem || mainProduct.imagen || '';
+      } else if(file === PT_JSON){
+        newObj.nome = mainProduct.nombre || mainProduct.nome || '';
+        newObj.descricao = mainProduct.descripcion || mainProduct.descricao || '';
+        newObj.preco = precio;
+        newObj.imagem = mainProduct.imagen || mainProduct.imagem || mainProduct.imagen || '';
+      } else {
+        // default (es)
+        newObj.nombre = mainProduct.nombre || '';
+        newObj.precio = precio;
+        newObj.imagen = mainProduct.imagen || '';
+      }
+
+      arr.push(newObj);
+    }
+
+    // 3) Guardar archivo en GitHub (create/overwrite)
+    const ok = await saveToGitHub(file, arr);
+    if(!ok) console.warn("No se pudo guardar " + file);
+  }catch(e){
+    console.error("updatePriceInJSON error for", file, e);
+  }
+}
+
+// --- FUNCIONES DE GITHUB: getSHA, saveToGitHub ---
+// getSHA: devuelve la sha del archivo o null si no existe
+async function getSHA(file){
+  try{
+    const token = getToken();
+    const headers = token ? { "Authorization": "Bearer " + token, "Accept":"application/vnd.github.v3+json" } : { "Accept":"application/vnd.github.v3+json" };
+    const r = await fetch(`https://api.github.com/repos/${USERNAME}/${REPO}/contents/${file}`, { headers });
+    if(r.status === 404) return null;
+    if(!r.ok) {
+      const text = await r.text().catch(()=>'');
+      throw new Error(`SHA fetch failed ${r.status} ${text}`);
+    }
     const j = await r.json();
-    return JSON.parse(atob(j.content));
+    return j.sha;
+  }catch(e){
+    console.warn("getSHA warning:", e);
+    return null;
+  }
 }
 
-/* ==========================
-    GUARDAR EN GITHUB
-=========================== */
-async function saveFile(path, data) {
-    const url = `https://api.github.com/repos/${USERNAME}/${REPO}/contents/${path}`;
-    const r = await fetch(url);
-    const file = await r.json();
-    const content = btoa(unescape(encodeURIComponent(JSON.stringify(data,null,2))));
-    await fetch(url, {
-        method: "PUT",
-        headers: {
-            "Authorization": `Bearer ${TOKEN}`,
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-            message: "Update " + path,
-            content: content,
-            sha: file.sha
-        })
-    });
-    return true;
-}
+// saveToGitHub: actualiza (o crea) el archivo JSON en el repo.
+// devuelve true si ok
+async function saveToGitHub(file, content){
+  try{
+    const token = getToken();
+    if(!token){
+      alert("❌ Falta token. Pegá tu token de GitHub y presioná Guardar.");
+      return false;
+    }
 
-/* ==========================
-      MOSTRAR TABLA
-=========================== */
-function renderTabla() {
-    let html = "";
-    productos.forEach((p,i) => {
-        html += `
-        <tr>
-            <td>${p.id}</td>
-            <td><img src="img/${p.img}" class="mini"></td>
-            <td><input value="${p.nombre}" onchange="cambiar(${i},'nombre',this.value)"></td>
-            <td><input value="${p.descripcion}" onchange="cambiar(${i},'descripcion',this.value)"></td>
-            <td><input value="${p.precio}" type="number" onchange="cambiar(${i},'precio',this.value)"></td>
-            <td><input value="${p.categoria}" onchange="cambiar(${i},'categoria',this.value)"></td>
-            <td><button class="btn" onclick="guardarFila(${i})">Guardar</button></td>
-        </tr>`;
-    });
-    document.getElementById("tablaBody").innerHTML = html;
-}
+    // obtener sha (si existe)
+    const sha = await getSHA(file);
 
-function cambiar(i,campo,v) {
-    productos[i][campo] = v;
-    sincronizarOtros(i);
-}
-
-function sincronizarOtros(i) {
-    let id = productos[i].id;
-    let itemEN = productosEN.find(p=>p.id==id);
-    let itemPT = productosPT.find(p=>p.id==id);
-    if(itemEN){ itemEN.precio = productos[i].precio; }
-    if(itemPT){ itemPT.precio = productos[i].precio; }
-}
-
-/* ==========================
-        GUARDAR FILA
-=========================== */
-async function guardarFila(i) {
-    await saveFile(MAIN_JSON, productos);
-    await saveFile(EN_JSON, productosEN);
-    await saveFile(PT_JSON, productosPT);
-    showOK("Fila guardada");
-}
-
-/* ==========================
-    GUARDAR TODOS LOS CAMBIOS
-=========================== */
-async function guardarTodos() {
-    await saveFile(MAIN_JSON, productos);
-    await saveFile(EN_JSON, productosEN);
-    await saveFile(PT_JSON, productosPT);
-    showOK("Todos los cambios guardados");
-}
-
-/* ==========================
-    AGREGAR PRODUCTO (UNO)
-=========================== */
-function mostrarFormNuevo(){ document.getElementById("formNuevo").style.display="block";}
-function cerrarFormNuevo(){  document.getElementById("formNuevo").style.display="none";}
-
-function agregarUno(){
-    const nombre = nNombre.value.trim();
-    if(!nombre) return alert("Nombre vacío");
-
-    let ultimo = productos[productos.length-1];
-    let n = parseInt(ultimo.id.replace("id","")) + 1;
-    let nuevoID = "id" + String(n).padStart(4,"0");
-
-    let obj = {
-        id: nuevoID,
-        nombre: nNombre.value,
-        descripcion: nDesc.value,
-        precio: nPrecio.value,
-        categoria: nCat.value,
-        img: nImg.value
+    const body = {
+      message: `update ${file}`,
+      content: btoa(unescape(encodeURIComponent(JSON.stringify(content, null, 2))))
     };
+    if(sha) body.sha = sha;
 
-    productos.push(obj);
-    productosEN.push({...obj});
-    productosPT.push({...obj});
-
-    renderTabla();
-    showOK("Producto agregado");
-}
-
-/* ==========================
-   AGREGAR VARIOS PRODUCTOS
-=========================== */
-function mostrarFormVarios(){ document.getElementById("formVarios").style.display="block";}
-function cerrarFormVarios(){  document.getElementById("formVarios").style.display="none";}
-
-function procesarVarios(){
-    let lineas = multiTxt.value.trim().split("\n");
-    let ultimo = productos[productos.length-1];
-    let n = parseInt(ultimo.id.replace("id","")) + 1;
-
-    lineas.forEach(l=>{
-        let partes = l.split("|");
-        if(partes.length<5) return;
-
-        let nuevoID = "id"+String(n).padStart(4,"0");
-        n++;
-
-        let obj = {
-            id: nuevoID,
-            nombre: partes[0],
-            descripcion: partes[1],
-            precio: partes[2],
-            categoria: partes[3],
-            img: partes[4]
-        };
-
-        productos.push(obj);
-        productosEN.push({...obj});
-        productosPT.push({...obj});
+    const r = await fetch(`https://api.github.com/repos/${USERNAME}/${REPO}/contents/${file}`, {
+      method: 'PUT',
+      headers: {
+        "Authorization": "Bearer " + token,
+        "Content-Type": "application/json",
+        "Accept":"application/vnd.github.v3+json"
+      },
+      body: JSON.stringify(body)
     });
 
-    renderTabla();
-    showOK("Productos agregados");
+    // Aceptamos 200 y 201 como éxito explícito; algunos envíos devuelven 201 (created)
+    if(r.status === 200 || r.status === 201){
+      // leer la respuesta para debug (no obligatorio)
+      try{ const j = await r.json().catch(()=>null); console.log('GitHub saved', file, j && j.content && j.content.sha); }catch(e){}
+      return true;
+    }
+
+    // si no fue 200/201, mostrar el texto de error en consola y devolver false
+    const respText = await r.text().catch(()=> '');
+    console.error("GitHub API error:", r.status, respText);
+    return false;
+
+  }catch(e){
+    console.error("saveToGitHub error:", e);
+    return false;
+  }
 }
 
-/* ==========================
-          INICIO
-=========================== */
-async function init(){
-    productos   = await getFile(MAIN_JSON);
-    productosEN = await getFile(EN_JSON);
-    productosPT = await getFile(PT_JSON);
-    renderTabla();
+// --- FORMULARIO (agregar/editar) ---
+function toggleForm(){
+  const f = document.getElementById('form');
+  f.style.display = f.style.display === 'none' ? 'block' : 'none';
 }
-init();
+function previewImage(){ document.getElementById('preview').src = document.getElementById('imagen').value; }
+
+function guardarFormulario(){
+  const nombre = document.getElementById('nombre').value.trim();
+  const descripcion = document.getElementById('descripcion').value.trim();
+  const precio = document.getElementById('precio').value.trim();
+  const imagen = document.getElementById('imagen').value.trim();
+  const categoria = document.getElementById('categoria').value.trim();
+  const editIndex = document.getElementById('editIndex').value;
+
+  if(editIndex){
+    // editar existente
+    productos[Number(editIndex)].nombre = nombre;
+    productos[Number(editIndex)].descripcion = descripcion;
+    productos[Number(editIndex)].precio = precio;
+    productos[Number(editIndex)].imagen = imagen;
+    productos[Number(editIndex)].categoria = categoria;
+  } else {
+    // agregar nuevo -> asignamos id si no tiene (prod + timestamp)
+    const id = 'prod' + Date.now();
+    productos.push({ id, nombre, descripcion, precio, imagen, categoria });
+  }
+
+  render(productos);
+  document.getElementById('form').style.display = 'none';
+}
+
+// filtro
+function filterProducts(){
+  const t = document.getElementById('search').value.toLowerCase();
+  render(productos.filter(p => (p.nombre||'').toLowerCase().includes(t) || (p.descripcion||'').toLowerCase().includes(t)));
+}
+
+// --- inicio ---
+loadProducts();
 
 </script>
+
 </body>
 </html>
+
+      padding:10px 15px;
+      background:#a07b68;
+      color:white;
+      border:none;
+      border-radius:8px;
+      cursor:pointer;
+      font-size: 14px;
+    }
+    #toggleForm {
+      background:#806250;
+      color:white;
+      padding:10px 15px;
+      border-radius:6px;
+      cursor:pointer;
+      margin-bottom:15px;
+      display:inline-block;
+    }
+    form { display:none; background:#fff; padding:15px; border-radius:10px; margin-bottom:20px; }
+    input, textarea { width:100%; padding:8px; margin:7px 0; border-radius:6px; border:1px solid #ccc; }
+    table { width:100%; border-collapse:collapse; background:white; }
+    th,td { border:1px solid #ddd; padding:8px; vertical-align: top; }
+    th { background:#806250; color:white; }
+    button { background:#806250; color:white; border:none; padding:6px 10px; border-radius:6px; cursor:pointer; }
+    #preview { max-width:100px; margin-top:5px; border-radius:6px; display:block; }
+    #tokenStatus { margin-top:6px; color:#555; }
+    .small { font-size: 13px; color:#666; margin-left:8px; }
+  </style>
+</head>
+
+<body>
+
+  <h1>Panel de Administración</h1>
+
+  <!-- Barra superior con botón -->
+  <div id="topBar">
+    <button id="guardarTodos" onclick="guardarTodosLosPrecios()">💾 Guardar TODOS los cambios</button>
+  </div>
+
+  <div>
+    <label>Token:</label>
+    <input type="password" id="token" placeholder="Pegar token">
+    <button onclick="saveToken()">Guardar</button>
+    <button onclick="clearToken()">Borrar</button>
+    <span class="small" id="tokenStatus">No guardado</span>
+  </div>
+
+  <input id="search" placeholder="Buscar..." oninput="filterProducts()" style="width:100%; padding:8px; margin:10px 0; border-radius:6px; border:1px solid #ccc;">
+
+  <button id="toggleForm" onclick="toggleForm()">+ Agregar producto</button>
+
+  <form id="form">
+    <input type="hidden" id="editIndex">
+    <label>Nombre</label>
+    <input id="nombre">
+
+    <label>Descripción</label>
+    <textarea id="descripcion"></textarea>
+
+    <label>Precio</label>
+    <input id="precio">
+
+    <label>Imagen (img/...)</label>
+    <input id="imagen" oninput="previewImage()">
+    <img id="preview">
+
+    <label>Categoría</label>
+    <input id="categoria">
+
+    <button type="button" onclick="guardarFormulario()">Guardar</button>
+  </form>
+
+  <table>
+    <thead><tr>
+      <th>Imagen</th><th>Nombre</th><th>Descripción</th><th>Categoría</th><th>Precio (ES)</th><th>Acciones</th>
+    </tr></thead>
+    <tbody id="tbody"></tbody>
+  </table>
+
+<script>
+/*
+  Instrucciones rápidas:
+  - Editás los productos en el JSON principal (productos.json) que usa el campo "precio".
+  - Al guardar una fila (botón "Guardar") se actualiza el ES (productos.json) y además
+    se sincroniza el precio a productos-en.json (campo "price") y productos-port.json (campo "preco").
+  - Botón "Guardar TODOS los cambios" guarda todos los cambios del JSON principal y sincroniza precios en EN y PT.
+  - Agregué manejo de SHA cuando el archivo no existe (crea/actualiza correctamente).
+*/
+
+const USERNAME="cholose10", REPO="cartaaguero";
+const MAIN_JSON="productos.json";
+const EN_JSON="productos-en.json";
+const PT_JSON="productos-port.json";
+
+let productos=[];
+
+// TOKEN
+function saveToken(){
+  localStorage.setItem('github_token', document.getElementById('token').value);
+  document.getElementById('tokenStatus').innerText = 'Token guardado';
+}
+function clearToken(){
+  localStorage.removeItem('github_token');
+  document.getElementById('tokenStatus').innerText = 'Token borrado';
+}
+function getToken(){ return localStorage.getItem('github_token'); }
+
+// CARGAR JSON PRINCIPAL (ES)
+async function loadProducts(){
+  try{
+    const r = await fetch(`https://raw.githubusercontent.com/${USERNAME}/${REPO}/main/${MAIN_JSON}`);
+    if(!r.ok) throw new Error('No se pudo cargar ' + MAIN_JSON);
+    productos = await r.json();
+    render(productos);
+  }catch(e){
+    console.error(e);
+    productos = [];
+    render(productos);
+    alert("No se pudo cargar productos.json. Revisa que exista en el repo y que sea público (o que el nombre de archivo sea correcto).");
+  }
+}
+
+// DIBUJAR TABLA
+function render(lista){
+  const tb = document.getElementById('tbody');
+  tb.innerHTML = '';
+
+  lista.forEach((p,i)=>{
+    tb.innerHTML += `
+      <tr>
+        <td style="width:70px;"><img src="${p.imagen||''}" style="max-width:60px;"></td>
+        <td><input value="${escapeHtml(p.nombre||'')}" oninput="editField(${i},'nombre',this.value)"></td>
+        <td><textarea oninput="editField(${i},'descripcion',this.value)">${escapeHtml(p.descripcion||'')}</textarea></td>
+        <td><input value="${escapeHtml(p.categoria||'')}" oninput="editField(${i},'categoria',this.value)"></td>
+        <td><input value="${p.precio||''}" oninput="editField(${i},'precio',this.value)"></td>
+        <td>
+          <button onclick="guardarFila(${i})">Guardar</button>
+        </td>
+      </tr>`;
+  });
+}
+
+function escapeHtml(t){ return String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;'); }
+function editField(i,campo,valor){ productos[i][campo] = valor; }
+
+// --- GUARDAR UNA FILA (ES + sincronizar precios) ---
+async function guardarFila(i){
+  try{
+    // Guardar ES (productos.json)
+    const okMain = await saveToGitHub(MAIN_JSON, productos);
+    if(!okMain){ alert("❌ Error guardando en español (productos.json). Revisa token/permisos."); return; }
+
+    // Sincronizar precio del producto i
+    const prod = productos[i];
+    if(prod && prod.id){
+      await syncPrice(prod.id, prod.precio);
+    } else {
+      console.warn('Producto sin id; no se sincroniza precio para traducciones.');
+    }
+
+    alert("✅ Guardado (ES + EN + PT) para el producto.");
+  }catch(e){
+    console.error(e);
+    alert("❌ Error guardando: " + (e.message || e));
+  }
+}
+
+// --- GUARDAR TODOS LOS PRECIOS (botón superior) ---
+async function guardarTodosLosPrecios(){
+  try{
+    const okMain = await saveToGitHub(MAIN_JSON, productos);
+    if(!okMain){ alert("❌ Error guardando español (productos.json). Revisa token/permisos."); return; }
+
+    // sincronizar cada producto
+    for(const p of productos){
+      if(p.id) await syncPrice(p.id, p.precio);
+    }
+
+    alert("✅ TODOS los cambios guardados (ES + EN + PT).");
+  }catch(e){
+    console.error(e);
+    alert("❌ Error guardando todos los cambios: " + (e.message || e));
+  }
+}
+
+// SINCRONIZAR PRECIOS (ES → EN → PT)
+// EN -> campo "price"
+// PT -> campo "preco"
+async function syncPrice(id, precio){
+  if(!id) return;
+  await updatePriceInJSON(EN_JSON, id, precio, "price");
+  await updatePriceInJSON(PT_JSON, id, precio, "preco");
+}
+
+// ACTUALIZA (o agrega) el precio en archivo JSON de destino
+async function updatePriceInJSON(file, id, precio, campo){
+  try{
+    // 1) Obtener contenido actual del archivo (raw)
+    const rawUrl = `https://raw.githubusercontent.com/${USERNAME}/${REPO}/main/${file}`;
+    let arr = [];
+    let fileExists = true;
+    try{
+      const r = await fetch(rawUrl);
+      if(!r.ok){
+        // si no existe, vamos a crear un array vacío y crear el archivo luego
+        fileExists = false;
+        arr = [];
+      } else {
+        arr = await r.json();
+        if(!Array.isArray(arr)) arr = [];
+      }
+    }catch(e){
+      console.warn("No se pudo leer " + file + ", se creará nuevo archivo si es necesario.");
+      arr = [];
+      fileExists = false;
+    }
+
+    // 2) Buscar producto por id
+    const ix = arr.findIndex(x => x && x.id === id);
+    if(ix >= 0){
+      arr[ix][campo] = precio;
+    } else {
+      // si no existe el producto en la traducción, lo agregamos con id y campo precio.
+      // No tocamos otros campos (el admin puede revisar después).
+      arr.push({ id: id, [campo]: precio });
+    }
+
+    // 3) Guardar archivo en GitHub (create/overwrite)
+    const ok = await saveToGitHub(file, arr);
+    if(!ok) console.warn("No se pudo guardar " + file);
+  }catch(e){
+    console.error("updatePriceInJSON error for", file, e);
+  }
+}
+
+// --- FUNCIONES DE GITHUB: getSHA, saveToGitHub ---
+// getSHA: devuelve la sha del archivo o null si no existe
+async function getSHA(file){
+  try{
+    const token = getToken();
+    const headers = token ? { "Authorization": "Bearer " + token, "Accept":"application/vnd.github.v3+json" } : { "Accept":"application/vnd.github.v3+json" };
+    const r = await fetch(`https://api.github.com/repos/${USERNAME}/${REPO}/contents/${file}`, { headers });
+    if(r.status === 404) return null;
+    if(!r.ok) {
+      const text = await r.text().catch(()=>'');
+      throw new Error(`SHA fetch failed ${r.status} ${text}`);
+    }
+    const j = await r.json();
+    return j.sha;
+  }catch(e){
+    console.warn("getSHA warning:", e);
+    return null;
+  }
+}
+
+// saveToGitHub: actualiza (o crea) el archivo JSON en el repo.
+// devuelve true si ok
+async function saveToGitHub(file, content){
+  try{
+    const token = getToken();
+    if(!token){
+      alert("❌ Falta token. Pegá tu token de GitHub y presioná Guardar.");
+      return false;
+    }
+
+    // obtener sha (si existe)
+    const sha = await getSHA(file);
+
+    const body = {
+      message: `update ${file}`,
+      content: btoa(unescape(encodeURIComponent(JSON.stringify(content, null, 2))))
+    };
+    if(sha) body.sha = sha;
+
+    const r = await fetch(`https://api.github.com/repos/${USERNAME}/${REPO}/contents/${file}`, {
+      method: 'PUT',
+      headers: {
+        "Authorization": "Bearer " + token,
+        "Content-Type": "application/json",
+        "Accept":"application/vnd.github.v3+json"
+      },
+      body: JSON.stringify(body)
+    });
+
+    if(!r.ok){
+      const respText = await r.text().catch(()=> '');
+      console.error("GitHub API error:", r.status, respText);
+      return false;
+    }
+
+    return true;
+  }catch(e){
+    console.error("saveToGitHub error:", e);
+    return false;
+  }
+}
+
+// --- FORMULARIO (agregar/editar) ---
+function toggleForm(){
+  const f = document.getElementById('form');
+  f.style.display = f.style.display === 'none' ? 'block' : 'none';
+}
+function previewImage(){ document.getElementById('preview').src = document.getElementById('imagen').value; }
+
+function guardarFormulario(){
+  const nombre = document.getElementById('nombre').value.trim();
+  const descripcion = document.getElementById('descripcion').value.trim();
+  const precio = document.getElementById('precio').value.trim();
+  const imagen = document.getElementById('imagen').value.trim();
+  const categoria = document.getElementById('categoria').value.trim();
+  const editIndex = document.getElementById('editIndex').value;
+
+  if(editIndex){
+    // editar existente
+    productos[Number(editIndex)].nombre = nombre;
+    productos[Number(editIndex)].descripcion = descripcion;
+    productos[Number(editIndex)].precio = precio;
+    productos[Number(editIndex)].imagen = imagen;
+    productos[Number(editIndex)].categoria = categoria;
+  } else {
+    // agregar nuevo -> asignamos id si no tiene (prod + timestamp)
+    const id = 'prod' + Date.now();
+    productos.push({ id, nombre, descripcion, precio, imagen, categoria });
+  }
+
+  render(productos);
+  document.getElementById('form').style.display = 'none';
+}
+
+// filtro
+function filterProducts(){
+  const t = document.getElementById('search').value.toLowerCase();
+  render(productos.filter(p => (p.nombre||'').toLowerCase().includes(t) || (p.descripcion||'').toLowerCase().includes(t)));
+}
+
+// --- inicio ---
+loadProducts();
+
+</script>
+
+</body>
+</
