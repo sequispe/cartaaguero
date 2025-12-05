@@ -51,7 +51,6 @@
 
   <h1>Panel de Administración</h1>
 
-  <!-- Barra superior con botón -->
   <div id="topBar">
     <button id="guardarTodos" onclick="guardarTodosLosPrecios()">💾 Guardar TODOS los cambios</button>
   </div>
@@ -80,7 +79,7 @@
     <input id="precio">
 
     <label>Imagen (img/...)</label>
-    <input id="imagen">
+    <input id="imagen" oninput="previewImage()">
     <img id="preview" style="max-width:100px;margin-top:5px;border-radius:6px;">
 
     <label>Categoría</label>
@@ -140,8 +139,10 @@ function render(lista){
   });
 }
 
-// EDITAR CAMPOS EN TABLA
-function editField(i,campo,valor){ productos[i][campo] = valor; }
+// EDITAR CAMPOS
+function editField(i, campo, valor){
+  productos[i][campo] = valor;   // ← CORRECCIÓN IMPORTANTE
+}
 
 // GUARDAR SOLO UNA FILA
 async function guardarFila(i){
@@ -153,7 +154,7 @@ async function guardarFila(i){
   alert("✅ Guardado (ES + EN + PT)");
 }
 
-// SINCRONIZAR PRECIOS (ES → EN → PT)
+// SINCRONIZAR PRECIOS
 async function syncPrice(id, precio){
   if(!id) return;
   await updatePriceInJSON(EN_JSON, id, precio, "price");
@@ -210,7 +211,7 @@ async function getSHA(file){
   return j.sha;
 }
 
-// GUARDAR TODOS LOS PRECIOS
+// GUARDAR TODOS
 async function guardarTodosLosPrecios(){
   const ok = await saveToGitHub(MAIN_JSON, productos);
   if(!ok){ alert("❌ Error guardando español"); return; }
@@ -223,8 +224,15 @@ async function guardarTodosLosPrecios(){
 }
 
 // OTROS
-function toggleForm(){ const f=document.getElementById('form'); f.style.display = f.style.display==='none'?'block':'none'; }
-function previewImage(){ document.getElementById('preview').src = document.getElementById('imagen').value; }
+function toggleForm(){ 
+  const f=document.getElementById('form'); 
+  f.style.display = f.style.display==='none'?'block':'none'; 
+}
+
+function previewImage(){ 
+  document.getElementById('preview').src = document.getElementById('imagen').value; 
+}
+
 function filterProducts(){ 
   const t=document.getElementById('search').value.toLowerCase();
   render(productos.filter(p=> (p.nombre||'').toLowerCase().includes(t)));
