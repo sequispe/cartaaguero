@@ -34,7 +34,7 @@
   {
     "nombre": "Café expresso Doble",
     "descripcion": "Café expresso Doble",
-    "precio": "520000",
+    "precio": "5200",
     "imagen": "img/doble.jpg",
     "categoria": "Cafetería☕️",
     "id": "prod0005"
