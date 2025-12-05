@@ -1418,7 +1418,7 @@
   {
     "nome": "Menu do dia ou sugestões",
     "descricao": "Menu do dia: prato + bebida + sobremesa ou café. A sugestão inclui apenas o prato.",
-    "preco": "000",
+    "preco": "1000",
     "imagem": "",
     "categoria": "📋Menu do dia/Sugestões e novidades",
     "id": "prod0178"
@@ -1430,12 +1430,5 @@
     "imagem": "img/torgrende.jpg",
     "categoria": "📋Menu do dia/Sugestões e novidades",
     "id": "prod0179"
-  },
-  {
-    "id": "prod1764944508852",
-    "nome": "Ensalada CAESAR con Atun",
-    "descricao": "Mix de verdes, croutons, atun rebozados, parmesano y aderezo Caesar",
-    "preco": "20000",
-    "imagem": "img/Caesarlangis.jpg"
   }
 ]
