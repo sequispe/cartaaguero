@@ -19,5 +19,12 @@
     "description": "Con papas fritas (para 2 personas)",
     "price": "71000",
     "image": "img/Brochette.jpg"
+  },
+  {
+    "id": "prod0081",
+    "name": "Pollo pechuga gril",
+    "description": "Con fritas, puré, ensalada o arroz",
+    "price": "21000",
+    "image": "img/Pechuga.jpg"
   }
 ]
