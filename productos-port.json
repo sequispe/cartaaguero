@@ -1,14 +1,14 @@
 [
   {
     "id": "prod0005",
-    "nome": "CafÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ© expresso Doble",
-    "descricao": "CafÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ© expresso Doble",
+    "nome": "CafÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ© expresso Doble",
+    "descricao": "CafÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ© expresso Doble",
     "preco": "5200",
     "imagem": "img/doble.jpg"
   },
   {
     "id": "prod0025",
-    "nome": "CookiesÃÂÃÂÃÂÃÂ°ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂª",
+    "nome": "CookiesÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ°ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂª",
     "descricao": "Cookies vainilla con chocolate, chocolate+chocolate c/u",
     "preco": "4800",
     "imagem": "img/20250902_085341.jpg"
@@ -29,23 +29,30 @@
   },
   {
     "id": "prod0027",
-    "nome": "ChipÃÂ¡ relleno",
-    "descricao": "ChipÃÂ¡ relleno de queso c/u",
+    "nome": "ChipÃÂÃÂ¡ relleno",
+    "descricao": "ChipÃÂÃÂ¡ relleno de queso c/u",
     "preco": "3700",
     "imagem": "img/Chipa.jpg"
   },
   {
     "id": "prod0008",
-    "nome": "CafÃ© MOKA",
-    "descricao": "Cacao intenso, cafÃ©, leche espumada",
+    "nome": "CafÃÂ© MOKA",
+    "descricao": "Cacao intenso, cafÃÂ©, leche espumada",
     "preco": "5950",
     "imagem": "img/Moka.jpg"
   },
   {
     "id": "prod0009",
-    "nome": "Café CARAMEL",
-    "descricao": "Caramelo, café, leche espumada",
+    "nome": "CafÃ© CARAMEL",
+    "descricao": "Caramelo, cafÃ©, leche espumada",
     "preco": "5950",
     "imagem": "img/20250903_144413.jpg"
+  },
+  {
+    "id": "prod0031",
+    "nome": "Alfajor Dubái",
+    "descricao": "Alfajor chocolate y pistacho c/u",
+    "preco": "4700",
+    "imagem": "img/alfapis.jpg"
   }
 ]
