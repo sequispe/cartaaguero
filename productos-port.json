@@ -30,8 +30,15 @@
   {
     "id": "prod0081",
     "nome": "Pollo pechuga gril",
-    "descricao": "Con fritas, puré, ensalada o arroz",
+    "descricao": "Con fritas, purÃ©, ensalada o arroz",
     "preco": "21000",
     "imagem": "img/Pechuga.jpg"
+  },
+  {
+    "id": "prod0062",
+    "nome": "Ensalada CAESAR con pollo crujiente",
+    "descricao": "Mix de verdes, croutons, pollo crujiente, parmesano y aderezo Caesar",
+    "preco": "18500",
+    "imagem": "img/Cranch.jpg"
   }
 ]
