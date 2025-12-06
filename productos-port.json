@@ -5,5 +5,12 @@
     "descricao": "Roll de canela",
     "preco": "4500",
     "imagem": "img/Rolcanela.jpg"
+  },
+  {
+    "id": "prod0043",
+    "nome": "AVOCADO",
+    "descricao": "Tostada con huevos revueltos, crema de palta y semillas",
+    "preco": "16000",
+    "imagem": "img/20250806_094923.jpg"
   }
 ]
