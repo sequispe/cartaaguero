@@ -16,7 +16,7 @@
   {
     "id": "prod0096",
     "nome": "Matambrito a la PIZZA",
-    "descricao": "De cerdo, muzarella, tomate y orÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ©gano con papas fritas",
+    "descricao": "De cerdo, muzarella, tomate y orÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ©gano con papas fritas",
     "preco": "28500",
     "imagem": "img/20250815_132057.jpg"
   },
@@ -54,5 +54,12 @@
     "descricao": "Con papas fritas (para 2 personas)",
     "preco": "71000",
     "imagem": "img/Brochette.jpg"
+  },
+  {
+    "id": "prod0101",
+    "nome": "BROCHETTE de Pollo",
+    "descricao": "Con papas fritas (para 2 personas)",
+    "preco": "51000",
+    "imagem": "img/20250817_135608.jpg"
   }
 ]
