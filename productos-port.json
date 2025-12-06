@@ -8,7 +8,7 @@
   },
   {
     "id": "prod0132",
-    "nome": "BoloÃ±esa",
+    "nome": "BoloÃÂ±esa",
     "descricao": "salsa con carne",
     "preco": "7700",
     "imagem": "img/Bolo.jpg"
@@ -19,5 +19,12 @@
     "descricao": "Simple (solo queso) con papas fritas",
     "preco": "15000",
     "imagem": "img/20250816_135012.jpg"
+  },
+  {
+    "id": "prod0133",
+    "nome": "Pesto con nuez",
+    "descricao": "nuez, ajo y perejil",
+    "preco": "6800",
+    "imagem": "img/IMG-20250816-WA0011.jpg"
   }
 ]
