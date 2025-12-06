@@ -33,5 +33,12 @@
     "descricao": "Aperol con naranja",
     "preco": "9500",
     "imagem": "img/Campati.jpg"
+  },
+  {
+    "id": "prod0166",
+    "nome": "Aperol Spritz",
+    "descricao": "Aperol Spritz",
+    "preco": "13000",
+    "imagem": "img/Aprol.jpg"
   }
 ]
