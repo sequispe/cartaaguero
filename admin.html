@@ -528,45 +528,66 @@
   /**********************************************************
    * saveToGitHub: guarda/crea archivo en GitHub (usa sha si se pasa)
    **********************************************************/
-  async function saveToGitHub(file, data, sha = undefined){
-    try{
-      const token = getToken();
-      if(!token){
-        showToast('Necesitas pegar tu token de GitHub para poder guardar.', 'err', 4000);
-        return false;
-      }
-
-      // body.content debe ser base64 (UTF-8 safe)
-      const contentB64 = btoa(unescape(encodeURIComponent(JSON.stringify(data, null, 2))));
-
-      const body = {
-        message: `update ${file}`,
-        content: contentB64
-      };
-      if(sha) body.sha = sha;
-
-      const r = await fetch(`https://api.github.com/repos/${USERNAME}/${REPO}/contents/${file}`, {
-        method: 'PUT',
-        headers: {
-          "Authorization": "Bearer " + token,
-          "Content-Type": "application/json",
-          "Accept":"application/vnd.github.v3+json"
-        },
-        body: JSON.stringify(body)
-      });
-
-      if(r.status === 200 || r.status === 201) {
-        return true;
-      } else {
-        const respText = await r.text().catch(()=>'');
-        console.error('GitHub API error', r.status, respText);
-        return false;
-      }
-    }catch(e){
-      console.error('saveToGitHub error', e);
+  async function saveToGitHub(file, data){
+  try {
+    const token = getToken();
+    if (!token) {
+      showToast('Necesitas pegar tu token de GitHub para poder guardar.', 'err', 4000);
       return false;
     }
+
+    // 1) Obtener SHA actual del archivo
+    const info = await fetch(`https://api.github.com/repos/${USERNAME}/${REPO}/contents/${file}`, {
+      headers: {
+        "Authorization": "token " + token,
+        "Accept": "application/vnd.github.v3+json"
+      }
+    });
+
+    if (!info.ok) {
+      console.error("Error obteniendo SHA", await info.text());
+      showToast("No se pudo leer el archivo en GitHub.", "err", 4000);
+      return false;
+    }
+
+    const infoJson = await info.json();
+    const sha = infoJson.sha;
+
+    // 2) Convertir a Base64 seguro
+    const contentB64 = btoa(unescape(encodeURIComponent(JSON.stringify(data, null, 2))));
+
+    // 3) Hacer PUT con SHA correcto
+    const body = {
+      message: `update ${file}`,
+      content: contentB64,
+      sha: sha
+    };
+
+    const r = await fetch(`https://api.github.com/repos/${USERNAME}/${REPO}/contents/${file}`, {
+      method: "PUT",
+      headers: {
+        "Authorization": "token " + token,
+        "Content-Type": "application/json",
+        "Accept": "application/vnd.github.v3+json"
+      },
+      body: JSON.stringify(body)
+    });
+
+    if (r.status === 200 || r.status === 201) {
+      return true;
+    } else {
+      const respText = await r.text().catch(() => "");
+      console.error("GitHub API error", r.status, respText);
+      showToast("Error guardando cambios en GitHub.", "err", 4000);
+      return false;
+    }
+
+  } catch (e) {
+    console.error("saveToGitHub error", e);
+    showToast("Error inesperado al guardar.", "err", 4000);
+    return false;
   }
+}
 
   /**********************************************************
    * Búsqueda / filtro
