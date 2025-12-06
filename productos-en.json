@@ -50,9 +50,16 @@
   },
   {
     "id": "prod0137",
-    "name": "línea Coca-Cola",
-    "description": "Zeros y clásicas",
+    "name": "lÃ­nea Coca-Cola",
+    "description": "Zeros y clÃ¡sicas",
     "price": "4200",
     "image": "img/20250830_141813.jpg"
+  },
+  {
+    "id": "prod0157",
+    "name": "Copa de vino",
+    "description": "Blancos o tintos",
+    "price": "8000",
+    "image": "img/20250903_124351.jpg"
   }
 ]
