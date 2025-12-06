@@ -1,15 +1,15 @@
 [
   {
     "id": "prod0009",
-    "nome": "CafÃÂÃÂÃÂÃÂ© CARAMEL",
-    "descricao": "Caramelo, cafÃÂÃÂÃÂÃÂ©, leche espumada",
+    "nome": "CafÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ© CARAMEL",
+    "descricao": "Caramelo, cafÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ©, leche espumada",
     "preco": "5950",
     "imagem": "img/20250903_144413.jpg"
   },
   {
     "id": "prod0010",
-    "nome": "TÃÂÃÂ© con leche",
-    "descricao": "TÃÂÃÂ© Inti Zen",
+    "nome": "TÃÂÃÂÃÂÃÂ© con leche",
+    "descricao": "TÃÂÃÂÃÂÃÂ© Inti Zen",
     "preco": "4400",
     "imagem": "img/te.jpg"
   },
@@ -22,16 +22,23 @@
   },
   {
     "id": "prod0005",
-    "nome": "CafÃ© expresso Doble",
-    "descricao": "CafÃ© expresso Doble",
+    "nome": "CafÃÂ© expresso Doble",
+    "descricao": "CafÃÂ© expresso Doble",
     "preco": "5200",
     "imagem": "img/doble.jpg"
   },
   {
     "id": "prod0012",
-    "nome": "Leche caliente o fría",
+    "nome": "Leche caliente o frÃ­a",
     "descricao": "Leche descremada",
     "preco": "3000",
     "imagem": "img/20250818_101037.jpg"
+  },
+  {
+    "id": "prod0013",
+    "nome": "CAFE TILO",
+    "descricao": "Café, Baileys, leche evaporada y chocolate rallado",
+    "preco": "7500",
+    "imagem": "img/20250819_160159.jpg"
   }
 ]
