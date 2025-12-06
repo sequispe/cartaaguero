@@ -5,5 +5,12 @@
     "descricao": "Fernet con Coca-Cola",
     "preco": "12000",
     "imagem": "img/Ferne.jpg"
+  },
+  {
+    "id": "prod0163",
+    "nome": "Gin Tonic Beefeater",
+    "descricao": "Gin Tonic Beefeater",
+    "preco": "12000",
+    "imagem": "img/Ginton.jpg"
   }
 ]
