@@ -1,7 +1,7 @@
 [
   {
     "id": "prod0041",
-    "name": "TOSTADASð",
+    "name": "TOSTADASÃ°ÂÂÂ",
     "description": "Pan negro o blanco con queso crema y mermelada casera",
     "price": "9700",
     "image": "img/Promotos1.jpg"
@@ -12,5 +12,12 @@
     "description": "Mix de verdes, croutones, pollo, parmesano y aderezo Caesar",
     "price": "17500",
     "image": "img/20250819_121751.jpg"
+  },
+  {
+    "id": "prod0042",
+    "name": "OMELETTE DE CLARAS",
+    "description": "Omelette con queso y tomate (con FRITOLIN) y frutas de estación",
+    "price": "16000",
+    "image": "img/Promoomelet.jpg"
   }
 ]
