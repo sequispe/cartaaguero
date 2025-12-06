@@ -8,9 +8,16 @@
   },
   {
     "id": "prod0132",
-    "nome": "Boloñesa",
+    "nome": "BoloÃ±esa",
     "descricao": "salsa con carne",
     "preco": "7700",
     "imagem": "img/Bolo.jpg"
+  },
+  {
+    "id": "prod0113",
+    "nome": "Burger simple",
+    "descricao": "Simple (solo queso) con papas fritas",
+    "preco": "15000",
+    "imagem": "img/20250816_135012.jpg"
   }
 ]
