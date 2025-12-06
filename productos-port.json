@@ -16,7 +16,7 @@
   {
     "id": "prod0096",
     "nome": "Matambrito a la PIZZA",
-    "descricao": "De cerdo, muzarella, tomate y orÃÂÃÂ©gano con papas fritas",
+    "descricao": "De cerdo, muzarella, tomate y orÃÂÃÂÃÂÃÂ©gano con papas fritas",
     "preco": "28500",
     "imagem": "img/20250815_132057.jpg"
   },
@@ -40,5 +40,12 @@
     "descricao": "Mozzarellas rebozadas",
     "preco": "17000",
     "imagem": "img/20250817_131412.jpg"
+  },
+  {
+    "id": "prod0119",
+    "nome": "Nachos",
+    "descricao": "Nachos de carne con cheddar y palta",
+    "preco": "18500",
+    "imagem": "img/20250815_155313.jpg"
   }
 ]
