@@ -8,8 +8,8 @@
   },
   {
     "id": "prod0095",
-    "nome": "SalmÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ³n AZUL",
-    "descricao": "SalmÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ³n rosado grillado en salsa crema de queso azul con papas espaÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ±olas",
+    "nome": "SalmÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ³n AZUL",
+    "descricao": "SalmÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ³n rosado grillado en salsa crema de queso azul con papas espaÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ±olas",
     "preco": 38000,
     "imagem": "img/20250817_142010.jpg"
   },
@@ -23,7 +23,7 @@
   {
     "id": "prod0096",
     "nome": "Matambrito a la PIZZA",
-    "descricao": "De cerdo, muzarella, tomate y orÃÂÃÂÃÂÃÂ©gano con papas fritas",
+    "descricao": "De cerdo, muzarella, tomate y orÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ©gano con papas fritas",
     "preco": "28500",
     "imagem": "img/20250815_132057.jpg"
   },
@@ -54,5 +54,12 @@
     "descricao": "Bife de lomo grillado en salsa de hongos con papas fritas",
     "preco": "37000",
     "imagem": "img/IMG-20250816-WA0009.jpg"
+  },
+  {
+    "id": "prod0082",
+    "nome": "Matambre de cerdo gril",
+    "descricao": "Con fritas, puré, ensalada o arroz",
+    "preco": "24500",
+    "imagem": "img/Matam.jpg"
   }
 ]
