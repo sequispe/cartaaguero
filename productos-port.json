@@ -5,5 +5,12 @@
     "descricao": "Queso cheddar, panceta y tomate, con papas fritas",
     "preco": "27000",
     "imagem": "img/Lomitobac.jpg"
+  },
+  {
+    "id": "prod0132",
+    "nome": "Boloñesa",
+    "descricao": "salsa con carne",
+    "preco": "7700",
+    "imagem": "img/Bolo.jpg"
   }
 ]
