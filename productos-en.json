@@ -8,15 +8,15 @@
   },
   {
     "id": "prod0009",
-    "name": "CafÃÂÃÂ© CARAMEL",
-    "description": "Caramelo, cafÃÂÃÂ©, leche espumada",
+    "name": "CafÃÂÃÂÃÂÃÂ© CARAMEL",
+    "description": "Caramelo, cafÃÂÃÂÃÂÃÂ©, leche espumada",
     "price": "5950",
     "image": "img/20250903_144413.jpg"
   },
   {
     "id": "prod0010",
-    "name": "TÃÂ© con leche",
-    "description": "TÃÂ© Inti Zen",
+    "name": "TÃÂÃÂ© con leche",
+    "description": "TÃÂÃÂ© Inti Zen",
     "price": "4400",
     "image": "img/te.jpg"
   },
@@ -33,5 +33,12 @@
     "description": "Leche espumada y barra de chocolate",
     "price": "5200",
     "image": "img/Submarino.jpg"
+  },
+  {
+    "id": "prod0031",
+    "name": "Alfajor Dubái",
+    "description": "Alfajor chocolate y pistacho c/u",
+    "price": "4700",
+    "image": "img/alfapis.jpg"
   }
 ]
