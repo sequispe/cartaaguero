@@ -16,7 +16,7 @@
   {
     "id": "prod0096",
     "nome": "Matambrito a la PIZZA",
-    "descricao": "De cerdo, muzarella, tomate y orÃ©gano con papas fritas",
+    "descricao": "De cerdo, muzarella, tomate y orÃÂ©gano con papas fritas",
     "preco": "28500",
     "imagem": "img/20250815_132057.jpg"
   },
@@ -26,5 +26,12 @@
     "descricao": "De cerdo, cebollitas, morrones, arvejas y huevo frito, con papas fritas",
     "preco": "28500",
     "imagem": "img/Matrio.jpg"
+  },
+  {
+    "id": "prod0117",
+    "nome": "Rabas a la romana",
+    "descricao": "Rabas a la romana",
+    "preco": "24000",
+    "imagem": "img/Rabas.jpg"
   }
 ]
