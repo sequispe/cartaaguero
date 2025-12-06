@@ -12,5 +12,12 @@
     "descricao": "Tostada con huevos revueltos, crema de palta y semillas",
     "preco": "16000",
     "imagem": "img/20250806_094923.jpg"
+  },
+  {
+    "id": "prod0024",
+    "nome": "Pan de chocolate",
+    "descricao": "Masa de croissant con chocolate belga",
+    "preco": "4800",
+    "imagem": "img/Pchoco.jpg"
   }
 ]
