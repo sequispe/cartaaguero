@@ -8,7 +8,7 @@
   },
   {
     "id": "prod0132",
-    "nome": "BoloÃÂ±esa",
+    "nome": "BoloÃÂÃÂ±esa",
     "descricao": "salsa con carne",
     "preco": "7700",
     "imagem": "img/Bolo.jpg"
@@ -26,5 +26,12 @@
     "descricao": "nuez, ajo y perejil",
     "preco": "6800",
     "imagem": "img/IMG-20250816-WA0011.jpg"
+  },
+  {
+    "id": "prod0114",
+    "nome": "Burger clásico",
+    "descricao": "Lechuga, tomate, jamón y queso",
+    "preco": "17000",
+    "imagem": "img/20250816_135012.jpg"
   }
 ]
