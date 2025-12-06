@@ -33,5 +33,12 @@
     "description": "manteca, pimienta y parmesano",
     "price": "7000",
     "image": "img/204218.jpg"
+  },
+  {
+    "id": "prod0155",
+    "name": "Portillo Chardonnay",
+    "description": "Portillo Chardonnay (750 cc)",
+    "price": "19000",
+    "image": "img/20250903_110934.jpg"
   }
 ]
