@@ -26,5 +26,12 @@
     "description": "Trumpeter Sauvignon Blanc (750 cc)",
     "price": "25000",
     "image": "img/20250903_112257.jpg"
+  },
+  {
+    "id": "prod0135",
+    "name": "caccio e pepe",
+    "description": "manteca, pimienta y parmesano",
+    "price": "7000",
+    "image": "img/204218.jpg"
   }
 ]
