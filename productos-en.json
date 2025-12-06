@@ -2,21 +2,21 @@
   {
     "id": "prod0045",
     "name": "PROTEICO",
-    "description": "Pancake 100% harina de almendras, queso crema y fruta de estaciÃÂÃÂ³n mÃÂÃÂ¡s dip de miel",
+    "description": "Pancake 100% harina de almendras, queso crema y fruta de estaciÃÂÃÂÃÂÃÂ³n mÃÂÃÂÃÂÃÂ¡s dip de miel",
     "price": "16000",
     "image": "img/20250815_132946.jpg"
   },
   {
     "id": "prod0046",
     "name": "FRENCH TOAST DULCE",
-    "description": "Tostadas marinadas en huevo, con canela y azÃÂºcar, queso crema, frutas de estaciÃÂ³n y dip de miel",
+    "description": "Tostadas marinadas en huevo, con canela y azÃÂÃÂºcar, queso crema, frutas de estaciÃÂÃÂ³n y dip de miel",
     "price": "15000",
     "image": "img/20250819_113846.jpg"
   },
   {
     "id": "prod0027",
-    "name": "ChipÃ¡ relleno",
-    "description": "ChipÃ¡ relleno de queso c/u",
+    "name": "ChipÃÂ¡ relleno",
+    "description": "ChipÃÂ¡ relleno de queso c/u",
     "price": "3700",
     "image": "img/Chipa.jpg"
   },
@@ -26,5 +26,12 @@
     "description": "Scon de queso c/u",
     "price": "4200",
     "image": "img/Sconquso.jpg"
+  },
+  {
+    "id": "prod0048",
+    "name": "AMIGOS Y FAMILLAS PASTA",
+    "description": "Fuente de ñoquis o tallarines (bolognesa, crema, fileto o rosa). Podés combinar.",
+    "price": "49000",
+    "image": "img/Fuenteñoquis.jpg"
   }
 ]
