@@ -1,14 +1,14 @@
 [
   {
     "id": "prod0127",
-    "nome": "Sorrentinos de muzzarella y jamÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ³n (salsa aparte)",
-    "descricao": "Sorrentinos rellenos de muzzarella y jamÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ³n",
+    "nome": "Sorrentinos de muzzarella y jamÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ³n (salsa aparte)",
+    "descricao": "Sorrentinos rellenos de muzzarella y jamÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ³n",
     "preco": "15000",
     "imagem": "img/Sonren.jpg"
   },
   {
     "id": "prod0147",
-    "nome": "CORONA (PorrÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ³n)",
+    "nome": "CORONA (PorrÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ³n)",
     "descricao": "Cerveza Corona 330cc",
     "preco": "7700",
     "imagem": "img/Estelar.jpg"
@@ -47,5 +47,12 @@
     "descricao": "Trumpeter Cabernet (750 cc)",
     "preco": "25000",
     "imagem": "img/20250903_112534.jpg"
+  },
+  {
+    "id": "prod0131",
+    "nome": "Alfredo langostinos",
+    "descricao": "salsa blanca con langostinos",
+    "preco": "9500",
+    "imagem": "img/Frelang.jpg"
   }
 ]
