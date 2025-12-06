@@ -1,14 +1,14 @@
 [
   {
     "id": "prod0005",
-    "nome": "CafÃÂÃÂÃÂÃÂ© expresso Doble",
-    "descricao": "CafÃÂÃÂÃÂÃÂ© expresso Doble",
+    "nome": "CafÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ© expresso Doble",
+    "descricao": "CafÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ© expresso Doble",
     "preco": "5200",
     "imagem": "img/doble.jpg"
   },
   {
     "id": "prod0025",
-    "nome": "CookiesÃÂ°ÃÂÃÂÃÂª",
+    "nome": "CookiesÃÂÃÂ°ÃÂÃÂÃÂÃÂÃÂÃÂª",
     "descricao": "Cookies vainilla con chocolate, chocolate+chocolate c/u",
     "preco": "4800",
     "imagem": "img/20250902_085341.jpg"
@@ -29,9 +29,16 @@
   },
   {
     "id": "prod0027",
-    "nome": "Chipá relleno",
-    "descricao": "Chipá relleno de queso c/u",
+    "nome": "ChipÃ¡ relleno",
+    "descricao": "ChipÃ¡ relleno de queso c/u",
     "preco": "3700",
     "imagem": "img/Chipa.jpg"
+  },
+  {
+    "id": "prod0008",
+    "nome": "Café MOKA",
+    "descricao": "Cacao intenso, café, leche espumada",
+    "preco": "5950",
+    "imagem": "img/Moka.jpg"
   }
 ]
