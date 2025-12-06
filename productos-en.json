@@ -21,10 +21,10 @@
     "image": "img/Submarino.jpg"
   },
   {
-    "id": "prod0005",
-    "name": "Café expresso Doble",
-    "description": "Café expresso Doble",
-    "price": "5200",
-    "image": "img/doble.jpg"
+    "id": "prod0012",
+    "name": "Leche caliente o fría",
+    "description": "Leche descremada",
+    "price": "3000",
+    "image": "img/20250818_101037.jpg"
   }
 ]
