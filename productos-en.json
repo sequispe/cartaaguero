@@ -16,7 +16,7 @@
   {
     "id": "prod0060",
     "name": "Ensalada FRESCA",
-    "description": "RÃÂºcula, manzana verde, pepino, tomates cherries, nueces, regianito",
+    "description": "RÃÂÃÂºcula, manzana verde, pepino, tomates cherries, nueces, regianito",
     "price": "19700",
     "image": "img/Fresca.jpg"
   },
@@ -30,8 +30,15 @@
   {
     "id": "prod0081",
     "name": "Pollo pechuga gril",
-    "description": "Con fritas, puré, ensalada o arroz",
+    "description": "Con fritas, purÃ©, ensalada o arroz",
     "price": "21000",
     "image": "img/Pechuga.jpg"
+  },
+  {
+    "id": "prod0063",
+    "name": "Ensalada CAESAR con langostinos",
+    "description": "Mix de verdes, croutons, langostinos rebozados, parmesano y aderezo Caesar",
+    "price": "20000",
+    "image": "img/Caesarlangis.jpg"
   }
 ]
