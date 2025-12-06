@@ -26,5 +26,12 @@
     "descricao": "Limonada simple",
     "preco": "6400",
     "imagem": "img/Limosim.jpg"
+  },
+  {
+    "id": "prod0165",
+    "nome": "Aperol con naranja",
+    "descricao": "Aperol con naranja",
+    "preco": "9500",
+    "imagem": "img/Campati.jpg"
   }
 ]
