@@ -1,8 +1,8 @@
 [
   {
     "id": "prod0095",
-    "name": "SalmÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ³n AZUL",
-    "description": "SalmÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ³n rosado grillado en salsa crema de queso azul con papas espaÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ±olas",
+    "name": "SalmÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ³n AZUL",
+    "description": "SalmÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ³n rosado grillado en salsa crema de queso azul con papas espaÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ±olas",
     "price": 38000,
     "image": "img/20250817_142010.jpg"
   },
@@ -16,7 +16,7 @@
   {
     "id": "prod0096",
     "name": "Matambrito a la PIZZA",
-    "description": "De cerdo, muzarella, tomate y orÃÂÃÂÃÂÃÂ©gano con papas fritas",
+    "description": "De cerdo, muzarella, tomate y orÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ©gano con papas fritas",
     "price": "28500",
     "image": "img/20250815_132057.jpg"
   },
@@ -47,5 +47,12 @@
     "description": "Con papas fritas (para 2 personas)",
     "price": "51000",
     "image": "img/20250817_135608.jpg"
+  },
+  {
+    "id": "prod0122",
+    "name": "PICADITA CALIENTE (para 2 personas)",
+    "description": "Pollo rebozado, bastones de muzarella, rabas y papas fritas. Incluye dos porrones de Stella",
+    "price": "45000",
+    "image": "img/IMG-20250815.jpg"
   }
 ]
