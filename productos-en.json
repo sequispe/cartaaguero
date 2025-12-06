@@ -8,9 +8,16 @@
   },
   {
     "id": "prod0009",
-    "name": "Café CARAMEL",
-    "description": "Caramelo, café, leche espumada",
+    "name": "CafÃ© CARAMEL",
+    "description": "Caramelo, cafÃ©, leche espumada",
     "price": "5950",
     "image": "img/20250903_144413.jpg"
+  },
+  {
+    "id": "prod0010",
+    "name": "Té con leche",
+    "description": "Té Inti Zen",
+    "price": "4400",
+    "image": "img/te.jpg"
   }
 ]
