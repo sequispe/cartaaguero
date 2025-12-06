@@ -1,8 +1,8 @@
 [
   {
     "id": "prod0114",
-    "name": "Burger clÃÂÃÂ¡sico",
-    "description": "Lechuga, tomate, jamÃÂÃÂ³n y queso",
+    "name": "Burger clÃÂÃÂÃÂÃÂ¡sico",
+    "description": "Lechuga, tomate, jamÃÂÃÂÃÂÃÂ³n y queso",
     "price": "17000",
     "image": "img/20250816_135012.jpg"
   },
@@ -23,8 +23,15 @@
   {
     "id": "prod0138",
     "name": "Agua local filtrada y mineralizada",
-    "description": "Agua fría, natural y con gas",
+    "description": "Agua frÃ­a, natural y con gas",
     "price": "3700",
     "image": "img/20250830_142147.jpg"
+  },
+  {
+    "id": "prod0139",
+    "name": "Adicional con limón",
+    "description": "Adicional con limón",
+    "price": "400",
+    "image": "img/20250903_093625.jpg"
   }
 ]
