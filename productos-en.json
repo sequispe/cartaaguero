@@ -1,15 +1,15 @@
 [
   {
     "id": "prod0009",
-    "name": "CafÃÂÃÂ© CARAMEL",
-    "description": "Caramelo, cafÃÂÃÂ©, leche espumada",
+    "name": "CafÃÂÃÂÃÂÃÂ© CARAMEL",
+    "description": "Caramelo, cafÃÂÃÂÃÂÃÂ©, leche espumada",
     "price": "5950",
     "image": "img/20250903_144413.jpg"
   },
   {
     "id": "prod0010",
-    "name": "TÃÂ© con leche",
-    "description": "TÃÂ© Inti Zen",
+    "name": "TÃÂÃÂ© con leche",
+    "description": "TÃÂÃÂ© Inti Zen",
     "price": "4400",
     "image": "img/te.jpg"
   },
@@ -22,9 +22,16 @@
   },
   {
     "id": "prod0012",
-    "name": "Leche caliente o fría",
+    "name": "Leche caliente o frÃ­a",
     "description": "Leche descremada",
     "price": "3000",
     "image": "img/20250818_101037.jpg"
+  },
+  {
+    "id": "prod0013",
+    "name": "CAFE TILO",
+    "description": "Café, Baileys, leche evaporada y chocolate rallado",
+    "price": "7500",
+    "image": "img/20250819_160159.jpg"
   }
 ]
