@@ -23,7 +23,7 @@
   {
     "id": "prod0081",
     "name": "Pollo pechuga gril",
-    "description": "Con fritas, purÃ©, ensalada o arroz",
+    "description": "Con fritas, purÃÂ©, ensalada o arroz",
     "price": "21000",
     "image": "img/Pechuga.jpg"
   },
@@ -33,5 +33,12 @@
     "description": "Con papas fritas (para 2 personas)",
     "price": "51000",
     "image": "img/20250817_135608.jpg"
+  },
+  {
+    "id": "prod0082",
+    "name": "Matambre de cerdo gril",
+    "description": "Con fritas, puré, ensalada o arroz",
+    "price": "24500",
+    "image": "img/Matam.jpg"
   }
 ]
