@@ -2,8 +2,15 @@
   {
     "id": "prod0045",
     "name": "PROTEICO",
-    "description": "Pancake 100% harina de almendras, queso crema y fruta de estación más dip de miel",
+    "description": "Pancake 100% harina de almendras, queso crema y fruta de estaciÃ³n mÃ¡s dip de miel",
     "price": "16000",
     "image": "img/20250815_132946.jpg"
+  },
+  {
+    "id": "prod0046",
+    "name": "FRENCH TOAST DULCE",
+    "description": "Tostadas marinadas en huevo, con canela y azúcar, queso crema, frutas de estación y dip de miel",
+    "price": "15000",
+    "image": "img/20250819_113846.jpg"
   }
 ]
