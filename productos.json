@@ -10,7 +10,7 @@
   {
     "nombre": "Café expresso jarrito",
     "descripcion": "Café americano",
-    "precio": "3609",
+    "precio": "3600",
     "imagen": "img/Americano.jpg",
     "categoria": "Cafetería☕️",
     "id": "prod0002"
@@ -512,7 +512,7 @@
     "id": "prod0064"
   },
   {
-    "nombre": " ENSALADAS COBB SALAD",
+    "nombre": "ENSALADAS COBB SALAD",
     "descripcion": "Mix de verdes, pollo, huevo, queso azul, tomate y salsa de palta.",
     "precio": "18200",
     "imagen": "img/Cpsala.jpg",
@@ -680,7 +680,7 @@
     "id": "prod0085"
   },
   {
-    "nombre": "Pollo (pechuga gril  ) ",
+    "nombre": "Pollo (pechuga gril  )",
     "descripcion": "Acompañado con espinaca, papas a la crema o verduras grilladas",
     "precio": "23000",
     "imagen": "img/Espepollo.jpg",
