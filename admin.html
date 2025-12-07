@@ -556,9 +556,9 @@ async function saveMainJson(arr, commitMessage){
 /**********************************************************
  * Sincronizar precios EN y PT
  **********************************************************/
-async function syncPricesToLangs(){
+async function syncPricesToLangs() {
   const token = getToken();
-  if(!token){
+  if (!token) {
     showToast('Token requerido para sincronizar EN/PT', 'err', 4000);
     return;
   }
@@ -566,33 +566,49 @@ async function syncPricesToLangs(){
   const byId = {};
   productos.forEach(p => { byId[p.id] = p; });
 
-  async function processLangFile(filename, idioma){
-    const info = await githubGetFileInfo(filename);
+  async function processLangFile(filename, idioma) {
+
+    // 🔥 Siempre obtener el SHA FRESCO antes de procesar
+    let info;
+    try {
+      info = await githubGetFileInfo(filename);
+    } catch (e) {
+      console.error(e);
+      showToast(`No se pudo cargar ${filename}`, 'err', 5000);
+      return;
+    }
+
     const sha = info.sha;
 
-    const raw = info.content.replace(/\n/g,'');
+    // Decodificar contenido
+    const raw = info.content.replace(/\n/g, '');
     const decoded = decodeURIComponent(escape(window.atob(raw)));
     let arr = JSON.parse(decoded);
 
     let changed = false;
 
+    // Actualizar SOLO precios
     const newArr = arr.map(item => {
       const itemId = item.id || null;
 
-      if(itemId && byId[itemId]){
+      if (itemId && byId[itemId]) {
         const nuevo = sanitizePrice(byId[itemId].precio);
 
-        if('precio' in item && item.precio !== nuevo){ item.precio = nuevo; changed = true; }
-        if('price' in item && item.price !== nuevo){ item.price = nuevo; changed = true; }
-        if('preco' in item && item.preco !== nuevo){ item.preco = nuevo; changed = true; }
+        if ('precio' in item && item.precio !== nuevo) { item.precio = nuevo; changed = true; }
+        if ('price' in item && item.price !== nuevo) { item.price = nuevo; changed = true; }
+        if ('preco' in item && item.preco !== nuevo) { item.preco = nuevo; changed = true; }
       }
 
       return ordenarCamposPorIdioma(item, idioma);
     });
 
-    if(changed){
+    if (changed) {
+      // 🔥 Obtener SHA nuevamente justo ANTES de subir
+      const latestInfo = await githubGetFileInfo(filename);
+      const latestSha = latestInfo.sha;
+
       const contentString = JSON.stringify(newArr, null, 2);
-      await githubPutFile(filename, contentString, `Sincroniza precios desde productos.json`, sha);
+      await githubPutFile(filename, contentString, `Sincroniza precios desde productos.json`, latestSha);
     }
   }
 
