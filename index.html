@@ -1,586 +1,362 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Admin Carta - Tilo Café Agüero (Sincroniza precios ES/EN/PT)</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tilo Café Agüero</title>
   <style>
-    body{font-family:Arial,Helvetica,sans-serif;margin:18px;background:#f7f3f0;color:#333}
-    h1{text-align:center;color:#806250;margin-bottom:10px}
-    .topRow{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;gap:10px}
-    .controls{display:flex;gap:8px;align-items:center}
-    input[type="text"], input[type="password"], textarea{padding:8px;border-radius:6px;border:1px solid #ccc;width:100%;box-sizing:border-box}
-    button{background:#806250;color:#fff;border:none;padding:8px 10px;border-radius:6px;cursor:pointer}
-    button.secondary{background:#5c8a50}
-    button.danger{background:#c0392b}
-    form{background:#fff;padding:12px;border-radius:10px;margin-bottom:12px;display:none}
-    table{width:100%;border-collapse:collapse;background:#fff}
-    th,td{border:1px solid #ddd;padding:8px;vertical-align:top}
-    th{background:#806250;color:#fff}
-    img.mini{max-width:60px;border-radius:6px}
-    #guardarTodos{position:fixed;top:18px;right:18px;z-index:1200;padding:10px 14px;background:#a07b68;color:#fff;border-radius:8px}
-    .small{font-size:13px;color:#666}
-    .rowActions{display:flex;gap:6px}
-    .previewImg{max-width:120px;margin-top:8px;border-radius:6px}
-    textarea#multiInput{width:100%;padding:8px;border-radius:6px;border:1px solid #ccc;box-sizing:border-box}
-    .toast {
-      position: fixed; top: 24px; right: 24px; z-index: 2000; padding: 12px 16px;
-      border-radius: 8px; color: white; font-weight: 600; box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-      opacity: 0; transform: translateY(-10px); transition: opacity .25s ease, transform .25s ease; max-width: 360px;
-    }
-    .toast.show { opacity: 1; transform: translateY(0); }
-    .toast.ok { background: #2ecc71; }
-    .toast.info { background: #3498db; }
-    .toast.err { background: #e74c3c; }
-    @media(max-width:720px){ .topRow{flex-direction:column;align-items:flex-start} table{font-size:13px} }
-  </style>
-</head>
-<body>
-
-  <h1>Panel de Administración - Tilo Café Agüero</h1>
-
-  <div class="topRow">
-    <div style="flex:1">
-      <div style="margin-bottom:6px"><span class="small">Repositorio:</span> <b>cholose10 / cartaaguero</b></div>
-      <div style="display:flex;gap:8px;align-items:center">
-        <label style="min-width:40px">Token:</label>
-        <input type="password" id="token" placeholder="Pegar token de GitHub (repo contents)" style="max-width:420px">
-        <button onclick="saveToken()">Guardar</button>
-        <button onclick="clearToken()">Borrar</button>
-        <span class="small" id="tokenStatus" style="margin-left:8px">No guardado</span>
-      </div>
-    </div>
-
-    <div class="controls">
-      <input id="search" placeholder="Buscar..." oninput="filterProducts()" style="min-width:180px;max-width:360px">
-      <button id="toggleFormBtn" onclick="toggleForm()">+ Agregar producto</button>
-      <button class="secondary" onclick="toggleMultiForm()">➕ Agregar VARIOS</button>
-    </div>
-  </div>
-
-  <button id="guardarTodos" onclick="guardarTodosLosPrecios()">💾 Guardar TODOS los cambios</button>
-
-  <form id="form">
-    <input type="hidden" id="editIndex">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
-      <div>
-        <label>Nombre</label>
-        <input id="nombre" type="text">
-      </div>
-      <div>
-        <label>Precio</label>
-        <input id="precio" type="text" placeholder="Ej: 3400 (sin $)">
-      </div>
-
-      <div style="grid-column:1/3">
-        <label>Descripción</label>
-        <textarea id="descripcion" rows="3"></textarea>
-      </div>
-
-      <div>
-        <label>Imagen (ruta o URL)</label>
-        <input id="imagen" type="text" oninput="previewImage()">
-        <img id="preview" class="previewImg" style="display:none">
-      </div>
-
-      <div>
-        <label>Categoría</label>
-        <input id="categoria" type="text" placeholder="Ej: Cafetería">
-      </div>
-    </div>
-
-    <div style="margin-top:10px;display:flex;gap:8px">
-      <button type="button" onclick="guardarFormulario()">Guardar</button>
-      <button type="button" onclick="cancelForm()" style="background:#999">Cancelar</button>
-    </div>
-  </form>
-
-  <form id="multiForm" style="display:none">
-    <h3>Agregar varios productos</h3>
-    <p class="small">Un producto por línea con formato: <b>nombre | descripcion | precio | imagen | categoria</b></p>
-    <textarea id="multiInput" rows="8" placeholder="Ej: Café expresso | Café chico | 3400 | img/cafe.jpg | Cafetería"></textarea>
-    <div style="margin-top:8px;display:flex;gap:8px">
-      <button type="button" onclick="procesarMulti()">Guardar varios</button>
-      <button type="button" onclick="toggleMultiForm()" style="background:#999">Cerrar</button>
-    </div>
-  </form>
-
-  <table aria-label="Productos">
-    <thead>
-      <tr><th style="width:80px">Imagen</th><th>Nombre</th><th>Descripción</th><th>Categoría</th><th style="width:100px">Precio (ES)</th><th style="width:180px">Acciones</th></tr>
-    </thead>
-    <tbody id="tbody"></tbody>
-  </table>
-
-<script>
-/**********************************************************
- * Config
- **********************************************************/
-const USERNAME = "cholose10";
-const REPO = "cartaaguero";
-const BRANCH = "main";               // cambiar si usás otro branch
-const MAIN_JSON = "productos.json";
-const EN_JSON = "productos-en.json";
-const PT_JSON = "productos-port.json";
-
-let productos = [];
-
-/**********************************************************
- * Toast helper
- **********************************************************/
-function showToast(msg, variant = 'ok', timeout = 3000){
-  const div = document.createElement('div');
-  div.className = 'toast ' + (variant === 'info' ? 'info' : variant === 'err' ? 'err' : 'ok');
-  div.innerText = (variant === 'err' ? '✖︎ ' : variant === 'info' ? 'ℹ︎ ' : '✔︎ ') + msg;
-  document.body.appendChild(div);
-  requestAnimationFrame(() => div.classList.add('show'));
-  setTimeout(() => {
-    div.classList.remove('show');
-    setTimeout(()=> div.remove(), 300);
-  }, timeout);
-}
-
-/**********************************************************
- * Token (localStorage)
- **********************************************************/
-function saveToken(){
-  const t = document.getElementById('token').value.trim();
-  if(!t){ showToast('Pegá tu token primero', 'err'); return; }
-  localStorage.setItem('github_token', t);
-  document.getElementById('tokenStatus').innerText = 'Token guardado';
-  showToast('Token guardado', 'ok', 1800);
-}
-function clearToken(){
-  localStorage.removeItem('github_token');
-  document.getElementById('tokenStatus').innerText = 'Token borrado';
-  showToast('Token borrado', 'info', 1500);
-}
-function getToken(){ return localStorage.getItem('github_token'); }
-(function initTokenStatus(){ const t = getToken(); if(t) document.getElementById('tokenStatus').innerText = 'Token guardado'; })();
-
-/**********************************************************
- * Util: generar id tipo id0001
- **********************************************************/
-function extractNumberFromId(id){
-  if(!id) return null;
-  const m = String(id).match(/(\d+)\s*$/);
-  if(m) return parseInt(m[1], 10);
-  return null;
-}
-function generateNextId(){
-  let max = 0;
-  for(const p of productos){
-    const n = extractNumberFromId(p.id || '');
-    if(Number.isFinite(n) && n > max) max = n;
-  }
-  const next = max + 1;
-  const s = String(next).padStart(4, '0');
-  return 'id' + s;
-}
-
-/**********************************************************
- * Sanitizar precio (quita todo lo que no sea dígito)
- * Nota: solo normaliza formato, NO intenta "arreglar ceros"
- **********************************************************/
-function sanitizePrice(v){
-  if(v === undefined || v === null) return '';
-  const only = String(v).replace(/[^\d]/g, '');
-  return only || '';
-}
-
-/**********************************************************
- * Cargar JSON principal (raw)
- **********************************************************/
-async function loadProducts(){
-  try{
-    const r = await fetch(`https://raw.githubusercontent.com/${USERNAME}/${REPO}/${BRANCH}/${MAIN_JSON}`);
-    if(!r.ok) throw new Error(`No se pudo cargar ${MAIN_JSON} (${r.status})`);
-    productos = await r.json();
-    if(!Array.isArray(productos)) productos = [];
-    // Asegurarnos IDs en formato id0001 si faltan
-    let changed = false;
-    productos.forEach(p=>{
-      if(!p.id){ p.id = generateNextId(); changed = true; }
-    });
-    render(productos);
-    if(changed) showToast('Se asignaron IDs faltantes localmente', 'info', 2200);
-  }catch(e){
-    console.warn(e);
-    productos = [];
-    render(productos);
-    showToast("No se pudo cargar productos.json. Revisa repo o token.", 'err', 5000);
-  }
-}
-
-/**********************************************************
- * Render: filas DOM
- **********************************************************/
-function render(lista){
-  const tb = document.getElementById('tbody');
-  tb.innerHTML = '';
-  lista.forEach((p, i) => {
-    const tr = document.createElement('tr');
-
-    const tdImg = document.createElement('td');
-    const img = document.createElement('img');
-    img.className = 'mini';
-    // soporte para distintos nombres de campo de imagen
-    img.src = p.imagen || p.image || p.imagem || '';
-    img.alt = p.nombre || p.name || '';
-    img.onerror = () => { img.src = ''; img.style.display = 'none'; };
-    tdImg.appendChild(img);
-    tr.appendChild(tdImg);
-
-    const tdNombre = document.createElement('td');
-    const nombreInput = document.createElement('input');
-    nombreInput.type = 'text';
-    nombreInput.value = p.nombre || p.name || '';
-    nombreInput.oninput = (e) => { productos[i].nombre = e.target.value; };
-    tdNombre.appendChild(nombreInput);
-    tr.appendChild(tdNombre);
-
-    const tdDesc = document.createElement('td');
-    const descTA = document.createElement('textarea');
-    descTA.rows = 2;
-    descTA.value = p.descripcion || p.description || p.descricao || '';
-    descTA.oninput = (e) => { productos[i].descripcion = e.target.value; };
-    tdDesc.appendChild(descTA);
-    tr.appendChild(tdDesc);
-
-    const tdCat = document.createElement('td');
-    const catInput = document.createElement('input');
-    catInput.type = 'text';
-    catInput.value = p.categoria || p.category || p.categoria || '';
-    catInput.oninput = (e) => { productos[i].categoria = e.target.value; };
-    tdCat.appendChild(catInput);
-    tr.appendChild(tdCat);
-
-    const tdPrecio = document.createElement('td');
-    const precioInput = document.createElement('input');
-    precioInput.type = 'text';
-    precioInput.value = p.precio || p.price || '';
-    precioInput.oninput = (e) => { productos[i].precio = e.target.value; };
-    tdPrecio.appendChild(precioInput);
-    tr.appendChild(tdPrecio);
-
-    const tdAcc = document.createElement('td');
-    tdAcc.className = 'rowActions';
-
-    const btnGuardar = document.createElement('button');
-    btnGuardar.textContent = 'Guardar';
-    btnGuardar.onclick = () => guardarFila(i);
-    tdAcc.appendChild(btnGuardar);
-
-    const btnEdit = document.createElement('button');
-    btnEdit.textContent = 'Editar';
-    btnEdit.style.background = '#2d87d6';
-    btnEdit.onclick = () => loadIntoForm(i);
-    tdAcc.appendChild(btnEdit);
-
-    const btnDelete = document.createElement('button');
-    btnDelete.textContent = 'Eliminar';
-    btnDelete.className = 'danger';
-    btnDelete.onclick = () => eliminarProducto(i);
-    tdAcc.appendChild(btnDelete);
-
-    tr.appendChild(tdAcc);
-    tb.appendChild(tr);
-  });
-}
-
-/**********************************************************
- * Form helpers
- **********************************************************/
-function toggleForm(){ 
-  const f = document.getElementById('form'); 
-  f.style.display = f.style.display === 'none' || f.style.display === '' ? 'block' : 'none';
-}
-function cancelForm(){
-  document.getElementById('editIndex').value = '';
-  document.getElementById('nombre').value = '';
-  document.getElementById('descripcion').value = '';
-  document.getElementById('precio').value = '';
-  document.getElementById('imagen').value = '';
-  document.getElementById('categoria').value = '';
-  document.getElementById('preview').style.display = 'none';
-  document.getElementById('form').style.display = 'none';
-}
-function previewImage(){
-  const v = document.getElementById('imagen').value.trim();
-  const img = document.getElementById('preview');
-  if(!v){ img.style.display='none'; img.src=''; return; }
-  img.src = v;
-  img.style.display = 'block';
-  img.onerror = ()=>{ img.style.display='none'; };
-}
-function loadIntoForm(index){
-  const p = productos[index];
-  if(!p) return;
-  document.getElementById('editIndex').value = index;
-  document.getElementById('nombre').value = p.nombre || '';
-  document.getElementById('descripcion').value = p.descripcion || '';
-  document.getElementById('precio').value = p.precio || '';
-  document.getElementById('imagen').value = p.imagen || p.image || p.imagem || '';
-  document.getElementById('categoria').value = p.categoria || '';
-  previewImage();
-  document.getElementById('form').style.display = 'block';
-}
-function validarProductoObj(obj){
-  if(!obj.nombre) return "Falta nombre";
-  if(!obj.precio) return "Falta precio";
-  return null;
-}
-function guardarFormulario(){
-  const nombre = document.getElementById('nombre').value.trim();
-  const descripcion = document.getElementById('descripcion').value.trim();
-  const precio = sanitizePrice(document.getElementById('precio').value.trim());
-  const imagen = document.getElementById('imagen').value.trim();
-  const categoria = document.getElementById('categoria').value.trim();
-  const editIndex = document.getElementById('editIndex').value;
-
-  const obj = { nombre, descripcion, precio, imagen, categoria };
-  const err = validarProductoObj(obj);
-  if(err){ showToast(err, 'err'); return; }
-
-  if(editIndex !== ''){
-    const idx = Number(editIndex);
-    productos[idx] = { ...productos[idx], ...obj };
-    if(!productos[idx].id) productos[idx].id = generateNextId();
-  } else {
-    const id = generateNextId();
-    productos.push({ id, ...obj });
-  }
-
-  render(productos);
-  document.getElementById('form').style.display = 'none';
-  showToast('Producto agregado/actualizado localmente', 'ok', 1800);
-}
-function toggleMultiForm(){
-  const f = document.getElementById('multiForm');
-  f.style.display = f.style.display === 'none' || f.style.display === '' ? 'block' : 'none';
-}
-function procesarMulti(){
-  const raw = document.getElementById('multiInput').value.trim();
-  if(!raw){ showToast('Nada para procesar', 'err'); return; }
-  const lines = raw.split('\n').map(l => l.trim()).filter(Boolean);
-  for(const ln of lines){
-    const parts = ln.split('|').map(p => p.trim());
-    const nombre = parts[0] || 'Sin nombre';
-    const descripcion = parts[1] || '';
-    const precio = sanitizePrice(parts[2] || '');
-    const imagen = parts[3] || '';
-    const categoria = parts[4] || '';
-    const id = generateNextId();
-    productos.push({ id, nombre, descripcion, precio, imagen, categoria });
-  }
-  document.getElementById('multiInput').value = '';
-  render(productos);
-  showToast('Productos agregados localmente. Presioná "Guardar TODOS los cambios".', 'info', 3500);
-}
-function eliminarProducto(i){
-  if(!confirm('Eliminar producto?')) return;
-  productos.splice(i,1);
-  render(productos);
-  showToast('Producto eliminado localmente', 'info', 1600);
-}
-
-/**********************************************************
- * GitHub API helpers (obtener sha y guardar)
- **********************************************************/
-async function githubGetFileInfo(path){
-  const token = getToken();
-  const headers = token ? { Authorization: 'token ' + token } : {};
-  const url = `https://api.github.com/repos/${USERNAME}/${REPO}/contents/${path}?ref=${BRANCH}`;
-  const res = await fetch(url, { headers });
-  if(!res.ok) throw new Error(`GitHub get ${path} -> ${res.status}`);
-  return await res.json(); // contiene .sha y .content (base64) entre otras cosas
-}
-async function githubPutFile(path, contentString, message, sha){
-  const token = getToken();
-  if(!token) throw new Error('Token requerido para subir cambios a GitHub');
-  const url = `https://api.github.com/repos/${USERNAME}/${REPO}/contents/${path}`;
-  const body = {
-    message: message,
-    content: btoa(unescape(encodeURIComponent(contentString))),
-    branch: BRANCH
-  };
-  if(sha) body.sha = sha;
-  const res = await fetch(url, {
-    method: 'PUT',
-    headers: {
-      Authorization: 'token ' + token,
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(body)
-  });
-  const data = await res.json();
-  if(!res.ok) {
-    throw new Error(`GitHub PUT ${path} -> ${res.status}: ${data.message || JSON.stringify(data)}`);
-  }
-  return data;
-}
-
-/**********************************************************
- * Guardar una fila (producto) —> actualiza MAIN_JSON y
- * sincroniza precios a EN/PT (solo precio)
- **********************************************************/
-async function guardarFila(i){
-  try{
-    const p = productos[i];
-    if(!p) throw new Error('Producto no encontrado');
-    if(!p.id) p.id = generateNextId();
-    // sanitizar precio
-    p.precio = sanitizePrice(p.precio);
-
-    // 1) Guardamos productos.json localmente -> subir
-    await saveMainJson(productos, `Actualiza producto ${p.id} - precio ${p.precio}`);
-
-    // 2) Sincronizamos precios en EN y PT
-    await syncPricesToLangs();
-
-    showToast('Producto guardado y precios sincronizados en EN/PT', 'ok', 2600);
-  }catch(e){
-    console.error(e);
-    showToast('Error al guardar fila: ' + (e.message||e), 'err', 5000);
-  }
-}
-
-/**********************************************************
- * Guardar TODOS los cambios (botón)
- **********************************************************/
-async function guardarTodosLosPrecios(){
-  try{
-    // sanitizar todos los precios antes de subir
-    productos = productos.map(p => ({ ...p, precio: sanitizePrice(p.precio) }));
-    await saveMainJson(productos, `Guardar TODOS los productos - sincronizando precios a EN/PT`);
-    await syncPricesToLangs();
-    showToast('Todos los cambios guardados y sincronizados (ES/EN/PT)', 'ok', 3000);
-  }catch(e){
-    console.error(e);
-    showToast('Error al guardar todos: ' + (e.message||e), 'err', 6000);
-  }
-}
-
-/**********************************************************
- * Guardar main JSON (subir a GitHub)
- **********************************************************/
-async function saveMainJson(arr, commitMessage){
-  // subida directa del array a MAIN_JSON
-  const contentString = JSON.stringify(arr, null, 2);
-  // debemos obtener el sha actual (si existe) para evitar conflicto
-  let sha;
-  try{
-    const info = await githubGetFileInfo(MAIN_JSON);
-    sha = info.sha;
-  }catch(e){
-    // si no existe lo creamos (sha undefined)
-    sha = undefined;
-  }
-  await githubPutFile(MAIN_JSON, contentString, commitMessage, sha);
-}
-
-/**********************************************************
- * Sincronizar precios en EN y PT (solo cambia precios)
- **********************************************************/
-async function syncPricesToLangs(){
-  // obtiene info de EN y PT, reemplaza solo el precio por id
-  const token = getToken();
-  if(!token) {
-    showToast('Token requerido para sincronizar EN/PT', 'err', 4000);
-    return;
-  }
-
-  // helper para procesar un archivo
-  async function processLangFile(filename){
-    // 1) obtener sha y contenido
-    const info = await githubGetFileInfo(filename);
-    const sha = info.sha;
-    // content viene base64
-    const decoded = decodeURIComponent(escape(window.atob(info.content.replace(/\n/g,''))));
-    let arr;
-    try {
-      arr = JSON.parse(decoded);
-      if(!Array.isArray(arr)) throw new Error('Formato inválido');
-    } catch(err) {
-      throw new Error(`No pude parsear ${filename}: ${err.message}`);
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: url("img/Fondo1.jpg") repeat;
+      background-size: cover;
+      margin: 0;
+      padding: 0;
+      color: #45270a;
+      text-align: center;
+      scroll-behavior: smooth;
     }
 
-    // 2) por cada producto en arr, buscar id en productos (base) y reemplazar precio solo
-    const byId = {};
-    productos.forEach(p => { if(p.id) byId[p.id] = p; });
-    let changed = false;
-    for(let item of arr){
-      // aceptar diferentes claves de id (prod0001 o id0001) -> el admin ya normaliza a id000X
-      const iid = item.id || item.prodId || item.productId || item.codigo || item.code || null;
-      const idKey = iid || item.id || null;
-      // Intentar igualar por id directo
-      const key = item.id || item.id || iid;
-      // Lo principal: si el item tiene "id" y coincide:
-      if(item.id && byId[item.id]){
-        const newPrice = sanitizePrice(byId[item.id].precio || byId[item.id].price || '');
-        if(newPrice !== '' && String(item.precio || item.price || item.preco) !== newPrice){
-          // mantener la misma clave que existía en el JSON: si tiene 'price' usa 'price', si 'precio' usa 'precio'
-          if('precio' in item) item.precio = newPrice;
-          else if('price' in item) item.price = newPrice;
-          else if('preco' in item) item.preco = newPrice;
-          else item.precio = newPrice; // fallback
-          changed = true;
-        }
-      } else if (iid && byId[iid]) {
-        const newPrice = sanitizePrice(byId[iid].precio || byId[iid].price || byId[iid].preco || '');
-        if(newPrice !== ''){
-          if('precio' in item) item.precio = newPrice;
-          else if('price' in item) item.price = newPrice;
-          else if('preco' in item) item.preco = newPrice;
-          else item.precio = newPrice;
-          changed = true;
-        }
-      } else {
-        // Intentar buscar por nombre (solo como fallback si no hay id)
-        // NO sobrescribimos nombres/desc/categorias
+    header img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .banner {
+      background: rgba(255,255,255,0.85);
+      padding: 10px;
+      font-size: 1.3em;
+      border-radius: 8px;
+      display: inline-block;
+      margin: 10px auto;
+    }
+
+    #languageSwitcher {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin: 10px 0;
+    }
+
+    .lang-btn {
+      background: #806250;
+      color: white;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .lang-btn.active {
+      background: #a07b68;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    }
+
+    .search-box {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin: 15px;
+    }
+
+    .search-box input {
+      padding: 10px;
+      width: 60%;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    .search-box button {
+      background: #806250;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 16px;
+      cursor: pointer;
+    }
+
+    #category-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin: 15px;
+    }
+
+    #category-buttons button {
+      background: #8c6954;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      padding: 8px 14px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    #category-buttons button:hover {
+      background: #6b4e3d;
+      transform: scale(1.05);
+    }
+
+    #product-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      padding: 10px;
+    }
+
+    .item {
+      background: rgba(255,255,255,0.95);
+      border-radius: 10px;
+      width: 280px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      overflow: hidden;
+      transition: 0.2s;
+    }
+
+    .item img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .item h3 { margin: 8px; }
+    .item p { margin: 0 8px 10px; }
+    .price { font-weight: bold; margin: 0 8px 10px; display: block; }
+    .msg { padding: 20px; color: #a00; }
+
+    #btnUp {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background: #8c6954;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      font-size: 22px;
+      cursor: pointer;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+      display: none;
+      transition: 0.3s;
+    }
+
+    #btnUp:hover {
+      background: #6b4e3d;
+      transform: scale(1.1);
+    }
+
+    /* 📱 RESPONSIVE: Ajuste automático según pantalla */
+    @media (max-width: 900px) {
+      .item {
+        width: 45%;
       }
     }
 
-    if(changed){
-      const contentString = JSON.stringify(arr, null, 2);
-      await githubPutFile(filename, contentString, `Sincroniza precios desde ${MAIN_JSON}`, sha);
+    @media (max-width: 600px) {
+      .item {
+        width: 90%;
+      }
+
+      .search-box input {
+        width: 70%;
+      }
     }
-    return changed;
-  }
 
-  // Procesar EN y PT (paralelo)
-  let results = await Promise.allSettled([processLangFile(EN_JSON), processLangFile(PT_JSON)]);
-  // evaluar resultados
-  const errors = results.filter(r => r.status === 'rejected');
-  if(errors.length){
-    const msgs = errors.map(e => e.reason && e.reason.message ? e.reason.message : JSON.stringify(e.reason)).join(' | ');
-    throw new Error('Errores sincronizando EN/PT: ' + msgs);
-  }
-  return true;
-}
+    @media (max-width: 400px) {
+      .item { width: 95%; }
+      header img { height: 180px; }
+    }
+  </style>
+</head>
 
-/**********************************************************
- * Filtrado simple
- **********************************************************/
-function filterProducts(){
-  const q = document.getElementById('search').value.toLowerCase().trim();
-  if(!q) { render(productos); return; }
-  const filtered = productos.filter(p => {
-    const name = (p.nombre||p.name||'').toString().toLowerCase();
-    const desc = (p.descripcion||p.description||'').toString().toLowerCase();
-    const cat = (p.categoria||p.category||'').toString().toLowerCase();
-    return name.includes(q) || desc.includes(q) || cat.includes(q);
-  });
-  render(filtered);
-}
+<body>
 
-/**********************************************************
- * Init
- **********************************************************/
+  <header>
+    <img src="img/Logo99.jpg" alt="Tilo Café">
+  </header>
+
+  <div class="banner" id="banner-text">¡Bienvenidos a Tilo Café Agüero 2298!</div>
+
+  <div id="languageSwitcher">
+    <button id="btn-es" class="lang-btn">🇪🇸 Español</button>
+    <button id="btn-en" class="lang-btn">🇬🇧 English</button>
+    <button id="btn-pt" class="lang-btn">🇧🇷 Português</button>
+  </div>
+
+  <div class="search-box">
+    <input id="search" type="text" placeholder="Buscar por nombre, descripción o categoría...">
+    <button id="btnSearch">Buscar</button>
+  </div>
+
+  <div id="category-buttons"></div>
+  <div id="product-list"></div>
+
+  <button id="btnUp">⬆️</button>
+
+<script>
 document.addEventListener('DOMContentLoaded', () => {
-  loadProducts();
+
+  const USER = "cholose10";
+  const REPO = "cartaaguero";
+  let idiomaActual = localStorage.getItem("idioma") || "es";
+
+  const btnEs = document.getElementById("btn-es");
+  const btnEn = document.getElementById("btn-en");
+  const btnPt = document.getElementById("btn-pt");
+  const banner = document.getElementById("banner-text");
+  const categoryContainer = document.getElementById("category-buttons");
+  const productList = document.getElementById("product-list");
+  const searchInput = document.getElementById("search");
+  const btnSearch = document.getElementById("btnSearch");
+  const btnUp = document.getElementById("btnUp");
+
+  let productos = [];
+
+  function scrollToProducts() {
+    productList.scrollIntoView({ behavior: "smooth" });
+  }
+
+  function actualizarBotones() {
+    btnEs.classList.toggle("active", idiomaActual === "es");
+    btnEn.classList.toggle("active", idiomaActual === "en");
+    btnPt.classList.toggle("active", idiomaActual === "pt");
+
+    if (idiomaActual === "es") banner.textContent = "¡Bienvenidos a Tilo Café Agüero 2298!";
+    if (idiomaActual === "en") banner.textContent = "Welcome to Tilo Café Agüero 2298!";
+    if (idiomaActual === "pt") banner.textContent = "Bem-vindo ao Tilo Café Agüero 2298!";
+  }
+
+  async function load() {
+    actualizarBotones();
+
+    let filename = "productos.json";
+    if (idiomaActual === "en") filename = "productos-en.json";
+    if (idiomaActual === "pt") filename = "productos-port.json";
+
+    /* 🚀 URL SIN BLOQUEO (jsDelivr) */
+    const RAW_URL = `https://raw.githubusercontent.com/${USER}/${REPO}/main/${filename}`;
+
+    try {
+      const res = await fetch(RAW_URL, { cache: "no-store" });
+      if (!res.ok) throw new Error("Error cargando productos");
+
+      const data = await res.json();
+
+      productos = data.map(p => ({
+        nombre:
+          idiomaActual === "es" ? (p.nombre || p.nome) :
+          idiomaActual === "en" ? (p.name || p.nome) :
+          p.nome,
+
+        descripcion:
+          idiomaActual === "es" ? (p.descripcion || p.descricao) :
+          idiomaActual === "en" ? (p.description || p.descricao) :
+          p.descricao,
+
+        precio: p.precio || p.preco || p.price,
+        imagen: p.imagen || p.imagem || p.image,
+
+        categoria:
+          idiomaActual === "es" ? p.categoria :
+          idiomaActual === "en" ? (p.category || p.categoria) :
+          p.categoria
+      }));
+
+      renderCategories();
+      renderProducts("Todos");
+
+    } catch (e) {
+      console.error(e);
+      productList.innerHTML = `<div class="msg">⚠️ No se pudieron cargar los productos.</div>`;
+    }
+  }
+
+  function renderCategories() {
+    const categorias = ["Todos", ...new Set(productos.map(p => p.categoria).filter(Boolean))];
+    categoryContainer.innerHTML = "";
+    categorias.forEach(cat => {
+      const btn = document.createElement("button");
+      btn.textContent = cat;
+      btn.addEventListener("click", () => {
+        renderProducts(cat);
+        scrollToProducts();
+      });
+      categoryContainer.appendChild(btn);
+    });
+  }
+
+  function renderProducts(categoria) {
+    productList.innerHTML = "";
+    const lista = categoria === "Todos" ? productos : productos.filter(p => p.categoria === categoria);
+
+    if (lista.length === 0) {
+      productList.innerHTML = `<div class="msg">No hay productos disponibles.</div>`;
+      return;
+    }
+
+    lista.forEach(p => {
+      const div = document.createElement("div");
+      div.className = "item";
+      div.innerHTML = `
+        <img src="${p.imagen}" alt="${p.nombre}">
+        <h3>${p.nombre}</h3>
+        <p>${p.descripcion || ""}</p>
+        <span class="price">$${p.precio}</span>`;
+      productList.appendChild(div);
+    });
+  }
+
+  function buscar() {
+    const q = searchInput.value.toLowerCase().trim();
+    const res = productos.filter(p =>
+      p.nombre.toLowerCase().includes(q) ||
+      (p.descripcion || "").toLowerCase().includes(q) ||
+      p.categoria.toLowerCase().includes(q)
+    );
+
+    if (res.length === 0) {
+      productList.innerHTML = `<div class="msg">🔍 No se encontraron resultados.</div>`;
+      return;
+    }
+
+    productList.innerHTML = "";
+    res.forEach(p => {
+      const div = document.createElement("div");
+      div.className = "item";
+      div.innerHTML = `
+        <img src="${p.imagen}" alt="${p.nombre}">
+        <h3>${p.nombre}</h3>
+        <p>${p.descripcion || ""}</p>
+        <span class="price">$${p.precio}</span>`;
+      productList.appendChild(div);
+    });
+
+    scrollToProducts();
+  }
+
+  btnEs.addEventListener("click", () => { idiomaActual = "es"; localStorage.setItem("idioma", "es"); load(); });
+  btnEn.addEventListener("click", () => { idiomaActual = "en"; localStorage.setItem("idioma", "en"); load(); });
+  btnPt.addEventListener("click", () => { idiomaActual = "pt"; localStorage.setItem("idioma", "pt"); load(); });
+
+  btnSearch.addEventListener("click", buscar);
+  searchInput.addEventListener("keydown", e => { if (e.key === "Enter") buscar(); });
+
+  window.addEventListener("scroll", () => {
+    btnUp.style.display = window.scrollY > 300 ? "block" : "none";
+  });
+
+  btnUp.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+  load();
 });
 </script>
 
 </body>
 </html>
+
