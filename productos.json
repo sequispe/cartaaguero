@@ -2,7 +2,7 @@
   {
     "nombre": "Café expresso",
     "descripcion": "Café chico",
-    "precio": "34000",
+    "precio": "3400",
     "imagen": "img/cafe.jpg",
     "categoria": "Cafetería☕️",
     "id": "prod0001"
@@ -34,7 +34,7 @@
   {
     "nombre": "Café expresso Doble",
     "descripcion": "Café expresso Doble",
-    "precio": "52000",
+    "precio": "5200",
     "imagen": "img/doble.jpg",
     "categoria": "Cafetería☕️",
     "id": "prod0005"
@@ -42,7 +42,7 @@
   {
     "nombre": "Capuccino",
     "descripcion": "Café, leche, canela y cacao",
-    "precio": "54000",
+    "precio": "5400",
     "imagen": "img/Capuchino.jpg",
     "categoria": "Cafetería☕️",
     "id": "prod0006"
