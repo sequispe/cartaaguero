@@ -754,7 +754,7 @@
   {
     "nombre": "Salmón AZUL",
     "descripcion": "Salmón rosado grillado en salsa crema de queso azul con papas españolas",
-    "precio": 38000,
+    "precio": "38000",
     "imagen": "img/20250817_142010.jpg",
     "categoria": "🍽️Comidas",
     "id": "prod0095"
@@ -1432,11 +1432,11 @@
     "id": "prod0179"
   },
   {
-    "id": "prod0180",
     "nombre": "Ensalada CAESAR con Atun",
     "descripcion": "Mix de verdes, croutons, atun rebozados, parmesano y aderezo Caesar",
     "precio": "20000",
     "imagen": "img/Nueva.jpg",
-    "categoria": "🍽️Comidas"
+    "categoria": "🍽️Comidas",
+    "id": "prod0180"
   }
 ]
