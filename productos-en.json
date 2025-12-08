@@ -139,7 +139,7 @@
     "id": "prod0018",
     "name": "Cream",
     "description": "Milk cream",
-    "price": "350",
+    "price": "35000",
     "image": "img/cremaadi.jpg",
     "category": "Coffee Shop ☕️"
   },
@@ -147,7 +147,7 @@
     "id": "prod0019",
     "name": "Almond Milk",
     "description": "Small $350 - Large $450",
-    "price": "350",
+    "price": "350000",
     "image": "img/lmen.jpg",
     "category": "Coffee Shop ☕️"
   },
@@ -155,7 +155,7 @@
     "id": "prod0020",
     "name": "Vanilla or Hazelnut Flavoring",
     "description": "Vanilla or hazelnut flavoring",
-    "price": "300",
+    "price": "300000",
     "image": "img/medialunas.jpg",
     "category": "Coffee Shop ☕️"
   },
