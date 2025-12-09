@@ -2,7 +2,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "3400",
     "imagem": "",
     "categoria": "Cafeteria☕️",
     "id": "prod0001"
@@ -10,7 +10,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "3600",
     "imagem": "",
     "categoria": "Cafeteria☕️",
     "id": "prod0002"
@@ -18,7 +18,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "3900",
     "imagem": "",
     "categoria": "Cafeteria☕️",
     "id": "prod0003"
@@ -26,7 +26,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "4400",
     "imagem": "",
     "categoria": "Cafeteria☕️",
     "id": "prod0004"
@@ -34,7 +34,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "5200",
     "imagem": "",
     "categoria": "Cafeteria☕️",
     "id": "prod0005"
@@ -42,7 +42,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "5400",
     "imagem": "",
     "categoria": "Cafeteria☕️",
     "id": "prod0006"
@@ -50,7 +50,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "5500",
     "imagem": "",
     "categoria": "Cafeteria☕️",
     "id": "prod0007"
@@ -58,7 +58,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "5950",
     "imagem": "",
     "categoria": "Cafeteria☕️",
     "id": "prod0008"
@@ -66,7 +66,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "5950",
     "imagem": "",
     "categoria": "Cafeteria☕️",
     "id": "prod0009"
@@ -74,7 +74,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "4400",
     "imagem": "",
     "categoria": "Cafeteria☕️",
     "id": "prod0010"
@@ -82,7 +82,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "5200",
     "imagem": "",
     "categoria": "Cafeteria☕️",
     "id": "prod0011"
@@ -90,7 +90,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "3000",
     "imagem": "",
     "categoria": "Cafeteria☕️",
     "id": "prod0012"
@@ -98,7 +98,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "7500",
     "imagem": "",
     "categoria": "Cafeteria☕️",
     "id": "prod0013"
@@ -106,7 +106,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "5200",
     "imagem": "",
     "categoria": "Cafeteria☕️",
     "id": "prod0014"
@@ -114,7 +114,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "5200",
     "imagem": "",
     "categoria": "Cafeteria☕️",
     "id": "prod0015"
@@ -122,7 +122,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "7100",
     "imagem": "",
     "categoria": "Cafeteria☕️",
     "id": "prod0016"
@@ -130,7 +130,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "7100",
     "imagem": "",
     "categoria": "Cafeteria☕️",
     "id": "prod0017"
@@ -138,7 +138,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "350",
     "imagem": "",
     "categoria": "Cafeteria☕️",
     "id": "prod0018"
@@ -146,7 +146,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "350",
     "imagem": "",
     "categoria": "Cafeteria☕️",
     "id": "prod0019"
@@ -154,7 +154,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "300",
     "imagem": "",
     "categoria": "Cafeteria☕️",
     "id": "prod0020"
@@ -162,7 +162,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "2400",
     "imagem": "",
     "categoria": "Cafeteria☕️",
     "id": "prod0021"
@@ -170,7 +170,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "2400",
     "imagem": "",
     "categoria": "Cafeteria☕️",
     "id": "prod0022"
@@ -178,7 +178,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "4500",
     "imagem": "",
     "categoria": "Cafeteria☕️",
     "id": "prod0023"
@@ -186,7 +186,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "4800",
     "imagem": "",
     "categoria": "Cafeteria☕️",
     "id": "prod0024"
@@ -194,7 +194,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "4800",
     "imagem": "",
     "categoria": "Cafeteria☕️",
     "id": "prod0025"
@@ -202,7 +202,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "6700",
     "imagem": "",
     "categoria": "Cafeteria☕️",
     "id": "prod0026"
@@ -210,7 +210,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "3700",
     "imagem": "",
     "categoria": "Cafeteria☕️",
     "id": "prod0027"
@@ -218,7 +218,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "4200",
     "imagem": "",
     "categoria": "Cafeteria☕️",
     "id": "prod0028"
@@ -226,7 +226,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "5500",
     "imagem": "",
     "categoria": "Cafeteria☕️",
     "id": "prod0029"
@@ -234,7 +234,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "4500",
     "imagem": "",
     "categoria": "Cafeteria☕️",
     "id": "prod0030"
@@ -242,7 +242,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "4700",
     "imagem": "",
     "categoria": "Cafeteria☕️",
     "id": "prod0031"
@@ -250,7 +250,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "4500",
     "imagem": "",
     "categoria": "Cafeteria☕️",
     "id": "prod0032"
@@ -258,7 +258,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "5500",
     "imagem": "",
     "categoria": "Cafeteria☕️",
     "id": "prod0033"
@@ -266,7 +266,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "9200",
     "imagem": "",
     "categoria": "Cafeteria☕️",
     "id": "prod0034"
@@ -274,7 +274,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "4600",
     "imagem": "",
     "categoria": "Cafeteria☕️",
     "id": "prod0035"
@@ -282,7 +282,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "8200",
     "imagem": "",
     "categoria": "Cafeteria☕️",
     "id": "prod0036"
@@ -290,7 +290,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "12000",
     "imagem": "",
     "categoria": "Cafeteria☕️",
     "id": "prod0037"
@@ -298,7 +298,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "3500",
     "imagem": "",
     "categoria": "Cafeteria☕️",
     "id": "prod0038"
@@ -306,7 +306,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "2500",
     "imagem": "",
     "categoria": "Cafeteria☕️",
     "id": "prod0039"
@@ -314,7 +314,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "9700",
     "imagem": "",
     "categoria": "💡promoções",
     "id": "prod0040"
@@ -322,7 +322,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "9700",
     "imagem": "",
     "categoria": "💡promoções",
     "id": "prod0041"
@@ -330,7 +330,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "16000",
     "imagem": "",
     "categoria": "💡promoções",
     "id": "prod0042"
@@ -338,7 +338,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "16000",
     "imagem": "",
     "categoria": "💡promoções",
     "id": "prod0043"
@@ -346,7 +346,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "14000",
     "imagem": "",
     "categoria": "💡promoções",
     "id": "prod0044"
@@ -354,7 +354,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "16000",
     "imagem": "",
     "categoria": "💡promoções",
     "id": "prod0045"
@@ -362,7 +362,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "15000",
     "imagem": "",
     "categoria": "💡promoções",
     "id": "prod0046"
@@ -370,7 +370,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "16000",
     "imagem": "",
     "categoria": "💡promoções",
     "id": "prod0047"
@@ -378,7 +378,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "49000",
     "imagem": "",
     "categoria": "💡promoções",
     "id": "prod0048"
@@ -386,7 +386,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "61000",
     "imagem": "",
     "categoria": "💡promoções",
     "id": "prod0049"
@@ -394,7 +394,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "48000",
     "imagem": "",
     "categoria": "💡promoções",
     "id": "prod0050"
@@ -402,7 +402,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "19000",
     "imagem": "",
     "categoria": "🍽️Refeições",
     "id": "prod0051"
@@ -410,7 +410,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "19000",
     "imagem": "",
     "categoria": "🍽️Refeições",
     "id": "prod0052"
@@ -418,7 +418,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "24500",
     "imagem": "",
     "categoria": "🍽️Refeições",
     "id": "prod0053"
@@ -426,7 +426,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "21000",
     "imagem": "",
     "categoria": "🍽️Refeições",
     "id": "prod0054"
@@ -434,7 +434,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "25000",
     "imagem": "",
     "categoria": "🍽️Refeições",
     "id": "prod0055"
@@ -442,7 +442,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "15000",
     "imagem": "",
     "categoria": "🍽️Refeições",
     "id": "prod0056"
@@ -450,7 +450,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "17000",
     "imagem": "",
     "categoria": "🍽️Refeições",
     "id": "prod0057"
@@ -458,7 +458,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "15500",
     "imagem": "",
     "categoria": "🍽️Refeições",
     "id": "prod0058"
@@ -466,7 +466,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "15700",
     "imagem": "",
     "categoria": "🍽️Refeições",
     "id": "prod0059"
@@ -474,7 +474,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "19700",
     "imagem": "",
     "categoria": "🍽️Refeições",
     "id": "prod0060"
@@ -482,7 +482,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "17500",
     "imagem": "",
     "categoria": "🍽️Refeições",
     "id": "prod0061"
@@ -490,7 +490,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "18500",
     "imagem": "",
     "categoria": "🍽️Refeições",
     "id": "prod0062"
@@ -498,7 +498,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "20000",
     "imagem": "",
     "categoria": "🍽️Refeições",
     "id": "prod0063"
@@ -506,7 +506,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "28500",
     "imagem": "",
     "categoria": "🍽️Refeições",
     "id": "prod0064"
@@ -514,7 +514,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "18200",
     "imagem": "",
     "categoria": "🍽️Refeições",
     "id": "prod0065"
@@ -522,7 +522,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "20500",
     "imagem": "",
     "categoria": "🍽️Refeições",
     "id": "prod0066"
@@ -530,7 +530,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "22500",
     "imagem": "",
     "categoria": "🍽️Refeições",
     "id": "prod0067"
@@ -538,7 +538,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "22500",
     "imagem": "",
     "categoria": "🍽️Refeições",
     "id": "prod0068"
@@ -546,7 +546,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "22500",
     "imagem": "",
     "categoria": "🍽️Refeições",
     "id": "prod0069"
@@ -554,7 +554,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "23500",
     "imagem": "",
     "categoria": "🍽️Refeições",
     "id": "prod0070"
@@ -562,7 +562,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "18500",
     "imagem": "",
     "categoria": "🍽️Refeições",
     "id": "prod0071"
@@ -570,7 +570,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "18000",
     "imagem": "",
     "categoria": "🍽️Refeições",
     "id": "prod0072"
@@ -578,7 +578,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "28000",
     "imagem": "",
     "categoria": "🍽️Refeições",
     "id": "prod0073"
@@ -586,7 +586,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "34000",
     "imagem": "",
     "categoria": "🍽️Refeições",
     "id": "prod0074"
@@ -594,7 +594,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "25500",
     "imagem": "",
     "categoria": "🍽️Refeições",
     "id": "prod0075"
@@ -602,7 +602,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "30000",
     "imagem": "",
     "categoria": "🍽️Refeições",
     "id": "prod0076"
@@ -610,7 +610,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "25500",
     "imagem": "",
     "categoria": "🍽️Refeições",
     "id": "prod0077"
@@ -618,7 +618,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "24000",
     "imagem": "",
     "categoria": "🍽️Refeições",
     "id": "prod0078"
@@ -626,7 +626,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "26500",
     "imagem": "",
     "categoria": "🍽️Refeições",
     "id": "prod0079"
@@ -634,7 +634,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "28500",
     "imagem": "",
     "categoria": "🍽️Refeições",
     "id": "prod0080"
@@ -642,7 +642,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "21000",
     "imagem": "",
     "categoria": "🍽️Refeições",
     "id": "prod0081"
@@ -650,7 +650,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "24500",
     "imagem": "",
     "categoria": "🍽️Refeições",
     "id": "prod0082"
@@ -658,7 +658,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "30500",
     "imagem": "",
     "categoria": "🍽️Refeições",
     "id": "prod0083"
@@ -666,7 +666,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "33500",
     "imagem": "",
     "categoria": "🍽️Refeições",
     "id": "prod0084"
@@ -674,7 +674,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "35000",
     "imagem": "",
     "categoria": "🍽️Refeições",
     "id": "prod0085"
@@ -682,7 +682,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "23000",
     "imagem": "",
     "categoria": "🍽️Refeições",
     "id": "prod0086"
@@ -690,7 +690,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "26500",
     "imagem": "",
     "categoria": "🍽️Refeições",
     "id": "prod0087"
@@ -698,7 +698,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "32000",
     "imagem": "",
     "categoria": "🍽️Refeições",
     "id": "prod0088"
@@ -706,7 +706,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "32500",
     "imagem": "",
     "categoria": "🍽️Refeições",
     "id": "prod0089"
@@ -714,7 +714,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "37000",
     "imagem": "",
     "categoria": "🍽️Refeições",
     "id": "prod0090"
@@ -722,7 +722,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "21000",
     "imagem": "",
     "categoria": "🍽️Refeições",
     "id": "prod0091"
@@ -730,7 +730,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "24000",
     "imagem": "",
     "categoria": "🍽️Refeições",
     "id": "prod0092"
@@ -738,7 +738,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "24500",
     "imagem": "",
     "categoria": "🍽️Refeições",
     "id": "prod0093"
@@ -746,7 +746,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "23500",
     "imagem": "",
     "categoria": "🍽️Refeições",
     "id": "prod0094"
@@ -754,7 +754,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "38000",
     "imagem": "",
     "categoria": "🍽️Refeições",
     "id": "prod0095"
@@ -762,7 +762,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "28500",
     "imagem": "",
     "categoria": "🍽️Refeições",
     "id": "prod0096"
@@ -770,7 +770,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "28500",
     "imagem": "",
     "categoria": "🍽️Refeições",
     "id": "prod0097"
@@ -778,7 +778,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "36000",
     "imagem": "",
     "categoria": "🍽️Refeições",
     "id": "prod0098"
@@ -786,7 +786,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "37000",
     "imagem": "",
     "categoria": "🍽️Refeições",
     "id": "prod0099"
@@ -794,7 +794,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "71000",
     "imagem": "",
     "categoria": "🍽️Refeições",
     "id": "prod0100"
@@ -802,7 +802,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "51000",
     "imagem": "",
     "categoria": "🍽️Refeições",
     "id": "prod0101"
@@ -810,7 +810,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "18000",
     "imagem": "",
     "categoria": "🍽️Refeições",
     "id": "prod0102"
@@ -818,7 +818,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "18000",
     "imagem": "",
     "categoria": "🍽️Refeições",
     "id": "prod0103"
@@ -826,7 +826,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "18000",
     "imagem": "",
     "categoria": "🍽️Refeições",
     "id": "prod0104"
@@ -834,7 +834,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "14000",
     "imagem": "",
     "categoria": "🥪 Sanduíches",
     "id": "prod0105"
@@ -842,7 +842,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "15000",
     "imagem": "",
     "categoria": "🥪 Sanduíches",
     "id": "prod0106"
@@ -850,7 +850,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "20000",
     "imagem": "",
     "categoria": "🥪 Sanduíches",
     "id": "prod0107"
@@ -858,7 +858,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "17000",
     "imagem": "",
     "categoria": "🥪 Sanduíches",
     "id": "prod0108"
@@ -866,7 +866,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "16000",
     "imagem": "",
     "categoria": "🥪 Sanduíches",
     "id": "prod0109"
@@ -874,7 +874,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "22000",
     "imagem": "",
     "categoria": "🥪 Sanduíches",
     "id": "prod0110"
@@ -882,7 +882,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "25000",
     "imagem": "",
     "categoria": "🥪 Sanduíches",
     "id": "prod0111"
@@ -890,7 +890,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "27000",
     "imagem": "",
     "categoria": "🥪 Sanduíches",
     "id": "prod0112"
@@ -898,7 +898,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "15000",
     "imagem": "",
     "categoria": "🥪 Sanduíches",
     "id": "prod0113"
@@ -906,7 +906,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "17000",
     "imagem": "",
     "categoria": "🥪 Sanduíches",
     "id": "prod0114"
@@ -914,7 +914,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "19000",
     "imagem": "",
     "categoria": "🥪 Sanduíches",
     "id": "prod0115"
@@ -922,7 +922,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "3000",
     "imagem": "",
     "categoria": "🥟 Entradinhas",
     "id": "prod0116"
@@ -930,7 +930,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "24000",
     "imagem": "",
     "categoria": "🥟 Entradinhas",
     "id": "prod0117"
@@ -938,7 +938,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "17000",
     "imagem": "",
     "categoria": "🥟 Entradinhas",
     "id": "prod0118"
@@ -946,7 +946,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "18500",
     "imagem": "",
     "categoria": "🥟 Entradinhas",
     "id": "prod0119"
@@ -954,7 +954,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "21000",
     "imagem": "",
     "categoria": "🥟 Entradinhas",
     "id": "prod0120"
@@ -962,7 +962,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "55000",
     "imagem": "",
     "categoria": "🥟 Entradinhas",
     "id": "prod0121"
@@ -970,7 +970,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "45000",
     "imagem": "",
     "categoria": "🥟 Entradinhas",
     "id": "prod0122"
@@ -978,7 +978,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "11000",
     "imagem": "",
     "categoria": "🍝 Massas",
     "id": "prod0123"
@@ -986,7 +986,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "11000",
     "imagem": "",
     "categoria": "🍝 Massas",
     "id": "prod0124"
@@ -994,7 +994,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "13000",
     "imagem": "",
     "categoria": "🍝 Massas",
     "id": "prod0125"
@@ -1002,7 +1002,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "13000",
     "imagem": "",
     "categoria": "🍝 Massas",
     "id": "prod0126"
@@ -1010,7 +1010,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "15000",
     "imagem": "",
     "categoria": "🍝 Massas",
     "id": "prod0127"
@@ -1018,7 +1018,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "6000",
     "imagem": "",
     "categoria": "🥫 Molhos",
     "id": "prod0128"
@@ -1026,7 +1026,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "6000",
     "imagem": "",
     "categoria": "🥫 Molhos",
     "id": "prod0129"
@@ -1034,7 +1034,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "7500",
     "imagem": "",
     "categoria": "🥫 Molhos",
     "id": "prod0130"
@@ -1042,7 +1042,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "9500",
     "imagem": "",
     "categoria": "🥫 Molhos",
     "id": "prod0131"
@@ -1050,7 +1050,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "7700",
     "imagem": "",
     "categoria": "🥫 Molhos",
     "id": "prod0132"
@@ -1058,7 +1058,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "6800",
     "imagem": "",
     "categoria": "🥫 Molhos",
     "id": "prod0133"
@@ -1066,7 +1066,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "7700",
     "imagem": "",
     "categoria": "🥫SALSAS",
     "id": "prod0134"
@@ -1074,7 +1074,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "7000",
     "imagem": "",
     "categoria": "🥫SALSAS",
     "id": "prod0135"
@@ -1082,7 +1082,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "6000",
     "imagem": "",
     "categoria": "🥫SALSAS",
     "id": "prod0136"
@@ -1090,7 +1090,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "4200",
     "imagem": "",
     "categoria": "🥤 Bebidas e vinos",
     "id": "prod0137"
@@ -1098,7 +1098,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "3700",
     "imagem": "",
     "categoria": "🥤 Bebidas e vinos",
     "id": "prod0138"
@@ -1106,7 +1106,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "400",
     "imagem": "",
     "categoria": "🥤 Bebidas e vinos",
     "id": "prod0139"
@@ -1114,7 +1114,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "6700",
     "imagem": "",
     "categoria": "🥤 Bebidas e vinos",
     "id": "prod0140"
@@ -1122,7 +1122,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "7200",
     "imagem": "",
     "categoria": "🥤 Bebidas e vinos",
     "id": "prod0141"
@@ -1130,7 +1130,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "9000",
     "imagem": "",
     "categoria": "🥤 Bebidas e vinos",
     "id": "prod0142"
@@ -1138,7 +1138,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "7500",
     "imagem": "",
     "categoria": "🥤 Bebidas e vinos",
     "id": "prod0143"
@@ -1146,7 +1146,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "6700",
     "imagem": "",
     "categoria": "🥤 Bebidas e vinos",
     "id": "prod0144"
@@ -1154,7 +1154,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "6400",
     "imagem": "",
     "categoria": "🥤 Bebidas e vinos",
     "id": "prod0145"
@@ -1162,7 +1162,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "7400",
     "imagem": "",
     "categoria": "🥤 Bebidas e vinos",
     "id": "prod0146"
@@ -1170,7 +1170,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "7700",
     "imagem": "",
     "categoria": "🥤 Bebidas e vinos",
     "id": "prod0147"
@@ -1178,7 +1178,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "17000",
     "imagem": "",
     "categoria": "🥤 Bebidas e vinos",
     "id": "prod0148"
@@ -1186,7 +1186,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "25000",
     "imagem": "",
     "categoria": "🥤 Bebidas e vinos",
     "id": "prod0149"
@@ -1194,7 +1194,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "25000",
     "imagem": "",
     "categoria": "🥤 Bebidas e vinos",
     "id": "prod0150"
@@ -1202,7 +1202,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "36000",
     "imagem": "",
     "categoria": "🥤 Bebidas e vinos",
     "id": "prod0151"
@@ -1210,7 +1210,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "19000",
     "imagem": "",
     "categoria": "🥤 Bebidas e vinos",
     "id": "prod0152"
@@ -1218,7 +1218,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "30000",
     "imagem": "",
     "categoria": "🥤 Bebidas e vinos",
     "id": "prod0153"
@@ -1226,7 +1226,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "25000",
     "imagem": "",
     "categoria": "🥤 Bebidas e vinos",
     "id": "prod0154"
@@ -1234,7 +1234,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "19000",
     "imagem": "",
     "categoria": "🥤 Bebidas e vinhos",
     "id": "prod0155"
@@ -1242,7 +1242,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "19000",
     "imagem": "",
     "categoria": "🥤 Bebidas e vinhos",
     "id": "prod0156"
@@ -1250,7 +1250,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "8000",
     "imagem": "",
     "categoria": "🥤 Bebidas e vinhos",
     "id": "prod0157"
@@ -1258,7 +1258,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "15000",
     "imagem": "",
     "categoria": "🍹Tragos",
     "id": "prod0158"
@@ -1266,7 +1266,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "15000",
     "imagem": "",
     "categoria": "🍹Tragos",
     "id": "prod0159"
@@ -1274,7 +1274,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "13000",
     "imagem": "",
     "categoria": "🍹Tragos",
     "id": "prod0160"
@@ -1282,7 +1282,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "12000",
     "imagem": "",
     "categoria": "🍹Tragos",
     "id": "prod0161"
@@ -1290,7 +1290,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "12000",
     "imagem": "",
     "categoria": "🍹Tragos",
     "id": "prod0162"
@@ -1298,7 +1298,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "12000",
     "imagem": "",
     "categoria": "🍹Tragos",
     "id": "prod0163"
@@ -1306,7 +1306,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "9500",
     "imagem": "",
     "categoria": "🍹Tragos",
     "id": "prod0164"
@@ -1314,7 +1314,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "9500",
     "imagem": "",
     "categoria": "🍹Tragos",
     "id": "prod0165"
@@ -1322,7 +1322,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "13000",
     "imagem": "",
     "categoria": "🍹Tragos",
     "id": "prod0166"
@@ -1330,7 +1330,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "0",
     "imagem": "",
     "categoria": "🍹Tragos",
     "id": "prod0167"
@@ -1338,7 +1338,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "15000",
     "imagem": "",
     "categoria": "🍹Tragos",
     "id": "prod0168"
@@ -1346,7 +1346,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "32000",
     "imagem": "",
     "categoria": "🍹Tragos",
     "id": "prod0169"
@@ -1354,7 +1354,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "40000",
     "imagem": "",
     "categoria": "🍹Tragos",
     "id": "prod0170"
@@ -1362,7 +1362,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "13500",
     "imagem": "",
     "categoria": "🍮Sobremesas",
     "id": "prod0171"
@@ -1370,7 +1370,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "14400",
     "imagem": "",
     "categoria": "🍮Sobremesas",
     "id": "prod0172"
@@ -1378,7 +1378,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "11000",
     "imagem": "",
     "categoria": "🍮Sobremesas",
     "id": "prod0173"
@@ -1386,7 +1386,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "14000",
     "imagem": "",
     "categoria": "🍮Sobremesas",
     "id": "prod0174"
@@ -1394,7 +1394,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "8500",
     "imagem": "",
     "categoria": "🍮Sobremesas",
     "id": "prod0175"
@@ -1402,7 +1402,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "14700",
     "imagem": "",
     "categoria": "🍮Sobremesas",
     "id": "prod0176"
@@ -1410,7 +1410,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "12500",
     "imagem": "",
     "categoria": "🍮Sobremesas",
     "id": "prod0177"
@@ -1418,7 +1418,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "1000",
     "imagem": "",
     "categoria": "📋Menu do dia/Sugestões e novidades",
     "id": "prod0178"
@@ -1426,7 +1426,7 @@
   {
     "nome": "",
     "descricao": "",
-    "preco": "",
+    "preco": "9200",
     "imagem": "",
     "categoria": "📋Menu do dia/Sugestões e novidades",
     "id": "prod0179"
