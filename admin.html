@@ -3,124 +3,70 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Admin Carta - Tilo Café Agüero</title>
-
+  <title>Admin Carta - Tilo Café Agüero (Sincroniza precios ES/EN/PT)</title>
   <style>
     body{font-family:Arial,Helvetica,sans-serif;margin:18px;background:#f7f3f0;color:#333}
     h1{text-align:center;color:#806250;margin-bottom:10px}
-
     .topRow{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;gap:10px}
-
     .controls{display:flex;gap:8px;align-items:center}
-
-    input[type="text"], input[type="password"], textarea{
-      padding:8px;border-radius:6px;border:1px solid #ccc;width:100%;box-sizing:border-box
-    }
-
-    button{
-      background:#806250;color:#fff;border:none;padding:8px 10px;border-radius:6px;cursor:pointer
-    }
+    input[type="text"], input[type="password"], textarea{padding:8px;border-radius:6px;border:1px solid #ccc;width:100%;box-sizing:border-box}
+    button{background:#806250;color:#fff;border:none;padding:8px 10px;border-radius:6px;cursor:pointer}
+    button.secondary{background:#5c8a50}
     button.danger{background:#c0392b}
-
     form{background:#fff;padding:12px;border-radius:10px;margin-bottom:12px;display:none}
-
     table{width:100%;border-collapse:collapse;background:#fff}
     th,td{border:1px solid #ddd;padding:8px;vertical-align:top}
     th{background:#806250;color:#fff}
-
     img.mini{max-width:60px;border-radius:6px}
-
+    #guardarTodos{position:fixed;top:18px;right:18px;z-index:1200;padding:10px 14px;background:#a07b68;color:#fff;border-radius:8px}
+    .small{font-size:13px;color:#666}
     .rowActions{display:flex;gap:6px}
-
     .previewImg{max-width:120px;margin-top:8px;border-radius:6px}
-
-    /* POSICIÓN NUEVA DEL BOTÓN */
-    #guardarTodos{
-      position:fixed;
-      bottom:20px;
-      right:20px;
-      z-index:1200;
-      padding:12px 18px;
-      font-size:15px;
-      background:#a07b68;
-      color:#fff;
-      border-radius:10px;
-      box-shadow:0 3px 10px rgba(0,0,0,.2);
+    textarea#multiInput{width:100%;padding:8px;border-radius:6px;border:1px solid #ccc;box-sizing:border-box}
+    .toast {
+      position: fixed; top: 24px; right: 24px; z-index: 2000; padding: 12px 16px;
+      border-radius: 8px; color: white; font-weight: 600; box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+      opacity: 0; transform: translateY(-10px); transition: opacity .25s ease, transform .25s ease; max-width: 360px;
     }
-
-    /* TOAST */
-    .toast{
-      position:fixed;top:24px;right:24px;z-index:2000;padding:12px 16px;border-radius:8px;
-      color:white;font-weight:600;box-shadow:0 6px 18px rgba(0,0,0,0.15);
-      opacity:0;transform:translateY(-10px);
-      transition:opacity .25s ease,transform .25s ease;
-      max-width:360px;
-    }
-    .toast.show{opacity:1;transform:translateY(0)}
-    .toast.ok{background:#2ecc71}
-    .toast.info{background:#3498db}
-    .toast.err{background:#e74c3c}
-
+    .toast.show { opacity: 1; transform: translateY(0); }
+    .toast.ok { background: #2ecc71; }
+    .toast.info { background: #3498db; }
+    .toast.err { background: #e74c3c; }
+    @media(max-width:720px){ .topRow{flex-direction:column;align-items:flex-start} table{font-size:13px} }
   </style>
 </head>
 <body>
 
-  <!-- BANNER DE BLOQUEO -->
-  <div id="lockBanner"
-       style="display:none;
-              background:#e74c3c;
-              color:white;
-              text-align:center;
-              padding:12px;
-              font-size:18px;
-              font-weight:bold;
-              border-radius:6px;
-              margin-bottom:14px;">
-    PANEL BLOQUEADO — Pegá el token para habilitar edición
-  </div>
-
-  <h1>Tilo Café Agüero — Panel Admin</h1>
+  <h1>Panel de Administración - Tilo Café Agüero</h1>
 
   <div class="topRow">
     <div style="flex:1">
-      <div style="margin-bottom:6px">
-        <span style="font-size:13px;color:#666">Repositorio:</span> 
-        <b>cholose10 / cartaaguero</b>
-      </div>
-
+      <div style="margin-bottom:6px"><span class="small">Repositorio:</span> <b>cholose10 / cartaaguero</b></div>
       <div style="display:flex;gap:8px;align-items:center">
         <label style="min-width:40px">Token:</label>
-        <input type="password" id="token" placeholder="Pegar token de GitHub (repo contents)"
-               style="max-width:420px">
+        <input type="password" id="token" placeholder="Pegar token de GitHub (repo contents)" style="max-width:420px">
         <button onclick="saveToken()">Guardar</button>
         <button onclick="clearToken()">Borrar</button>
-        <span style="font-size:13px;color:#666" id="tokenStatus">No guardado</span>
+        <span class="small" id="tokenStatus" style="margin-left:8px">No guardado</span>
       </div>
     </div>
 
     <div class="controls">
-      <input id="search" placeholder="Buscar..." oninput="filterProducts()"
-             style="min-width:180px;max-width:360px">
-      <button onclick="toggleForm()">+ Agregar producto</button>
-      <!-- ELIMINADO AGREGAR VARIOS -->
+      <input id="search" placeholder="Buscar..." oninput="filterProducts()" style="min-width:180px;max-width:360px">
+      <button id="toggleFormBtn" onclick="toggleForm()">+ Agregar producto</button>
+      <button class="secondary" onclick="toggleMultiForm()">➕ Agregar VARIOS</button>
     </div>
   </div>
 
-  <!-- BOTÓN REUBICADO ABAJO -->
-  <button id="guardarTodos" onclick="guardarTodosLosPrecios()">
-    💾 Guardar TODOS los cambios
-  </button>
+  <button id="guardarTodos" onclick="guardarTodosLosPrecios()">💾 Guardar TODOS los cambios</button>
 
-  <!-- Formulario -->
   <form id="form">
     <input type="hidden" id="editIndex">
-
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
       <div>
         <label>Nombre</label>
         <input id="nombre" type="text">
       </div>
-
       <div>
         <label>Precio</label>
         <input id="precio" type="text" placeholder="Ej: 3400 (sin $)">
@@ -132,14 +78,14 @@
       </div>
 
       <div>
-        <label>Imagen</label>
+        <label>Imagen (ruta o URL)</label>
         <input id="imagen" type="text" oninput="previewImage()">
         <img id="preview" class="previewImg" style="display:none">
       </div>
 
       <div>
         <label>Categoría</label>
-        <input id="categoria" type="text">
+        <input id="categoria" type="text" placeholder="Ej: Cafetería">
       </div>
     </div>
 
@@ -149,502 +95,533 @@
     </div>
   </form>
 
-  <!-- TABLA -->
-  <table>
+  <form id="multiForm" style="display:none">
+    <h3>Agregar varios productos</h3>
+    <p class="small">Un producto por línea con formato: <b>nombre | descripcion | precio | imagen | categoria</b></p>
+    <textarea id="multiInput" rows="8" placeholder="Ej: Café expresso | Café chico | 3400 | img/cafe.jpg | Cafetería"></textarea>
+    <div style="margin-top:8px;display:flex;gap:8px">
+      <button type="button" onclick="procesarMulti()">Guardar varios</button>
+      <button type="button" onclick="toggleMultiForm()" style="background:#999">Cerrar</button>
+    </div>
+  </form>
+
+  <table aria-label="Productos">
     <thead>
-      <tr>
-        <th style="width:80px">Imagen</th>
-        <th>Nombre</th>
-        <th>Descripción</th>
-        <th>Categoría</th>
-        <th style="width:100px">Precio</th>
-        <th style="width:180px">Acciones</th>
-      </tr>
+      <tr><th style="width:80px">Imagen</th><th>Nombre</th><th>Descripción</th><th>Categoría</th><th style="width:100px">Precio (ES)</th><th style="width:180px">Acciones</th></tr>
     </thead>
     <tbody id="tbody"></tbody>
   </table>
 
-
 <script>
-/*******************************************************
- * CONFIG
- *******************************************************/
+/**********************************************************
+ * Config
+ **********************************************************/
 const USERNAME = "cholose10";
 const REPO = "cartaaguero";
 const BRANCH = "main";
-
 const MAIN_JSON = "productos.json";
-const EN_JSON   = "productos-en.json";
-const PT_JSON   = "productos-port.json";
+const EN_JSON = "productos-en.json";
+const PT_JSON = "productos-port.json";
 
 let productos = [];
 
-/*******************************************************
- * TOAST
- *******************************************************/
-function showToast(msg, variant='ok', timeout=3000){
+/**********************************************************
+ * Toast
+ **********************************************************/
+function showToast(msg, variant = 'ok', timeout = 3000){
   const div = document.createElement('div');
-  div.className = 'toast ' + (variant==='info'?'info':variant==='err'?'err':'ok');
-  div.innerText = (variant==='err'?'✖ ':'✔ ') + msg;
+  div.className = 'toast ' + (variant === 'info' ? 'info' : variant === 'err' ? 'err' : 'ok');
+  div.innerText = (variant === 'err' ? '✖︎ ' : variant === 'info' ? 'ℹ︎ ' : '✔︎ ') + msg;
   document.body.appendChild(div);
-
-  requestAnimationFrame(()=>div.classList.add('show'));
-  setTimeout(()=>{
+  requestAnimationFrame(() => div.classList.add('show'));
+  setTimeout(() => {
     div.classList.remove('show');
-    setTimeout(()=>div.remove(),300);
-  },timeout);
+    setTimeout(()=> div.remove(), 300);
+  }, timeout);
 }
 
-/*******************************************************
- * TOKEN
- *******************************************************/
+/**********************************************************
+ * Token
+ **********************************************************/
 function saveToken(){
   const t = document.getElementById('token').value.trim();
-  if(!t){ showToast("Pegá tu token", "err"); return; }
-  localStorage.setItem("github_token", t);
-  document.getElementById("tokenStatus").innerText = "Token guardado";
-  checkTokenAndLock();
+  if(!t){ showToast('Pegá tu token primero', 'err'); return; }
+  localStorage.setItem('github_token', t);
+  document.getElementById('tokenStatus').innerText = 'Token guardado';
+  showToast('Token guardado', 'ok', 1800);
 }
-
 function clearToken(){
-  localStorage.removeItem("github_token");
-  document.getElementById("tokenStatus").innerText = "No guardado";
-  checkTokenAndLock();
+  localStorage.removeItem('github_token');
+  document.getElementById('tokenStatus').innerText = 'Token borrado';
+  showToast('Token borrado', 'info', 1500);
 }
+function getToken(){ return localStorage.getItem('github_token'); }
+(function initTokenStatus(){ const t = getToken(); if(t) document.getElementById('tokenStatus').innerText = 'Token guardado'; })();
 
-function getToken(){ return localStorage.getItem("github_token"); }
-
-/*******************************************************
- * BLOQUEO MÓDULO 14
- *******************************************************/
-function lockAdmin(locked){
-  const disabled = locked;
-
-  document.querySelectorAll("input, textarea").forEach(el=>{
-    if(el.id === "token") return;
-    el.disabled = disabled;
-  });
-
-  document.querySelectorAll("button").forEach(btn=>{
-    const t = btn.innerText.toLowerCase();
-    if(
-      t.includes("guardar") ||
-      t.includes("agregar") ||
-      t.includes("eliminar") ||
-      btn.id === "guardarTodos"
-    ){
-      btn.disabled = disabled;
-      btn.style.opacity = disabled ? "0.5":"1";
-    }
-  });
-}
-
-function checkTokenAndLock(){
-  const token = getToken();
-  const banner = document.getElementById("lockBanner");
-
-  if(!token){
-    lockAdmin(true);
-    banner.style.display="block";
-  }else{
-    lockAdmin(false);
-    banner.style.display="none";
-  }
-}
-
-/*******************************************************
- * UTILIDADES
- *******************************************************/
+/**********************************************************
+ * IDs
+ **********************************************************/
 function extractNumberFromProdId(id){
   if(!id) return null;
-  const m = String(id).match(/(\d+)$/);
-  return m ? parseInt(m[1],10) : null;
+  const m = String(id).match(/(\d+)\s*$/);
+  if(m) return parseInt(m[1], 10);
+  return null;
 }
-
 function generateNextProdId(){
   let max = 0;
-  productos.forEach(p=>{
-    const n = extractNumberFromProdId(p.id||"");
-    if(n && n>max) max=n;
-  });
-  return "prod" + String(max+1).padStart(4,"0");
+  for(const p of productos){
+    const n = extractNumberFromProdId(p.id || '');
+    if(Number.isFinite(n) && n > max) max = n;
+  }
+  const next = max + 1;
+  return 'prod' + String(next).padStart(4, '0');
 }
 
+/**********************************************************
+ * Precio
+ **********************************************************/
 function sanitizePrice(v){
-  return String(v).replace(/[^\d]/g,"");
+  if(v === undefined || v === null) return '';
+  const only = String(v).replace(/[^\d]/g, '');
+  return only || '';
 }
 
-/*******************************************************
- * ORDENAR CAMPOS POR IDIOMA
- *******************************************************/
+/**********************************************************
+ * Ordenar claves según idioma
+ **********************************************************/
 function ordenarCamposPorIdioma(item, idioma){
-  const id = item.id || "";
+  const id = item.id || '';
 
-  if(idioma==="EN"){
+  if(idioma === 'EN'){
     return {
-      id:id,
-      name:item.nombre||"",
-      description:item.descripcion||"",
-      price:item.precio||"",
-      image:item.imagen||"",
-      category:item.categoria||""
+      id: id,
+      name: item.name || item.nombre || item.nome || '',
+      description: item.description || item.descripcion || item.descricao || '',
+      price: item.price || item.precio || item.preco || '',
+      image: item.image || item.imagen || item.imagem || '',
+      category: item.category || item.categoria || ''
     };
   }
 
-  if(idioma==="PT"){
+  if(idioma === 'PT'){
     return {
-      nome:item.nombre||"",
-      descricao:item.descripcion||"",
-      preco:item.precio||"",
-      imagem:item.imagen||"",
-      categoria:item.categoria||"",
-      id:id
+      nome: item.nome || item.name || item.nombre || '',
+      descricao: item.descricao || item.description || item.descripcion || '',
+      preco: item.preco || item.price || item.precio || '',
+      imagem: item.imagem || item.image || item.imagen || '',
+      categoria: item.categoria || item.category || '',
+      id: id
     };
   }
 
   return {
-    nombre:item.nombre||"",
-    descripcion:item.descripcion||"",
-    precio:item.precio||"",
-    imagen:item.imagen||"",
-    categoria:item.categoria||"",
-    id:id
+    nombre: item.nombre || item.name || item.nome || '',
+    descripcion: item.descripcion || item.description || item.descricao || '',
+    precio: item.precio || item.price || item.preco || '',
+    imagen: item.imagen || item.image || item.imagem || '',
+    categoria: item.categoria || item.category || '',
+    id: id
   };
 }
 
-/*******************************************************
- * CARGAR productos.json
- *******************************************************/
+/**********************************************************
+ * Cargar productos.json
+ **********************************************************/
 async function loadProducts(){
   try{
     const r = await fetch(`https://raw.githubusercontent.com/${USERNAME}/${REPO}/${BRANCH}/${MAIN_JSON}`);
+    if(!r.ok) throw new Error(`No se pudo cargar ${MAIN_JSON} (${r.status})`);
     const arr = await r.json();
-    productos = arr.map(item=>({
-      id:item.id,
-      nombre:item.nombre,
-      descripcion:item.descripcion,
-      precio:String(item.precio),
-      imagen:item.imagen,
-      categoria:item.categoria
+    if(!Array.isArray(arr)) throw new Error('Formato inválido en productos.json');
+
+    productos = arr.map(item => ({
+      id: item.id || '',
+      nombre: item.nombre || item.name || item.nome || '',
+      descripcion: item.descripcion || item.description || item.descricao || '',
+      precio: String(item.precio || item.price || item.preco || ''),
+      imagen: item.imagen || item.image || item.imagem || '',
+      categoria: item.categoria || item.category || ''
     }));
+
+    // asignar IDs faltantes
+    let changed = false;
+    productos.forEach(p => {
+      if(!p.id || !/^prod\d{4}$/.test(p.id)){
+        p.id = generateNextProdId();
+        changed = true;
+      }
+    });
+
     render(productos);
+    if(changed) showToast('Se asignaron IDs faltantes (prodXXXX)', 'info', 2500);
+
   }catch(e){
-    showToast("No se pudo cargar productos.json", "err", 4000);
+    console.warn(e);
+    productos = [];
+    render(productos);
+    showToast("No se pudo cargar productos.json", 'err', 5000);
   }
 }
 
-/*******************************************************
- * RENDER TABLA
- *******************************************************/
+/**********************************************************
+ * Render tabla
+ **********************************************************/
 function render(lista){
-  const tb = document.getElementById("tbody");
-  tb.innerHTML="";
-
-  lista.forEach((p,i)=>{
-    const tr = document.createElement("tr");
+  const tb = document.getElementById('tbody');
+  tb.innerHTML = '';
+  
+  lista.forEach((p, i) => {
+    const tr = document.createElement('tr');
 
     // imagen
-    const tdImg = document.createElement("td");
-    const img = document.createElement("img");
-    img.className="mini";
-    img.src = p.imagen || "";
-    img.onerror = ()=> img.style.display="none";
+    const tdImg = document.createElement('td');
+    const img = document.createElement('img');
+    img.className = 'mini';
+    img.src = p.imagen || '';
+    img.onerror = () => { img.style.display='none'; };
     tdImg.appendChild(img);
     tr.appendChild(tdImg);
 
     // nombre
-    const tdNom=document.createElement("td");
-    const iNom=document.createElement("input");
-    iNom.value=p.nombre;
-    iNom.oninput=e=>productos[i].nombre=e.target.value;
-    tdNom.appendChild(iNom);
-    tr.appendChild(tdNom);
+    const tdNombre = document.createElement('td');
+    const nombreInput = document.createElement('input');
+    nombreInput.type = 'text';
+    nombreInput.value = p.nombre || '';
+    nombreInput.oninput = e => productos[i].nombre = e.target.value;
+    tdNombre.appendChild(nombreInput);
+    tr.appendChild(tdNombre);
 
-    // descripción
-    const tdD=document.createElement("td");
-    const iDesc=document.createElement("textarea");
-    iDesc.rows=2;
-    iDesc.value=p.descripcion;
-    iDesc.oninput=e=>productos[i].descripcion=e.target.value;
-    tdD.appendChild(iDesc);
-    tr.appendChild(tdD);
+    // descripcion
+    const tdDesc = document.createElement('td');
+    const desc = document.createElement('textarea');
+    desc.rows = 2;
+    desc.value = p.descripcion || '';
+    desc.oninput = e => productos[i].descripcion = e.target.value;
+    tdDesc.appendChild(desc);
+    tr.appendChild(tdDesc);
 
-    // categoría
-    const tdC=document.createElement("td");
-    const iCat=document.createElement("input");
-    iCat.value=p.categoria;
-    iCat.oninput=e=>productos[i].categoria=e.target.value;
-    tdC.appendChild(iCat);
-    tr.appendChild(tdC);
+    // categoria
+    const tdCat = document.createElement('td');
+    const cat = document.createElement('input');
+    cat.type = 'text';
+    cat.value = p.categoria || '';
+    cat.oninput = e => productos[i].categoria = e.target.value;
+    tdCat.appendChild(cat);
+    tr.appendChild(tdCat);
 
     // precio
-    const tdP=document.createElement("td");
-    const iPre=document.createElement("input");
-    iPre.value=p.precio;
-    iPre.oninput=e=>productos[i].precio=e.target.value;
-    tdP.appendChild(iPre);
-    tr.appendChild(tdP);
+    const tdPrecio = document.createElement('td');
+    const precio = document.createElement('input');
+    precio.type = 'text';
+    precio.value = p.precio || '';
+    precio.oninput = e => productos[i].precio = e.target.value;
+    tdPrecio.appendChild(precio);
+    tr.appendChild(tdPrecio);
 
     // acciones
-    const tdAcc=document.createElement("td");
-    tdAcc.className="rowActions";
+    const tdAcc = document.createElement('td');
+    tdAcc.className = 'rowActions';
 
-    const b1=document.createElement("button");
-    b1.textContent="Guardar";
-    b1.onclick=()=>guardarFila(i);
+    const b1 = document.createElement('button');
+    b1.textContent = "Guardar";
+    b1.onclick = () => guardarFila(i);
 
-    const b2=document.createElement("button");
-    b2.textContent="Editar";
-    b2.style.background="#2d87d6";
-    b2.onclick=()=>loadIntoForm(i);
+    const b2 = document.createElement('button');
+    b2.textContent = "Editar";
+    b2.style.background = "#2d87d6";
+    b2.onclick = () => loadIntoForm(i);
 
-    const b3=document.createElement("button");
-    b3.textContent="Eliminar";
-    b3.className="danger";
-    b3.onclick=()=>eliminarProducto(i);
+    const b3 = document.createElement('button');
+    b3.textContent = "Eliminar";
+    b3.className = "danger";
+    b3.onclick = () => eliminarProducto(i);
 
-    tdAcc.append(b1,b2,b3);
+    tdAcc.appendChild(b1);
+    tdAcc.appendChild(b2);
+    tdAcc.appendChild(b3);
+
     tr.appendChild(tdAcc);
-
     tb.appendChild(tr);
   });
 }
 
-/*******************************************************
- * FORMULARIO
- *******************************************************/
-function toggleForm(){
-  const f=document.getElementById("form");
-  f.style.display = f.style.display==="none"||f.style.display===""?"block":"none";
+/**********************************************************
+ * Formulario
+ **********************************************************/
+function toggleForm(){ 
+  const f = document.getElementById('form'); 
+  f.style.display = f.style.display === 'none' || f.style.display === '' ? 'block' : 'none';
 }
-
 function cancelForm(){
-  document.getElementById("editIndex").value="";
-  document.getElementById("nombre").value="";
-  document.getElementById("descripcion").value="";
-  document.getElementById("precio").value="";
-  document.getElementById("imagen").value="";
-  document.getElementById("categoria").value="";
-  document.getElementById("preview").style.display="none";
-  document.getElementById("form").style.display="none";
+  document.getElementById('editIndex').value = '';
+  document.getElementById('nombre').value = '';
+  document.getElementById('descripcion').value = '';
+  document.getElementById('precio').value = '';
+  document.getElementById('imagen').value = '';
+  document.getElementById('categoria').value = '';
+  document.getElementById('preview').style.display = 'none';
+  document.getElementById('form').style.display = 'none';
 }
-
 function previewImage(){
-  const v=document.getElementById("imagen").value.trim();
-  const img=document.getElementById("preview");
-  if(!v){ img.style.display="none"; return; }
-  img.src=v;
-  img.style.display="block";
+  const v = document.getElementById('imagen').value.trim();
+  const img = document.getElementById('preview');
+  if(!v){ img.style.display='none'; img.src=''; return; }
+  img.src = v;
+  img.style.display = 'block';
+  img.onerror = ()=>{ img.style.display='none'; };
 }
-
-function loadIntoForm(i){
-  const p=productos[i];
-  document.getElementById("editIndex").value=i;
-  document.getElementById("nombre").value=p.nombre;
-  document.getElementById("descripcion").value=p.descripcion;
-  document.getElementById("precio").value=p.precio;
-  document.getElementById("imagen").value=p.imagen;
-  document.getElementById("categoria").value=p.categoria;
+function loadIntoForm(index){
+  const p = productos[index];
+  if(!p) return;
+  document.getElementById('editIndex').value = index;
+  document.getElementById('nombre').value = p.nombre || '';
+  document.getElementById('descripcion').value = p.descripcion || '';
+  document.getElementById('precio').value = p.precio || '';
+  document.getElementById('imagen').value = p.imagen || '';
+  document.getElementById('categoria').value = p.categoria || '';
   previewImage();
-  document.getElementById("form").style.display="block";
+  document.getElementById('form').style.display = 'block';
 }
-
+function validarProductoObj(obj){
+  if(!obj.nombre) return "Falta nombre";
+  if(!obj.precio) return "Falta precio";
+  return null;
+}
 function guardarFormulario(){
-  const idx=document.getElementById("editIndex").value;
-  const nombre=document.getElementById("nombre").value.trim();
-  const descripcion=document.getElementById("descripcion").value.trim();
-  const precio=sanitizePrice(document.getElementById("precio").value.trim());
-  const imagen=document.getElementById("imagen").value.trim();
-  const categoria=document.getElementById("categoria").value.trim();
+  const nombre = document.getElementById('nombre').value.trim();
+  const descripcion = document.getElementById('descripcion').value.trim();
+  const precio = sanitizePrice(document.getElementById('precio').value.trim());
+  const imagen = document.getElementById('imagen').value.trim();
+  const categoria = document.getElementById('categoria').value.trim();
+  const editIndex = document.getElementById('editIndex').value;
 
-  if(idx!==""){
-    productos[idx] = {...productos[idx], nombre, descripcion, precio, imagen, categoria};
-  }else{
-    productos.push({
-      id:generateNextProdId(),
-      nombre, descripcion, precio, imagen, categoria
-    });
+  const obj = { nombre, descripcion, precio, imagen, categoria };
+  const err = validarProductoObj(obj);
+  if(err){ showToast(err, 'err'); return; }
+
+  if(editIndex !== ''){
+    const idx = Number(editIndex);
+    productos[idx] = { ...productos[idx], ...obj };
+    if(!productos[idx].id || !/^prod\d{4}$/.test(productos[idx].id)) productos[idx].id = generateNextProdId();
+  } else {
+    const id = generateNextProdId();
+    productos.push({ id, ...obj });
   }
 
   render(productos);
-  cancelForm();
-  showToast("Producto guardado localmente");
+  document.getElementById('form').style.display = 'none';
+  showToast('Producto agregado/actualizado localmente', 'ok', 1800);
 }
-
-/*******************************************************
- * ELIMINAR
- *******************************************************/
+function toggleMultiForm(){
+  const f = document.getElementById('multiForm');
+  f.style.display = f.style.display === 'none' || f.style.display === '' ? 'block' : 'none';
+}
+function procesarMulti(){
+  const raw = document.getElementById('multiInput').value.trim();
+  if(!raw){ showToast('Nada para procesar', 'err'); return; }
+  const lines = raw.split('\n').map(l => l.trim()).filter(Boolean);
+  for(const ln of lines){
+    const parts = ln.split('|').map(p => p.trim());
+    const nombre = parts[0] || 'Sin nombre';
+    const descripcion = parts[1] || '';
+    const precio = sanitizePrice(parts[2] || '');
+    const imagen = parts[3] || '';
+    const categoria = parts[4] || '';
+    const id = generateNextProdId();
+    productos.push({ id, nombre, descripcion, precio, imagen, categoria });
+  }
+  document.getElementById('multiInput').value = '';
+  render(productos);
+  showToast('Productos agregados localmente. Presioná "Guardar TODOS los cambios".', 'info', 3500);
+}
 function eliminarProducto(i){
-  if(!confirm("Eliminar producto?")) return;
+  if(!confirm('Eliminar producto?')) return;
   productos.splice(i,1);
   render(productos);
+  showToast('Producto eliminado localmente', 'info', 1600);
 }
 
-/*******************************************************
- * REFRESCAR TABLA
- *******************************************************/
-function refrescarArrayDesdeTabla(){
-  const filas = document.querySelectorAll("#tbody tr");
-  const nuevos=[];
+/**********************************************************
+ * GitHub API
+ **********************************************************/
+async function githubGetFileInfo(path){
+  const token = getToken();
+  const headers = token ? { Authorization: 'token ' + token } : {};
+  const url = `https://api.github.com/repos/${USERNAME}/${REPO}/contents/${path}?ref=${BRANCH}`;
+  const res = await fetch(url, { headers });
+  if(!res.ok) throw new Error(`GitHub get ${path} -> ${res.status}`);
+  return await res.json();
+}
+async function githubPutFile(path, contentString, message, sha){
+  const token = getToken();
+  if(!token) throw new Error('Token requerido para subir cambios a GitHub');
+  const url = `https://api.github.com/repos/${USERNAME}/${REPO}/contents/${path}`;
+  const body = {
+    message: message,
+    content: btoa(unescape(encodeURIComponent(contentString))),
+    branch: BRANCH
+  };
+  if(sha) body.sha = sha;
+  const res = await fetch(url, {
+    method: 'PUT',
+    headers: {
+      Authorization: 'token ' + token,
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(body)
+  });
+  const data = await res.json();
+  if(!res.ok) {
+    throw new Error(`GitHub PUT ${path} -> ${res.status}: ${data.message || JSON.stringify(data)}`);
+  }
+  return data;
+}
 
-  filas.forEach((fila,i)=>{
-    const td=fila.querySelectorAll("td");
-    nuevos.push({
-      id:productos[i].id,
-      imagen:productos[i].imagen,
-      nombre:td[1].querySelector("input").value.trim(),
-      descripcion:td[2].querySelector("textarea").value.trim(),
-      categoria:td[3].querySelector("input").value.trim(),
-      precio:sanitizePrice(td[4].querySelector("input").value.trim())
-    });
+/**********************************************************
+ * Guardar fila
+ **********************************************************/
+async function guardarFila(i){
+  try{
+    const p = productos[i];
+    if(!p) throw new Error('Producto no encontrado');
+    if(!p.id || !/^prod\d{4}$/.test(p.id)) p.id = generateNextProdId();
+    p.precio = sanitizePrice(p.precio);
+
+    await saveMainJson(productos, `Actualiza producto ${p.id} - precio ${p.precio}`);
+    await syncPricesToLangs();
+
+    showToast('Producto guardado y precios sincronizados en EN/PT', 'ok', 2600);
+  }catch(e){
+    console.error(e);
+    showToast('Error al guardar fila: ' + (e.message||e), 'err', 5000);
+  }
+}
+
+/**********************************************************
+ * 🔥 FIX: Refrescar array desde la tabla
+ **********************************************************/
+function refrescarArrayDesdeTabla() {
+  const filas = document.querySelectorAll("#tbody tr");
+  const nuevos = [];
+
+  filas.forEach((fila, i) => {
+    const celdas = fila.querySelectorAll("td");
+
+    const nombre = celdas[1].querySelector("input").value.trim();
+    const descripcion = celdas[2].querySelector("textarea").value.trim();
+    const categoria = celdas[3].querySelector("input").value.trim();
+    const precio = sanitizePrice(celdas[4].querySelector("input").value.trim());
+
+    const id = productos[i]?.id || generateNextProdId();
+    const imagen = productos[i]?.imagen || '';
+
+    nuevos.push({ id, nombre, descripcion, categoria, precio, imagen });
   });
 
   productos = nuevos;
 }
 
-/*******************************************************
- * GITHUB (MÓDULO 1 — SHA FRESCO)
- *******************************************************/
-async function githubGetFileInfo(path){
-  const token=getToken();
-  const headers = token ? 
-    {Authorization:"token "+token} :
-    {};
-  const url = `https://api.github.com/repos/${USERNAME}/${REPO}/contents/${path}?ref=${BRANCH}`;
-
-  const r = await fetch(url,{headers});
-  if(!r.ok) throw new Error("Error GET "+path);
-  return await r.json();
-}
-
-async function githubPutFile(path, content, message, sha){
-  const token=getToken();
-  const body={
-    message,
-    content:btoa(unescape(encodeURIComponent(content))),
-    branch:BRANCH
-  };
-  if(sha) body.sha=sha;
-
-  const r = await fetch(`https://api.github.com/repos/${USERNAME}/${REPO}/contents/${path}`,{
-    method:"PUT",
-    headers:{
-      Authorization:"token "+token,
-      "Content-Type":"application/json"
-    },
-    body:JSON.stringify(body)
-  });
-
-  const data = await r.json();
-  if(!r.ok) throw new Error(`PUT ${path}: ${data.message}`);
-  return data;
-}
-
-/*******************************************************
- * GUARDAR MAIN
- *******************************************************/
-async function saveMainJson(arr, msg){
-  const out = arr.map(x=>ordenarCamposPorIdioma(x,"ES"));
-  const txt = JSON.stringify(out,null,2);
-
-  let sha = null;
-  try{ sha = (await githubGetFileInfo(MAIN_JSON)).sha; }catch(e){}
-
-  // SHA fresco
-  try{ sha = (await githubGetFileInfo(MAIN_JSON)).sha; }catch(e){}
-
-  return githubPutFile(MAIN_JSON, txt, msg, sha);
-}
-
-/*******************************************************
- * SYNC EN + PT
- *******************************************************/
-async function syncPricesToLangs(){
-  const map={};
-  productos.forEach(p=>map[p.id]=p.precio);
-
-  async function proc(file, lang){
-    let info=null, arr=[];
-    try{
-      info=await githubGetFileInfo(file);
-      const raw=decodeURIComponent(escape(window.atob(info.content.replace(/\n/g,""))));
-      arr=JSON.parse(raw);
-    }catch(e){ arr=[]; }
-
-    let changed=false;
-
-    const nuevo = arr.map(item=>{
-      if(map[item.id]){
-        const np = map[item.id];
-        if(item.price!==undefined && item.price!==np){ item.price=np; changed=true; }
-        if(item.preco!==undefined && item.preco!==np){ item.preco=np; changed=true; }
-        if(item.precio!==undefined && item.precio!==np){ item.precio=np; changed=true; }
-      }
-      return ordenarCamposPorIdioma(item, lang);
-    });
-
-    if(!changed) return;
-
-    const shaFresh = (await githubGetFileInfo(file)).sha;
-    const txt = JSON.stringify(nuevo,null,2);
-    await githubPutFile(file,txt,"Sync precios",shaFresh);
-  }
-
-  await proc(EN_JSON,"EN");
-  await proc(PT_JSON,"PT");
-}
-
-/*******************************************************
- * GUARDAR FILA
- *******************************************************/
-async function guardarFila(i){
-  try{
-    productos[i].precio = sanitizePrice(productos[i].precio);
-    await saveMainJson(productos,"Actualiza producto "+productos[i].id);
-    await syncPricesToLangs();
-    showToast("Guardado OK");
-  }catch(e){
-    showToast(e.message,"err",5000);
-  }
-}
-
-/*******************************************************
- * GUARDAR TODOS
- *******************************************************/
+/**********************************************************
+ * Guardar TODOS los cambios
+ **********************************************************/
 async function guardarTodosLosPrecios(){
   try{
-    refrescarArrayDesdeTabla();
-    await saveMainJson(productos,"Guardar TODOS");
+    refrescarArrayDesdeTabla();   // ← FIX aplicado
+
+    productos = productos.map(p => ({ ...p, precio: sanitizePrice(p.precio) }));
+
+    await saveMainJson(productos, `Guardar TODOS los productos - sincronizando precios a EN/PT`);
     await syncPricesToLangs();
-    showToast("Cambios guardados correctamente");
+
+    showToast('Todos los cambios guardados y sincronizados (ES/EN/PT)', 'ok', 3000);
   }catch(e){
-    showToast(e.message,"err",5000);
+    console.error(e);
+    showToast('Error al guardar todos: ' + (e.message||e), 'err', 6000);
   }
 }
 
-/*******************************************************
- * FILTRO
- *******************************************************/
-function filterProducts(){
-  const q=document.getElementById("search").value.toLowerCase();
-  if(!q){ render(productos); return; }
+/**********************************************************
+ * Guardar productos.json
+ **********************************************************/
+async function saveMainJson(arr, commitMessage){
+  const out = arr.map(item => ordenarCamposPorIdioma(item, 'ES'));
+  const contentString = JSON.stringify(out, null, 2);
 
-  render(
-    productos.filter(p =>
-      p.nombre.toLowerCase().includes(q) ||
-      p.descripcion.toLowerCase().includes(q) ||
-      p.categoria.toLowerCase().includes(q)
-    )
-  );
+  let sha;
+  try{ sha = (await githubGetFileInfo(MAIN_JSON)).sha; }catch(e){ sha = undefined; }
+
+  await githubPutFile(MAIN_JSON, contentString, commitMessage, sha);
 }
 
-/*******************************************************
- * INIT
- *******************************************************/
-document.addEventListener("DOMContentLoaded",()=>{
-  checkTokenAndLock();
-  loadProducts();
-});
+/**********************************************************
+ * Sincronizar precios EN y PT
+ **********************************************************/
+async function syncPricesToLangs(){
+  const token = getToken();
+  if(!token){
+    showToast('Token requerido para sincronizar EN/PT', 'err', 4000);
+    return;
+  }
+
+  const byId = {};
+  productos.forEach(p => { byId[p.id] = p; });
+
+  async function processLangFile(filename, idioma){
+    const info = await githubGetFileInfo(filename);
+    const sha = info.sha;
+
+    const raw = info.content.replace(/\n/g,'');
+    const decoded = decodeURIComponent(escape(window.atob(raw)));
+    let arr = JSON.parse(decoded);
+
+    let changed = false;
+
+    const newArr = arr.map(item => {
+      const itemId = item.id || null;
+
+      if(itemId && byId[itemId]){
+        const nuevo = sanitizePrice(byId[itemId].precio);
+
+        if('precio' in item && item.precio !== nuevo){ item.precio = nuevo; changed = true; }
+        if('price' in item && item.price !== nuevo){ item.price = nuevo; changed = true; }
+        if('preco' in item && item.preco !== nuevo){ item.preco = nuevo; changed = true; }
+      }
+
+      return ordenarCamposPorIdioma(item, idioma);
+    });
+
+    if(changed){
+      const contentString = JSON.stringify(newArr, null, 2);
+      await githubPutFile(filename, contentString, `Sincroniza precios desde productos.json`, sha);
+    }
+  }
+
+  await Promise.all([
+    processLangFile(EN_JSON, 'EN'),
+    processLangFile(PT_JSON, 'PT')
+  ]);
+}
+
+/**********************************************************
+ * Filtrar
+ **********************************************************/
+function filterProducts(){
+  const q = document.getElementById('search').value.toLowerCase().trim();
+  if(!q){ render(productos); return; }
+
+  const filtered = productos.filter(p =>
+    (p.nombre||'').toLowerCase().includes(q) ||
+    (p.descripcion||'').toLowerCase().includes(q) ||
+    (p.categoria||'').toLowerCase().includes(q)
+  );
+
+  render(filtered);
+}
+
+/**********************************************************
+ * Init
+ **********************************************************/
+document.addEventListener('DOMContentLoaded', () => loadProducts());
 </script>
 
 </body>
