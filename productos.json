@@ -843,7 +843,7 @@
     "nombre": "Tostado mixto",
     "descripcion": "4 triángulos de jamón y queso",
     "precio": "15000",
-    "imagen": "img/20250824_141355.jpg",
+    "imagen": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766529949/tostado_yzgb6d.jpg",
     "categoria": "🥪 Sandwiches",
     "id": "prod0106"
   },
@@ -875,7 +875,7 @@
     "nombre": "Sandwich de lomito solo queso",
     "descripcion": "Simple (solo queso) con papas fritas",
     "precio": "22000",
-    "imagen": "img/20250910_132716.jpg",
+    "imagen": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766530219/lomitoqueso_ucgzhj.jpg",
     "categoria": "🥪 Sandwiches",
     "id": "prod0110"
   },
