@@ -475,7 +475,7 @@
     "nombre": "Ensalada FRESCA",
     "descripcion": "Rúcula, manzana verde, pepino, tomates cherries, nueces, regianito",
     "precio": "19700",
-    "imagen": "img/Fresca.jpg",
+    "imagen": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766509183/fresca_iptvwv.jpg",
     "categoria": "🍽️Comidas",
     "id": "prod0060"
   },
@@ -515,7 +515,7 @@
     "nombre": "ENSALADAS COBB SALAD",
     "descripcion": "Mix de verdes, pollo, huevo, queso azul, tomate y salsa de palta.",
     "precio": "18200",
-    "imagen": "img/Cpsala.jpg",
+    "imagen": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766509219/copsala_hn6org.jpg",
     "categoria": "🍽️Comidas",
     "id": "prod0065"
   },
@@ -667,7 +667,7 @@
     "nombre": "Bife de lomo grill",
     "descripcion": "Con fritas, puré, ensalada o arroz",
     "precio": "33500",
-    "imagen": "img/IMG-20250816-WA0008.jpg",
+    "imagen": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766508238/lomo_tnfcze.jpg",
     "categoria": "🍽️Comidas",
     "id": "prod0084"
   },
@@ -675,7 +675,7 @@
     "nombre": "Salmón rosado grill",
     "descripcion": "Con fritas, puré, ensalada o arroz",
     "precio": "35000",
-    "imagen": "img/Salmón.jpg",
+    "imagen": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766530080/salmon_b18cvr.jpg",
     "categoria": "🍽️Comidas",
     "id": "prod0085"
   },
@@ -899,7 +899,7 @@
     "nombre": "Burger simple",
     "descripcion": "Simple (solo queso) con papas fritas",
     "precio": "15000",
-    "imagen": "img/20250816_135012.jpg",
+    "imagen": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766509123/20251221_130347_otnuns.jpg",
     "categoria": "🥪 Sandwiches",
     "id": "prod0113"
   },
