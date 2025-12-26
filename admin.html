@@ -401,6 +401,24 @@ async function syncPricesToLangs(){
         if('price' in item && String(item.price) !== nuevo){ item.price = nuevo; changed = true; }
         if('preco' in item && String(item.preco) !== nuevo){ item.preco = nuevo; changed = true; }
       }
+      // 🔄 sincronizar imagen por ID (ES / EN / PT)
+const nuevaImagen = byId[itemId].imagen || '';
+
+if('imagen' in item && item.imagen !== nuevaImagen){
+  item.imagen = nuevaImagen;
+  changed = true;
+}
+
+if('image' in item && item.image !== nuevaImagen){
+  item.image = nuevaImagen;
+  changed = true;
+}
+
+if('imagem' in item && item.imagem !== nuevaImagen){
+  item.imagem = nuevaImagen;
+  changed = true;
+}
+
       if(!item.id && itemId) item.id = itemId;
       return ordenarCamposPorIdioma(item, idioma);
     });
