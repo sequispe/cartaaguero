@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Admin Carta - Tilo Café Aguero</title>
 
 <style>
@@ -19,14 +19,14 @@ button.danger{background:#c0392b}
 .toast.show{opacity:1}
 .toast.ok{background:#2ecc71}
 .toast.err{background:#e74c3c}
-#guardarTodos{position:fixed;top:18px;right:18px;z-index:1200}
 </style>
 </head>
 
 <body>
 
 <h1>Admin Carta — Tilo Café Aguero</h1>
-<button id="guardarTodos" onclick="guardarTodosLosPrecios()">💾 Guardar TODOS</button>
+
+<button onclick="guardarTodosLosPrecios()">💾 Guardar TODOS</button>
 
 <table>
 <thead>
@@ -43,18 +43,16 @@ button.danger{background:#c0392b}
 </table>
 
 <script>
-/* ================= CONFIG ================= */
 const USERNAME="tilo-restocafe";
 const REPO="cartaaguero";
 const BRANCH="main";
-
 const MAIN_JSON="productos.json";
 const EN_JSON="productos-en.json";
 const PT_JSON="productos-port.json";
 
 let productos=[];
 
-/* ================= UTIL ================= */
+/* =================== UTIL =================== */
 function showToast(msg,type='ok'){
   const t=document.createElement('div');
   t.className='toast '+type;
@@ -63,48 +61,44 @@ function showToast(msg,type='ok'){
   setTimeout(()=>t.classList.add('show'),50);
   setTimeout(()=>t.remove(),3000);
 }
+function sanitizePrice(v){return String(v||'').replace(/[^\d]/g,'');}
+function getToken(){return localStorage.getItem('github_token');}
 
-function sanitizePrice(v){
-  return String(v||'').replace(/[^\d]/g,'');
-}
-
-function getToken(){
-  return localStorage.getItem('github_token');
-}
-
-/* ================= LOAD ================= */
+/* =================== LOAD =================== */
 async function loadProducts(){
   const r=await fetch(`https://raw.githubusercontent.com/${USERNAME}/${REPO}/${BRANCH}/${MAIN_JSON}`);
   productos=await r.json();
   render();
 }
 
-/* ================= RENDER ================= */
+/* =================== RENDER =================== */
 function render(){
   const tb=document.getElementById('tbody');
   tb.innerHTML='';
   productos.forEach(p=>{
     const tr=document.createElement('tr');
+
     tr.innerHTML=`
       <td><img class="mini" src="${p.imagen||''}"></td>
       <td><input value="${p.nombre||''}" oninput="p.nombre=this.value"></td>
       <td><input value="${p.descripcion||''}" oninput="p.descripcion=this.value"></td>
       <td><input value="${p.categoria||''}" oninput="p.categoria=this.value"></td>
       <td><input value="${p.precio||''}" oninput="p.precio=this.value"></td>
-      <td><button onclick="guardarFilaPorId('${p.id}')">Guardar</button></td>
+      <td>
+        <button onclick="guardarFila('${p.id}')">Guardar</button>
+      </td>
     `;
     tb.appendChild(tr);
   });
 }
 
-/* ================= GITHUB ================= */
+/* =================== GITHUB =================== */
 async function githubGet(path){
   const r=await fetch(`https://api.github.com/repos/${USERNAME}/${REPO}/contents/${path}?ref=${BRANCH}`,{
     headers:{Authorization:'token '+getToken()}
   });
   return r.json();
 }
-
 async function githubPut(path,content,msg,sha){
   await fetch(`https://api.github.com/repos/${USERNAME}/${REPO}/contents/${path}`,{
     method:'PUT',
@@ -115,13 +109,12 @@ async function githubPut(path,content,msg,sha){
     body:JSON.stringify({
       message:msg,
       content:btoa(unescape(encodeURIComponent(content))),
-      sha,
-      branch:BRANCH
+      sha,branch:BRANCH
     })
   });
 }
 
-/* ================= SAVE ES ================= */
+/* =================== SAVE ES =================== */
 async function saveMainJson(){
   const info=await githubGet(MAIN_JSON);
   await githubPut(
@@ -132,41 +125,40 @@ async function saveMainJson(){
   );
 }
 
-/* ================= SYNC PRECIOS (YA EXISTENTE) ================= */
+/* =================== SYNC PRECIOS (YA EXISTE) =================== */
 async function syncPricesToLangs(){
   const byId={};
   productos.forEach(p=>byId[p.id]=sanitizePrice(p.precio));
 
-  async function sync(file,key){
+  async function sync(file,priceKey){
     const info=await githubGet(file);
     const arr=JSON.parse(atob(info.content));
     arr.forEach(i=>{
-      if(byId[i.id]) i[key]=byId[i.id];
+      if(byId[i.id]) i[priceKey]=byId[i.id];
     });
     await githubPut(file,JSON.stringify(arr,null,2),'Sync precios',info.sha);
   }
-
   await sync(EN_JSON,'price');
   await sync(PT_JSON,'preco');
 }
 
-/* ================= 🔥 SYNC PRECIO + IMAGEN ================= */
+/* =================== 🔥 FUNCIÓN NUEVA =================== */
 async function syncCommonFieldsToLangs(){
   const base={};
   productos.forEach(p=>{
     base[p.id]={precio:sanitizePrice(p.precio),imagen:p.imagen};
   });
 
-  async function sync(file,lang){
+  async function sync(file,idioma){
     const info=await githubGet(file);
     const arr=JSON.parse(atob(info.content));
     arr.forEach(i=>{
       if(base[i.id]){
-        if(lang==='EN'){
+        if(idioma==='EN'){
           i.price=base[i.id].precio;
           i.image=base[i.id].imagen;
         }
-        if(lang==='PT'){
+        if(idioma==='PT'){
           i.preco=base[i.id].precio;
           i.imagem=base[i.id].imagen;
         }
@@ -179,41 +171,22 @@ async function syncCommonFieldsToLangs(){
   await sync(PT_JSON,'PT');
 }
 
-/* ================= GUARDAR ================= */
-async function guardarFilaPorId(id){
-  try{
-    const p=productos.find(x=>x.id===id);
-    if(!p) throw 'No encontrado';
-
-    p.precio=sanitizePrice(p.precio);
-
-    await saveMainJson();
-    await syncPricesToLangs();
-    await syncCommonFieldsToLangs();
-
-    showToast('Producto guardado','ok');
-    render();
-  }catch(e){
-    showToast('Error al guardar','err');
-  }
+/* =================== GUARDAR =================== */
+async function guardarFila(id){
+  await saveMainJson();
+  await syncPricesToLangs();
+  await syncCommonFieldsToLangs();
+  showToast('Producto sincronizado');
 }
 
 async function guardarTodosLosPrecios(){
-  try{
-    productos=productos.map(p=>({...p,precio:sanitizePrice(p.precio)}));
-
-    await saveMainJson();
-    await syncPricesToLangs();
-    await syncCommonFieldsToLangs();
-
-    showToast('Todo sincronizado','ok');
-    render();
-  }catch(e){
-    showToast('Error al guardar todo','err');
-  }
+  await saveMainJson();
+  await syncPricesToLangs();
+  await syncCommonFieldsToLangs();
+  showToast('Todo sincronizado');
 }
 
-/* ================= INIT ================= */
+/* =================== INIT =================== */
 loadProducts();
 </script>
 
