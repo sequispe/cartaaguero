@@ -1,105 +1,121 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Admin Carta - Tilo Café Aguero</title>
 
-<style>
-body{font-family:Arial,Helvetica,sans-serif;margin:18px;background:#f7f3f0;color:#333}
-h1{text-align:center;color:#806250}
-table{width:100%;border-collapse:collapse;background:#fff}
-th,td{border:1px solid #ddd;padding:8px}
-th{background:#806250;color:#fff}
-img.mini{max-width:60px;border-radius:6px}
-button{background:#806250;color:#fff;border:none;padding:6px 10px;border-radius:6px;cursor:pointer}
-button.secondary{background:#5c8a50}
-button.danger{background:#c0392b}
-.toast{position:fixed;top:20px;right:20px;padding:10px 14px;border-radius:8px;color:#fff;font-weight:600;opacity:0;transition:.3s}
-.toast.show{opacity:1}
-.toast.ok{background:#2ecc71}
-.toast.err{background:#e74c3c}
-</style>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Admin Carta - Tilo Café Aguero (Sincroniza precios ES/EN/PT)</title>
+
+  <style>
+    body{font-family:Arial,Helvetica,sans-serif;margin:18px;background:#f7f3f0;color:#333}
+    h1{text-align:center;color:#806250;margin-bottom:10px}
+    .topRow{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;gap:10px}
+    .controls{display:flex;gap:8px;align-items:center}
+    input[type="text"], input[type="password"], textarea{padding:8px;border-radius:6px;border:1px solid #ccc;width:100%;box-sizing:border-box}
+    button{background:#806250;color:#fff;border:none;padding:8px 10px;border-radius:6px;cursor:pointer}
+    button.secondary{background:#5c8a50}
+    button.danger{background:#c0392b}
+    form{background:#fff;padding:12px;border-radius:10px;margin-bottom:12px;display:none}
+    table{width:100%;border-collapse:collapse;background:#fff}
+    th,td{border:1px solid #ddd;padding:8px;vertical-align:top}
+    th{background:#806250;color:#fff}
+    img.mini{max-width:60px;border-radius:6px}
+    #guardarTodos{position:fixed;top:18px;right:18px;z-index:1200;padding:10px 14px;background:#a07b68;color:#fff;border-radius:8px}
+    .small{font-size:13px;color:#666}
+    .rowActions{display:flex;gap:6px}
+    .previewImg{max-width:120px;margin-top:8px;border-radius:6px}
+    .toast{position:fixed;top:24px;right:24px;z-index:2000;padding:12px 16px;border-radius:8px;color:white;font-weight:600;opacity:0;transition:.25s}
+    .toast.show{opacity:1}
+    .toast.ok{background:#2ecc71}
+    .toast.info{background:#3498db}
+    .toast.err{background:#e74c3c}
+  </style>
 </head>
 
 <body>
 
 <h1>Admin Carta — Tilo Café Aguero</h1>
 
-<button onclick="guardarTodosLosPrecios()">💾 Guardar TODOS</button>
+<button id="guardarTodos" onclick="guardarTodosLosPrecios()">💾 Guardar TODOS los cambios</button>
 
 <table>
 <thead>
 <tr>
-<th>Imagen</th>
-<th>Nombre</th>
-<th>Descripción</th>
-<th>Categoría</th>
-<th>Precio</th>
-<th>Acciones</th>
+  <th>Imagen</th>
+  <th>Nombre</th>
+  <th>Descripción</th>
+  <th>Categoría</th>
+  <th>Precio</th>
+  <th>Acciones</th>
 </tr>
 </thead>
 <tbody id="tbody"></tbody>
 </table>
 
 <script>
-const USERNAME="tilo-restocafe";
-const REPO="cartaaguero";
-const BRANCH="main";
-const MAIN_JSON="productos.json";
-const EN_JSON="productos-en.json";
-const PT_JSON="productos-port.json";
+/* ================= CONFIG ================= */
+const USERNAME = "tilo-restocafe";
+const REPO = "cartaaguero";
+const BRANCH = "main";
 
-let productos=[];
+const MAIN_JSON = "productos.json";
+const EN_JSON   = "productos-en.json";
+const PT_JSON   = "productos-port.json";
 
-/* =================== UTIL =================== */
+let productos = [];
+
+/* ================= UTIL ================= */
 function showToast(msg,type='ok'){
-  const t=document.createElement('div');
-  t.className='toast '+type;
-  t.textContent=msg;
-  document.body.appendChild(t);
-  setTimeout(()=>t.classList.add('show'),50);
-  setTimeout(()=>t.remove(),3000);
+  const d=document.createElement('div');
+  d.className='toast '+type;
+  d.textContent=msg;
+  document.body.appendChild(d);
+  setTimeout(()=>d.classList.add('show'),50);
+  setTimeout(()=>d.remove(),3000);
 }
-function sanitizePrice(v){return String(v||'').replace(/[^\d]/g,'');}
-function getToken(){return localStorage.getItem('github_token');}
 
-/* =================== LOAD =================== */
+function sanitizePrice(v){
+  return String(v||'').replace(/[^\d]/g,'');
+}
+
+function getToken(){
+  return localStorage.getItem('github_token');
+}
+
+/* ================= LOAD ================= */
 async function loadProducts(){
   const r=await fetch(`https://raw.githubusercontent.com/${USERNAME}/${REPO}/${BRANCH}/${MAIN_JSON}`);
   productos=await r.json();
   render();
 }
 
-/* =================== RENDER =================== */
+/* ================= RENDER ================= */
 function render(){
   const tb=document.getElementById('tbody');
   tb.innerHTML='';
   productos.forEach(p=>{
     const tr=document.createElement('tr');
-
     tr.innerHTML=`
       <td><img class="mini" src="${p.imagen||''}"></td>
       <td><input value="${p.nombre||''}" oninput="p.nombre=this.value"></td>
       <td><input value="${p.descripcion||''}" oninput="p.descripcion=this.value"></td>
       <td><input value="${p.categoria||''}" oninput="p.categoria=this.value"></td>
       <td><input value="${p.precio||''}" oninput="p.precio=this.value"></td>
-      <td>
-        <button onclick="guardarFila('${p.id}')">Guardar</button>
-      </td>
+      <td><button onclick="guardarFilaPorId('${p.id}')">Guardar</button></td>
     `;
     tb.appendChild(tr);
   });
 }
 
-/* =================== GITHUB =================== */
-async function githubGet(path){
+/* ================= GITHUB ================= */
+async function githubGetFileInfo(path){
   const r=await fetch(`https://api.github.com/repos/${USERNAME}/${REPO}/contents/${path}?ref=${BRANCH}`,{
     headers:{Authorization:'token '+getToken()}
   });
   return r.json();
 }
-async function githubPut(path,content,msg,sha){
+
+async function githubPutFile(path,content,msg,sha){
   await fetch(`https://api.github.com/repos/${USERNAME}/${REPO}/contents/${path}`,{
     method:'PUT',
     headers:{
@@ -109,15 +125,16 @@ async function githubPut(path,content,msg,sha){
     body:JSON.stringify({
       message:msg,
       content:btoa(unescape(encodeURIComponent(content))),
-      sha,branch:BRANCH
+      sha,
+      branch:BRANCH
     })
   });
 }
 
-/* =================== SAVE ES =================== */
+/* ================= SAVE ES ================= */
 async function saveMainJson(){
-  const info=await githubGet(MAIN_JSON);
-  await githubPut(
+  const info=await githubGetFileInfo(MAIN_JSON);
+  await githubPutFile(
     MAIN_JSON,
     JSON.stringify(productos,null,2),
     'Actualiza productos',
@@ -125,70 +142,87 @@ async function saveMainJson(){
   );
 }
 
-/* =================== SYNC PRECIOS (YA EXISTE) =================== */
-async function syncPricesToLangs(){
-  const byId={};
-  productos.forEach(p=>byId[p.id]=sanitizePrice(p.precio));
-
-  async function sync(file,priceKey){
-    const info=await githubGet(file);
-    const arr=JSON.parse(atob(info.content));
-    arr.forEach(i=>{
-      if(byId[i.id]) i[priceKey]=byId[i.id];
-    });
-    await githubPut(file,JSON.stringify(arr,null,2),'Sync precios',info.sha);
-  }
-  await sync(EN_JSON,'price');
-  await sync(PT_JSON,'preco');
-}
-
-/* =================== 🔥 FUNCIÓN NUEVA =================== */
+  <script>
+/**********************************************************
+ * 🔥 NUEVO: Sincronizar precio + imagen + id a EN / PT
+ * NO toca nombres ni descripciones
+ **********************************************************/
 async function syncCommonFieldsToLangs(){
-  const base={};
-  productos.forEach(p=>{
-    base[p.id]={precio:sanitizePrice(p.precio),imagen:p.imagen};
+
+  const token = getToken();
+  if(!token){
+    showToast('Token requerido para sincronizar EN/PT', 'err', 4000);
+    return;
+  }
+
+  // Base desde ES
+  const baseById = {};
+  productos.forEach(p => {
+    if(p.id){
+      baseById[p.id] = {
+        precio: sanitizePrice(p.precio),
+        imagen: p.imagen || ''
+      };
+    }
   });
 
-  async function sync(file,idioma){
-    const info=await githubGet(file);
-    const arr=JSON.parse(atob(info.content));
-    arr.forEach(i=>{
-      if(base[i.id]){
-        if(idioma==='EN'){
-          i.price=base[i.id].precio;
-          i.image=base[i.id].imagen;
+  async function processFile(filename, idioma){
+
+    let info;
+    try{
+      info = await githubGetFileInfo(filename);
+    }catch(e){
+      return;
+    }
+
+    const raw = info.content.replace(/\n/g,'');
+    const decoded = decodeURIComponent(escape(atob(raw)));
+    let arr = JSON.parse(decoded);
+
+    let changed = false;
+
+    arr.forEach(item => {
+      if(item.id && baseById[item.id]){
+        const base = baseById[item.id];
+
+        if(idioma === 'EN'){
+          if(item.price !== base.precio){
+            item.price = base.precio;
+            changed = true;
+          }
+          if(item.image !== base.imagen){
+            item.image = base.imagen;
+            changed = true;
+          }
         }
-        if(idioma==='PT'){
-          i.preco=base[i.id].precio;
-          i.imagem=base[i.id].imagen;
+
+        if(idioma === 'PT'){
+          if(item.preco !== base.precio){
+            item.preco = base.precio;
+            changed = true;
+          }
+          if(item.imagem !== base.imagen){
+            item.imagem = base.imagen;
+            changed = true;
+          }
         }
       }
     });
-    await githubPut(file,JSON.stringify(arr,null,2),'Sync precio + imagen',info.sha);
+
+    if(changed){
+      const latest = await githubGetFileInfo(filename);
+      await githubPutFile(
+        filename,
+        JSON.stringify(arr, null, 2),
+        'Sincroniza precio e imagen desde productos.json',
+        latest.sha
+      );
+    }
   }
 
-  await sync(EN_JSON,'EN');
-  await sync(PT_JSON,'PT');
+  await processFile(EN_JSON, 'EN');
+  await processFile(PT_JSON, 'PT');
 }
-
-/* =================== GUARDAR =================== */
-async function guardarFila(id){
-  await saveMainJson();
-  await syncPricesToLangs();
-  await syncCommonFieldsToLangs();
-  showToast('Producto sincronizado');
-}
-
-async function guardarTodosLosPrecios(){
-  await saveMainJson();
-  await syncPricesToLangs();
-  await syncCommonFieldsToLangs();
-  showToast('Todo sincronizado');
-}
-
-/* =================== INIT =================== */
-loadProducts();
 </script>
 
-</body>
-</html>
+  
