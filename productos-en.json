@@ -907,7 +907,7 @@
     "id": "prod0114",
     "name": "Classic Burger",
     "description": "Lettuce, tomato, ham and cheese",
-    "price": "17000",
+    "price": "17500",
     "image": "img/20250816_135012.jpg",
     "category": "🥪 Sandwiches"
   },
@@ -915,7 +915,7 @@
     "id": "prod0115",
     "name": "Bacon Burger",
     "description": "Cheddar cheese, bacon and tomato",
-    "price": "19000",
+    "price": "19500",
     "image": "img/Bacon.jpg",
     "category": "🥪 Sandwiches"
   },
