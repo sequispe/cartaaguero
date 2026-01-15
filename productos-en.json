@@ -643,7 +643,7 @@
     "id": "prod0081",
     "name": "Grilled Chicken Breast",
     "description": "With fries, mashed potatoes, salad or rice",
-    "price": "21000",
+    "price": "21500",
     "image": "img/Pechuga.jpg",
     "category": "🍽️Meals"
   },
@@ -683,7 +683,7 @@
     "id": "prod0086",
     "name": "Chicken (grilled breast)",
     "description": "Served with spinach, creamy potatoes or grilled vegetables",
-    "price": "23000",
+    "price": "23500",
     "image": "img/Espepollo.jpg",
     "category": "🍽️Meals"
   },
