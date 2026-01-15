@@ -650,7 +650,7 @@
   {
     "nombre": "Matambre de cerdo grill",
     "descripcion": "Con fritas, puré, ensalada o arroz",
-    "precio": "24500",
+    "precio": "25000",
     "imagen": "img/Matam.jpg",
     "categoria": "🍽️Comidas",
     "id": "prod0082"
@@ -690,7 +690,7 @@
   {
     "nombre": "Matambre de cerdo grill",
     "descripcion": "Acompañado con espinaca, papas a la crema o verduras grilladas",
-    "precio": "26500",
+    "precio": "27000",
     "imagen": "img/Matavergrill.jpg",
     "categoria": "🍽️Comidas",
     "id": "prod0087"
