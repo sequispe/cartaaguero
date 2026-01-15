@@ -906,7 +906,7 @@
   {
     "nome": "Burger clássico",
     "descricao": "Alface, tomate, presunto e queijo",
-    "preco": "17000",
+    "preco": "17500",
     "imagem": "img/20250816_135012.jpg",
     "categoria": "🥪 Sanduíches",
     "id": "prod0114"
@@ -914,7 +914,7 @@
   {
     "nome": "Burger bacon",
     "descricao": "Queijo cheddar, bacon e tomate",
-    "preco": "19000",
+    "preco": "19500",
     "imagem": "img/Bacon.jpg",
     "categoria": "🥪 Sanduíches",
     "id": "prod0115"
