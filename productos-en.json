@@ -795,7 +795,7 @@
     "id": "prod0100",
     "name": "Beef Loin Skewers",
     "description": "With French fries (for 2 people)",
-    "price": "71000",
+    "price": "73000",
     "image": "img/Brochette.jpg",
     "category": "🍽️Meals"
   },
@@ -803,7 +803,7 @@
     "id": "prod0101",
     "name": "Chicken Skewers",
     "description": "With French fries (for 2 people)",
-    "price": "51000",
+    "price": "53000",
     "image": "img/20250817_135608.jpg",
     "category": "🍽️Meals"
   },
