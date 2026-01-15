@@ -658,7 +658,7 @@
   {
     "nombre": "Bife de chorizo grill",
     "descripcion": "Con fritas, puré, ensalada o arroz",
-    "precio": "30500",
+    "precio": "31000",
     "imagen": "img/20250815_151841.jpg",
     "categoria": "🍽️Comidas",
     "id": "prod0083"
@@ -666,7 +666,7 @@
   {
     "nombre": "Bife de lomo grill",
     "descripcion": "Con fritas, puré, ensalada o arroz",
-    "precio": "33500",
+    "precio": "34000",
     "imagen": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766508238/lomo_tnfcze.jpg",
     "categoria": "🍽️Comidas",
     "id": "prod0084"
@@ -698,7 +698,7 @@
   {
     "nombre": "Bife de chorizo",
     "descripcion": "Acompañado con espinaca, papas a la crema o verduras grilladas",
-    "precio": "32000",
+    "precio": "33000",
     "imagen": "img/Bifepapa.jpg",
     "categoria": "🍽️Comidas",
     "id": "prod0088"
@@ -706,7 +706,7 @@
   {
     "nombre": "Bife de lomo",
     "descripcion": "Acompañado con espinaca, papas a la crema o verduras grilladas",
-    "precio": "32500",
+    "precio": "36000",
     "imagen": "img/Lomoesp.jpg",
     "categoria": "🍽️Comidas",
     "id": "prod0089"
