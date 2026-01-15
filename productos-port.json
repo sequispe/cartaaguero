@@ -530,7 +530,7 @@
   {
     "nome": "Milanesa espinafre (carne ou frango)",
     "descricao": "Creme de espinafre e queijo gratinado. Acompanha purê, macarrão, salada ou batatas fritas",
-    "preco": "22500",
+    "preco": "23000",
     "imagem": "img/Esp.jpg",
     "categoria": "🍽️Refeições",
     "id": "prod0067"
@@ -538,7 +538,7 @@
   {
     "nome": "Milanesa suíça",
     "descricao": "Molho branco e queijo gratinado. Acompanha purê, macarrão, salada ou batatas fritas",
-    "preco": "22500",
+    "preco": "23000",
     "imagem": "img/Mizuisa.jpg",
     "categoria": "🍽️Refeições",
     "id": "prod0068"
@@ -546,7 +546,7 @@
   {
     "nome": "Milanesa napolitana",
     "descricao": "Molho de tomate, presunto e queijo. Acompanha purê, macarrão, salada ou batatas fritas",
-    "preco": "22500",
+    "preco": "23000",
     "imagem": "img/20250813_125845 (1).jpg",
     "categoria": "🍽️Refeições",
     "id": "prod0069"
@@ -554,7 +554,7 @@
   {
     "nome": "Mila SMOKE",
     "descricao": "Molho de tomate, geleia de bacon, cheddar. Acompanhadas com purê, massas, salada ou batatas fritas",
-    "preco": "23500",
+    "preco": "24000",
     "imagem": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766508220/milasmoke_lnn6nz.jpg",
     "categoria": "🍽️Refeições",
     "id": "prod0070"
