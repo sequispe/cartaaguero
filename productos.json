@@ -906,7 +906,7 @@
   {
     "nombre": "Burger clásico",
     "descripcion": "Lechuga, tomate, jamón y queso",
-    "precio": "17000",
+    "precio": "17500",
     "imagen": "img/20250816_135012.jpg",
     "categoria": "🥪 Sandwiches",
     "id": "prod0114"
@@ -914,7 +914,7 @@
   {
     "nombre": "Burger bacon",
     "descripcion": "Queso cheddar, panceta y tomate",
-    "precio": "19000",
+    "precio": "19500",
     "imagen": "img/Bacon.jpg",
     "categoria": "🥪 Sandwiches",
     "id": "prod0115"
