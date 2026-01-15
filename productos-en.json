@@ -659,7 +659,7 @@
     "id": "prod0083",
     "name": "Grilled Sirloin Steak",
     "description": "With fries, mashed potatoes, salad or rice",
-    "price": "30500",
+    "price": "31000",
     "image": "img/20250815_151841.jpg",
     "category": "🍽️Meals"
   },
@@ -667,7 +667,7 @@
     "id": "prod0084",
     "name": "Grilled Tenderloin Steak",
     "description": "With fries, mashed potatoes, salad or rice",
-    "price": "33500",
+    "price": "34000",
     "image": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766508238/lomo_tnfcze.jpg",
     "category": "🍽️Meals"
   },
@@ -699,7 +699,7 @@
     "id": "prod0088",
     "name": "Ribeye Steak",
     "description": "Served with spinach, creamy potatoes or grilled vegetables",
-    "price": "32000",
+    "price": "33000",
     "image": "img/Bifepapa.jpg",
     "category": "🍽️Meals"
   },
@@ -707,7 +707,7 @@
     "id": "prod0089",
     "name": "Tenderloin Steak",
     "description": "Served with spinach, creamy potatoes or grilled vegetables",
-    "price": "32500",
+    "price": "36000",
     "image": "img/Lomoesp.jpg",
     "category": "🍽️Meals"
   },
