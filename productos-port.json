@@ -658,7 +658,7 @@
   {
     "nome": "Bife de chorizo grelhado",
     "descricao": "Com fritas, purê, salada ou arroz",
-    "preco": "30500",
+    "preco": "31000",
     "imagem": "img/20250815_151841.jpg",
     "categoria": "🍽️Refeições",
     "id": "prod0083"
@@ -666,7 +666,7 @@
   {
     "nome": "Filé mignon grelhado",
     "descricao": "Com fritas, purê, salada ou arroz",
-    "preco": "33500",
+    "preco": "34000",
     "imagem": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766508238/lomo_tnfcze.jpg",
     "categoria": "🍽️Refeições",
     "id": "prod0084"
@@ -698,7 +698,7 @@
   {
     "nome": "Bife de chorizo",
     "descricao": "Acompanhado de espinafre, batatas ao creme ou legumes grelhados",
-    "preco": "32000",
+    "preco": "33000",
     "imagem": "img/Bifepapa.jpg",
     "categoria": "🍽️Refeições",
     "id": "prod0088"
@@ -706,7 +706,7 @@
   {
     "nome": "Filé mignon",
     "descricao": "Acompanhado de espinafre, batatas ao creme ou legumes grelhados",
-    "preco": "32500",
+    "preco": "36000",
     "imagem": "img/Lomoesp.jpg",
     "categoria": "🍽️Refeições",
     "id": "prod0089"
