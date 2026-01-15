@@ -778,7 +778,7 @@
   {
     "nome": "Lomo CACIO E PEPE",
     "descricao": "Filé mignon grelhado com spaghetti ao molho de pimenta e queijo",
-    "preco": "36000",
+    "preco": "36500",
     "imagem": "img/Pepe.jpg",
     "categoria": "🍽️Refeições",
     "id": "prod0098"
@@ -786,7 +786,7 @@
   {
     "nome": "Lomo AL CHAMPI",
     "descricao": "Filé mignon grelhado em molho de cogumelos com batatas fritas",
-    "preco": "37000",
+    "preco": "37500",
     "imagem": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766508233/lomochampi_nsgd4x.jpg",
     "categoria": "🍽️Refeições",
     "id": "prod0099"
