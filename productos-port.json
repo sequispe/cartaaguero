@@ -874,7 +874,7 @@
   {
     "nome": "Sanduíche de lomito só queijo",
     "descricao": "Simples (só queijo) com batatas fritas",
-    "preco": "22000",
+    "preco": "22500",
     "imagem": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766530219/lomitoqueso_ucgzhj.jpg",
     "categoria": "🥪 Sanduíches",
     "id": "prod0110"
@@ -882,7 +882,7 @@
   {
     "nome": "Sanduíche de lomito clássico",
     "descricao": "Alface, tomate, presunto e queijo, com batatas fritas",
-    "preco": "25000",
+    "preco": "25500",
     "imagem": "img/20250914_130533.jpg",
     "categoria": "🥪 Sanduíches",
     "id": "prod0111"
@@ -890,7 +890,7 @@
   {
     "nome": "Sanduíche de lomito bacon",
     "descricao": "Queijo cheddar, bacon e tomate, com batatas fritas",
-    "preco": "27000",
+    "preco": "27500",
     "imagem": "img/Lomitobac.jpg",
     "categoria": "🥪 Sanduíches",
     "id": "prod0112"
