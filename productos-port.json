@@ -754,7 +754,7 @@
   {
     "nome": "Salmón AZUL",
     "descricao": "Salmão rosado grelhado em molho cremoso de queijo azul com batatas espanholas",
-    "preco": 38000,
+    "preco": "39000",
     "imagem": "img/20250817_142010.jpg",
     "categoria": "🍽️Refeições",
     "id": "prod0095"
