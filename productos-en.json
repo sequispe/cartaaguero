@@ -755,7 +755,7 @@
     "id": "prod0095",
     "name": "Blue Salmon",
     "description": "Grilled pink salmon in blue cheese cream sauce with Spanish potatoes",
-    "price": 38000,
+    "price": "39000",
     "image": "img/20250817_142010.jpg",
     "category": "🍽️Meals"
   },
