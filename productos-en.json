@@ -651,7 +651,7 @@
     "id": "prod0082",
     "name": "Grilled Pork Matambre",
     "description": "With fries, mashed potatoes, salad or rice",
-    "price": "24500",
+    "price": "25000",
     "image": "img/Matam.jpg",
     "category": "🍽️Meals"
   },
@@ -691,7 +691,7 @@
     "id": "prod0087",
     "name": "Grilled Pork Matambre",
     "description": "Served with spinach, creamy potatoes or grilled vegetables",
-    "price": "26500",
+    "price": "27000",
     "image": "img/Matavergrill.jpg",
     "category": "🍽️Meals"
   },
