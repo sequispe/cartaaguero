@@ -779,7 +779,7 @@
     "id": "prod0098",
     "name": "Tenderloin Cacio e Pepe",
     "description": "Grilled tenderloin with spaghetti in pepper and cheese",
-    "price": "36000",
+    "price": "36500",
     "image": "img/Pepe.jpg",
     "category": "🍽️Meals"
   },
@@ -787,7 +787,7 @@
     "id": "prod0099",
     "name": "Tenderloin with Mushrooms",
     "description": "Grilled tenderloin in mushroom sauce with French fries",
-    "price": "37000",
+    "price": "37500",
     "image": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766508233/lomochampi_nsgd4x.jpg",
     "category": "🍽️Meals"
   },
