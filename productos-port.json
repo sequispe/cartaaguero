@@ -674,7 +674,7 @@
   {
     "nome": "Salmão rosa grelhado",
     "descricao": "Com fritas, purê, salada ou arroz",
-    "preco": "35000",
+    "preco": "36000",
     "imagem": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766530080/salmon_b18cvr.jpg",
     "categoria": "🍽️Refeições",
     "id": "prod0085"
@@ -714,7 +714,7 @@
   {
     "nome": "Salmão rosa (grelhado)",
     "descricao": "Acompanhado de espinafre, batatas ao creme ou legumes grelhados",
-    "preco": "37000",
+    "preco": "38000",
     "imagem": "img/Blu.jpg",
     "categoria": "🍽️Refeições",
     "id": "prod0090"
