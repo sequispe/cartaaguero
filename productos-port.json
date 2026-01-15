@@ -642,7 +642,7 @@
   {
     "nome": "Peito de frango grelhado",
     "descricao": "Com fritas, purê, salada ou arroz",
-    "preco": "21000",
+    "preco": "21500",
     "imagem": "img/Pechuga.jpg",
     "categoria": "🍽️Refeições",
     "id": "prod0081"
@@ -682,7 +682,7 @@
   {
     "nome": "Peito de frango grelhado",
     "descricao": "Acompanhado de espinafre, batatas ao creme ou legumes grelhados",
-    "preco": "23000",
+    "preco": "23500",
     "imagem": "img/Espepollo.jpg",
     "categoria": "🍽️Refeições",
     "id": "prod0086"
