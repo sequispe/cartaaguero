@@ -642,7 +642,7 @@
   {
     "nombre": "Pollo pechuga grill",
     "descripcion": "Con fritas, puré, ensalada o arroz",
-    "precio": "21000",
+    "precio": "21500",
     "imagen": "img/Pechuga.jpg",
     "categoria": "🍽️Comidas",
     "id": "prod0081"
@@ -682,7 +682,7 @@
   {
     "nombre": "Pollo (pechuga grill )",
     "descripcion": "Acompañado con espinaca, papas a la crema o verduras grilladas",
-    "precio": "23000",
+    "precio": "23500",
     "imagen": "img/Espepollo.jpg",
     "categoria": "🍽️Comidas",
     "id": "prod0086"
