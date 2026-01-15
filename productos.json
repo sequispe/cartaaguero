@@ -778,7 +778,7 @@
   {
     "nombre": "Lomo CACIO E PEPE",
     "descripcion": "Bife de lomo grillado con spaghetti en pimienta y queso",
-    "precio": "36000",
+    "precio": "36500",
     "imagen": "img/Pepe.jpg",
     "categoria": "🍽️Comidas",
     "id": "prod0098"
@@ -786,7 +786,7 @@
   {
     "nombre": "Lomo AL CHAMPI",
     "descripcion": "Bife de lomo grillado en salsa de hongos con papas fritas",
-    "precio": "37000",
+    "precio": "37500",
     "imagen": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766508233/lomochampi_nsgd4x.jpg",
     "categoria": "🍽️Comidas",
     "id": "prod0099"
