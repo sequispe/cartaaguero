@@ -531,7 +531,7 @@
     "id": "prod0067",
     "name": "Spinach Milanesa (chicken or beef)",
     "description": "Spinach cream and gratin cheese. Served with mashed potatoes, pasta, salad or fries",
-    "price": "22500",
+    "price": "23000",
     "image": "img/Esp.jpg",
     "category": "🍽️Meals"
   },
@@ -539,7 +539,7 @@
     "id": "prod0068",
     "name": "Swiss Milanesa",
     "description": "White sauce and gratin cheese. Served with mashed potatoes, pasta, salad or fries",
-    "price": "22500",
+    "price": "23000",
     "image": "img/Mizuisa.jpg",
     "category": "🍽️Meals"
   },
@@ -547,7 +547,7 @@
     "id": "prod0069",
     "name": "Napolitana Milanesa",
     "description": "Tomato sauce, ham and cheese. Served with mashed potatoes, pasta, salad or fries",
-    "price": "22500",
+    "price": "23000",
     "image": "img/20250813_125845 (1).jpg",
     "category": "🍽️Meals"
   },
@@ -555,7 +555,7 @@
     "id": "prod0070",
     "name": "Smoke Milanesa",
     "description": "Tomato sauce, bacon jam, cheddar. Served with mashed potatoes, pasta, salad or fries",
-    "price": "23500",
+    "price": "24000",
     "image": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766508220/milasmoke_lnn6nz.jpg",
     "category": "🍽️Meals"
   },
