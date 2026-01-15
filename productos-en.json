@@ -875,7 +875,7 @@
     "id": "prod0110",
     "name": "Loin Sandwich (Cheese Only)",
     "description": "Simple (cheese only) with French fries",
-    "price": "22000",
+    "price": "22500",
     "image": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766530219/lomitoqueso_ucgzhj.jpg",
     "category": "🥪 Sandwiches"
   },
@@ -883,7 +883,7 @@
     "id": "prod0111",
     "name": "Classic Loin Sandwich",
     "description": "Lettuce, tomato, ham and cheese, with French fries",
-    "price": "25000",
+    "price": "25500",
     "image": "img/20250914_130533.jpg",
     "category": "🥪 Sandwiches"
   },
@@ -891,7 +891,7 @@
     "id": "prod0112",
     "name": "Bacon Loin Sandwich",
     "description": "Cheddar cheese, bacon and tomato, with French fries",
-    "price": "27000",
+    "price": "27500",
     "image": "img/Lomitobac.jpg",
     "category": "🥪 Sandwiches"
   },
