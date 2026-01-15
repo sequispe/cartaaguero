@@ -874,7 +874,7 @@
   {
     "nombre": "Sandwich de lomito solo queso",
     "descripcion": "Simple (solo queso) con papas fritas",
-    "precio": "22000",
+    "precio": "22500",
     "imagen": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766530219/lomitoqueso_ucgzhj.jpg",
     "categoria": "🥪 Sandwiches",
     "id": "prod0110"
@@ -882,7 +882,7 @@
   {
     "nombre": "Sandwich de lomito clásico",
     "descripcion": "Lechuga, tomate, jamón y queso, con papas fritas",
-    "precio": "25000",
+    "precio": "25500",
     "imagen": "img/20250914_130533.jpg",
     "categoria": "🥪 Sandwiches",
     "id": "prod0111"
@@ -890,7 +890,7 @@
   {
     "nombre": "Sandwich de lomito bacon",
     "descripcion": "Queso cheddar, panceta y tomate, con papas fritas",
-    "precio": "27000",
+    "precio": "27500",
     "imagen": "img/Lomitobac.jpg",
     "categoria": "🥪 Sandwiches",
     "id": "prod0112"
