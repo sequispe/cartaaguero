@@ -650,7 +650,7 @@
   {
     "nome": "Matambre de porco grelhado",
     "descricao": "Com fritas, purê, salada ou arroz",
-    "preco": "24500",
+    "preco": "25000",
     "imagem": "img/Matam.jpg",
     "categoria": "🍽️Refeições",
     "id": "prod0082"
@@ -690,7 +690,7 @@
   {
     "nome": "Matambre de porco grelhado",
     "descricao": "Acompanhado de espinafre, batatas ao creme ou legumes grelhados",
-    "preco": "26500",
+    "preco": "27000",
     "imagem": "img/Matavergrill.jpg",
     "categoria": "🍽️Refeições",
     "id": "prod0087"
