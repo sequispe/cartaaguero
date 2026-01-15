@@ -674,7 +674,7 @@
   {
     "nombre": "Salmón rosado grill",
     "descripcion": "Con fritas, puré, ensalada o arroz",
-    "precio": "35000",
+    "precio": "36000",
     "imagen": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766530080/salmon_b18cvr.jpg",
     "categoria": "🍽️Comidas",
     "id": "prod0085"
@@ -714,7 +714,7 @@
   {
     "nombre": "Salmón rosado (grill)",
     "descripcion": "Acompañado con espinaca, papas a la crema o verduras grilladas",
-    "precio": "37000",
+    "precio": "38000",
     "imagen": "img/Blu.jpg",
     "categoria": "🍽️Comidas",
     "id": "prod0090"
