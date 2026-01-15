@@ -675,7 +675,7 @@
     "id": "prod0085",
     "name": "Grilled Salmon",
     "description": "With fries, mashed potatoes, salad or rice",
-    "price": "35000",
+    "price": "36000",
     "image": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766530080/salmon_b18cvr.jpg",
     "category": "🍽️Meals"
   },
@@ -715,7 +715,7 @@
     "id": "prod0090",
     "name": "Pink Salmon (grilled)",
     "description": "Served with spinach, creamy potatoes or grilled vegetables",
-    "price": "37000",
+    "price": "38000",
     "image": "img/Blu.jpg",
     "category": "🍽️Meals"
   },
