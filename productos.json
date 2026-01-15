@@ -530,7 +530,7 @@
   {
     "nombre": "Mila ESPINACA carne o pollo",
     "descripcion": "Crema de espinaca y queso gratinado. Acompañadas con puré, fideos, ensalada o papas fritas",
-    "precio": "22500",
+    "precio": "23000",
     "imagen": "img/Esp.jpg",
     "categoria": "🍽️Comidas",
     "id": "prod0067"
@@ -538,7 +538,7 @@
   {
     "nombre": "Mila SUIZA",
     "descripcion": "Salsa blanca y queso gratinado. Acompañadas con puré, fideos, ensalada o papas fritas",
-    "precio": "22500",
+    "precio": "23000",
     "imagen": "img/Mizuisa.jpg",
     "categoria": "🍽️Comidas",
     "id": "prod0068"
@@ -546,7 +546,7 @@
   {
     "nombre": "Mila NAPOLITANA",
     "descripcion": "Salsa de tomate, jamón y queso. Acompañadas con puré, fideos, ensalada o papas fritas",
-    "precio": "22500",
+    "precio": "23000",
     "imagen": "img/20250813_125845 (1).jpg",
     "categoria": "🍽️Comidas",
     "id": "prod0069"
@@ -554,7 +554,7 @@
   {
     "nombre": "Mila SMOKE",
     "descripcion": "Salsa de tomate, mermelada de bacon, cheddar Acompañadas con puré, fideos, ensalada o papas fritas",
-    "precio": "23500",
+    "precio": "24000",
     "imagen": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766508220/milasmoke_lnn6nz.jpg",
     "categoria": "🍽️Comidas",
     "id": "prod0070"
