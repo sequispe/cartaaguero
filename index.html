@@ -6,12 +6,6 @@
   <title>Tilo Café Agüero</title>
   <style>
     body {
-      <!-- Sonidos -->
-<audio id="sound-category" src="sounds/category.mp3" preload="auto"></audio>
-<audio id="sound-search" src="sounds/search.mp3" preload="auto"></audio>
-<audio id="sound-scroll" src="sounds/scroll.mp3" preload="auto"></audio>
-<audio id="sound-button" src="sounds/button.mp3" preload="auto"></audio>
-
       font-family: 'Segoe UI', sans-serif;
       background: url("img/Fondo2.jpg") repeat;
       background-size: cover;
@@ -179,35 +173,14 @@
       .item { width: 95%; }
       header img { height: 1800px; }
     }
-    .logo-wrap {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  /* 🔒 esto evita que escale con texto */
-  font-size: 16px;
-}
-
-.logo-wrap img {
-  width: 100%;
-  max-width: 520px;
-  height: auto;
-  object-fit: contain;
-
-  /* 🔒 iOS fix */
-  transform: translateZ(0);
-}
-
   </style>
 </head>
 
 <body>
 
-<div class="logo-wrap">
-  <img src="img/Logo99.jpg" alt="Tilo Café">
-</div>
-
+  <header>
+    <img src="img/logo1.png" alt="Tilo Café">
+  </header>
 
   <div class="banner" id="banner-text">¡Bienvenidos a Tilo Café Agüero 2298!</div>
 
@@ -384,49 +357,8 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   load();
-<script>
-const playSound = (id, volume = 0.5) => {
-    const sound = document.getElementById(id);
-    if (!sound) return;
-    sound.volume = volume;
-    sound.currentTime = 0;
-    sound.play().catch(() => {});
-};
-
-// Categorías
-document.querySelectorAll('.category-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-        playSound('sound-category', 0.6);
-    });
-});
-
-// Botones generales
-document.querySelectorAll('button').forEach(btn => {
-    btn.addEventListener('click', () => {
-        playSound('sound-button', 0.4);
-    });
-});
-
-// Buscador
-const searchInput = document.getElementById('search');
-if (searchInput) {
-    searchInput.addEventListener('input', () => {
-        playSound('sound-search', 0.3);
-    });
-}
-
-// Scroll (muy suave)
-let lastScroll = 0;
-window.addEventListener('scroll', () => {
-    const now = Date.now();
-    if (now - lastScroll > 600) {
-        playSound('sound-scroll', 0.15);
-        lastScroll = now;
-    }
 });
 </script>
 
-
 </body>
 </html>
-
