@@ -16,14 +16,14 @@
       scroll-behavior: smooth;
     }
 
-   header img {
+ header img {
   width: 100%;
+  max-width: 520px;
   height: auto;
-  max-height: 250px;
   object-fit: contain;
   display: block;
+  margin: 0 auto;
 }
-
 
     .banner {
       text-align: center;
@@ -162,12 +162,13 @@
       }
     }
 
-    @media (max-width: 600px) {
-      .item {
-        width: 90%;
-      }
-
-      .search-box input {
+    @media (max-width: 420px) {
+  header img {
+    max-width: 90%;
+  }
+}
+ 
+     .search-box input {
         width: 90%;
       }
     }
