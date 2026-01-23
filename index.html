@@ -16,14 +16,11 @@
       scroll-behavior: smooth;
     }
 
- header img {
-  width: 900%;
-  max-width: 250px;
-  height: auto;
-  object-fit: contain;
-  display: block;
-  margin: 0 auto;
-}
+    header img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
 
     .banner {
       text-align: center;
@@ -162,22 +159,20 @@
       }
     }
 
-    @media (max-width: 500px) {
-  header img {
-    max-width: 90%;
-  }
-}
- 
-     .search-box input {
+    @media (max-width: 600px) {
+      .item {
+        width: 90%;
+      }
+
+      .search-box input {
         width: 90%;
       }
     }
 
-   @media (max-width: 380px) {
-  .item { width: 95%; }
-  header img { max-height: 200px; }
-}
-
+    @media (max-width: 380px) {
+      .item { width: 95%; }
+      header img { height: 1800px; }
+    }
   </style>
 </head>
 
