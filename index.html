@@ -384,8 +384,48 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   load();
+<script>
+const playSound = (id, volume = 0.5) => {
+    const sound = document.getElementById(id);
+    if (!sound) return;
+    sound.volume = volume;
+    sound.currentTime = 0;
+    sound.play().catch(() => {});
+};
+
+// Categorías
+document.querySelectorAll('.category-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        playSound('sound-category', 0.6);
+    });
+});
+
+// Botones generales
+document.querySelectorAll('button').forEach(btn => {
+    btn.addEventListener('click', () => {
+        playSound('sound-button', 0.4);
+    });
+});
+
+// Buscador
+const searchInput = document.getElementById('search');
+if (searchInput) {
+    searchInput.addEventListener('input', () => {
+        playSound('sound-search', 0.3);
+    });
+}
+
+// Scroll (muy suave)
+let lastScroll = 0;
+window.addEventListener('scroll', () => {
+    const now = Date.now();
+    if (now - lastScroll > 600) {
+        playSound('sound-scroll', 0.15);
+        lastScroll = now;
+    }
 });
 </script>
+
 
 </body>
 </html>
