@@ -4,7 +4,7 @@
     "name": "Espresso Coffee",
     "description": "Small coffee",
     "price": "3400",
-    "image": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1765842339/cafe_wf70hy.jpg",
+    "image": "img/Cafe.jpg",
     "category": "Coffee Shop ☕️"
   },
   {
@@ -60,7 +60,7 @@
     "name": "MOKA Coffee",
     "description": "Intense cocoa, coffee, frothed milk",
     "price": "5950",
-    "image": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766508226/moka_cc1hre.jpg",
+    "image": "img/Moka.jpg",
     "category": "Coffee Shop ☕️"
   },
   {
