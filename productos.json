@@ -3,7 +3,7 @@
     "nombre": "Café expresso",
     "descripcion": "Café chico",
     "precio": "3400",
-    "imagen": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1765842339/cafe_wf70hy.jpg",
+    "imagen": "img/Cafe.jpg",
     "categoria": "Cafetería☕️",
     "id": "prod0001"
   },
@@ -59,7 +59,7 @@
     "nombre": "Café MOKA",
     "descripcion": "Cacao intenso, café, leche espumada",
     "precio": "5950",
-    "imagen": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766508226/moka_cc1hre.jpg",
+    "imagen": "img/Moka.jpg",
     "categoria": "Cafetería☕️",
     "id": "prod0008"
   },
