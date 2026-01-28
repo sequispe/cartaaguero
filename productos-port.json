@@ -667,7 +667,7 @@
     "nome": "Filé mignon grelhado",
     "descricao": "Com fritas, purê, salada ou arroz",
     "preco": "34000",
-    "imagem": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766508238/lomo_tnfcze.jpg",
+    "imagem": "img/grillomo.jpg",
     "categoria": "🍽️Refeições",
     "id": "prod0084"
   },
@@ -675,7 +675,7 @@
     "nome": "Salmão rosa grelhado",
     "descricao": "Com fritas, purê, salada ou arroz",
     "preco": "36000",
-    "imagem": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766530080/salmon_b18cvr.jpg",
+    "imagem": "img/salm.jpg",
     "categoria": "🍽️Refeições",
     "id": "prod0085"
   },
