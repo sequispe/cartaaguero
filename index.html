@@ -28,11 +28,13 @@ header {
 
 header img {
   width: 100%;
-  height: 220px;       /* controlás solo la altura */
+  height: 220px;
   max-height: 220px;
-  object-fit: cover;  /* llena de lado a lado */
+  object-fit: cover;
+  object-position: center 35%; /* 👈 ACÁ */
   display: block;
 }
+
 /* ================= BANNER ================= */
 
 .banner {
@@ -223,11 +225,13 @@ header img {
     width: 95%;
   }
 }
-    @media (max-width: 600px) {
+@media (max-width: 600px) {
   header img {
     height: 160px;
     max-height: 160px;
+    object-position: center 30%;
   }
+}
 }
   </style>
 </head>
