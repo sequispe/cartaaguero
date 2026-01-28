@@ -900,7 +900,7 @@
     "name": "Simple Burger",
     "description": "Simple (cheese only) with French fries",
     "price": "15000",
-    "image": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766509123/20251221_130347_otnuns.jpg",
+    "image": "img/buersimple.jpg",
     "category": "🥪 Sandwiches"
   },
   {
