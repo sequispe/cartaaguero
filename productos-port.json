@@ -155,7 +155,7 @@
     "nome": "Aromatizante baunilha ou avelã",
     "descricao": "Aromatizante baunilha ou avelã",
     "preco": "300",
-    "imagem": "img/medialunas.jpg",
+    "imagem": "img/vaunilla.jpg",
     "categoria": "Cafeteria☕️",
     "id": "prod0020"
   },
@@ -275,7 +275,7 @@
     "nome": "Medialuna quente com presunto e queijo",
     "descricao": "Medialuna quente com presunto e queijo c/u",
     "preco": "4600",
-    "imagem": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766529930/lujyq_umzzi5.jpg",
+    "imagem": "img/Lujyq.jpg",
     "categoria": "Cafeteria☕️",
     "id": "prod0035"
   },
