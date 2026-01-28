@@ -1068,7 +1068,7 @@
     "descricao": "Creme, panceta e cebolinha",
     "preco": "7700",
     "imagem": "img/Carbonara.jpg",
-    "categoria": "🥫SALSAS",
+    "categoria": "🥫 Molhos",
     "id": "prod0134"
   },
   {
@@ -1076,7 +1076,7 @@
     "descricao": "manteiga, pimenta e parmesão",
     "preco": "7000",
     "imagem": "img/Pepe.jpg",
-    "categoria": "🥫SALSAS",
+    "categoria": "🥫 Molhos",
     "id": "prod0135"
   },
   {
@@ -1084,7 +1084,7 @@
     "descricao": "MANTEIGA, AZEITE, ALHO E PARMESÃO",
     "preco": "6000",
     "imagem": "img/218.jpg",
-    "categoria": "🥫SALSAS",
+   "categoria": "🥫 Molhos",
     "id": "prod0136"
   },
   {
@@ -1092,7 +1092,7 @@
     "descricao": "Zeros e clássicas",
     "preco": "4200",
     "imagem": "img/20250830_141813.jpg",
-    "categoria": "🥤 Bebidas e vinos",
+    "categoria": "🥤 Bebidas e vinhos",
     "id": "prod0137"
   },
   {
@@ -1100,7 +1100,7 @@
     "descricao": "Água fria, natural e com gás",
     "preco": "3700",
     "imagem": "img/20250830_142147.jpg",
-    "categoria": "🥤 Bebidas e vinos",
+   "categoria": "🥤 Bebidas e vinhos",
     "id": "prod0138"
   },
   {
@@ -1108,7 +1108,7 @@
     "descricao": "Adicional com limão",
     "preco": "400",
     "imagem": "img/20250903_093625.jpg",
-    "categoria": "🥤 Bebidas e vinos",
+   "categoria": "🥤 Bebidas e vinhos",
     "id": "prod0139"
   },
   {
@@ -1116,7 +1116,7 @@
     "descricao": "Espremido de laranja natural",
     "preco": "6700",
     "imagem": "img/Exprimido.jpg",
-    "categoria": "🥤 Bebidas e vinos",
+   "categoria": "🥤 Bebidas e vinhos",
     "id": "prod0140"
   },
   {
@@ -1124,7 +1124,7 @@
     "descricao": "Pomelo natural",
     "preco": "7200",
     "imagem": "img/pomelada.jpg",
-    "categoria": "🥤 Bebidas e vinos",
+    "categoria": "🥤 Bebidas e vinhos",
     "id": "prod0141"
   },
   {
@@ -1132,7 +1132,7 @@
     "descricao": "Sorvete de creme, com oreos e chantilly",
     "preco": "9000",
     "imagem": "img/Mioreo.jpg",
-    "categoria": "🥤 Bebidas e vinos",
+   "categoria": "🥤 Bebidas e vinhos",
     "id": "prod0142"
   },
   {
@@ -1140,7 +1140,7 @@
     "descricao": "Com frutas da estação (base de água, leite ou suco)",
     "preco": "7500",
     "imagem": "img/20250903_110035.jpg",
-    "categoria": "🥤 Bebidas e vinos",
+    "categoria": "🥤 Bebidas e vinhos",
     "id": "prod0143"
   },
   {
@@ -1148,7 +1148,7 @@
     "descricao": "Limonada natural com hortelã e gengibre",
     "preco": "6700",
     "imagem": "img/Limonada.jpg",
-    "categoria": "🥤 Bebidas e vinos",
+    "categoria": "🥤 Bebidas e vinhos",
     "id": "prod0144"
   },
   {
@@ -1156,7 +1156,7 @@
     "descricao": "Limonada simples",
     "preco": "6400",
     "imagem": "img/Limosim.jpg",
-    "categoria": "🥤 Bebidas e vinos",
+    "categoria": "🥤 Bebidas e vinhos",
     "id": "prod0145"
   },
   {
@@ -1164,7 +1164,7 @@
     "descricao": "Cerveja Stella Artois 330cc",
     "preco": "7400",
     "imagem": "img/Coroa.jpg",
-    "categoria": "🥤 Bebidas e vinos",
+   "categoria": "🥤 Bebidas e vinhos",
     "id": "prod0146"
   },
   {
@@ -1172,7 +1172,7 @@
     "descricao": "Cerveja Corona 330cc",
     "preco": "7700",
     "imagem": "img/Estelar.jpg",
-    "categoria": "🥤 Bebidas e vinos",
+   "categoria": "🥤 Bebidas e vinhos",
     "id": "prod0147"
   },
   {
@@ -1180,7 +1180,7 @@
     "descricao": "Cerveja Stella Artois 1 L",
     "preco": "17000",
     "imagem": "img/SetellaL1.jpg",
-    "categoria": "🥤 Bebidas e vinos",
+    "categoria": "🥤 Bebidas e vinhos",
     "id": "prod0148"
   },
   {
@@ -1188,7 +1188,7 @@
     "descricao": "Trumpeter Malbec (750 cc)",
     "preco": "25000",
     "imagem": "img/20250903_112612.jpg",
-    "categoria": "🥤 Bebidas e vinos",
+    "categoria": "🥤 Bebidas e vinhos",
     "id": "prod0149"
   },
   {
@@ -1196,7 +1196,7 @@
     "descricao": "Trumpeter Cabernet (750 cc)",
     "preco": "25000",
     "imagem": "img/20250903_112534.jpg",
-    "categoria": "🥤 Bebidas e vinos",
+    "categoria": "🥤 Bebidas e vinhos",
     "id": "prod0150"
   },
   {
@@ -1204,7 +1204,7 @@
     "descricao": "Rutini Malbec-Cabernet Franc (750 cc)",
     "preco": "36000",
     "imagem": "img/Rutinicaber.jpg",
-    "categoria": "🥤 Bebidas e vinos",
+    "categoria": "🥤 Bebidas e vinhos",
     "id": "prod0151"
   },
   {
@@ -1212,7 +1212,7 @@
     "descricao": "Portillo Malbec (750 cc)",
     "preco": "19000",
     "imagem": "img/20250903_111015.jpg",
-    "categoria": "🥤 Bebidas e vinos",
+    "categoria": "🥤 Bebidas e vinhos",
     "id": "prod0152"
   },
   {
@@ -1220,7 +1220,7 @@
     "descricao": "Salentein Reserva Cabernet Sauvignon (750 cc)",
     "preco": "30000",
     "imagem": "img/20250903_123740.jpg",
-    "categoria": "🥤 Bebidas e vinos",
+    "categoria": "🥤 Bebidas e vinhos",
     "id": "prod0153"
   },
   {
@@ -1228,7 +1228,7 @@
     "descricao": "Trumpeter Sauvignon Blanc (750 cc)",
     "preco": "25000",
     "imagem": "img/20250903_112257.jpg",
-    "categoria": "🥤 Bebidas e vinos",
+    "categoria": "🥤 Bebidas e vinhos",
     "id": "prod0154"
   },
   {
