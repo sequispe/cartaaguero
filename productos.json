@@ -1315,7 +1315,7 @@
     "nombre": "Aperol con naranja",
     "descripcion": "Aperol con naranja",
     "precio": "9500",
-    "imagen": "img/Campati.jpg",
+    "imagen": "img/Api.jpg",
     "categoria": "🍹TRAGOS",
     "id": "prod0165"
   },
@@ -1414,14 +1414,6 @@
     "imagen": "img/Brouni.jpg",
     "categoria": "🍮POSTRES",
     "id": "prod0177"
-  },
-  {
-    "nombre": "MENU del DIA o SUGERENCIAS",
-    "descripcion": "Menú del día: plato + bebida + postre o café. La sugerencia solo incluye el plato.",
-    "precio": "1000",
-    "imagen": "",
-    "categoria": "📋MENU del DIA/SUGERENCIAS Y NOVEDADES",
-    "id": "prod0178"
   },
   {
     "nombre": "tortas nuevas",
