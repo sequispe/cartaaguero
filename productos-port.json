@@ -939,7 +939,7 @@
     "nome": "Mozzarellas empanadas",
     "descricao": "Mozzarellas empanadas",
     "preco": "17000",
-    "imagem": "img/20250817_131412.jpg",
+    "imagem": "img/muz.jpg",
     "categoria": "🥟 Entradinhas",
     "id": "prod0118"
   },
@@ -947,7 +947,7 @@
     "nome": "Nachos",
     "descricao": "Nachos de carne com cheddar e abacate",
     "preco": "18500",
-    "imagem": "img/muz.jpg",
+    "imagem": "img/nachop.jpg",
     "categoria": "🥟 Entradinhas",
     "id": "prod0119"
   },
@@ -1059,7 +1059,7 @@
     "nome": "Pesto con nuez",
     "descricao": "noz, alho e salsa",
     "preco": "6800",
-    "imagem": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766535868/spaguettipesto_bepmmw.jpg",
+    "imagem": "img/pesto.jpg",
     "categoria": "🥫 Molhos",
     "id": "prod0133"
   },
@@ -1075,7 +1075,7 @@
     "nome": "caccio e pepe",
     "descricao": "manteiga, pimenta e parmesão",
     "preco": "7000",
-    "imagem": "img/204218.jpg",
+    "imagem": "img/Pepe.jpg",
     "categoria": "🥫SALSAS",
     "id": "prod0135"
   },
