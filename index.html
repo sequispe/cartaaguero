@@ -104,23 +104,32 @@ header img {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10px;
-  margin: 15px;
+  gap: 12px;
+  margin: 18px 12px;
 }
 
 #category-buttons button {
-  background: #8c6954;
-  color: white;
+  background: linear-gradient(135deg, #9a7b65, #7a5a46);
+  color: #fff;
   border: none;
-  border-radius: 10px;
-  padding: 8px 14px;
+  border-radius: 999px; /* redonditos tipo app */
+  padding: 10px 18px;
+  font-size: 0.95rem;
+  font-weight: 600;
   cursor: pointer;
-  transition: 0.2s;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.18);
+  transition: all 0.25s ease;
 }
 
 #category-buttons button:hover {
-  background: #6b4e3d;
-  transform: scale(1.05);
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+  background: linear-gradient(135deg, #a8866f, #6b4e3d);
+}
+
+#category-buttons button:active {
+  transform: scale(0.97);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
 
 /* ================= PRODUCTOS ================= */
