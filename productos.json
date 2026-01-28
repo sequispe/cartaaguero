@@ -155,7 +155,7 @@
     "nombre": "Saborizante vainilla o avellanas",
     "descripcion": "Saborizante vainilla o avellanas",
     "precio": "300",
-    "imagen": "img/medialunas.jpg",
+    "imagen": "img/vaunilla.jpg",
     "categoria": "Cafetería☕️",
     "id": "prod0020"
   },
@@ -275,7 +275,7 @@
     "nombre": "Medialuna caliente de jamón y queso",
     "descripcion": "Medialuna caliente de jamón y queso c/u",
     "precio": "4600",
-    "imagen": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766529930/lujyq_umzzi5.jpg",
+    "imagen": "img/Lujyq.jpg",
     "categoria": "Cafetería☕️",
     "id": "prod0035"
   },
