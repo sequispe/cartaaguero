@@ -740,7 +740,7 @@
     "name": "Mushroom Chicken",
     "description": "In mushroom sauce with French fries",
     "price": "25500",
-    "image": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766530096/pollochampi_mffplh.jpg",
+    "image": "img/polcha.jpg",
     "category": "🍽️Meals"
   },
   {
@@ -820,7 +820,7 @@
     "name": "👶KIDS MENU Spaghetti or Gnocchi",
     "description": "Fileto or cream sauce",
     "price": "18000",
-    "image": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766535773/20251221_140053_ssbaca.jpg",
+    "image": "img/Ñoquis.jpg",
     "category": "🍽️Meals"
   },
   {
@@ -844,7 +844,7 @@
     "name": "Toasted Ham & Cheese",
     "description": "4 ham and cheese triangles",
     "price": "15000",
-    "image": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766529949/tostado_yzgb6d.jpg",
+    "image": "img/tm.jpg",
     "category": "🥪 Sandwiches"
   },
   {
