@@ -899,7 +899,7 @@
     "nombre": "Burger simple",
     "descripcion": "Simple (solo queso) con papas fritas",
     "precio": "15000",
-    "imagen": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766509123/20251221_130347_otnuns.jpg",
+    "imagen": "img/buersimple.jpg",
     "categoria": "🥪 Sandwiches",
     "id": "prod0113"
   },
