@@ -739,7 +739,7 @@
     "nombre": "Pollo al CHAMPI",
     "descripcion": "En salsa de hongos con papas fritas",
     "precio": "25500",
-    "imagen": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766530096/pollochampi_mffplh.jpg",
+    "imagen": "img/polcha.jpg",
     "categoria": "🍽️Comidas",
     "id": "prod0093"
   },
@@ -819,7 +819,7 @@
     "nombre": "👶MENU KIDS Spaghetti o ñoquis",
     "descripcion": "Fileto o crema",
     "precio": "18000",
-    "imagen": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766535773/20251221_140053_ssbaca.jpg",
+    "imagen": "img/Ñoquis.jpg",
     "categoria": "🍽️Comidas",
     "id": "prod0103"
   },
@@ -843,7 +843,7 @@
     "nombre": "Tostado mixto",
     "descripcion": "4 triángulos de jamón y queso",
     "precio": "15000",
-    "imagen": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766529949/tostado_yzgb6d.jpg",
+    "imagen": "img/tm.jpg",
     "categoria": "🥪 Sandwiches",
     "id": "prod0106"
   },
