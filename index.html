@@ -23,17 +23,19 @@ header{
   width: 100%;
   height: 220px;
   overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 header img{
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center; /* centra el recorte */
+  object-fit: cover;         /* o contain si querés que se vea entero */
+  object-position: center;   /* centra el recorte */
   display: block;
 }
-
-
 /* ================= BANNER ================= */
 
 .banner {
@@ -222,6 +224,10 @@ header img{
 @media (max-width: 380px) {
   .item {
     width: 95%;
+  }
+  @media (max-width: 600px) {
+  header img {
+    object-position: center 30%;
   }
 }
 @media (max-width: 600px) {
