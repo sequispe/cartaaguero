@@ -940,7 +940,7 @@
     "name": "Breaded Mozzarellas",
     "description": "Breaded mozzarellas",
     "price": "17000",
-    "image": "img/20250817_131412.jpg",
+    "image": "img/muz.jpg",
     "category": "🥟 Starters"
   },
   {
@@ -948,7 +948,7 @@
     "name": "Nachos",
     "description": "Beef nachos with cheddar and avocado",
     "price": "18500",
-    "image": "img/muz.jpg",
+    "image": "img/nachop.jpg",
     "category": "🥟 Starters"
   },
   {
@@ -1060,7 +1060,7 @@
     "name": "Walnut Pesto",
     "description": "Walnut, garlic and parsley",
     "price": "6800",
-    "image": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766535868/spaguettipesto_bepmmw.jpg",
+    "image": "img/pesto.jpg",
     "category": "🥫Sauces"
   },
   {
@@ -1076,7 +1076,7 @@
     "name": "Cacio e Pepe",
     "description": "Butter, pepper and parmesan",
     "price": "7000",
-    "image": "img/204218.jpg",
+    "image": "img/Pepe.jpg",
     "category": "🥫Sauces"
   },
   {
