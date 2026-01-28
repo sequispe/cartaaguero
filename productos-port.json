@@ -899,7 +899,7 @@
     "nome": "Burger simples",
     "descricao": "Simples (só queijo) com batatas fritas",
     "preco": "15000",
-    "imagem": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766509123/20251221_130347_otnuns.jpg",
+    "imagem": "img/buersimple.jpg",
     "categoria": "🥪 Sanduíches",
     "id": "prod0113"
   },
