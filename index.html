@@ -27,8 +27,8 @@ header {
 
 header img {
   width: 100%;
-  height: 190px;        /* ← controla la altura */
-  max-height: 200px;   /* ← evita que crezca */
+  height: 220px;        /* ← controla la altura */
+  max-height: 220px;   /* ← evita que crezca */
   object-fit: contain; /* ← muestra todo el logo sin deformar */
   display: block;
 }
@@ -221,6 +221,12 @@ header img {
 @media (max-width: 380px) {
   .item {
     width: 95%;
+  }
+}
+    @media (max-width: 600px) {
+  header img {
+    height: 160px;
+    max-height: 160px;
   }
 }
   </style>
