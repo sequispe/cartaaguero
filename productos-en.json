@@ -156,7 +156,7 @@
     "name": "Vanilla or Hazelnut Flavoring",
     "description": "Vanilla or hazelnut flavoring",
     "price": "300",
-    "image": "img/medialunas.jpg",
+    "image": "img/vaunilla.jpg",
     "category": "Coffee Shop ☕️"
   },
   {
@@ -276,7 +276,7 @@
     "name": "Hot Ham and Cheese Croissant",
     "description": "Hot ham and cheese croissant each",
     "price": "4600",
-    "image": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766529930/lujyq_umzzi5.jpg",
+    "image": "img/Lujyq.jpg",
     "category": "Coffee Shop ☕️"
   },
   {
