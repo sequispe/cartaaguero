@@ -667,7 +667,7 @@
     "nombre": "Bife de lomo grill",
     "descripcion": "Con fritas, puré, ensalada o arroz",
     "precio": "34000",
-    "imagen": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766508238/lomo_tnfcze.jpg",
+    "imagen": "img/grillomo.jpg",
     "categoria": "🍽️Comidas",
     "id": "prod0084"
   },
@@ -675,7 +675,7 @@
     "nombre": "Salmón rosado grill",
     "descripcion": "Con fritas, puré, ensalada o arroz",
     "precio": "36000",
-    "imagen": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766530080/salmon_b18cvr.jpg",
+    "imagen": "img/salm.jpg",
     "categoria": "🍽️Comidas",
     "id": "prod0085"
   },
