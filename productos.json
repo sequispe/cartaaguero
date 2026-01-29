@@ -155,7 +155,7 @@
     "nombre": "Saborizante vainilla o avellanas",
     "descripcion": "Saborizante vainilla o avellanas",
     "precio": "300",
-    "imagen": "img/medialunas.jpg",
+    "imagen": "img/vaunilla.jpg",
     "categoria": "Cafetería☕️",
     "id": "prod0020"
   },
@@ -275,7 +275,7 @@
     "nombre": "Medialuna caliente de jamón y queso",
     "descripcion": "Medialuna caliente de jamón y queso c/u",
     "precio": "4600",
-    "imagen": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766529930/lujyq_umzzi5.jpg",
+    "imagen": "img/Lujyq.jpg",
     "categoria": "Cafetería☕️",
     "id": "prod0035"
   },
@@ -339,7 +339,7 @@
     "nombre": "AVOCADO",
     "descripcion": "Tostada con huevos revueltos, crema de palta y semillas",
     "precio": "16000",
-    "imagen": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766508212/avoca_bhdpdq.jpg",
+    "imagen": "img/avocado.jpg",
     "categoria": "💡promociones",
     "id": "prod0043"
   },
@@ -347,7 +347,7 @@
     "nombre": "REVUELTO",
     "descripcion": "Huevos revueltos con jamón y queso, una tostada para acompañar",
     "precio": "14000",
-    "imagen": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766535715/20251221_125952_o0phyv.jpg",
+    "imagen": "img/Resultado.jpg",
     "categoria": "💡promociones",
     "id": "prod0044"
   },
@@ -387,7 +387,7 @@
     "nombre": "AMIGOS Y FAMILLA MILANESA PARA 3",
     "descripcion": "Ternera napolitana, smoke, suiza (puede ser 1/2 y 1/2) con fritas",
     "precio": "63000",
-    "imagen": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766530111/milapa3_kb0oo0.jpg",
+    "imagen": "img/mil3.jpg",
     "categoria": "💡promociones",
     "id": "prod0049"
   },
@@ -411,7 +411,7 @@
     "nombre": "Tarta de POLLO",
     "descripcion": "Pechuga de pollo, puerro, muzzarella, cebolla",
     "precio": "19000",
-    "imagen": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766529958/tartapollo_ivwpua.jpg",
+    "imagen": "img/tarpol.jpg",
     "categoria": "🍽️Comidas",
     "id": "prod0052"
   },
@@ -475,7 +475,7 @@
     "nombre": "Ensalada FRESCA",
     "descripcion": "Rúcula, manzana verde, pepino, tomates cherries, nueces, regianito",
     "precio": "19700",
-    "imagen": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766509183/fresca_iptvwv.jpg",
+    "imagen": "img/Fresca.jpg",
     "categoria": "🍽️Comidas",
     "id": "prod0060"
   },
@@ -499,7 +499,7 @@
     "nombre": "Ensalada CAESAR con langostinos",
     "descripcion": "Mix de verdes, croutons, langostinos rebozados, parmesano y aderezo Caesar",
     "precio": "20000",
-    "imagen": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766508233/caesarlagostino_z1yyqt.jpg",
+    "imagen": "img/sisacra.jpg",
     "categoria": "🍽️Comidas",
     "id": "prod0063"
   },
@@ -515,7 +515,7 @@
     "nombre": "ENSALADAS COBB SALAD",
     "descripcion": "Mix de verdes, pollo, huevo, queso azul, tomate y salsa de palta.",
     "precio": "18200",
-    "imagen": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766509219/copsala_hn6org.jpg",
+    "imagen": "img/Cobbsala.jpg",
     "categoria": "🍽️Comidas",
     "id": "prod0065"
   },
@@ -555,7 +555,7 @@
     "nombre": "Mila SMOKE",
     "descripcion": "Salsa de tomate, mermelada de bacon, cheddar Acompañadas con puré, fideos, ensalada o papas fritas",
     "precio": "24000",
-    "imagen": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766508220/milasmoke_lnn6nz.jpg",
+    "imagen": "img/smo.jpg",
     "categoria": "🍽️Comidas",
     "id": "prod0070"
   },
@@ -619,7 +619,7 @@
     "nombre": "RISOTTO de Pollo",
     "descripcion": "Con pollo Y VERDURAS",
     "precio": "24000",
-    "imagen": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766508221/risopollo_ecrlll.jpg",
+    "imagen": "img/ridopo.jpg",
     "categoria": "🍽️Comidas",
     "id": "prod0078"
   },
@@ -627,7 +627,7 @@
     "nombre": "RISOTTO Langostinos",
     "descripcion": "Con verduras, nueces y almendras",
     "precio": "26500",
-    "imagen": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766508220/risolangos_ualnwh.jpg",
+    "imagen": "img/risolang.jpg",
     "categoria": "🍽️Comidas",
     "id": "prod0079"
   },
@@ -667,7 +667,7 @@
     "nombre": "Bife de lomo grill",
     "descripcion": "Con fritas, puré, ensalada o arroz",
     "precio": "34000",
-    "imagen": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766508238/lomo_tnfcze.jpg",
+    "imagen": "img/grillomo.jpg",
     "categoria": "🍽️Comidas",
     "id": "prod0084"
   },
@@ -675,7 +675,7 @@
     "nombre": "Salmón rosado grill",
     "descripcion": "Con fritas, puré, ensalada o arroz",
     "precio": "36000",
-    "imagen": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766530080/salmon_b18cvr.jpg",
+    "imagen": "img/salm.jpg",
     "categoria": "🍽️Comidas",
     "id": "prod0085"
   },
@@ -731,7 +731,7 @@
     "nombre": "Pollo N.Y",
     "descripcion": "Pollo ahumado, mix de queso, verdeo, tomate and papas fritas",
     "precio": "24500",
-    "imagen": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766530089/pollony_ijaswf.jpg",
+    "imagen": "img/Ny.jpg",
     "categoria": "🍽️Comidas",
     "id": "prod0092"
   },
@@ -739,7 +739,7 @@
     "nombre": "Pollo al CHAMPI",
     "descripcion": "En salsa de hongos con papas fritas",
     "precio": "25500",
-    "imagen": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766530096/pollochampi_mffplh.jpg",
+    "imagen": "img/polcha.jpg",
     "categoria": "🍽️Comidas",
     "id": "prod0093"
   },
@@ -787,7 +787,7 @@
     "nombre": "Lomo AL CHAMPI",
     "descripcion": "Bife de lomo grillado en salsa de hongos con papas fritas",
     "precio": "37500",
-    "imagen": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766508233/lomochampi_nsgd4x.jpg",
+    "imagen": "img/Lochapi.jpg",
     "categoria": "🍽️Comidas",
     "id": "prod0099"
   },
@@ -819,7 +819,7 @@
     "nombre": "👶MENU KIDS Spaghetti o ñoquis",
     "descripcion": "Fileto o crema",
     "precio": "18000",
-    "imagen": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766535773/20251221_140053_ssbaca.jpg",
+    "imagen": "img/Ñoquis.jpg",
     "categoria": "🍽️Comidas",
     "id": "prod0103"
   },
@@ -843,7 +843,7 @@
     "nombre": "Tostado mixto",
     "descripcion": "4 triángulos de jamón y queso",
     "precio": "15000",
-    "imagen": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766529949/tostado_yzgb6d.jpg",
+    "imagen": "img/tm.jpg",
     "categoria": "🥪 Sandwiches",
     "id": "prod0106"
   },
@@ -875,7 +875,7 @@
     "nombre": "Sandwich de lomito solo queso",
     "descripcion": "Simple (solo queso) con papas fritas",
     "precio": "22500",
-    "imagen": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766530219/lomitoqueso_ucgzhj.jpg",
+    "imagen": "img/lomosolo.jpeg",
     "categoria": "🥪 Sandwiches",
     "id": "prod0110"
   },
@@ -899,7 +899,7 @@
     "nombre": "Burger simple",
     "descripcion": "Simple (solo queso) con papas fritas",
     "precio": "15000",
-    "imagen": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766509123/20251221_130347_otnuns.jpg",
+    "imagen": "img/buersimple.jpg",
     "categoria": "🥪 Sandwiches",
     "id": "prod0113"
   },
@@ -939,7 +939,7 @@
     "nombre": "Mozzarellas rebozadas",
     "descripcion": "Mozzarellas rebozadas",
     "precio": "17000",
-    "imagen": "img/20250817_131412.jpg",
+    "imagen": "img/muz.jpg",
     "categoria": "🥟 ENTRADITAS",
     "id": "prod0118"
   },
@@ -947,7 +947,7 @@
     "nombre": "Nachos",
     "descripcion": "Nachos de carne con cheddar y palta",
     "precio": "18500",
-    "imagen": "img/20250815_155313.jpg",
+    "imagen": "img/nachop.jpg",
     "categoria": "🥟 ENTRADITAS",
     "id": "prod0119"
   },
@@ -1059,7 +1059,7 @@
     "nombre": "Pesto con nuez",
     "descripcion": "nuez, ajo y perejil",
     "precio": "6800",
-    "imagen": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766535868/spaguettipesto_bepmmw.jpg",
+    "imagen": "img/pesto.jpg",
     "categoria": "🥫SALSAS",
     "id": "prod0133"
   },
@@ -1075,7 +1075,7 @@
     "nombre": "caccio e pepe",
     "descripcion": "manteca, pimienta y parmesano",
     "precio": "7000",
-    "imagen": "img/204218.jpg",
+    "imagen": "img/Pepe.jpg",
     "categoria": "🥫SALSAS",
     "id": "prod0135"
   },
@@ -1315,7 +1315,7 @@
     "nombre": "Aperol con naranja",
     "descripcion": "Aperol con naranja",
     "precio": "9500",
-    "imagen": "img/Campati.jpg",
+    "imagen": "img/Api.jpg",
     "categoria": "🍹TRAGOS",
     "id": "prod0165"
   },
@@ -1416,18 +1416,10 @@
     "id": "prod0177"
   },
   {
-    "nombre": "MENU del DIA o SUGERENCIAS",
-    "descripcion": "Menú del día: plato + bebida + postre o café. La sugerencia solo incluye el plato.",
-    "precio": "1000",
-    "imagen": "",
-    "categoria": "📋MENU del DIA/SUGERENCIAS Y NOVEDADES",
-    "id": "prod0178"
-  },
-  {
     "nombre": "tortas nuevas",
     "descripcion": "Sugerencia nueva por porción.",
     "precio": "9200",
-    "imagen": "img/torgrende.jpg",
+    "imagen": "img/tortas.jpg",
     "categoria": "📋MENU del DIA/SUGERENCIAS Y NOVEDADES",
     "id": "prod0179"
   },

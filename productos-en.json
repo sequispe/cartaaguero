@@ -156,7 +156,7 @@
     "name": "Vanilla or Hazelnut Flavoring",
     "description": "Vanilla or hazelnut flavoring",
     "price": "300",
-    "image": "img/medialunas.jpg",
+    "image": "img/vaunilla.jpg",
     "category": "Coffee Shop ☕️"
   },
   {
@@ -276,7 +276,7 @@
     "name": "Hot Ham and Cheese Croissant",
     "description": "Hot ham and cheese croissant each",
     "price": "4600",
-    "image": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766529930/lujyq_umzzi5.jpg",
+    "image": "img/Lujyq.jpg",
     "category": "Coffee Shop ☕️"
   },
   {
@@ -340,7 +340,7 @@
     "name": "AVOCADO",
     "description": "Toast with scrambled eggs, avocado cream and seeds",
     "price": "16000",
-    "image": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766508212/avoca_bhdpdq.jpg",
+    "image": "img/avocado.jpg",
     "category": "💡Promotions"
   },
   {
@@ -348,7 +348,7 @@
     "name": "SCRAMBLED",
     "description": "Scrambled eggs with ham and cheese, served with toast",
     "price": "14000",
-    "image": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766535715/20251221_125952_o0phyv.jpg",
+    "image": "img/Resultado.jpg",
     "category": "💡Promotions"
   },
   {
@@ -388,7 +388,7 @@
     "name": "FRIENDS & FAMILY MILANESA FOR 3",
     "description": "Veal napolitana, smoked, swiss (can be 1/2 and 1/2) with fries",
     "price": "63000",
-    "image": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766530111/milapa3_kb0oo0.jpg",
+    "image": "img/mil3.jpg",
     "category": "💡Promotions"
   },
   {
@@ -412,7 +412,7 @@
     "name": "Chicken Tart",
     "description": "Chicken breast, leek, sardo cheese, onion, whole wheat dough",
     "price": "19000",
-    "image": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766529958/tartapollo_ivwpua.jpg",
+    "image": "img/tarpol.jpg",
     "category": "🍽️Meals"
   },
   {
@@ -476,7 +476,7 @@
     "name": "Fresh Salad",
     "description": "Arugula, green apple, cucumber, cherry tomatoes, walnuts, reggianito",
     "price": "19700",
-    "image": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766509183/fresca_iptvwv.jpg",
+    "image": "img/Fresca.jpg",
     "category": "🍽️Meals"
   },
   {
@@ -500,7 +500,7 @@
     "name": "Shrimp Caesar Salad",
     "description": "Mixed greens, croutons, breaded shrimp, parmesan and Caesar dressing",
     "price": "20000",
-    "image": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766508233/caesarlagostino_z1yyqt.jpg",
+    "image": "img/sisacra.jpg",
     "category": "🍽️Meals"
   },
   {
@@ -516,7 +516,7 @@
     "name": "Cobb Salad",
     "description": "Mixed greens, chicken, egg, blue cheese, tomato and avocado sauce",
     "price": "18200",
-    "image": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766509219/copsala_hn6org.jpg",
+    "image": "img/Cobbsala.jpg",
     "category": "🍽️Meals"
   },
   {
@@ -556,7 +556,7 @@
     "name": "Smoke Milanesa",
     "description": "Tomato sauce, bacon jam, cheddar. Served with mashed potatoes, pasta, salad or fries",
     "price": "24000",
-    "image": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766508220/milasmoke_lnn6nz.jpg",
+    "image": "img/smo.jpg",
     "category": "🍽️Meals"
   },
   {
@@ -620,7 +620,7 @@
     "name": "Chicken Risotto",
     "description": "With chicken, pumpkin and vegetables",
     "price": "24000",
-    "image": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766508221/risopollo_ecrlll.jpg",
+    "image": "img/ridopo.jpg",
     "category": "🍽️Meals"
   },
   {
@@ -628,7 +628,7 @@
     "name": "Shrimp Risotto",
     "description": "With vegetables, walnuts and almonds",
     "price": "26500",
-    "image": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766508220/risolangos_ualnwh.jpg",
+    "image": "img/risolang.jpg",
     "category": "🍽️Meals"
   },
   {
@@ -668,7 +668,7 @@
     "name": "Grilled Tenderloin Steak",
     "description": "With fries, mashed potatoes, salad or rice",
     "price": "34000",
-    "image": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766508238/lomo_tnfcze.jpg",
+    "image": "img/grillomo.jpg",
     "category": "🍽️Meals"
   },
   {
@@ -676,7 +676,7 @@
     "name": "Grilled Salmon",
     "description": "With fries, mashed potatoes, salad or rice",
     "price": "36000",
-    "image": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766530080/salmon_b18cvr.jpg",
+    "image": "img/salm.jpg",
     "category": "🍽️Meals"
   },
   {
@@ -732,7 +732,7 @@
     "name": "N.Y Chicken",
     "description": "Smoked chicken, cheese mix, green onion, tomato and French fries",
     "price": "24500",
-    "image": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766530089/pollony_ijaswf.jpg",
+    "image": "img/Ny.jpg",
     "category": "🍽️Meals"
   },
   {
@@ -740,7 +740,7 @@
     "name": "Mushroom Chicken",
     "description": "In mushroom sauce with French fries",
     "price": "25500",
-    "image": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766530096/pollochampi_mffplh.jpg",
+    "image": "img/polcha.jpg",
     "category": "🍽️Meals"
   },
   {
@@ -788,7 +788,7 @@
     "name": "Tenderloin with Mushrooms",
     "description": "Grilled tenderloin in mushroom sauce with French fries",
     "price": "37500",
-    "image": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766508233/lomochampi_nsgd4x.jpg",
+    "image": "img/Lochapi.jpg",
     "category": "🍽️Meals"
   },
   {
@@ -820,7 +820,7 @@
     "name": "👶KIDS MENU Spaghetti or Gnocchi",
     "description": "Fileto or cream sauce",
     "price": "18000",
-    "image": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766535773/20251221_140053_ssbaca.jpg",
+    "image": "img/Ñoquis.jpg",
     "category": "🍽️Meals"
   },
   {
@@ -844,7 +844,7 @@
     "name": "Toasted Ham & Cheese",
     "description": "4 ham and cheese triangles",
     "price": "15000",
-    "image": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766529949/tostado_yzgb6d.jpg",
+    "image": "img/tm.jpg",
     "category": "🥪 Sandwiches"
   },
   {
@@ -876,7 +876,7 @@
     "name": "Loin Sandwich (Cheese Only)",
     "description": "Simple (cheese only) with French fries",
     "price": "22500",
-    "image": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766530219/lomitoqueso_ucgzhj.jpg",
+    "image": "img/lomosolo.jpeg",
     "category": "🥪 Sandwiches"
   },
   {
@@ -900,7 +900,7 @@
     "name": "Simple Burger",
     "description": "Simple (cheese only) with French fries",
     "price": "15000",
-    "image": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766509123/20251221_130347_otnuns.jpg",
+    "image": "img/buersimple.jpg",
     "category": "🥪 Sandwiches"
   },
   {
@@ -940,7 +940,7 @@
     "name": "Breaded Mozzarellas",
     "description": "Breaded mozzarellas",
     "price": "17000",
-    "image": "img/20250817_131412.jpg",
+    "image": "img/muz.jpg",
     "category": "🥟 Starters"
   },
   {
@@ -948,7 +948,7 @@
     "name": "Nachos",
     "description": "Beef nachos with cheddar and avocado",
     "price": "18500",
-    "image": "img/20250815_155313.jpg",
+    "image": "img/nachop.jpg",
     "category": "🥟 Starters"
   },
   {
@@ -1060,7 +1060,7 @@
     "name": "Walnut Pesto",
     "description": "Walnut, garlic and parsley",
     "price": "6800",
-    "image": "https://res.cloudinary.com/dfcj9eyyn/image/upload/v1766535868/spaguettipesto_bepmmw.jpg",
+    "image": "img/pesto.jpg",
     "category": "🥫Sauces"
   },
   {
@@ -1076,7 +1076,7 @@
     "name": "Cacio e Pepe",
     "description": "Butter, pepper and parmesan",
     "price": "7000",
-    "image": "img/204218.jpg",
+    "image": "img/Pepe.jpg",
     "category": "🥫Sauces"
   },
   {
@@ -1428,7 +1428,7 @@
     "name": "New cakes",
     "description": "New suggestion per slice.",
     "price": "9200",
-    "image": "img/torgrende.jpg",
+    "image": "img/tortas.jpg",
     "category": "📋DAILY MENU/SPECIALS & NEWS"
   }
 ]
